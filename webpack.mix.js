@@ -11,7 +11,19 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        //
-    ]);
+mix.ts('resources/js/app.ts', 'public/js').postCss('resources/css/app.css', 'public/css', [
+    require('postcss-import'),
+    require('tailwindcss'),
+    require('autoprefixer'),
+])
+.webpackConfig(require('./webpack.config'))
+.version();
+// .browserSync({
+//     proxy: 'js.test',
+//     ui: false,
+//     files: [
+//         'public/css/*.css',
+//         'public/js/*.js',
+//         'resources/views/**/*.blade.php',
+//     ]
+// });
