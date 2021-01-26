@@ -19,6 +19,7 @@ class CreatePostsTable extends Migration
                 ->foreignId("user_id")
                 ->constrained()
                 ->onDelete("cascade");
+            $table->string("provider_slug");
             $table->string("category_slug");
             $table->string("title");
             $table->string("slug")->nullable();
@@ -32,6 +33,12 @@ class CreatePostsTable extends Migration
                 ->foreign("category_slug")
                 ->references("slug")
                 ->on("categories")
+                ->onDelete("cascade");
+
+            $table
+                ->foreign("provider_slug")
+                ->references("slug")
+                ->on("providers")
                 ->onDelete("cascade");
         });
     }

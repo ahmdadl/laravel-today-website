@@ -21,14 +21,11 @@ class CategoryTest extends TestCase
         parent::setUp();
     
         $this->user = User::factory()->create();
-        $this->category = Category::factory()->make();
+        $this->category = Category::factory()->create();
     }
     
     public function testCategoryHaveSlug()
     {
-        $this->category->save();
-        $this->category->refresh();
-
         $this->assertSame(
             Str::slug($this->category->title),
             $this->category->slug
@@ -36,9 +33,7 @@ class CategoryTest extends TestCase
     }
     
     public function testCategoryHavePosts()
-    {
-        $this->category->save();
-        
+    {        
         Post::factory()->count(4)->create([
             'category_slug' => $this->category->slug,
         ]);

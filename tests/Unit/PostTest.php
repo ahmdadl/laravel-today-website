@@ -4,6 +4,7 @@ namespace Tests\Unit;
 
 use App\Models\Category;
 use App\Models\Post;
+use App\Models\Provider;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
@@ -14,6 +15,7 @@ class PostTest extends TestCase
 
     private User $user;
     private Category $category;
+    private Provider $provider;
     private Post $post;
 
     protected function setUp(): void
@@ -22,8 +24,10 @@ class PostTest extends TestCase
     
         $this->user = User::factory()->create();
         $this->category = Category::factory()->create();
+        $this->provider = Provider::factory()->create();
         $this->post = Post::factory()->make([
             'category_slug' => $this->category->slug,
+            'provider_slug' => $this->provider->slug,
         ]);
     }
 
@@ -45,6 +49,18 @@ class PostTest extends TestCase
         $this->post->save();
 
         $this->assertIsString($this->post->image_url);
+    }
+    
+    public function testPostBelongsToProvider()
+    {
+        $this->post->save();
+
+        $this->assertNotNull($this->post->provider);
+
+        $this->assertEquals(
+            $this->provider->slug,
+            $this->post->provider->slug
+        );
     }
     
 }
