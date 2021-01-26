@@ -39,4 +39,12 @@ class PostTest extends TestCase
         );
     }
     
+    public function testPostHaveDefaultImage()
+    {
+        $this->post->image = '';
+        $this->post->save();
+
+        $this->assertIsString($this->post->image_url);
+    }
+    
 }

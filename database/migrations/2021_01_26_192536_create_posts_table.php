@@ -24,6 +24,7 @@ class CreatePostsTable extends Migration
             $table->string("slug")->nullable();
             $table->string("content")->default("");
             $table->string("url");
+            $table->string("image")->nullable();
             $table->timestamps();
             $table->dateTime("scraped_at")->useCurrent();
 

@@ -26,6 +26,20 @@ class Post extends Model
         ];
     }
 
+    /**
+     * get image_url or default image if not present
+     *
+     * @return string
+     */
+    public function getImageUrlAttribute(): string
+    {
+        $defaultUri = "https://images.test/posts/5.jpeg";
+
+        return is_null($this->image) || empty($this->image)
+            ? $defaultUri
+            : $this->image;
+    }
+
     public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class, "category_slug", "slug");
