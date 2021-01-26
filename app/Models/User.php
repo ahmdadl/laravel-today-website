@@ -40,4 +40,18 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * get image_url or default image if not present
+     *
+     * @return string
+     */
+    public function getImageUrlAttribute(): string
+    {
+        $defaultUri = "https://images.test/users/5.jpeg";
+
+        return is_null($this->image) || empty($this->image)
+            ? $defaultUri
+            : $this->image;
+    }
 }
