@@ -3,6 +3,7 @@
 namespace Tests\Unit;
 
 use App\Models\Category;
+use App\Models\Post;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Str;
@@ -34,4 +35,14 @@ class CategoryTest extends TestCase
         );
     }
     
+    public function testCategoryHavePosts()
+    {
+        $this->category->save();
+        
+        Post::factory()->count(4)->create([
+            'category_slug' => $this->category->slug,
+        ]);
+
+        $this->assertCount(4, $this->category->posts);
+    }
 }

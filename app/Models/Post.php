@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Category extends Model
+class Post extends Model
 {
     use HasFactory;
-    use Sluggable;
+    use sluggable;
 
     /**
      * Return the sluggable configuration array for this model.
@@ -20,14 +20,14 @@ class Category extends Model
     public function sluggable(): array
     {
         return [
-            'slug' => [
-                'source' => 'title'
-            ]
+            "slug" => [
+                "source" => "title",
+            ],
         ];
     }
 
-    public function posts(): HasMany
+    public function category(): BelongsTo
     {
-        return $this->hasMany(Post::class, 'category_slug', 'slug');
+        return $this->belongsTo(Category::class, "category_slug", "slug");
     }
 }
