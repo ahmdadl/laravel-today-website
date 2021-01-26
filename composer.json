@@ -8,7 +8,7 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.3|^8.0",
+        "php": "^8.0",
         "cviebrock/eloquent-sluggable": "^8.0",
         "enlightn/enlightn": "^1.4",
         "fideloper/proxy": "^4.4",
@@ -64,6 +64,16 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ],
         "md": [
             "@php artisan ide-helper:models --nowrite"
         ],
