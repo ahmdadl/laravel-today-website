@@ -33,7 +33,7 @@ class Post extends Model
      */
     public function getImageUrlAttribute(): string
     {
-        $defaultUri = "https://images.test/posts/5.jpeg";
+        $defaultUri = "https://images.test/posts/5.jpg";
 
         return is_null($this->image) || empty($this->image)
             ? $defaultUri
@@ -47,6 +47,6 @@ class Post extends Model
 
     public function provider(): BelongsTo
     {
-        return $this->belongsTo(Provider::class, "provider_slug", "slug");
+        return $this->belongsTo(Provider::class, "provider_slug", "slug")->with('owner');
     }
 }

@@ -40,7 +40,7 @@ module.exports = {
                 green: colors.emerald,
                 orange: colors.orange,
                 gray: colors.blueGray,
-                'dark-bg': '#1a202c',
+                'dark': '#1a202c',
             },
         },
     },

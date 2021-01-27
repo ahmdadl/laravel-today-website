@@ -27,13 +27,13 @@ class PostFactory extends Factory
     {
         $imageUri = "https://images.test/posts/";
         return [
-            "user_id" => fn() => User::factory()->create()->id,
+            // "user_id" => fn() => User::factory()->create()->id,
             "provider_slug" => fn() => Provider::factory()->create()->slug,
             "category_slug" => fn() => Category::factory()->create()->slug,
             "title" => $this->faker->sentence,
             "content" => $this->faker->paragraph,
             "url" => $this->faker->url,
-            "image" => $imageUri . random_int(1, 16) . ".jpeg",
+            "image" => $imageUri . random_int(1, 16) . ".jpg",
         ];
     }
 }

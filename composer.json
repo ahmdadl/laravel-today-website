@@ -17,6 +17,7 @@
         "hedronium/spaceless-blade": "^3.0",
         "laravel/framework": "^8.12",
         "laravel/ui": "^3.2",
+        "spatie/laravel-route-attributes": "^1.2",
         "weidner/goutte": "^2.0"
     },
     "require-dev": {
@@ -42,11 +43,7 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": [
-                "barryvdh\/laravel-debugbar",
-                "laravel\/telescope",
-                "laravel\/tinker"
-            ]
+            "dont-discover": []
         }
     },
     "autoload": {
@@ -65,8 +62,7 @@
     "prefer-stable": true,
     "scripts": {
         "post-autoload-dump": [
-            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""

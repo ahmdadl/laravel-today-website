@@ -49,7 +49,7 @@ class User extends Authenticatable
      */
     public function getImageUrlAttribute(): string
     {
-        $defaultUri = "https://images.test/users/5.jpeg";
+        $defaultUri = "https://images.test/users/5.jpg";
 
         return is_null($this->image) || empty($this->image)
             ? $defaultUri

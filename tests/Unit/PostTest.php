@@ -62,5 +62,4 @@ class PostTest extends TestCase
             $this->post->provider->slug
         );
     }
-    
 }
