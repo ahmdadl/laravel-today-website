@@ -26,5 +26,6 @@
                 {{ $slot }}
             </main>
         </div>
+        <x-toast></x-toast>
     </body>
 </html>

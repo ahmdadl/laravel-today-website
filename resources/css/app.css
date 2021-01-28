@@ -7,5 +7,99 @@
 @import '@fortawesome/fontawesome-free/css/brands.min.css';
 
 /*! purgecss start ignore */
+.fa-trash-alt:before {
+    content: '\f014';
+}
+.fa-refresh:before {
+    content: '\f021';
+}
+.fa-spinner:before {
+    content: '\f110';
+}
 
+@layer utilities {
+    .indent-1 {
+        text-indent: 0.5rem;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    @apply cursor-pointer;
+}
+
+.alert {
+    @apply px-4 py-3 mx-auto font-semibold rounded shadow;
+    &.alert-danger {
+        @apply text-red-800 bg-red-300;
+    }
+    &.alert-success {
+        @apply text-green-800 bg-green-300;
+    }
+}
+
+.form-input {
+    @apply bg-transparent border border-gray-600;
+    &:focus {
+        @apply font-semibold text-black bg-gray-200 border-green-400 shadow-outline-green;
+        &.auth {
+            @apply text-white bg-blue-900;
+        }
+    }
+    &:invalid {
+        @apply text-red-700 border-red-500 shadow-outline-red;
+    }
+}
+
+.theme-dark .form-input:focus {
+    @apply text-white bg-gray-700;
+}
+
+.toast {
+    @apply flex items-center px-3 py-2 mt-2 transition duration-500 ease-in-out border-l-4 shadow-md;
+    &.toast-default {
+        @apply bg-teal-700 border-teal-500;
+    }
+    &.toast-success {
+        @apply bg-green-700 border-green-500;
+    }
+    &.toast-info {
+        @apply bg-blue-700 border-blue-500;
+    }
+    &.toast-warn {
+        @apply bg-orange-700 border-orange-500;
+    }
+    &.toast-danger {
+        @apply bg-red-700 border-red-500;
+    }
+}
+
+.list-item {
+    @apply border-t;
+    &:nth-child(1) {
+        @apply border-t-0;
+    }
+}
+
+.social {
+    @apply p-2 mx-1 text-gray-400 transition-colors duration-500 ease-linear border border-transparent;
+}
+
+.lazyload {
+    opacity: 0;
+}
+
+.lazyloading,
+.lazyloaded {
+    opacity: 1;
+    /* transition: all 300ms; */
+    /* background: transparent url(./loader.svg) no-repeat center; */
+}
+
+.lazyloaded:not([src]) {
+    background-image: none;
+}
 /*! purgecss end ignore */

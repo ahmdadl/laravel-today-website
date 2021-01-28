@@ -62,4 +62,21 @@ class PostTest extends TestCase
             $this->post->provider->slug
         );
     }
+
+    public function testPostCanBeLikedAndDisliked()
+    {
+        $this->post->save();
+
+        $this->assertSame(0, $this->post->liked);
+        $this->post->like();
+        $this->assertSame(1, $this->post->liked);
+        $this->post->like();
+        $this->assertSame(2, $this->post->liked);
+
+        $this->post->dislike();
+        $this->assertSame(1, $this->post->liked);
+        $this->post->dislike();
+        $this->assertSame(0, $this->post->liked);
+    }
+    
 }

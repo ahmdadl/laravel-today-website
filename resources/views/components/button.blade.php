@@ -8,12 +8,10 @@
 
     <button {{ $attributes->merge([
     'type' => 'button', 
-    'class' => 'inline-flex items-center hover:bg-'.$bg.'-700 active:bg-'.$bg.'-800' .$bgClasses. $border.' border '.$rounded.' font-semibold text-xs uppercase tracking-widest focus:outline-none focus:border-'.$bg.'-800 focus:shadow-outline-'.$bg.' disabled:opacity-25 transition ease-in-out duration-500', 
-    'wire:loading.class' =>'cursor-not-allowed',
-    'wire:loading.attr' => 'disabled',
-    ]) }} @isset($target)wire:target='{{$target}}'@endisset>
+    'class' => 'inline-flex items-center hover:bg-'.$bg.'-700 active:bg-'.$bg.'-800' .$bgClasses. $border.' border '.$rounded.' font-semibold text-xs uppercase tracking-widest focus:outline-none focus:border-'.$bg.'-800 focus:shadow-outline-'.$bg.' disabled:opacity-25 transition ease-in-out duration-500',
+    ]) }}>
         @isset($icon)
-            <i class='{{ $icon }} px-1' @isset($target)wire:target='{{$target}}'@endisset wire:loading.class.remove='{{ $icon }}' wire:loading.class='fas fa-spin fa-spinner'></i>
+            <i id='loader' class='{{ $icon }} px-1' sa='fas fa-spin fa-spinner'></i>
         @endisset
         {{ $slot }}
     </button>

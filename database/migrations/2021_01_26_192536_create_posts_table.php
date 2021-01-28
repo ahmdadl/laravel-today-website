@@ -28,6 +28,7 @@ class CreatePostsTable extends Migration
             $table->string("image")->nullable();
             $table->timestamps();
             $table->dateTime("scraped_at")->useCurrent();
+            $table->integer('liked')->default(0);
 
             $table
                 ->foreign("category_slug")
