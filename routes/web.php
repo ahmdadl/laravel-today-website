@@ -20,6 +20,6 @@ Route::post('/{post}/like', Like::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+})->middleware([])->name('dashboard');
 
 require __DIR__.'/auth.php';

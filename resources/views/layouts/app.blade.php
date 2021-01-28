@@ -35,7 +35,7 @@
     <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 
-<body class="font-sans antialiased bg-gray-200 dark:text-gray-100 dark:bg-dark">
+<body class="font-sans antialiased bg-gray-100 dark:text-gray-100 dark:bg-dark">
     <div class="min-h-screen">
         @include('layouts.navigation')
 
