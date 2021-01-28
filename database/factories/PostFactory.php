@@ -31,7 +31,7 @@ class PostFactory extends Factory
             "provider_slug" => fn() => Provider::factory()->create()->slug,
             "category_slug" => fn() => Category::factory()->create()->slug,
             "title" => $this->faker->sentence,
-            "content" => $this->faker->paragraph,
+            // "content" => $this->faker->paragraph,
             "url" => $this->faker->url,
             "image" => $imageUri . random_int(1, 16) . ".jpg",
             'liked' => 0,

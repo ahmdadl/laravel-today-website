@@ -8,7 +8,7 @@
 <div x-data class='fixed bottom-0 right-0' wire:ignore>
     <template x-for='(t, inx) in $store.toast.arr'>
         <div class='text-white opacity-100 cursor-pointer toast' :class="'toast-' + t.type"
-            x-on:click='$store.toast.remove(inx)' x-show="t.show" x-transition:enter="transition ease-out duration-300"
+            x-on:click='$store.toast.remove(t.message)' x-show="t.show" x-transition:enter="transition ease-out duration-300"
             x-transition:enter-start="opacity-0 transform scale-90"
             x-transition:enter-end="opacity-100 transform scale-100"
             x-transition:leave="opacity-100 transform scale-100">

@@ -20,6 +20,10 @@ class Like extends Controller
             'like' => 'nullable',
         ]);
 
+        if ($post->liked < 1 && !isset($res['like'])) {
+            return response()->json([], 201);
+        }
+
         $liked = isset($res['like']) ? $post->like() : $post->dislike();
 
         if ($liked !== 1) {

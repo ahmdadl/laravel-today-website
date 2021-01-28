@@ -39,11 +39,12 @@
                                 x-on:click="$store.post.like(slug, 'fa-thumbs-up').then(r => {if (r) liked += 1})">
                             </x-button>
                         </span>
-                        <span class='text-xl text-center text-gray-700 dark:text-gray-500' x-text='liked'>
+                        <span class='text-xl text-center text-gray-700 break-all dark:text-gray-500' x-text='$store.common.formatNum(liked)'>
                         </span>
                         <span class="text-xl text-center">
                             <x-button bg='red' icon='fas fa-thumbs-down' clear='1' id='dislike'
-                                x-on:click="$store.post.like(slug, 'fa-thumbs-up', false).then(r => {if (r) liked -= 1})">
+                                x-on:click="liked >= 0 ? $store.post.like(slug, 'fa-thumbs-down', false).then(r => {if (r && liked >= 1) liked -= 1}) : null"
+                                x-bind:disabled='liked < 1'>
                             </x-button>
                         </span>
                     </div>

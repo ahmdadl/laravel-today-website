@@ -64,10 +64,11 @@ window.Spruce.store('axios', {
 // @ts-ignore
 window.Spruce.store('post', {
     like: async (slug: string, icon: string, isLike: boolean = true): Promise<boolean | null> => {
+        const btnId = isLike ? 'like' : 'dislike'
         const loader = document.querySelector(
-            `#${slug} #like #loader`
+            `#${slug} #${btnId} #loader`
         ) as HTMLElement;
-        const btn = document.querySelector(`#${slug} #like`) as HTMLElement;
+        const btn = document.querySelector(`#${slug} #${btnId}`) as HTMLElement;
         loader.classList.add('fa-spin', 'fa-cog');
         loader.classList.remove(icon);
         btn.setAttribute('disabled', 'disabled');
@@ -99,7 +100,7 @@ window.Spruce.store('toast', {
         setTimeout((_) => {
             this.remove(message);
         }, 3000);
-        console.log(message, type);
+        // console.log(message, type);
     },
     info(message: string) {
         this.add(message);
@@ -115,6 +116,7 @@ window.Spruce.store('toast', {
     },
     remove(message: string) {
         const inx = this.arr.findIndex((x) => x.message === message);
+        if (!this.arr[inx]) return;
         this.arr[inx].show = false;
         this.arr.splice(inx, 1);
     },
@@ -135,4 +137,23 @@ window.Spruce.store('common', {
             mail
         );
     },
+    formatNum: (num: number) => {
+        var si = [
+          { value: 1, symbol: "" },
+          { value: 1E3, symbol: "k" },
+          { value: 1E6, symbol: "M" },
+          { value: 1E9, symbol: "G" },
+          { value: 1E12, symbol: "T" },
+          { value: 1E15, symbol: "P" },
+          { value: 1E18, symbol: "E" }
+        ];
+        var rx = /\.0+$|(\.[0-9]*[1-9])0+$/;
+        var i;
+        for (i = si.length - 1; i > 0; i--) {
+          if (num >= si[i].value) {
+            break;
+          }
+        }
+        return (num / si[i].value).toFixed(1).replace(rx, "$1") + si[i].symbol;
+      }
 });

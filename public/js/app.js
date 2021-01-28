@@ -3887,12 +3887,13 @@ window.Spruce.store('post', {
     }
 
     return (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__awaiter)(void 0, void 0, void 0, function () {
-      var loader, btn, data, res;
+      var btnId, loader, btn, data, res;
       return (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__generator)(this, function (_a) {
         switch (_a.label) {
           case 0:
-            loader = document.querySelector("#" + slug + " #like #loader");
-            btn = document.querySelector("#" + slug + " #like");
+            btnId = isLike ? 'like' : 'dislike';
+            loader = document.querySelector("#" + slug + " #" + btnId + " #loader");
+            btn = document.querySelector("#" + slug + " #" + btnId);
             loader.classList.add('fa-spin', 'fa-cog');
             loader.classList.remove(icon);
             btn.setAttribute('disabled', 'disabled');
@@ -3942,8 +3943,7 @@ window.Spruce.store('toast', {
     });
     setTimeout(function (_) {
       _this.remove(message);
-    }, 3000);
-    console.log(message, type);
+    }, 3000); // console.log(message, type);
   },
   info: function info(message) {
     this.add(message);
@@ -3961,6 +3961,7 @@ window.Spruce.store('toast', {
     var inx = this.arr.findIndex(function (x) {
       return x.message === message;
     });
+    if (!this.arr[inx]) return;
     this.arr[inx].show = false;
     this.arr.splice(inx, 1);
   }
@@ -3974,6 +3975,40 @@ window.Spruce.store('common', {
   },
   testMail: function testMail(mail) {
     return /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(mail);
+  },
+  formatNum: function formatNum(num) {
+    var si = [{
+      value: 1,
+      symbol: ""
+    }, {
+      value: 1E3,
+      symbol: "k"
+    }, {
+      value: 1E6,
+      symbol: "M"
+    }, {
+      value: 1E9,
+      symbol: "G"
+    }, {
+      value: 1E12,
+      symbol: "T"
+    }, {
+      value: 1E15,
+      symbol: "P"
+    }, {
+      value: 1E18,
+      symbol: "E"
+    }];
+    var rx = /\.0+$|(\.[0-9]*[1-9])0+$/;
+    var i;
+
+    for (i = si.length - 1; i > 0; i--) {
+      if (num >= si[i].value) {
+        break;
+      }
+    }
+
+    return (num / si[i].value).toFixed(1).replace(rx, "$1") + si[i].symbol;
   }
 });
 

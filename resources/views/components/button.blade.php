@@ -11,7 +11,7 @@
     'class' => 'inline-flex items-center hover:bg-'.$bg.'-700 active:bg-'.$bg.'-800' .$bgClasses. $border.' border '.$rounded.' font-semibold text-xs uppercase tracking-widest focus:outline-none focus:border-'.$bg.'-800 focus:shadow-outline-'.$bg.' disabled:opacity-25 transition ease-in-out duration-500',
     ]) }}>
         @isset($icon)
-            <i id='loader' class='{{ $icon }} px-1' sa='fas fa-spin fa-spinner'></i>
+            <i id='loader' class='{{ $icon }} px-1'></i>
         @endisset
         {{ $slot }}
     </button>

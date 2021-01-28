@@ -15,20 +15,16 @@ class CreatePostsTable extends Migration
     {
         Schema::create("posts", function (Blueprint $table) {
             $table->id();
-            // $table
-            //     ->foreignId("user_id")
-            //     ->constrained()
-            //     ->onDelete("cascade");
             $table->string("provider_slug");
             $table->string("category_slug");
             $table->string("title");
-            $table->string("slug")->nullable();
-            $table->string("content")->default("");
+            $table->string("slug")->nullable()->index();
+            // $table->string("content")->default("");
             $table->string("url");
             $table->string("image")->nullable();
             $table->timestamps();
             $table->dateTime("scraped_at")->useCurrent();
-            $table->integer('liked')->default(0);
+            $table->unsignedInteger('liked')->default(0);
 
             $table
                 ->foreign("category_slug")

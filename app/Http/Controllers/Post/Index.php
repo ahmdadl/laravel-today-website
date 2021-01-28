@@ -18,7 +18,7 @@ class Index extends Controller
     {
         return view('posts.index', [
             'posts' => Post::with('provider')
-                ->orderByDesc('liked')
+                ->orderByDesc('id')
                 ->paginate(),
         ]);
     }
