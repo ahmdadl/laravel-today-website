@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', Index::class);
+Route::get('/', Index::class)->name('home');
 Route::post('/{post}/like', Like::class);
 
 Route::get('/dashboard', function () {
