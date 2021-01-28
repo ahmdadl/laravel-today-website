@@ -26,6 +26,11 @@ class Category extends Model
         ];
     }
 
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
     public function posts(): HasMany
     {
         return $this->hasMany(Post::class, 'category_slug', 'slug');

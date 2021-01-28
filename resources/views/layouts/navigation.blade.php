@@ -5,7 +5,7 @@
         <div class="flex justify-between h-16">
             <div class="flex">
                 <div class="flex items-center flex-shrink-0">
-                    <a href="{{ route('dashboard') }}">
+                    <a href="{{ route('home') }}">
                         <x-application-logo class="block w-auto h-10 text-gray-600 fill-current" />
                     </a>
                 </div>
@@ -14,8 +14,11 @@
                     <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
                         Home
                     </x-nav-link>
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        Dashboard
+                    <x-nav-link href="/category/news" :active='request()->is("category/news")'>
+                        News
+                    </x-nav-link>
+                    <x-nav-link href="/category/tutorial" :active="request()->is('category/tutorial')">
+                        Tutorial
                     </x-nav-link>
                 </div>
             </div>
@@ -25,7 +28,7 @@
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <x-nav-link href="https://abo3adel.github.io/" target='_blank'>
-                    <img class='inline-block object-cover w-10 h-10 mx-1 rounded-full' src='https://images.test/users/1.jpg'
+                    <img class='inline-block object-cover w-10 h-10 mx-1 rounded-full' src='https://images.test/users/2.jpg'
                         alt='Ahmed Adel Profile Image' />
                     <span class='inline-block'>Ahmed Adel</span>
                 </x-nav-link>
@@ -52,8 +55,11 @@
             <x-responsive-nav-link :href="route('home')" :active="request()->routeIs('home')">
                 Home
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                Dashboard
+            <x-responsive-nav-link href="/category/news" :active="request()->is('category/news')">
+                News
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="/category/tutorial" :active="request()->is('category/tutorial')">
+                Tutorial
             </x-responsive-nav-link>
         </div>
     </div>

@@ -23,13 +23,10 @@
         } else {
             document.documentElement.classList.remove('theme-dark')
         }
-
     </script>
 
-    <!-- Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
-    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/gh/alpine-collective/alpine-magic-helpers@0.5.x/dist/component.min.js" defer>
     </script>
     <script src="{{ mix('js/app.js') }}" defer></script>
@@ -39,7 +36,6 @@
     <div class="min-h-screen">
         @include('layouts.navigation')
 
-        <!-- Page Content -->
         <main class="px-1 py-4 mt-16 sm:px-2 md:py-3">
             {{ $slot }}
         </main>

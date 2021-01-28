@@ -16,6 +16,10 @@ class CategorySeeder extends Seeder
     {
         Category::factory()
             ->count(2)
+            ->sequence(
+                ['title' => 'News'],
+                ['title' => 'Tutorial']
+            )
             ->create();
     }
 }
