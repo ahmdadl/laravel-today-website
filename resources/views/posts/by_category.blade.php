@@ -1,10 +1,12 @@
 <x-sidebar-layout>
     @include('posts.one', compact('posts'))
 
+    @if($posts->count() > 15)
     <div class='pt-6 mt-5'>
         <hr class='mt-5 mb-2 border border-gray-500' />
         {{$posts->links()}}
     </div>
+    @endif
 
     <x-slot name='sidebar'>
         <div class='mt-5'>
