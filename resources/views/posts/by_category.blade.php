@@ -17,6 +17,7 @@
                     : null
                     ])
             </div>
+            @include('sidebar.providers')
         </div>
     </x-slot>
 </x-sidebar-layout>

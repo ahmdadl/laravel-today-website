@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\GetPostByCategory;
 use App\Http\Controllers\Post\GetPopular;
+use App\Http\Controllers\Post\GetProviders;
 use App\Http\Controllers\Post\Index;
 use App\Http\Controllers\Post\Like;
 use Illuminate\Support\Facades\Route;
@@ -24,8 +25,6 @@ Route::get('/popular/{slug?}/{provider?}', GetPopular::class);
 
 Route::get('/category/{category}', GetPostByCategory::class);
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware([])->name('dashboard');
+Route::get('/providers', GetProviders::class);
 
 require __DIR__.'/auth.php';
