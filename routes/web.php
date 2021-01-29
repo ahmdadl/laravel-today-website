@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GetPostByCategory;
+use App\Http\Controllers\Post\GetPopular;
 use App\Http\Controllers\Post\Index;
 use App\Http\Controllers\Post\Like;
 use Illuminate\Support\Facades\Route;
@@ -18,6 +19,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', Index::class)->name('home');
 Route::post('/{post}/like', Like::class);
+
+Route::get('/popular/{slug}/{provider?}', GetPopular::class);
 
 Route::get('/category/{category}', GetPostByCategory::class);
 

@@ -17,6 +17,8 @@ class Post extends Model
         'liked' => 'int'
     ];
 
+    protected $appends = ['image_url'];
+
     /**
      * Return the sluggable configuration array for this model.
      *

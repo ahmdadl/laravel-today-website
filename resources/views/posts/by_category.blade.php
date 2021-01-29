@@ -9,6 +9,7 @@
     <x-slot name='sidebar'>
         <div class='mt-5'>
             @include('sidebar.search')
+            @include('sidebar.popular', ['post' => $posts->first()])
         </div>
     </x-slot>
 </x-sidebar-layout>
