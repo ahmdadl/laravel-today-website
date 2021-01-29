@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\GetPostByCategory;
+use App\Http\Controllers\GetPostsByCategory;
 use App\Http\Controllers\Post\GetPopular;
+use App\Http\Controllers\Post\GetPostsByProvider;
 use App\Http\Controllers\Post\GetProviders;
 use App\Http\Controllers\Post\Index;
 use App\Http\Controllers\Post\Like;
@@ -19,12 +20,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', Index::class)->name('home');
-Route::post('/{post}/like', Like::class);
+Route::post('/{post}/like', Like::class)->where(
+    'post',
+    "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+);
 
-Route::get('/popular/{slug?}/{provider?}', GetPopular::class);
+Route::get('/popular/{slug?}/{provider?}', GetPopular::class)
+    ->where('slug', "^[a-z0-9]+(?:-[a-z0-9]+)*$")
+    ->whereAlpha('provider');
 
-Route::get('/category/{category}', GetPostByCategory::class);
+Route::get('/category/{category}', GetPostsByCategory::class)->where(
+    'category',
+    "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+);
 
 Route::get('/providers', GetProviders::class);
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
+
+Route::get('/{provider}', GetPostsByProvider::class)->where(
+    'provider',
+    "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+);

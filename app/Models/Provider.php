@@ -29,6 +29,11 @@ class Provider extends Model
         ];
     }
 
+    public function getRouteKeyName(): string
+    {
+        return 'slug';
+    }
+
     /**
      * get image_url or default image if not present
      *
