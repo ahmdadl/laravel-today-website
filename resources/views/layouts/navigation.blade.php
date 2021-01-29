@@ -23,7 +23,6 @@
                 </div>
             </div>
 
-
             <x-theme-toggler></x-theme-toggler>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
