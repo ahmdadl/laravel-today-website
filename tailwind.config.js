@@ -18,8 +18,8 @@ module.exports = {
             safelist: {
                 // standard: ['bg-blue-500', 'bg-red-500'],
                 // deep: [/bg-green-500/],
-            }
-        }
+            },
+        },
     },
 
     theme: {
@@ -40,7 +40,7 @@ module.exports = {
                 green: colors.emerald,
                 orange: colors.orange,
                 gray: colors.blueGray,
-                'dark': '#1a202c',
+                dark: '#1a202c',
             },
         },
     },
@@ -53,9 +53,17 @@ module.exports = {
             'focus',
             'active',
             'invalid',
-            'dark', 'dark:hover', 'dark:focus',
+            'dark',
+            'dark:hover',
+            'dark:focus',
         ],
-        backgroundImage: ['disabled', 'dark', 'dark:hover', 'dark:focus', 'responsive'],
+        backgroundImage: [
+            'disabled',
+            'dark',
+            'dark:hover',
+            'dark:focus',
+            'responsive',
+        ],
         borderColor: [
             'disabled',
             'hover',
@@ -63,14 +71,40 @@ module.exports = {
             'active',
             'invalid',
             'group-hover',
-            'dark', 'dark:hover', 'dark:focus',
+            'dark',
+            'dark:hover',
+            'dark:focus',
         ],
-        boxShadow: ['disabled', 'hover', 'focus', 'active', 'invalid', 'dark', 'dark:hover', 'dark:focus'],
+        boxShadow: [
+            'disabled',
+            'hover',
+            'focus',
+            'active',
+            'invalid',
+            'dark',
+            'dark:hover',
+            'dark:focus',
+        ],
         cursor: ['disabled', 'hover'],
-        gradientColorStops: ['responsive', 'dark', 'dark:hover', 'dark:focus', 'hover', 'focus'],
+        gradientColorStops: [
+            'responsive',
+            'dark',
+            'dark:hover',
+            'dark:focus',
+            'hover',
+            'focus',
+        ],
         opacity: ['responsive', 'hover', 'focus', 'disabled'],
         outline: ['invalid', 'hover', 'focus', 'disabled'],
-        textColor: ['invalid', 'hover', 'disabled', 'group-hover', 'dark', 'dark:hover', 'dark:focus'],
+        textColor: [
+            'invalid',
+            'hover',
+            'disabled',
+            'group-hover',
+            'dark',
+            'dark:hover',
+            'dark:focus',
+        ],
     },
 
     plugins: [
@@ -78,5 +112,9 @@ module.exports = {
         require('@tailwindcss/forms'),
         require('tailwindcss-invalid-variant-plugin'),
         require('tailwindcss-multi-theme'),
+        require('tailwind-bootstrap-grid')(),
     ],
+    corePlugins: {
+        container: false,
+    },
 };
