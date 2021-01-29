@@ -12,11 +12,11 @@
 
         <main class="container px-1 py-4 mt-16">
             <div class="row">
-                <div class='col-12 sm:col-5'>
+                <div class='col-12 md:col-9'>
                     {{ $slot }}
                 </div>
     
-                <div class='col-12 sm:col-6'>
+                <div class='col-12 md:col-3'>
                     {{ $sidebar }}
                 </div>
             </div>
