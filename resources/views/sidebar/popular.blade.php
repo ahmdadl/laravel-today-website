@@ -1,5 +1,5 @@
 <x-card title='Popular Posts'>
-    <div x-data="{loading: true, posts: []}" x-init="$store.axios.get('/popular/{{ request()->is('/provider/*') ? $post->provider_slug : $post->category_slug }}').then(res => {
+    <div x-data="{loading: true, posts: []}" x-init="$store.axios.get('/popular/{{ request()->is('/provider/*') ? $post?->provider_slug : $post?->category_slug }}').then(res => {
             if (res.status !== 200 || !res.data) return;
             loading = false;
             posts = res.data;
