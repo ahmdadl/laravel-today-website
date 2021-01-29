@@ -45,10 +45,8 @@ class Post extends Model
      */
     public function getImageUrlAttribute(): string
     {
-        $defaultUri = "https://images.test/posts/5.jpg";
-
         return is_null($this->image) || empty($this->image)
-            ? $defaultUri
+            ? "https://images.test/posts/5.jpg"
             : $this->image;
     }
 

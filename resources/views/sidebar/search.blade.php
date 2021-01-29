@@ -1,4 +1,4 @@
-<x-card icon='fas fa-search' title=''>
+<x-card icon='fas fa-search'>
     <div x-data="{q: '{{ request('q') }}'}">
         <form action='/' class='search-form' method='get'>
             <input type='search' name='q' x-model='q' autocapitalize='off' autocorrect="off" class='w-full form-input'

@@ -10,6 +10,13 @@
         <div class='mt-5'>
             @include('sidebar.search')
             @include('sidebar.popular', ['post' => $posts->first()])
+            <div class='mt-10'>
+                @include('sidebar.copy', [
+                    'provider' => request()->is('provider/*')
+                    ? $posts->first()?->provider
+                    : null
+                    ])
+            </div>
         </div>
     </x-slot>
 </x-sidebar-layout>

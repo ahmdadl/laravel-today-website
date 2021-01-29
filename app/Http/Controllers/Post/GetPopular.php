@@ -16,13 +16,16 @@ class GetPopular extends Controller
      */
     public function __invoke(
         Request $request,
-        string $slug,
+        ?string $slug = null,
         ?bool $is_provider = null
     ) {
-        if ($is_provider !== null) {
-            $posts = Post::whereProviderSlug($slug);
+        if ($slug !== null) {
+            $posts =
+                null !== $is_provider
+                    ? Post::whereProviderSlug($slug)
+                    : Post::whereCategorySlug($slug);
         } else {
-            $posts = Post::whereCategorySlug($slug);
+            $posts = Post::limit(5);
         }
 
         return response()->json(

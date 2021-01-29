@@ -1,6 +1,7 @@
 @props([
     'icon',
-    'title',
+    'title' => '',
+    'p' => 'px-1'
     ])
 
     <div class="my-3 text-center text-gray-700 bg-gray-200 rounded dark:bg-gray-800 dark:text-gray-300">
@@ -18,7 +19,7 @@
 @endunless">
                 {{ $title }}
             </h1>
-            <div class="px-2 mt-2 ">
+            <div class="{{$p}} mt-2 ">
                 {{ $slot }}
         </div>
     </div>

@@ -29,6 +29,19 @@ class Provider extends Model
         ];
     }
 
+    /**
+     * get image_url or default image if not present
+     *
+     * @return string
+     */
+    public function getImageUrlAttribute(): string
+    {
+        return is_null($this->image) || empty($this->image)
+            ? "https://images.test/users/8.jpg"
+            : $this->image;
+    }
+
+
     public function posts(): HasMany
     {
         return $this->hasMany(Post::class, 'provider_slug', 'slug');

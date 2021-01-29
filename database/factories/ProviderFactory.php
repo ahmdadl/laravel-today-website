@@ -5,6 +5,7 @@ namespace Database\Factories;
 use App\Models\Provider;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Str;
 
 class ProviderFactory extends Factory
 {
@@ -22,11 +23,15 @@ class ProviderFactory extends Factory
      */
     public function definition()
     {
+        $imageUri = "https://images.test/users/";
+
         return [
             'user_id' => fn () => User::factory()->create()->id,
             'title' => $this->faker->words(2, true),
             'url' => $this->faker->url,
             'request_url' => '/' . $this->faker->word,
+            "image" => $imageUri . random_int(1, 9) . ".jpg",
+            'bio' => Str::limit($this->faker->paragraph)
         ];
     }
 }

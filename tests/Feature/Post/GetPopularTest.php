@@ -17,7 +17,7 @@ class GetPopularTest extends TestCase
 
     const BASE_URI = '/popular/';
 
-    private User $user; 
+    private User $user;
     private Category $category;
     private Provider $provider;
     private Collection $posts;
@@ -26,32 +26,43 @@ class GetPopularTest extends TestCase
     {
         parent::setUp();
 
-        $this->user = User::factory()->has(Provider::factory())->create();
+        $this->user = User::factory()
+            ->has(Provider::factory())
+            ->create();
         $this->category = Category::factory()->create();
         $this->provider = $this->user->provider;
-        $this->posts = (Post::factory()
+        $this->posts = Post::factory()
             ->count(10)
             ->sequence([
                 'category_slug' => $this->category->slug,
                 'provider_slug' => $this->provider->slug,
-                'liked' => fn () => random_int(1, 255),
+                'liked' => fn() => random_int(1, 255),
             ])
-            ->create())->sortByDesc('liked');
+            ->create()
+            ->sortByDesc('liked');
     }
 
     public function testUserCanGetPopularPostsByCategorySlug()
     {
         $this->getJson(self::BASE_URI . $this->category->slug)
-        ->assertOk()
-        ->assertJsonCount(5)
-        ->assertJsonFragment(['title' => $this->posts->first()->title]);
+            ->assertOk()
+            ->assertJsonCount(5)
+            ->assertJsonFragment(['title' => $this->posts->first()->title]);
     }
-    
+
     public function testUserCanGetPopularPostsByProviderSlug()
     {
         $this->getJson(self::BASE_URI . $this->provider->slug . '/provider')
-        ->assertOk()
-        ->assertJsonCount(5)
-        ->assertJsonFragment(['title' => $this->posts->first()->title]);
+            ->assertOk()
+            ->assertJsonCount(5)
+            ->assertJsonFragment(['title' => $this->posts->first()->title]);
+    }
+
+    public function testUserCanGetPopularPostsIfNoCategoryOrProvierWasRequested()
+    {
+        $this->getJson(self::BASE_URI)
+            ->assertOk()
+            ->assertJsonCount(5)
+            ->assertJsonFragment(['title' => $this->posts->first()->title]);
     }
 }
