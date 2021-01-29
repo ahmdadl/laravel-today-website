@@ -40,7 +40,7 @@
                         x-text='$store.common.formatNum(liked)'>
                     </span>
                     <span class="text-xl text-center">
-                        <x-button bg='red' icon='fas fa-thumbs-down' clear='1' id='dislike'
+                        <x-button class='disabled:cursor-not-allowed' bg='red' icon='fas fa-thumbs-down' clear='1' id='dislike'
                             x-on:click="liked >= 0 ? $store.post.like(slug, 'fa-thumbs-down', false).then(r => {if (r && liked >= 1) liked -= 1}) : null"
                             x-bind:disabled='liked < 1'>
                         </x-button>
