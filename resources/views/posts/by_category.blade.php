@@ -10,7 +10,9 @@
 
     <x-slot name='sidebar'>
         <div class='mt-5'>
-            @include('sidebar.search')
+            <div class='mt-10'>
+                @include('sidebar.search')
+            </div>
             @include('sidebar.popular', ['post' => $posts->first()])
             <div class='mt-10'>
                 @include('sidebar.copy', [
