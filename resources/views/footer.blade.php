@@ -9,6 +9,12 @@
             @include('footer.social')
         </div>
         <div class='my-5 text-center sm:my-3'>
+            <x-nav-link :href="route('add_provider')" class='px-2 font-bold text-green-400 border border-green-400 rounded'>
+                Submit a Provider
+            </x-nav-link>
+            <hr class='w-12 mx-auto border-gray-600' />
+            <br>
+            <br>
             Content &copy; to it`<small>s</small> own Writers
             <br>
             All rights reserved

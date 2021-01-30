@@ -1,5 +1,9 @@
 <x-sidebar-layout>
-    @include('posts.one', compact('posts'))
+    @include('posts.one', [
+        'posts' => $posts,
+        'provider' => $provider ?? null,
+        'owner' => $owner ?? null,
+    ])
 
     @if($posts->count() > 15)
     <div class='pt-6 mt-5'>
@@ -16,9 +20,7 @@
             @include('sidebar.popular', ['post' => $posts->first()])
             <div class='mt-10'>
                 @include('sidebar.copy', [
-                    'provider' => ($posts?->first() && !request()->is('category/*'))
-                    ? $posts->first()?->provider
-                    : null
+                    'provider' => $provider ?? null,
                     ])
             </div>
             @include('sidebar.providers')

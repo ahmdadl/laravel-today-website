@@ -6,8 +6,8 @@
 
             <div class="p-6">
                 <div>
-                    <a href='/{{ $post->provider->slug }}'
-                        class="px-2 py-1 text-xs font-medium text-white uppercase bg-red-600 rounded-full opacity-80 hover:opacity-100 hover:bg-red-800 hover:underline">{{ $post->provider->title }}</a>
+                    <a href='/{{ $provider?->slug ??$post->provider->slug }}'
+                        class="px-2 py-1 text-xs font-medium text-white uppercase bg-red-600 rounded-full opacity-80 hover:opacity-100 hover:bg-red-800 hover:underline">{{ $provider?->title ?? $post->provider->title }}</a>
                     <a href="{{ $post->url }}" target='_blank'
                         class="block mt-2 text-xl font-semibold text-gray-800 dark:text-white hover:text-gray-600 hover:underline">{{ $post->title }}</a>
                 </div>
@@ -16,11 +16,11 @@
                     <div class="flex items-center">
                         <div class="flex items-center">
                             <img class="object-cover w-10 h-10 rounded-full"
-                                src="{{ $post->provider->owner->image_url }}"
-                                alt="{{ $post->provider->owner->name }} Avatar">
-                            <a href="{{ $post->provider->owner->url }}" target='_blank'
+                                src="{{ $owner?->image_url ?? $post->provider->owner->image_url }}"
+                                alt="{{ $owner?->name ?? $post->provider->owner->name }} Avatar">
+                            <a href="{{ $owner?->url ?? $post->provider->owner->url }}" target='_blank'
                                 class="mx-2 text-sm font-semibold text-gray-700 dark:text-gray-200">{{
-                            $post->provider->owner->name}}</a>
+                            $owner?->name ?? $post->provider->owner->name}}</a>
                         </div>
                         <span class="mx-1 text-xs text-gray-700 dark:text-gray-300">
                             {{ $post->created_at->format('d M Y') }}

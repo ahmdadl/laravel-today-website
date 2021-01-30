@@ -27,8 +27,8 @@ class CreateProvidersTable extends Migration
                 ->index();
             $table->string("url");
             $table->string("request_url");
-            $table->string('image')->nullable();
-            $table->string('bio')->nullable();
+            // $table->string('image')->nullable();
+            $table->string('bio', 140)->nullable();
             // $table->unsignedBigInteger('author_id')->nullable();
         });
     }

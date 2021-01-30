@@ -1,11 +1,12 @@
 <?php
 
-use App\Http\Controllers\GetPostsByCategory;
+use App\Http\Controllers\Post\GetPostsByCategory;
 use App\Http\Controllers\Post\GetPopular;
 use App\Http\Controllers\Post\GetPostsByProvider;
 use App\Http\Controllers\Post\GetProviders;
 use App\Http\Controllers\Post\Index;
 use App\Http\Controllers\Post\Like;
+use App\Http\Controllers\ProviderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,6 +36,13 @@ Route::get('/category/{category}', GetPostsByCategory::class)->where(
 );
 
 Route::get('/providers', GetProviders::class);
+
+Route::get('/providers/create', [ProviderController::class, 'create'])->name(
+    'add_provider',
+);
+Route::post('/providers', [ProviderController::class, 'store'])->name(
+    'post_provider',
+);
 
 require __DIR__ . '/auth.php';
 

@@ -1,5 +1,5 @@
 <nav x-data="{ open: false }"
-    class="fixed top-0 left-0 z-10 w-full bg-blue-900 border-b border-green-300 dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600">
+    class="fixed top-0 left-0 z-10 w-full bg-blue-900 dark:bg-gray-700 dark:text-gray-200">
     <!-- Primary Navigation Menu -->
     <div class="px-4 mx-auto capitalize max-w-7xl sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -11,14 +11,14 @@
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
-                        Home
-                    </x-nav-link>
                     <x-nav-link href="/category/news" :active='request()->is("category/news")'>
                         News
                     </x-nav-link>
                     <x-nav-link href="/category/tutorial" :active="request()->is('category/tutorial')">
                         Tutorial
+                    </x-nav-link>
+                    <x-nav-link :href="route('add_provider')" :active="request()->routeIs('add_provider')" class='hidden font-bold md:flex'>
+                        Submit a Provider
                     </x-nav-link>
                 </div>
             </div>
@@ -51,14 +51,14 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('home')" :active="request()->routeIs('home')">
-                Home
-            </x-responsive-nav-link>
             <x-responsive-nav-link href="/category/news" :active="request()->is('category/news')">
                 News
             </x-responsive-nav-link>
             <x-responsive-nav-link href="/category/tutorial" :active="request()->is('category/tutorial')">
                 Tutorial
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('add_provider')" :active="request()->routeIs('add_provider')">
+                Submit a Provider
             </x-responsive-nav-link>
         </div>
     </div>

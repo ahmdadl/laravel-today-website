@@ -30,8 +30,8 @@ class ProviderFactory extends Factory
             'title' => $this->faker->words(2, true),
             'url' => $this->faker->url,
             'request_url' => '/' . $this->faker->word,
-            "image" => $imageUri . random_int(1, 9) . ".jpg",
-            'bio' => Str::limit($this->faker->paragraph)
+            // "image" => $imageUri . random_int(1, 9) . ".jpg",
+            'bio' => Str::limit($this->faker->paragraph, 140)
         ];
     }
 }

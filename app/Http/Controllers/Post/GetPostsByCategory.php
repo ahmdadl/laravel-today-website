@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Post;
 
+use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Post;
 use Artesaos\SEOTools\Facades\SEOMeta;
@@ -20,7 +21,8 @@ class GetPostsByCategory extends Controller
         SEOMeta::setTitle($category->title . ' Posts');
 
         return view('posts.by_category', [
-            'posts' => Post::whereCategorySlug($category->slug)
+            'posts' => Post::with('provider')
+                ->whereCategorySlug($category->slug)
                 ->orderByDesc('liked')
                 ->orderByDesc('created_at')
                 ->paginate(),
