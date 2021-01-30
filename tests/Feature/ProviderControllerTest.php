@@ -42,15 +42,16 @@ class ProviderControllerTest extends TestCase
                 'req_url',
             ]);
 
-        // assert user cannot reregister provider again
+        // assert user cannot register provider twice
         $this->user->save();
         $this->provider->save();
         $this->post(self::BASE_URI, [
             'title' => $this->provider->title,
             'email' => $this->user->email,
+            'req_url' => $this->provider->request_url,
         ])
             ->assertStatus(302)
-            ->assertSessionHasErrors(['title', 'email']);
+            ->assertSessionHasErrors(['title', 'email', 'req_url']);
     }
 
     public function testUserCanAddAProvider()
@@ -76,4 +77,36 @@ class ProviderControllerTest extends TestCase
                 ->exists(),
         );
     }
+
+    public function testUserCannotCheckForProviderStatusWithInvalidData()
+    {
+        $this->postJson(self::BASE_URI . 'check', [])
+            ->assertStatus(422)
+            ->assertJsonFragment(['title' => ['The title field is required.']]);
+    }
+
+    public function testUserCanCheckForProviderStatus()
+    {
+        $this->provider->save();
+
+        $this->postJson(self::BASE_URI . 'check', [
+            'title' => strtoupper($this->provider->title),
+            'req_url' => $this->provider->request_url,
+        ])->assertOk()->assertJsonFragment(['status' => 'pending']);
+
+        $this->provider->setStatus(Provider::APPROVED);
+        $this->postJson(self::BASE_URI . 'check', [
+            'title' => $this->provider->title,
+            'req_url' => $this->provider->request_url,
+        ])->assertOk()->assertJsonFragment(['status' => 'approved']);
+    }
+    
+    public function testUserCannotCheckForProviderStatusIfNotFound()
+    {
+        $this->postJson(self::BASE_URI . 'check', [
+            'title' => $this->provider->title,
+            'req_url' => $this->provider->request_url,
+        ])->assertStatus(204);
+    }
+    
 }

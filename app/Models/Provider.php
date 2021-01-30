@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
+use Exception;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
@@ -20,6 +21,10 @@ class Provider extends Model
     public $timestamps = false;
 
     protected $guarded = [];
+
+    protected $casts = [
+        'status' => 'int',
+    ];
 
     protected $hidden = [
         'id',
@@ -56,6 +61,16 @@ class Provider extends Model
         return is_null($this->image) || empty($this->image)
             ? "https://images.test/users/8.jpg"
             : $this->image;
+    }
+
+    public function getStateAttribute(): string
+    {
+        return match($this->status) {
+            self::PENDING => 'pending',
+            self::APPROVED => 'approved',
+            self::Rejected => 'rejected',
+            default => throw new Exception('status not found')
+        };
     }
 
     public function isPending(): bool

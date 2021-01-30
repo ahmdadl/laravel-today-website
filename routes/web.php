@@ -35,14 +35,20 @@ Route::get('/category/{category}', GetPostsByCategory::class)->where(
     "^[a-z0-9]+(?:-[a-z0-9]+)*$",
 );
 
-Route::get('/providers', GetProviders::class);
+Route::prefix('/providers')->group(function () {
+    Route::get('', GetProviders::class);
 
-Route::get('/providers/create', [ProviderController::class, 'create'])->name(
-    'add_provider',
-);
-Route::post('/providers', [ProviderController::class, 'store'])->name(
-    'post_provider',
-);
+    Route::get('/create', [ProviderController::class, 'create'])->name(
+        'add_provider',
+    );
+
+    Route::post('', [ProviderController::class, 'store'])->name(
+        'post_provider',
+    );
+
+    Route::get('/check', [ProviderController::class, 'checkState']);
+    Route::post('/check', [ProviderController::class, 'checkState']);
+});
 
 require __DIR__ . '/auth.php';
 

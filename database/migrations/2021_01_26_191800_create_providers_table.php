@@ -20,14 +20,14 @@ class CreateProvidersTable extends Migration
                 ->foreignId('user_id')
                 ->constrained()
                 ->onDelete('cascade');
-            $table->string('title', 50)->unique();
+            $table->string('title', 50)->unique()->index();
             $table
                 ->string('slug')
                 ->unique()
                 ->nullable()
                 ->index();
             $table->string('url');
-            $table->string('request_url');
+            $table->string('request_url')->unique()->index();
             $table->string('bio', 140)->nullable();
             $table
                 ->unsignedTinyInteger('status')

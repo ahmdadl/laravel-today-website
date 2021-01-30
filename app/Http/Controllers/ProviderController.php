@@ -9,6 +9,17 @@ use Illuminate\Http\Request;
 
 class ProviderController extends Controller
 {
+    protected array $rules = [
+        'name' => 'required|string|min:3|max:50',
+        'email' => 'required|email|unique:users,email',
+        'avatar' => 'sometimes|url',
+        'profile' => 'sometimes|url',
+        'title' => 'required|string|min:3|max:50|unique:providers,title',
+        'home_url' => 'required|url',
+        'req_url' => 'required|url|unique:providers,request_url',
+        'bio' => 'sometimes|min:10|max:140',
+    ];
+
     /**
      * Display a listing of the resource.
      *
@@ -37,16 +48,7 @@ class ProviderController extends Controller
      */
     public function store(Request $request)
     {
-        $res = (object) request()->validate([
-            'name' => 'required|string|min:3|max:50',
-            'email' => 'required|email|unique:users,email',
-            'avatar' => 'sometimes|url',
-            'profile' => 'sometimes|url',
-            'title' => 'required|string|min:3|max:50|unique:providers,title',
-            'home_url' => 'required|url',
-            'req_url' => 'required|url',
-            'bio' => 'sometimes|min:10|max:140',
-        ]);
+        $res = (object) request()->validate($this->rules);
 
         $user = User::create([
             'name' => $res->name,
@@ -56,14 +58,12 @@ class ProviderController extends Controller
             'password' => Hash::make(bin2hex(random_bytes(8))),
         ]);
 
-        $user
-            ->provider()
-            ->create([
-                'title' => $res->title,
-                'url' => $res->home_url,
-                'request_url' => $res->req_url,
-                'bio' => $res->bio,
-            ]);
+        $user->provider()->create([
+            'title' => strtolower($res->title),
+            'url' => $res->home_url,
+            'request_url' => $res->req_url,
+            'bio' => $res->bio,
+        ]);
 
         return view('provider.created');
     }
@@ -74,32 +74,33 @@ class ProviderController extends Controller
      * @param  \App\Models\Provider  $provider
      * @return \Illuminate\Http\Response
      */
-    public function show(Provider $provider)
+    public function show()
     {
-        //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Provider  $provider
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Provider $provider)
+    public function checkState(Request $request)
     {
-        //
-    }
+        if ($request->wantsJson()) {
+            $res = (object) request()->validate([
+                'title' => 'required|string|min:3|max:50',
+                'req_url' => 'required|url',
+            ]);
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Provider  $provider
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Provider $provider)
-    {
-        //
+            $res->title = strtolower($res->title);
+
+            $provider = Provider::whereRaw('LOWER(title) like ? ')
+                ->addBinding("%{$res->title}%")
+                ->whereRequestUrl($res->req_url)
+                ->first();
+
+            if (null === $provider) {
+                return response()->noContent();
+            }
+
+            return response()->json(['status' => $provider->state]);
+        }
+
+        return view('provider.check');
     }
 
     /**

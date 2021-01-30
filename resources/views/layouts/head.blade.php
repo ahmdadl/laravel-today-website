@@ -4,8 +4,13 @@
 <meta name="author" content="Ahmed Adel">
 {!! SEOMeta::generate(true) !!}
 {{-- <title>{{ config('app.name', 'Laravel') }}</title> --}}
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="preload" as='style'
+<style>
+    [x-cloak] {
+        display: none;
+    }
+</style>
+{{-- <link rel="preconnect" href="https://fonts.gstatic.com"> --}}
+{{-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="preload" as='style' --}}
     onload="this.onload=null; this.rel='stylesheet'">
 
 <script>
@@ -23,6 +28,6 @@
 
 <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
-<script src="https://cdn.jsdelivr.net/gh/alpine-collective/alpine-magic-helpers@0.5.x/dist/component.min.js" defer>
-</script>
+{{-- <script src="https://cdn.jsdelivr.net/gh/alpine-collective/alpine-magic-helpers@0.5.x/dist/component.min.js" defer>
+</script> --}}
 <script src="{{ mix('js/app.js') }}" defer></script>

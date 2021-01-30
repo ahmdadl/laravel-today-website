@@ -63,4 +63,15 @@ class ProviderTest extends TestCase
         $this->assertTrue($this->provider->isRejected());
     }
     
+    public function testProviderHaveGetState()
+    {
+        $this->assertTrue($this->provider->isPending());
+        $this->assertSame('pending', $this->provider->state);
+
+        $this->provider->setStatus(Provider::Rejected);
+
+        $this->assertTrue($this->provider->isRejected());
+        $this->assertSame('rejected', $this->provider->state);
+    }
+    
 }
