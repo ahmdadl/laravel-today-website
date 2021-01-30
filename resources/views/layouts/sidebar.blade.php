@@ -21,6 +21,7 @@
                 </div>
             </div>
         </main>
+        @include('footer')
     </div>
     <x-toast></x-toast>
 </body>
