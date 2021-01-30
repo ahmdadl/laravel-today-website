@@ -155,5 +155,6 @@ window.Spruce.store('common', {
           }
         }
         return (num / si[i].value).toFixed(1).replace(rx, "$1") + si[i].symbol;
-      }
+      },
+      testUrl: (url: string): boolean => /^(http|https):\/\/[^ "]+$/.test(url),
 });

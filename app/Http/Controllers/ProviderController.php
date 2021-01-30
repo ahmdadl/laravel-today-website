@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Provider;
+use App\Models\User;
+use Hash;
 use Illuminate\Http\Request;
 
 class ProviderController extends Controller
@@ -35,7 +37,33 @@ class ProviderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $res = (object) request()->validate([
+            'name' => 'required|string|min:3|max:50',
+            'email' => 'required|email|unique:users,email',
+            'avatar' => 'sometimes|url',
+            'profile' => 'sometimes|url',
+            'title' => 'required|string|min:3|max:50|unique:providers,title',
+            'home_url' => 'required|url',
+            'req_url' => 'required|url',
+            'bio' => 'sometimes|min:10|max:140',
+        ]);
+
+        $user = User::create([
+            'name' => $res->name,
+            'email' => $res->email,
+            'image' => $res->avatar,
+            'url' => $res->profile,
+            'password' => Hash::make(bin2hex(random_bytes(8))),
+        ]);
+
+        $provider = $user
+            ->provider()
+            ->create([
+                'title' => $res->title,
+                'url' => $res->home_url,
+                'request_url' => $res->req_url,
+                'bio' => $res->bio,
+            ]);
     }
 
     /**

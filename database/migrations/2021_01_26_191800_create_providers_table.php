@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Provider;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -13,23 +14,25 @@ class CreateProvidersTable extends Migration
      */
     public function up()
     {
-        Schema::create("providers", function (Blueprint $table) {
+        Schema::create('providers', function (Blueprint $table) {
             $table->id();
             $table
-                ->foreignId("user_id")
+                ->foreignId('user_id')
                 ->constrained()
-                ->onDelete("cascade");
-            $table->string("title")->unique();
+                ->onDelete('cascade');
+            $table->string('title', 50)->unique();
             $table
-                ->string("slug")
+                ->string('slug')
                 ->unique()
                 ->nullable()
                 ->index();
-            $table->string("url");
-            $table->string("request_url");
-            // $table->string('image')->nullable();
+            $table->string('url');
+            $table->string('request_url');
             $table->string('bio', 140)->nullable();
-            // $table->unsignedBigInteger('author_id')->nullable();
+            $table
+                ->unsignedTinyInteger('status')
+                ->default(Provider::PENDING)
+                ->index();
         });
     }
 
@@ -40,6 +43,6 @@ class CreateProvidersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists("providers");
+        Schema::dropIfExists('providers');
     }
 }

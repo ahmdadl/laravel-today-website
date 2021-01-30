@@ -29,9 +29,10 @@ class ProviderFactory extends Factory
             'user_id' => fn () => User::factory()->create()->id,
             'title' => $this->faker->words(2, true),
             'url' => $this->faker->url,
-            'request_url' => '/' . $this->faker->word,
+            'request_url' => $this->faker->url,
             // "image" => $imageUri . random_int(1, 9) . ".jpg",
-            'bio' => Str::limit($this->faker->paragraph, 140)
+            'bio' => Str::limit($this->faker->paragraph, 130),
+            'status' => Provider::PENDING,
         ];
     }
 }

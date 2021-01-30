@@ -44,4 +44,23 @@ class ProviderTest extends TestCase
         );
     }
     
+    public function testProviderHasState()
+    {
+        $this->assertIsInt($this->provider->status);
+        
+        $this->assertArrayNotHasKey('status', $this->provider->toArray());
+
+        $this->assertTrue($this->provider->isPending());
+    }
+    
+    public function testProviderStateCanBeUpdated()
+    {
+        $this->assertTrue($this->provider->isPending());
+
+        $this->provider->setStatus(Provider::Rejected);
+
+        $this->assertFalse($this->provider->isPending());
+        $this->assertTrue($this->provider->isRejected());
+    }
+    
 }

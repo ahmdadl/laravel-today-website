@@ -4009,6 +4009,9 @@ window.Spruce.store('common', {
     }
 
     return (num / si[i].value).toFixed(1).replace(rx, "$1") + si[i].symbol;
+  },
+  testUrl: function testUrl(url) {
+    return /^(http|https):\/\/[^ "]+$/.test(url);
   }
 });
 
