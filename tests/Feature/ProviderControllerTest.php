@@ -65,7 +65,9 @@ class ProviderControllerTest extends TestCase
             'home_url' => $this->provider->url,
             'req_url' => $this->provider->request_url,
             'bio' => $this->provider->bio,
-        ])->assertSessionDoesntHaveErrors();
+        ])
+            ->assertSessionDoesntHaveErrors()
+            ->assertViewIs('provider.created');
 
         $this->assertTrue(User::whereEmail($this->user->email)->exists());
         $this->assertTrue(

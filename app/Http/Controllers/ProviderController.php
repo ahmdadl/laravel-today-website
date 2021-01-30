@@ -56,7 +56,7 @@ class ProviderController extends Controller
             'password' => Hash::make(bin2hex(random_bytes(8))),
         ]);
 
-        $provider = $user
+        $user
             ->provider()
             ->create([
                 'title' => $res->title,
@@ -64,6 +64,8 @@ class ProviderController extends Controller
                 'request_url' => $res->req_url,
                 'bio' => $res->bio,
             ]);
+
+        return view('provider.created');
     }
 
     /**
