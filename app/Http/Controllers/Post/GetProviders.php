@@ -22,7 +22,9 @@ class GetProviders extends Controller
             Cache::remember(
                 'providers',
                 now()->addDay(),
-                fn() => Provider::withCount('posts')->get(),
+                fn() => Provider::withCount('posts')
+                    ->whereStatus(Provider::APPROVED)
+                    ->get(),
             ),
         );
     }

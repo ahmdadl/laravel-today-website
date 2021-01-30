@@ -18,13 +18,23 @@ class GetProvidersTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
-    
-        $this->providers = Provider::factory()->count(6)->has(Post::factory())->create();
+
+        $this->providers = Provider::factory()
+            ->count(6)
+            ->has(Post::factory())
+            ->create();
     }
 
-    public function testUserCanGetProvidersList()
+    public function testUserWillOnlyGetApprovedProviders()
     {
-        $this->get('/providers')->assertOk()->assertJsonCount(6)->assertJsonFragment(['title' => $this->providers->first()->title]);
+        $providers = Provider::factory()
+            ->count(2)
+            ->create(['status' => Provider::APPROVED]);
+
+        $this->get('/providers')
+            ->assertOk()
+            ->assertJsonCount(2)
+            ->assertJsonFragment(['title' => $providers->first()->title])
+            ->assertJsonMissing(['title' => $this->providers->first()->title]);
     }
-    
 }
