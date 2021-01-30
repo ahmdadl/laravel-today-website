@@ -23,7 +23,7 @@ class PostSeeder extends Seeder
 
         Provider::all()->each(function (Provider $provider) use ($categories) {
             Post::factory()
-                ->count(random_int(1, 9))
+                ->count(random_int(10, 31))
                 ->create([
                     'category_slug' => $categories->random()->slug,
                     'provider_slug' => $provider->slug,
