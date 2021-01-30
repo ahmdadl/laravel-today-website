@@ -25,6 +25,9 @@ class CreatePostsTable extends Migration
             $table->timestamps();
             $table->dateTime("scraped_at")->useCurrent();
             $table->unsignedInteger('liked')->default(0);
+            $table->string('author')->nullable();
+            $table->string('author_img')->nullable();
+            $table->string('author_url')->nullable();
 
             $table
                 ->foreign("category_slug")

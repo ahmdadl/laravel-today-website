@@ -16,11 +16,12 @@
                     <div class="flex items-center">
                         <div class="flex items-center">
                             <img class="object-cover w-10 h-10 rounded-full"
-                                src="{{ $owner?->image_url ?? $post->provider->owner->image_url }}"
+                                src="{{ $post?->author_img ?? 
+                                $owner?->image_url ?? $post->provider->owner->image_url }}"
                                 alt="{{ $owner?->name ?? $post->provider->owner->name }} Avatar">
-                            <a href="{{ $owner?->url ?? $post->provider->owner->url }}" target='_blank'
+                            <a href="{{ $post?->author_url ?? $owner?->url ?? $post->provider->owner->url }}" target='_blank'
                                 class="mx-2 text-sm font-semibold text-gray-700 dark:text-gray-200">{{
-                            $owner?->name ?? $post->provider->owner->name}}</a>
+                            $post?->author ?? $owner?->name ?? $post->provider->owner->name}}</a>
                         </div>
                         <span class="mx-1 text-xs text-gray-700 dark:text-gray-300">
                             {{ $post->created_at->format('d M Y') }}

@@ -25,9 +25,10 @@ class PostFactory extends Factory
      */
     public function definition()
     {
+        $hasAuthor = !!random_int(0, 1);
         $imageUri = "https://images.test/posts/";
+        $userImagesUri = "https://images.test/users/";
         return [
-            // "user_id" => fn() => User::factory()->create()->id,
             "provider_slug" => fn() => Provider::factory()->create()->slug,
             "category_slug" => fn() => Category::factory()->create()->slug,
             "title" => $this->faker->sentence,
@@ -35,6 +36,9 @@ class PostFactory extends Factory
             "url" => $this->faker->url,
             "image" => $imageUri . random_int(1, 16) . ".jpg",
             'liked' => random_int(500, 90000),
+            'author' => $hasAuthor ? $this->faker->name : null,
+            'author_img' => $hasAuthor ? $userImagesUri . random_int(1, 8) . ".jpg" : null,
+            'author_url' => $hasAuthor ? $this->faker->url . '/byMe' : null,
         ];
     }
 }
