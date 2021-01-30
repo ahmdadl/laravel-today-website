@@ -18,20 +18,25 @@ class Index extends Controller
      */
     public function __invoke()
     {
-        $posts = Post::with('provider')
-            ->orderByDesc('liked')
-            ->orderByDesc('created_at');
-
         if (request('q')) {
-            return $this->search($posts);
+            return $this->search(
+                $this->getPostBuilder('liked')->orderByDesc('created_at'),
+            );
         }
 
-        return view('index', [
-            'posts' => $posts->paginate(),
-        ]);
+        $news = $this->getPostBuilder()
+            ->whereCategorySlug('news')
+            ->limit(8)
+            ->get();
+        $tut = $this->getPostBuilder()
+            ->limit(8)
+            ->whereCategorySlug('tutorial')
+            ->get();
+
+        return view('index', compact('news', 'tut'));
     }
 
-    public function search(Builder $posts): View
+    private function search(Builder $posts): View
     {
         ['q' => $q] = request()->validate([
             'q' => 'required|string|min:3|max:255',
@@ -39,9 +44,14 @@ class Index extends Controller
 
         $posts = $posts
             ->where('title', 'LIKE', "%$q%")
-            ->orWhere('provider_slug', 'LIKE', "%". Str::slug($q) ."%")
+            ->orWhere('provider_slug', 'LIKE', '%' . Str::slug($q) . '%')
             ->paginate();
 
         return view('posts.by_category', compact('posts'));
+    }
+
+    private function getPostBuilder(string $orderBy = 'created_at'): Builder
+    {
+        return Post::with('provider')->orderByDesc($orderBy);
     }
 }

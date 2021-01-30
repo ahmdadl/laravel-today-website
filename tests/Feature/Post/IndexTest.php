@@ -21,7 +21,7 @@ class IndexTest extends TestCase
     {
         parent::setUp();
 
-        $this->category = Category::factory()->create();
+        $this->category = Category::factory()->create(['title' => 'news']);
         $this->posts = Post::factory()
             ->count(5)
             ->sequence([
@@ -44,7 +44,7 @@ class IndexTest extends TestCase
         $providerTitle = $post->provider->title;
         $this->get('/?q=' . $providerTitle)
             ->assertOk()
-            ->assertDontSee('we could not found any posts in this category')
+            ->assertDontSee('we could not found any posts')
             ->assertSee($providerTitle)
             ->assertSee($post->title)
             ->assertViewIs('posts.by_category');
@@ -54,7 +54,8 @@ class IndexTest extends TestCase
     {
         $this->get('/')
             ->assertOk()
-            ->assertSee($this->posts->last()->title)
-            ->assertViewIs('posts.index');
+            ->assertSee('Latest News')
+            ->assertSee($this->posts->first()->title)
+            ->assertViewIs('index');
     }
 }
