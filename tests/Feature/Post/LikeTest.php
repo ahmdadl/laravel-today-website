@@ -17,7 +17,9 @@ class LikeTest extends TestCase
     {
         parent::setUp();
 
-        $this->post = Post::factory()->create();
+        $this->post = Post::factory()->create([
+            'liked' => 0
+        ]);
     }
 
     public function testPostCanBeLiked()

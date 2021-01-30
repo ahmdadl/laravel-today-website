@@ -33,9 +33,10 @@ class IndexTest extends TestCase
     public function testUserCanSearchForPostsOrProviders()
     {
         $title = $this->posts->shuffle(1)->first()->title;
+
         $this->get('/?q=' . Str::substr($title, 3, 9))
             ->assertOk()
-            ->assertDontSee('we could not found any posts in this category')
+            ->assertDontSee('we could not found any posts')
             ->assertSee($title)
             ->assertViewIs('posts.by_category');
 

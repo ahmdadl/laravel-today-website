@@ -43,7 +43,7 @@ class GetPostByCategoryTest extends TestCase
 
         $this->get(self::BASE_URI . $cat->slug)
             ->assertOk()
-            ->assertSee('we could not found any posts in this category')
+            ->assertSee('we could not found any posts')
             ->assertViewIs('posts.by_category');
     }
 

@@ -14,7 +14,7 @@
             @include('sidebar.popular', ['post' => $posts->first()])
             <div class='mt-10'>
                 @include('sidebar.copy', [
-                    'provider' => request()->is('provider/*')
+                    'provider' => ($posts?->first() && !request()->is('category/*'))
                     ? $posts->first()?->provider
                     : null
                     ])

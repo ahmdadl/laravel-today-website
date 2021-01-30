@@ -52,6 +52,6 @@
 
 @if(!$posts->count())
     <div class='mx-auto text-center sm:w-3/4 md:w-1/2 alert alert-danger'>
-        we could not found any posts in this category
+        we could not found any posts
     </div>
 @endif
