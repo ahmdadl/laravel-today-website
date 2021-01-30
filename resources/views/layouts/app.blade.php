@@ -10,6 +10,8 @@
     <div class="min-h-screen">
         @include('layouts.navigation')
 
+        {{$header ?? ''}}
+
         <main class="px-1 py-4 mt-16 sm:px-2 lg:px-3">
             {{ $slot }}
         </main>

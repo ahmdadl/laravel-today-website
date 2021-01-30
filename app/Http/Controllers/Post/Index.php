@@ -26,7 +26,7 @@ class Index extends Controller
             return $this->search($posts);
         }
 
-        return view('posts.index', [
+        return view('index', [
             'posts' => $posts->paginate(),
         ]);
     }
