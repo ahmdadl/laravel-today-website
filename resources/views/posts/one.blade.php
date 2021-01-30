@@ -6,7 +6,7 @@
 
             <div class="p-6">
                 <div>
-                    <a href='/provider/{{ $post->provider->slug }}'
+                    <a href='/{{ $post->provider->slug }}'
                         class="px-2 py-1 text-xs font-medium text-white uppercase bg-red-600 rounded-full opacity-80 hover:opacity-100 hover:bg-red-800 hover:underline">{{ $post->provider->title }}</a>
                     <a href="{{ $post->url }}" target='_blank'
                         class="block mt-2 text-xl font-semibold text-gray-800 dark:text-white hover:text-gray-600 hover:underline">{{ $post->title }}</a>
