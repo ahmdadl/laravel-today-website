@@ -7,7 +7,9 @@ use App\Models\Post;
 use App\Models\Provider;
 use Carbon\Carbon;
 use Goutte\Client;
+use Illuminate\Database\QueryException;
 use InvalidArgumentException;
+use PDOException;
 use Symfony\Component\DomCrawler\Crawler;
 use Symfony\Component\DomCrawler\UriResolver;
 
@@ -46,19 +48,21 @@ abstract class AbstractScraper
 
     public function run(): void {
         $arr = array_filter($this->extract(), fn ($i) => !is_null($i));
-        
+
         foreach ($arr as $p) {
-            Post::create([
-                'category_slug' => $this->category->slug,
-                'provider_slug' => $this->provider->slug,
-                'title' => $p->title,
-                'url' => $p->url,
-                'image' => $p->image,
-                'created_at' => $p->created_at,
-                'author' => $p->author?->name,
-                'author_url' => $p->author?->uri,
-                'author_img' => $p->author?->img,
-            ]);
+            try {
+                Post::create([
+                    'category_slug' => $this->category->slug,
+                    'provider_slug' => $this->provider->slug,
+                    'title' => $p->title,
+                    'url' => $p->url,
+                    'image' => $p->image,
+                    'created_at' => $p->created_at,
+                    'author' => $p->author?->name,
+                    'author_url' => $p->author?->uri,
+                    'author_img' => $p->author?->img,
+                ]);
+            } catch (QueryException | PDOException) {}
         }
     }
 

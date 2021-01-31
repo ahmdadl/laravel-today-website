@@ -17,7 +17,7 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->string("provider_slug");
             $table->string("category_slug");
-            $table->string("title");
+            $table->string("title")->unique();
             $table->string("slug")->nullable()->index();
             // $table->string("content")->default("");
             $table->string("url");
