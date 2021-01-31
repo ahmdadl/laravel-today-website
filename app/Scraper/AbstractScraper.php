@@ -32,10 +32,12 @@ abstract class AbstractScraper
     private function getInstance(): void
     {
         if ($this->isTest) {
+            $fileName = 'tests/sites/'. $this->provider->slug .'.txt';
+            if (!file_exists($fileName)) return;
             $this->crawler = new Crawler();
-            // $this->crawler->addHtmlContent(file_get_contents(
-            //     base_path('tests/sites/'. $this->provider->slug .'.txt')
-            // ));
+            $this->crawler->addHtmlContent(file_get_contents(
+                base_path($fileName)
+            ));
             return;
         }
 
