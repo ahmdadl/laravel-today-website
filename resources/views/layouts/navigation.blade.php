@@ -1,5 +1,4 @@
-<nav x-data="{ open: false }"
-    class="fixed top-0 left-0 z-10 w-full bg-blue-900 dark:bg-gray-700 dark:text-gray-200">
+<nav x-data="{ open: false }" class="fixed top-0 left-0 z-10 w-full bg-blue-900 dark:bg-gray-700 dark:text-gray-200">
     <!-- Primary Navigation Menu -->
     <div class="px-4 mx-auto capitalize max-w-7xl sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -17,7 +16,8 @@
                     <x-nav-link href="/category/tutorial" :active="request()->is('category/tutorial')">
                         Tutorial
                     </x-nav-link>
-                    <x-nav-link :href="route('add_provider')" :active="request()->routeIs('add_provider')" class='hidden font-bold md:flex'>
+                    <x-nav-link :href="route('add_provider')" :active="request()->routeIs('add_provider')"
+                        class='hidden font-bold md:flex'>
                         Submit a Provider
                     </x-nav-link>
                 </div>
@@ -26,18 +26,35 @@
             <x-theme-toggler></x-theme-toggler>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
-                <x-nav-link href="https://abo3adel.github.io/" target='_blank'>
-                    <img class='inline-block object-cover w-10 h-10 mx-1 rounded-full' src='https://images.test/users/2.jpg'
-                        alt='Ahmed Adel Profile Image' />
-                    <span class='inline-block'>Ahmed Adel</span>
-                </x-nav-link>
+                @can('browse_admin')
+                    <x-nav-link href="/admin">
+                        <img class='inline-block object-cover w-10 h-10 mx-1 rounded-full'
+                            src='https://images.test/users/2.jpg' alt='Ahmed Adel Profile Image' />
+                    </x-nav-link>
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+
+                        <x-nav-link class='bg-red-600 rounded' href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                    this.closest('form').submit();">
+
+                            {{ __('Logout') }}
+                        </x-nav-link>
+                    </form>
+                @else
+                    <x-nav-link href="https://abo3adel.github.io/" target='_blank'>
+                        <img class='inline-block object-cover w-10 h-10 mx-1 rounded-full'
+                            src='https://images.test/users/2.jpg' alt='Ahmed Adel Profile Image' />
+                        <span class='inline-block'>Ahmed Adel</span>
+                    </x-nav-link>
+                @endcan
             </div>
 
             <div class="flex items-center -mr-2 sm:hidden">
                 <button @click="open = ! open"
-                    class="inline-flex items-center justify-center text-gray-300 transition duration-500 ease-in-out border-4 border-transparent rounded-full w-13 h-13 hover:border-gray-200 focus:outline-none" :class='{"border-gray-200": open}'>
-                    <img class='inline-block object-cover w-full h-full mx-1 rounded-full' src='https://images.test/users/2.jpg'
-                        alt='Ahmed Adel Profile Image' />
+                    class="inline-flex items-center justify-center text-gray-300 transition duration-500 ease-in-out border-4 border-transparent rounded-full w-13 h-13 hover:border-gray-200 focus:outline-none"
+                    :class='{"border-gray-200": open}'>
+                    <img class='inline-block object-cover w-full h-full mx-1 rounded-full'
+                        src='https://images.test/users/2.jpg' alt='Ahmed Adel Profile Image' />
                 </button>
             </div>
         </div>

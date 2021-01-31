@@ -21,16 +21,6 @@ class ProviderController extends Controller
     ];
 
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -68,16 +58,6 @@ class ProviderController extends Controller
         return view('provider.created');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Provider  $provider
-     * @return \Illuminate\Http\Response
-     */
-    public function show()
-    {
-    }
-
     public function checkState(Request $request)
     {
         if ($request->wantsJson()) {
@@ -101,16 +81,5 @@ class ProviderController extends Controller
         }
 
         return view('provider.check');
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Provider  $provider
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Provider $provider)
-    {
-        //
     }
 }
