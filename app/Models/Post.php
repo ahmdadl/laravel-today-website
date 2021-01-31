@@ -13,6 +13,8 @@ class Post extends Model
     use HasFactory;
     use sluggable;
 
+    protected $guarded = [];
+
     protected $casts = [
         'liked' => 'int'
     ];

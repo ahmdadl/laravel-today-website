@@ -10,10 +10,6 @@ use Symfony\Component\DomCrawler\Crawler;
 
 final class LaravelNews extends AbstractScraper
 {
-    protected string $baseUri = "https://laravel-news.com";
-    protected string $requestUri = "https://laravel-news.com/category/news";
-    protected int $authorId = 1;
-
     protected function extract(): array
     {
         return $this->crawler
@@ -31,18 +27,19 @@ final class LaravelNews extends AbstractScraper
                         ?->last()
                         ?->text() . " 00:00" ?? Carbon::now()
                 );
-                $author = $this->findEl($node, ".author__content > h4 > a")?->first();
+                $author = $this->findEl($node, '.post__author')?->first();
+                $authorLink = $this->findEl($author, ".author__content > h4 > a")?->first();
 
                 return $this->item(
                     $link?->text(),
                     $this->resolveUri($link?->attr("href")),
                     $created_at,
                     Str::substr($img ?? "", 0, strpos($img ?? "", "?")),
-                    "",
                     !is_null($author)
                         ? (object) [
-                            "name" => $author->text("null"),
-                            "uri" => $this->resolveUri($author->attr("href")),
+                            "name" => $authorLink->text("null"),
+                            "uri" => $this->resolveUri($authorLink->attr("href")),
+                            'img' => $this->findEl($author, "img")?->first()?->attr('src'),
                         ]
                         : null
                 );

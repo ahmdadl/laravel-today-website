@@ -2,24 +2,29 @@
 
 namespace App\Scraper;
 
+use App\Models\Category;
+use App\Models\Post;
+use App\Models\Provider;
 use Carbon\Carbon;
 use Goutte\Client;
 use InvalidArgumentException;
 use Symfony\Component\DomCrawler\Crawler;
 use Symfony\Component\DomCrawler\UriResolver;
 
-use function PHPUnit\Framework\returnSelf;
-
 abstract class AbstractScraper
 {
     protected Client $goutte;
     protected Crawler $crawler;
 
-    protected string $baseUri;
-    protected string $requestUri;
-    protected int $authorId;
+    // protected string $baseUri;
+    // protected string $requestUri;
+    // protected int $authorId;
 
-    public function __construct(protected bool $isTest = false) {
+    public function __construct(
+        protected Category $category,
+        protected Provider $provider,
+        protected bool $isTest = false
+    ) {
         $this->goutte = app('goutte');
         $this->getInstance();
     }
@@ -34,14 +39,25 @@ abstract class AbstractScraper
             return;
         }
 
-        $this->crawler = $this->goutte->request('GET', $this->requestUri);
+        $this->crawler = $this->goutte->request('GET', $this->provider->request_url);
     }
 
-    public function run(): ?array {
+    public function run(): void {
         $arr = array_filter($this->extract(), fn ($i) => !is_null($i));
         
-        if ($this->isTest) return $arr;
-        return $arr;
+        foreach ($arr as $p) {
+            Post::create([
+                'category_slug' => $this->category->slug,
+                'provider_slug' => $this->provider->slug,
+                'title' => $p->title,
+                'url' => $p->url,
+                'image' => $p->image,
+                'created_at' => $p->created_at,
+                'author' => $p->author?->name,
+                'author_url' => $p->author?->uri,
+                'author_img' => $p->author?->img,
+            ]);
+        }
     }
 
     protected function item(
@@ -49,15 +65,14 @@ abstract class AbstractScraper
         string $url,
         string $created_at,
         ?string $image = null,
-        ?string $content = '',
         ?object $author = null
     ): object {
-        return (object) compact('title', 'url', 'image', 'content', 'created_at', 'author');
+        return (object) compact('title', 'url', 'image', 'created_at', 'author');
     }
 
     protected function resolveUri(?string $uri = ''): string
     {
-        return UriResolver::resolve($uri, $this->requestUri);
+        return UriResolver::resolve($uri, $this->provider->request_url);
     }
 
     protected function findEl(Crawler $node, string $selector): ?Crawler
