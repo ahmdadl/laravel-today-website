@@ -519,7 +519,7 @@ Header style 1
         </h1>            </div>
                             <div class="td-header-sp-recs">
                     <div class="td-header-rec-wrap">
-    <div class="td-a-rec td-a-rec-id-header  td_uid_1_6016c12a87553_rand td_block_template_1"><div class="td-all-devices"><a href="/weekly-laravel-newsletter?utm_source=internal&amp;utm_campaign=top_banner"><img src="/wp-content/uploads/2018/12/laravel-articles.png"></a></div></div>
+    <div class="td-a-rec td-a-rec-id-header  td_uid_1_6016dfa90de4d_rand td_block_template_1"><div class="td-all-devices"><a href="/weekly-laravel-newsletter?utm_source=internal&amp;utm_campaign=top_banner"><img src="/wp-content/uploads/2018/12/laravel-articles.png"></a></div></div>
 </div>                </div>
                     </div>
     </div>
@@ -568,14 +568,14 @@ Header style 1
 </div>        
             <div class="td-main-content-wrap td-main-page-wrap td-container-wrap">
                 <div class="tdc-content-wrap">
-                    <div id="td_uid_1_6016c12a880b5" class="tdc-row"><div class="vc_row td_uid_2_6016c12a880ba_rand  wpb_row td-pb-row">
+                    <div id="td_uid_1_6016dfa90ea73" class="tdc-row"><div class="vc_row td_uid_2_6016dfa90ea79_rand  wpb_row td-pb-row">
 <style scoped>
 
 /* custom css */
-.td_uid_2_6016c12a880ba_rand {
+.td_uid_2_6016dfa90ea79_rand {
                     min-height: 0;
                 }
-</style><div class="vc_column td_uid_3_6016c12a881ca_rand  wpb_column vc_column_container tdc-column td-pb-span12"><div class="wpb_wrapper"><div class="td_block_wrap td_block_big_grid_3 td_uid_4_6016c12a8825a_rand td-grid-style-1 td-hover-1 td-big-grids td-pb-border-top td_block_template_1" data-td-block-uid="td_uid_4_6016c12a8825a"><div id="td_uid_4_6016c12a8825a" class="td_block_inner"><div class="td-big-grid-wrapper">
+</style><div class="vc_column td_uid_3_6016dfa90eb6e_rand  wpb_column vc_column_container tdc-column td-pb-span12"><div class="wpb_wrapper"><div class="td_block_wrap td_block_big_grid_3 td_uid_4_6016dfa90ec0a_rand td-grid-style-1 td-hover-1 td-big-grids td-pb-border-top td_block_template_1" data-td-block-uid="td_uid_4_6016dfa90ec0a"><div id="td_uid_4_6016dfa90ec0a" class="td_block_inner"><div class="td-big-grid-wrapper">
         <div class="td_module_mx5 td-animation-stack td-big-grid-post-0 td-big-grid-post td-big-thumb">
             <div class="td-module-thumb"><a href="https://laraveldaily.com/free-e-book-40-laravel-quick-tips-and-counting/" rel="bookmark" class="td-image-wrap" title="FREE E-book: 100 Laravel Quick Tips (and counting)"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAhYAAAHOAQMAAAD+DNJPAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAADVJREFUeNrtwQENAAAAwiD7p7bHBwwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAICEA3q4AAGK1CNoAAAAAElFTkSuQmCC" alt="" title="FREE E-book: 100 Laravel Quick Tips (and counting)" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/uploads/2020/04/laravel-quick-tips-534x315.png" width="534" height="315"></a></div>            <div class="td-meta-info-container">
                 <div class="td-meta-align">
@@ -627,7 +627,7 @@ Header style 1
 		<script>
 
 			jQuery(window).load(function () {
-				jQuery('body').find('#td_uid_1_6016c12a880b5 .td-element-style').each(function (index, element) {
+				jQuery('body').find('#td_uid_1_6016dfa90ea73 .td-element-style').each(function (index, element) {
 					jQuery(element).css('opacity', 1);
 					return;
 				});
@@ -655,7 +655,7 @@ Header style 1
 							refWindow = window;
 						}
 
-						$content.find('#td_uid_1_6016c12a880b5 .td-element-style').each(function (index, element) {
+						$content.find('#td_uid_1_6016dfa90ea73 .td-element-style').each(function (index, element) {
 							jQuery(element).css('opacity', 1);
 							return;
 						});
@@ -664,25 +664,25 @@ Header style 1
 				}, 200);
 			</script>
 
-			<div id="td_uid_3_6016c12a8ace0" class="tdc-row"><div class="vc_row td_uid_5_6016c12a8ace5_rand td-ss-row wpb_row td-pb-row">
+			<div id="td_uid_3_6016dfa91184d" class="tdc-row"><div class="vc_row td_uid_5_6016dfa911853_rand td-ss-row wpb_row td-pb-row">
 <style scoped>
 
 /* custom css */
-.td_uid_5_6016c12a8ace5_rand {
+.td_uid_5_6016dfa911853_rand {
                     min-height: 0;
                 }
-</style><div class="vc_column td_uid_6_6016c12a8ae07_rand  wpb_column vc_column_container tdc-column td-pb-span8"><div class="wpb_wrapper"><div class="td_block_wrap td_block_11 td_uid_7_6016c12a8aee6_rand td_with_ajax_pagination td-pb-border-top td_block_template_1 td-column-2" data-td-block-uid="td_uid_7_6016c12a8aee6"><script>var block_td_uid_7_6016c12a8aee6 = new tdBlock();
-block_td_uid_7_6016c12a8aee6.id = "td_uid_7_6016c12a8aee6";
-block_td_uid_7_6016c12a8aee6.atts = '{"limit":"10","td_filter_default_txt":"All","category_id":"","sort":"","custom_title":"NEWEST ARTICLES","ajax_pagination":"next_prev","separator":"","custom_url":"","block_template_id":"","m10_tl":"","m10_el":"","post_ids":"","category_ids":"","tag_slug":"","autors_id":"","installed_post_types":"","offset":"","el_class":"","td_ajax_filter_type":"","td_ajax_filter_ids":"","td_ajax_preloading":"","f_header_font_header":"","f_header_font_title":"Block header","f_header_font_settings":"","f_header_font_family":"","f_header_font_size":"","f_header_font_line_height":"","f_header_font_style":"","f_header_font_weight":"","f_header_font_transform":"","f_header_font_spacing":"","f_header_":"","f_ajax_font_title":"Ajax categories","f_ajax_font_settings":"","f_ajax_font_family":"","f_ajax_font_size":"","f_ajax_font_line_height":"","f_ajax_font_style":"","f_ajax_font_weight":"","f_ajax_font_transform":"","f_ajax_font_spacing":"","f_ajax_":"","f_more_font_title":"Load more button","f_more_font_settings":"","f_more_font_family":"","f_more_font_size":"","f_more_font_line_height":"","f_more_font_style":"","f_more_font_weight":"","f_more_font_transform":"","f_more_font_spacing":"","f_more_":"","m10f_title_font_header":"","m10f_title_font_title":"Article title","m10f_title_font_settings":"","m10f_title_font_family":"","m10f_title_font_size":"","m10f_title_font_line_height":"","m10f_title_font_style":"","m10f_title_font_weight":"","m10f_title_font_transform":"","m10f_title_font_spacing":"","m10f_title_":"","m10f_cat_font_title":"Article category tag","m10f_cat_font_settings":"","m10f_cat_font_family":"","m10f_cat_font_size":"","m10f_cat_font_line_height":"","m10f_cat_font_style":"","m10f_cat_font_weight":"","m10f_cat_font_transform":"","m10f_cat_font_spacing":"","m10f_cat_":"","m10f_meta_font_title":"Article meta info","m10f_meta_font_settings":"","m10f_meta_font_family":"","m10f_meta_font_size":"","m10f_meta_font_line_height":"","m10f_meta_font_style":"","m10f_meta_font_weight":"","m10f_meta_font_transform":"","m10f_meta_font_spacing":"","m10f_meta_":"","m10f_ex_font_title":"Article excerpt","m10f_ex_font_settings":"","m10f_ex_font_family":"","m10f_ex_font_size":"","m10f_ex_font_line_height":"","m10f_ex_font_style":"","m10f_ex_font_weight":"","m10f_ex_font_transform":"","m10f_ex_font_spacing":"","m10f_ex_":"","ajax_pagination_infinite_stop":"","css":"","tdc_css":"","td_column_number":2,"header_color":"","color_preset":"","border_top":"","class":"td_uid_7_6016c12a8aee6_rand","tdc_css_class":"td_uid_7_6016c12a8aee6_rand","tdc_css_class_style":"td_uid_7_6016c12a8aee6_rand_style"}';
-block_td_uid_7_6016c12a8aee6.td_column_number = "2";
-block_td_uid_7_6016c12a8aee6.block_type = "td_block_11";
-block_td_uid_7_6016c12a8aee6.post_count = "10";
-block_td_uid_7_6016c12a8aee6.found_posts = "312";
-block_td_uid_7_6016c12a8aee6.header_color = "";
-block_td_uid_7_6016c12a8aee6.ajax_pagination_infinite_stop = "";
-block_td_uid_7_6016c12a8aee6.max_num_pages = "32";
-tdBlocksArray.push(block_td_uid_7_6016c12a8aee6);
-</script><div class="td-block-title-wrap"><h4 class="block-title td-block-title"><span class="td-pulldown-size">NEWEST ARTICLES</span></h4></div><div id="td_uid_7_6016c12a8aee6" class="td_block_inner">
+</style><div class="vc_column td_uid_6_6016dfa911947_rand  wpb_column vc_column_container tdc-column td-pb-span8"><div class="wpb_wrapper"><div class="td_block_wrap td_block_11 td_uid_7_6016dfa9119de_rand td_with_ajax_pagination td-pb-border-top td_block_template_1 td-column-2" data-td-block-uid="td_uid_7_6016dfa9119de"><script>var block_td_uid_7_6016dfa9119de = new tdBlock();
+block_td_uid_7_6016dfa9119de.id = "td_uid_7_6016dfa9119de";
+block_td_uid_7_6016dfa9119de.atts = '{"limit":"10","td_filter_default_txt":"All","category_id":"","sort":"","custom_title":"NEWEST ARTICLES","ajax_pagination":"next_prev","separator":"","custom_url":"","block_template_id":"","m10_tl":"","m10_el":"","post_ids":"","category_ids":"","tag_slug":"","autors_id":"","installed_post_types":"","offset":"","el_class":"","td_ajax_filter_type":"","td_ajax_filter_ids":"","td_ajax_preloading":"","f_header_font_header":"","f_header_font_title":"Block header","f_header_font_settings":"","f_header_font_family":"","f_header_font_size":"","f_header_font_line_height":"","f_header_font_style":"","f_header_font_weight":"","f_header_font_transform":"","f_header_font_spacing":"","f_header_":"","f_ajax_font_title":"Ajax categories","f_ajax_font_settings":"","f_ajax_font_family":"","f_ajax_font_size":"","f_ajax_font_line_height":"","f_ajax_font_style":"","f_ajax_font_weight":"","f_ajax_font_transform":"","f_ajax_font_spacing":"","f_ajax_":"","f_more_font_title":"Load more button","f_more_font_settings":"","f_more_font_family":"","f_more_font_size":"","f_more_font_line_height":"","f_more_font_style":"","f_more_font_weight":"","f_more_font_transform":"","f_more_font_spacing":"","f_more_":"","m10f_title_font_header":"","m10f_title_font_title":"Article title","m10f_title_font_settings":"","m10f_title_font_family":"","m10f_title_font_size":"","m10f_title_font_line_height":"","m10f_title_font_style":"","m10f_title_font_weight":"","m10f_title_font_transform":"","m10f_title_font_spacing":"","m10f_title_":"","m10f_cat_font_title":"Article category tag","m10f_cat_font_settings":"","m10f_cat_font_family":"","m10f_cat_font_size":"","m10f_cat_font_line_height":"","m10f_cat_font_style":"","m10f_cat_font_weight":"","m10f_cat_font_transform":"","m10f_cat_font_spacing":"","m10f_cat_":"","m10f_meta_font_title":"Article meta info","m10f_meta_font_settings":"","m10f_meta_font_family":"","m10f_meta_font_size":"","m10f_meta_font_line_height":"","m10f_meta_font_style":"","m10f_meta_font_weight":"","m10f_meta_font_transform":"","m10f_meta_font_spacing":"","m10f_meta_":"","m10f_ex_font_title":"Article excerpt","m10f_ex_font_settings":"","m10f_ex_font_family":"","m10f_ex_font_size":"","m10f_ex_font_line_height":"","m10f_ex_font_style":"","m10f_ex_font_weight":"","m10f_ex_font_transform":"","m10f_ex_font_spacing":"","m10f_ex_":"","ajax_pagination_infinite_stop":"","css":"","tdc_css":"","td_column_number":2,"header_color":"","color_preset":"","border_top":"","class":"td_uid_7_6016dfa9119de_rand","tdc_css_class":"td_uid_7_6016dfa9119de_rand","tdc_css_class_style":"td_uid_7_6016dfa9119de_rand_style"}';
+block_td_uid_7_6016dfa9119de.td_column_number = "2";
+block_td_uid_7_6016dfa9119de.block_type = "td_block_11";
+block_td_uid_7_6016dfa9119de.post_count = "10";
+block_td_uid_7_6016dfa9119de.found_posts = "312";
+block_td_uid_7_6016dfa9119de.header_color = "";
+block_td_uid_7_6016dfa9119de.ajax_pagination_infinite_stop = "";
+block_td_uid_7_6016dfa9119de.max_num_pages = "32";
+tdBlocksArray.push(block_td_uid_7_6016dfa9119de);
+</script><div class="td-block-title-wrap"><h4 class="block-title td-block-title"><span class="td-pulldown-size">NEWEST ARTICLES</span></h4></div><div id="td_uid_7_6016dfa9119de" class="td_block_inner">
 
 	<div class="td-block-span12">
 
@@ -864,64 +864,64 @@ Quite often in e-shops you can see many level of categories and subcategories, s
         </div>
 
         
-	</div> <!-- ./td-block-span12 --></div><div class="td-next-prev-wrap"><a href="#" class="td-ajax-prev-page ajax-page-disabled" id="prev-page-td_uid_7_6016c12a8aee6" data-td_block_id="td_uid_7_6016c12a8aee6"><i class="td-icon-font td-icon-menu-left"></i></a><a href="#" class="td-ajax-next-page" id="next-page-td_uid_7_6016c12a8aee6" data-td_block_id="td_uid_7_6016c12a8aee6"><i class="td-icon-font td-icon-menu-right"></i></a></div></div> <!-- ./block --></div></div><div class="vc_column td_uid_8_6016c12a904c2_rand  wpb_column vc_column_container tdc-column td-pb-span4"><div class="wpb_wrapper"><div class="td-a-rec td-a-rec-id-custom_ad_1  td_uid_9_6016c12a90530_rand td_block_template_1"><div class="td-all-devices">
-<a href="https://laraveldaily.teachable.com/?utm_source=laraveldaily&amp;utm_campaign=sidebar_banner" target="_blank"><img src="/wp-content/uploads/2018/12/online-courses.png"></a></div></div><div class="td_block_wrap td_block_social_counter td_uid_10_6016c12a90704_rand td-social-style4 td-social-colored td-pb-border-top td_block_template_1"><div class="td-block-title-wrap"><h4 class="block-title td-block-title"><span class="td-pulldown-size">STAY CONNECTED</span></h4></div><div class="td-social-list"><div class="td_social_type td-pb-margin-side td_social_facebook"><div class="td-social-box"><div class="td-sp td-sp-facebook"></div><span class="td_social_info">2,225</span><span class="td_social_info td_social_info_name">Fans</span><span class="td_social_button"><a href="https://www.facebook.com/LaravelDaily">Like</a></span></div></div><div class="td_social_type td-pb-margin-side td_social_twitter"><div class="td-social-box"><div class="td-sp td-sp-twitter"></div><span class="td_social_info">14,676</span><span class="td_social_info td_social_info_name">Followers</span><span class="td_social_button"><a href="https://twitter.com/DailyLaravel">Follow</a></span></div></div><div class="td_social_type td-pb-margin-side td_social_youtube"><div class="td-social-box"><div class="td-sp td-sp-youtube"></div><span class="td_social_info">11,800</span><span class="td_social_info td_social_info_name">Subscribers</span><span class="td_social_button"><a href="https://www.youtube.com/channel/UCTuplgOBi6tJIlesIboymGA">Subscribe</a></span></div></div></div></div> <!-- ./block --><div class="td-a-rec td-a-rec-id-custom_ad_2  td_uid_11_6016c12a908dd_rand td_block_template_1"><div class="td-all-devices"><a href="https://quickadminpanel.com?utm_source=laraveldaily&amp;utm_campaign=sidebar_banner" target="_blank"><img src="/wp-content/uploads/2018/12/quick-admin-panel-1.png"></a></div></div><div class="td_block_wrap td_block_15 td_uid_12_6016c12a90a6c_rand td-pb-border-top td_block_template_1 td-column-1 td_block_padding" data-td-block-uid="td_uid_12_6016c12a90a6c">
+	</div> <!-- ./td-block-span12 --></div><div class="td-next-prev-wrap"><a href="#" class="td-ajax-prev-page ajax-page-disabled" id="prev-page-td_uid_7_6016dfa9119de" data-td_block_id="td_uid_7_6016dfa9119de"><i class="td-icon-font td-icon-menu-left"></i></a><a href="#" class="td-ajax-next-page" id="next-page-td_uid_7_6016dfa9119de" data-td_block_id="td_uid_7_6016dfa9119de"><i class="td-icon-font td-icon-menu-right"></i></a></div></div> <!-- ./block --></div></div><div class="vc_column td_uid_8_6016dfa916b09_rand  wpb_column vc_column_container tdc-column td-pb-span4"><div class="wpb_wrapper"><div class="td-a-rec td-a-rec-id-custom_ad_1  td_uid_9_6016dfa916b7a_rand td_block_template_1"><div class="td-all-devices">
+<a href="https://laraveldaily.teachable.com/?utm_source=laraveldaily&amp;utm_campaign=sidebar_banner" target="_blank"><img src="/wp-content/uploads/2018/12/online-courses.png"></a></div></div><div class="td_block_wrap td_block_social_counter td_uid_10_6016dfa916da3_rand td-social-style4 td-social-colored td-pb-border-top td_block_template_1"><div class="td-block-title-wrap"><h4 class="block-title td-block-title"><span class="td-pulldown-size">STAY CONNECTED</span></h4></div><div class="td-social-list"><div class="td_social_type td-pb-margin-side td_social_facebook"><div class="td-social-box"><div class="td-sp td-sp-facebook"></div><span class="td_social_info">2,225</span><span class="td_social_info td_social_info_name">Fans</span><span class="td_social_button"><a href="https://www.facebook.com/LaravelDaily">Like</a></span></div></div><div class="td_social_type td-pb-margin-side td_social_twitter"><div class="td-social-box"><div class="td-sp td-sp-twitter"></div><span class="td_social_info">14,676</span><span class="td_social_info td_social_info_name">Followers</span><span class="td_social_button"><a href="https://twitter.com/DailyLaravel">Follow</a></span></div></div><div class="td_social_type td-pb-margin-side td_social_youtube"><div class="td-social-box"><div class="td-sp td-sp-youtube"></div><span class="td_social_info">11,800</span><span class="td_social_info td_social_info_name">Subscribers</span><span class="td_social_button"><a href="https://www.youtube.com/channel/UCTuplgOBi6tJIlesIboymGA">Subscribe</a></span></div></div></div></div> <!-- ./block --><div class="td-a-rec td-a-rec-id-custom_ad_2  td_uid_11_6016dfa916f84_rand td_block_template_1"><div class="td-all-devices"><a href="https://quickadminpanel.com?utm_source=laraveldaily&amp;utm_campaign=sidebar_banner" target="_blank"><img src="/wp-content/uploads/2018/12/quick-admin-panel-1.png"></a></div></div><div class="td_block_wrap td_block_15 td_uid_12_6016dfa917116_rand td-pb-border-top td_block_template_1 td-column-1 td_block_padding" data-td-block-uid="td_uid_12_6016dfa917116">
 <style>
-.td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td-pulldown-filter-link:hover,
-            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td-subcat-item a:hover,
-            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td-subcat-item .td-cur-simple-item {
+.td-theme-wrap .td_uid_12_6016dfa917116_rand .td-pulldown-filter-link:hover,
+            .td-theme-wrap .td_uid_12_6016dfa917116_rand .td-subcat-item a:hover,
+            .td-theme-wrap .td_uid_12_6016dfa917116_rand .td-subcat-item .td-cur-simple-item {
                 color: #dd9933;
             }
 
-            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .block-title > *,
-            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td-subcat-dropdown:hover .td-subcat-more {
+            .td-theme-wrap .td_uid_12_6016dfa917116_rand .block-title > *,
+            .td-theme-wrap .td_uid_12_6016dfa917116_rand .td-subcat-dropdown:hover .td-subcat-more {
                 background-color: #dd9933;
             }
-            .td-theme-wrap .td-footer-wrapper .td_uid_12_6016c12a90a6c_rand .block-title > * {
+            .td-theme-wrap .td-footer-wrapper .td_uid_12_6016dfa917116_rand .block-title > * {
                 padding: 6px 7px 5px;
                 line-height: 1;
             }
 
-            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .block-title {
+            .td-theme-wrap .td_uid_12_6016dfa917116_rand .block-title {
                 border-color: #dd9933;
             }
 
             
-            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td_module_wrap:hover .entry-title a,
-            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td_quote_on_blocks,
-            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td-opacity-cat .td-post-category:hover,
-            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td-opacity-read .td-read-more a:hover,
-            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td-opacity-author .td-post-author-name a:hover,
-            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td-instagram-user a {
+            .td-theme-wrap .td_uid_12_6016dfa917116_rand .td_module_wrap:hover .entry-title a,
+            .td-theme-wrap .td_uid_12_6016dfa917116_rand .td_quote_on_blocks,
+            .td-theme-wrap .td_uid_12_6016dfa917116_rand .td-opacity-cat .td-post-category:hover,
+            .td-theme-wrap .td_uid_12_6016dfa917116_rand .td-opacity-read .td-read-more a:hover,
+            .td-theme-wrap .td_uid_12_6016dfa917116_rand .td-opacity-author .td-post-author-name a:hover,
+            .td-theme-wrap .td_uid_12_6016dfa917116_rand .td-instagram-user a {
                 color: #dd9933;
             }
 
-            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td-next-prev-wrap a:hover,
-            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td-load-more-wrap a:hover {
+            .td-theme-wrap .td_uid_12_6016dfa917116_rand .td-next-prev-wrap a:hover,
+            .td-theme-wrap .td_uid_12_6016dfa917116_rand .td-load-more-wrap a:hover {
                 background-color: #dd9933;
                 border-color: #dd9933;
             }
 
-            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td-read-more a,
-            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td-weather-information:before,
-            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td-weather-week:before,
-            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td-exchange-header:before,
-            .td-theme-wrap .td-footer-wrapper .td_uid_12_6016c12a90a6c_rand .td-post-category,
-            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td-post-category:hover {
+            .td-theme-wrap .td_uid_12_6016dfa917116_rand .td-read-more a,
+            .td-theme-wrap .td_uid_12_6016dfa917116_rand .td-weather-information:before,
+            .td-theme-wrap .td_uid_12_6016dfa917116_rand .td-weather-week:before,
+            .td-theme-wrap .td_uid_12_6016dfa917116_rand .td-exchange-header:before,
+            .td-theme-wrap .td-footer-wrapper .td_uid_12_6016dfa917116_rand .td-post-category,
+            .td-theme-wrap .td_uid_12_6016dfa917116_rand .td-post-category:hover {
                 background-color: #dd9933;
             }
-</style><script>var block_td_uid_12_6016c12a90a6c = new tdBlock();
-block_td_uid_12_6016c12a90a6c.id = "td_uid_12_6016c12a90a6c";
-block_td_uid_12_6016c12a90a6c.atts = '{"category_id":"","limit":"4","custom_title":"NEWEST VIDEOS","td_filter_default_txt":"All","ajax_pagination":"","sort":"","tag_slug":"video","header_color":"#dd9933","separator":"","custom_url":"","block_template_id":"","mx4_tl":"","post_ids":"","category_ids":"","autors_id":"","installed_post_types":"","offset":"","el_class":"","td_ajax_filter_type":"","td_ajax_filter_ids":"","td_ajax_preloading":"","f_header_font_header":"","f_header_font_title":"Block header","f_header_font_settings":"","f_header_font_family":"","f_header_font_size":"","f_header_font_line_height":"","f_header_font_style":"","f_header_font_weight":"","f_header_font_transform":"","f_header_font_spacing":"","f_header_":"","f_ajax_font_title":"Ajax categories","f_ajax_font_settings":"","f_ajax_font_family":"","f_ajax_font_size":"","f_ajax_font_line_height":"","f_ajax_font_style":"","f_ajax_font_weight":"","f_ajax_font_transform":"","f_ajax_font_spacing":"","f_ajax_":"","f_more_font_title":"Load more button","f_more_font_settings":"","f_more_font_family":"","f_more_font_size":"","f_more_font_line_height":"","f_more_font_style":"","f_more_font_weight":"","f_more_font_transform":"","f_more_font_spacing":"","f_more_":"","mx4f_title_font_header":"","mx4f_title_font_title":"Article title","mx4f_title_font_settings":"","mx4f_title_font_family":"","mx4f_title_font_size":"","mx4f_title_font_line_height":"","mx4f_title_font_style":"","mx4f_title_font_weight":"","mx4f_title_font_transform":"","mx4f_title_font_spacing":"","mx4f_title_":"","mx4f_cat_font_title":"Article category tag","mx4f_cat_font_settings":"","mx4f_cat_font_family":"","mx4f_cat_font_size":"","mx4f_cat_font_line_height":"","mx4f_cat_font_style":"","mx4f_cat_font_weight":"","mx4f_cat_font_transform":"","mx4f_cat_font_spacing":"","mx4f_cat_":"","ajax_pagination_infinite_stop":"","css":"","tdc_css":"","td_column_number":1,"color_preset":"","border_top":"","class":"td_uid_12_6016c12a90a6c_rand","tdc_css_class":"td_uid_12_6016c12a90a6c_rand","tdc_css_class_style":"td_uid_12_6016c12a90a6c_rand_style"}';
-block_td_uid_12_6016c12a90a6c.td_column_number = "1";
-block_td_uid_12_6016c12a90a6c.block_type = "td_block_15";
-block_td_uid_12_6016c12a90a6c.post_count = "4";
-block_td_uid_12_6016c12a90a6c.found_posts = "22";
-block_td_uid_12_6016c12a90a6c.header_color = "#dd9933";
-block_td_uid_12_6016c12a90a6c.ajax_pagination_infinite_stop = "";
-block_td_uid_12_6016c12a90a6c.max_num_pages = "6";
-tdBlocksArray.push(block_td_uid_12_6016c12a90a6c);
-</script><div class="td-block-title-wrap"><h4 class="block-title td-block-title"><span class="td-pulldown-size">NEWEST VIDEOS</span></h4></div><div id="td_uid_12_6016c12a90a6c" class="td_block_inner td-column-1"><div class="td-cust-row">
+</style><script>var block_td_uid_12_6016dfa917116 = new tdBlock();
+block_td_uid_12_6016dfa917116.id = "td_uid_12_6016dfa917116";
+block_td_uid_12_6016dfa917116.atts = '{"category_id":"","limit":"4","custom_title":"NEWEST VIDEOS","td_filter_default_txt":"All","ajax_pagination":"","sort":"","tag_slug":"video","header_color":"#dd9933","separator":"","custom_url":"","block_template_id":"","mx4_tl":"","post_ids":"","category_ids":"","autors_id":"","installed_post_types":"","offset":"","el_class":"","td_ajax_filter_type":"","td_ajax_filter_ids":"","td_ajax_preloading":"","f_header_font_header":"","f_header_font_title":"Block header","f_header_font_settings":"","f_header_font_family":"","f_header_font_size":"","f_header_font_line_height":"","f_header_font_style":"","f_header_font_weight":"","f_header_font_transform":"","f_header_font_spacing":"","f_header_":"","f_ajax_font_title":"Ajax categories","f_ajax_font_settings":"","f_ajax_font_family":"","f_ajax_font_size":"","f_ajax_font_line_height":"","f_ajax_font_style":"","f_ajax_font_weight":"","f_ajax_font_transform":"","f_ajax_font_spacing":"","f_ajax_":"","f_more_font_title":"Load more button","f_more_font_settings":"","f_more_font_family":"","f_more_font_size":"","f_more_font_line_height":"","f_more_font_style":"","f_more_font_weight":"","f_more_font_transform":"","f_more_font_spacing":"","f_more_":"","mx4f_title_font_header":"","mx4f_title_font_title":"Article title","mx4f_title_font_settings":"","mx4f_title_font_family":"","mx4f_title_font_size":"","mx4f_title_font_line_height":"","mx4f_title_font_style":"","mx4f_title_font_weight":"","mx4f_title_font_transform":"","mx4f_title_font_spacing":"","mx4f_title_":"","mx4f_cat_font_title":"Article category tag","mx4f_cat_font_settings":"","mx4f_cat_font_family":"","mx4f_cat_font_size":"","mx4f_cat_font_line_height":"","mx4f_cat_font_style":"","mx4f_cat_font_weight":"","mx4f_cat_font_transform":"","mx4f_cat_font_spacing":"","mx4f_cat_":"","ajax_pagination_infinite_stop":"","css":"","tdc_css":"","td_column_number":1,"color_preset":"","border_top":"","class":"td_uid_12_6016dfa917116_rand","tdc_css_class":"td_uid_12_6016dfa917116_rand","tdc_css_class_style":"td_uid_12_6016dfa917116_rand_style"}';
+block_td_uid_12_6016dfa917116.td_column_number = "1";
+block_td_uid_12_6016dfa917116.block_type = "td_block_15";
+block_td_uid_12_6016dfa917116.post_count = "4";
+block_td_uid_12_6016dfa917116.found_posts = "22";
+block_td_uid_12_6016dfa917116.header_color = "#dd9933";
+block_td_uid_12_6016dfa917116.ajax_pagination_infinite_stop = "";
+block_td_uid_12_6016dfa917116.max_num_pages = "6";
+tdBlocksArray.push(block_td_uid_12_6016dfa917116);
+</script><div class="td-block-title-wrap"><h4 class="block-title td-block-title"><span class="td-pulldown-size">NEWEST VIDEOS</span></h4></div><div id="td_uid_12_6016dfa917116" class="td_block_inner td-column-1"><div class="td-cust-row">
 
 	<div class="td-block-span12">
 
@@ -969,72 +969,72 @@ tdBlocksArray.push(block_td_uid_12_6016c12a90a6c);
         </div>
 
         
-	</div> <!-- ./td-block-span12 --></div></div></div> <!-- ./block --><div class="clearfix"></div><div class="td_block_wrap td_block_7 td_uid_13_6016c12a93afe_rand td-pb-border-top td_block_template_1 td-column-1 td_block_padding" data-td-block-uid="td_uid_13_6016c12a93afe">
+	</div> <!-- ./td-block-span12 --></div></div></div> <!-- ./block --><div class="clearfix"></div><div class="td_block_wrap td_block_7 td_uid_13_6016dfa919558_rand td-pb-border-top td_block_template_1 td-column-1 td_block_padding" data-td-block-uid="td_uid_13_6016dfa919558">
 <style>
-.td-theme-wrap .td_uid_13_6016c12a93afe_rand .td-pulldown-filter-link:hover,
-            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .td-subcat-item a:hover,
-            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .td-subcat-item .td-cur-simple-item {
+.td-theme-wrap .td_uid_13_6016dfa919558_rand .td-pulldown-filter-link:hover,
+            .td-theme-wrap .td_uid_13_6016dfa919558_rand .td-subcat-item a:hover,
+            .td-theme-wrap .td_uid_13_6016dfa919558_rand .td-subcat-item .td-cur-simple-item {
                 color: #383838;
             }
 
-            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .block-title > *,
-            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .td-subcat-dropdown:hover .td-subcat-more {
+            .td-theme-wrap .td_uid_13_6016dfa919558_rand .block-title > *,
+            .td-theme-wrap .td_uid_13_6016dfa919558_rand .td-subcat-dropdown:hover .td-subcat-more {
                 background-color: #383838;
             }
-            .td-theme-wrap .td-footer-wrapper .td_uid_13_6016c12a93afe_rand .block-title > * {
+            .td-theme-wrap .td-footer-wrapper .td_uid_13_6016dfa919558_rand .block-title > * {
                 padding: 6px 7px 5px;
                 line-height: 1;
             }
 
-            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .block-title {
+            .td-theme-wrap .td_uid_13_6016dfa919558_rand .block-title {
                 border-color: #383838;
             }
 
             
-            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .td_module_wrap:hover .entry-title a,
-            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .td_quote_on_blocks,
-            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .td-opacity-cat .td-post-category:hover,
-            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .td-opacity-read .td-read-more a:hover,
-            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .td-opacity-author .td-post-author-name a:hover,
-            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .td-instagram-user a {
+            .td-theme-wrap .td_uid_13_6016dfa919558_rand .td_module_wrap:hover .entry-title a,
+            .td-theme-wrap .td_uid_13_6016dfa919558_rand .td_quote_on_blocks,
+            .td-theme-wrap .td_uid_13_6016dfa919558_rand .td-opacity-cat .td-post-category:hover,
+            .td-theme-wrap .td_uid_13_6016dfa919558_rand .td-opacity-read .td-read-more a:hover,
+            .td-theme-wrap .td_uid_13_6016dfa919558_rand .td-opacity-author .td-post-author-name a:hover,
+            .td-theme-wrap .td_uid_13_6016dfa919558_rand .td-instagram-user a {
                 color: #383838;
             }
 
-            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .td-next-prev-wrap a:hover,
-            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .td-load-more-wrap a:hover {
+            .td-theme-wrap .td_uid_13_6016dfa919558_rand .td-next-prev-wrap a:hover,
+            .td-theme-wrap .td_uid_13_6016dfa919558_rand .td-load-more-wrap a:hover {
                 background-color: #383838;
                 border-color: #383838;
             }
 
-            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .td-read-more a,
-            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .td-weather-information:before,
-            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .td-weather-week:before,
-            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .td-exchange-header:before,
-            .td-theme-wrap .td-footer-wrapper .td_uid_13_6016c12a93afe_rand .td-post-category,
-            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .td-post-category:hover {
+            .td-theme-wrap .td_uid_13_6016dfa919558_rand .td-read-more a,
+            .td-theme-wrap .td_uid_13_6016dfa919558_rand .td-weather-information:before,
+            .td-theme-wrap .td_uid_13_6016dfa919558_rand .td-weather-week:before,
+            .td-theme-wrap .td_uid_13_6016dfa919558_rand .td-exchange-header:before,
+            .td-theme-wrap .td-footer-wrapper .td_uid_13_6016dfa919558_rand .td-post-category,
+            .td-theme-wrap .td_uid_13_6016dfa919558_rand .td-post-category:hover {
                 background-color: #383838;
             }
-</style><script>var block_td_uid_13_6016c12a93afe = new tdBlock();
-block_td_uid_13_6016c12a93afe.id = "td_uid_13_6016c12a93afe";
-block_td_uid_13_6016c12a93afe.atts = '{"category_id":"","limit":"8","custom_title":"RANDOM ARTICLES","td_filter_default_txt":"All","ajax_pagination":"","sort":"random_posts","header_color":"#383838","separator":"","custom_url":"","block_template_id":"","m6_tl":"","post_ids":"","category_ids":"","tag_slug":"","autors_id":"","installed_post_types":"","offset":"","el_class":"","td_ajax_filter_type":"","td_ajax_filter_ids":"","td_ajax_preloading":"","f_header_font_header":"","f_header_font_title":"Block header","f_header_font_settings":"","f_header_font_family":"","f_header_font_size":"","f_header_font_line_height":"","f_header_font_style":"","f_header_font_weight":"","f_header_font_transform":"","f_header_font_spacing":"","f_header_":"","f_ajax_font_title":"Ajax categories","f_ajax_font_settings":"","f_ajax_font_family":"","f_ajax_font_size":"","f_ajax_font_line_height":"","f_ajax_font_style":"","f_ajax_font_weight":"","f_ajax_font_transform":"","f_ajax_font_spacing":"","f_ajax_":"","f_more_font_title":"Load more button","f_more_font_settings":"","f_more_font_family":"","f_more_font_size":"","f_more_font_line_height":"","f_more_font_style":"","f_more_font_weight":"","f_more_font_transform":"","f_more_font_spacing":"","f_more_":"","m6f_title_font_header":"","m6f_title_font_title":"Article title","m6f_title_font_settings":"","m6f_title_font_family":"","m6f_title_font_size":"","m6f_title_font_line_height":"","m6f_title_font_style":"","m6f_title_font_weight":"","m6f_title_font_transform":"","m6f_title_font_spacing":"","m6f_title_":"","m6f_cat_font_title":"Article category tag","m6f_cat_font_settings":"","m6f_cat_font_family":"","m6f_cat_font_size":"","m6f_cat_font_line_height":"","m6f_cat_font_style":"","m6f_cat_font_weight":"","m6f_cat_font_transform":"","m6f_cat_font_spacing":"","m6f_cat_":"","m6f_meta_font_title":"Article meta info","m6f_meta_font_settings":"","m6f_meta_font_family":"","m6f_meta_font_size":"","m6f_meta_font_line_height":"","m6f_meta_font_style":"","m6f_meta_font_weight":"","m6f_meta_font_transform":"","m6f_meta_font_spacing":"","m6f_meta_":"","ajax_pagination_infinite_stop":"","css":"","tdc_css":"","td_column_number":1,"color_preset":"","border_top":"","class":"td_uid_13_6016c12a93afe_rand","tdc_css_class":"td_uid_13_6016c12a93afe_rand","tdc_css_class_style":"td_uid_13_6016c12a93afe_rand_style"}';
-block_td_uid_13_6016c12a93afe.td_column_number = "1";
-block_td_uid_13_6016c12a93afe.block_type = "td_block_7";
-block_td_uid_13_6016c12a93afe.post_count = "8";
-block_td_uid_13_6016c12a93afe.found_posts = "312";
-block_td_uid_13_6016c12a93afe.header_color = "#383838";
-block_td_uid_13_6016c12a93afe.ajax_pagination_infinite_stop = "";
-block_td_uid_13_6016c12a93afe.max_num_pages = "39";
-tdBlocksArray.push(block_td_uid_13_6016c12a93afe);
-</script><div class="td-block-title-wrap"><h4 class="block-title td-block-title"><span class="td-pulldown-size">RANDOM ARTICLES</span></h4></div><div id="td_uid_13_6016c12a93afe" class="td_block_inner">
+</style><script>var block_td_uid_13_6016dfa919558 = new tdBlock();
+block_td_uid_13_6016dfa919558.id = "td_uid_13_6016dfa919558";
+block_td_uid_13_6016dfa919558.atts = '{"category_id":"","limit":"8","custom_title":"RANDOM ARTICLES","td_filter_default_txt":"All","ajax_pagination":"","sort":"random_posts","header_color":"#383838","separator":"","custom_url":"","block_template_id":"","m6_tl":"","post_ids":"","category_ids":"","tag_slug":"","autors_id":"","installed_post_types":"","offset":"","el_class":"","td_ajax_filter_type":"","td_ajax_filter_ids":"","td_ajax_preloading":"","f_header_font_header":"","f_header_font_title":"Block header","f_header_font_settings":"","f_header_font_family":"","f_header_font_size":"","f_header_font_line_height":"","f_header_font_style":"","f_header_font_weight":"","f_header_font_transform":"","f_header_font_spacing":"","f_header_":"","f_ajax_font_title":"Ajax categories","f_ajax_font_settings":"","f_ajax_font_family":"","f_ajax_font_size":"","f_ajax_font_line_height":"","f_ajax_font_style":"","f_ajax_font_weight":"","f_ajax_font_transform":"","f_ajax_font_spacing":"","f_ajax_":"","f_more_font_title":"Load more button","f_more_font_settings":"","f_more_font_family":"","f_more_font_size":"","f_more_font_line_height":"","f_more_font_style":"","f_more_font_weight":"","f_more_font_transform":"","f_more_font_spacing":"","f_more_":"","m6f_title_font_header":"","m6f_title_font_title":"Article title","m6f_title_font_settings":"","m6f_title_font_family":"","m6f_title_font_size":"","m6f_title_font_line_height":"","m6f_title_font_style":"","m6f_title_font_weight":"","m6f_title_font_transform":"","m6f_title_font_spacing":"","m6f_title_":"","m6f_cat_font_title":"Article category tag","m6f_cat_font_settings":"","m6f_cat_font_family":"","m6f_cat_font_size":"","m6f_cat_font_line_height":"","m6f_cat_font_style":"","m6f_cat_font_weight":"","m6f_cat_font_transform":"","m6f_cat_font_spacing":"","m6f_cat_":"","m6f_meta_font_title":"Article meta info","m6f_meta_font_settings":"","m6f_meta_font_family":"","m6f_meta_font_size":"","m6f_meta_font_line_height":"","m6f_meta_font_style":"","m6f_meta_font_weight":"","m6f_meta_font_transform":"","m6f_meta_font_spacing":"","m6f_meta_":"","ajax_pagination_infinite_stop":"","css":"","tdc_css":"","td_column_number":1,"color_preset":"","border_top":"","class":"td_uid_13_6016dfa919558_rand","tdc_css_class":"td_uid_13_6016dfa919558_rand","tdc_css_class_style":"td_uid_13_6016dfa919558_rand_style"}';
+block_td_uid_13_6016dfa919558.td_column_number = "1";
+block_td_uid_13_6016dfa919558.block_type = "td_block_7";
+block_td_uid_13_6016dfa919558.post_count = "8";
+block_td_uid_13_6016dfa919558.found_posts = "312";
+block_td_uid_13_6016dfa919558.header_color = "#383838";
+block_td_uid_13_6016dfa919558.ajax_pagination_infinite_stop = "";
+block_td_uid_13_6016dfa919558.max_num_pages = "39";
+tdBlocksArray.push(block_td_uid_13_6016dfa919558);
+</script><div class="td-block-title-wrap"><h4 class="block-title td-block-title"><span class="td-pulldown-size">RANDOM ARTICLES</span></h4></div><div id="td_uid_13_6016dfa919558" class="td_block_inner">
 
 	<div class="td-block-span12">
 
         <div class="td_module_6 td_module_wrap td-animation-stack">
 
-        <div class="td-module-thumb"><a href="https://laraveldaily.com/use-laravel-observers-and-global-scopes-to-create-user-multi-tenancy/" rel="bookmark" class="td-image-wrap" title="Use Laravel Observers and Global Scopes to Create User Multi-Tenancy"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=" alt="" title="Use Laravel Observers and Global Scopes to Create User Multi-Tenancy" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/uploads/2018/08/Multi-Tenancy-1-100x70.png" width="100" height="70"></a></div>
+        <div class="td-module-thumb"><a href="https://laraveldaily.com/revisionable-package-log/" rel="bookmark" class="td-image-wrap" title="Revisionable: package to log who did what and when in Laravel Models"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=" alt="" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/themes/Newspaper/images/no-thumb/td_100x70.png" width="100" height="70"></a></div>
         <div class="item-details">
-            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/use-laravel-observers-and-global-scopes-to-create-user-multi-tenancy/" rel="bookmark" title="Use Laravel Observers and Global Scopes to Create User Multi-Tenancy">Use Laravel Observers and Global Scopes to Create User Multi-Tenancy</a></h3>            <div class="td-module-meta-info">
-                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2018-08-11T13:31:35+00:00">August 11, 2018</time></span>                            </div>
+            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/revisionable-package-log/" rel="bookmark" title="Revisionable: package to log who did what and when in Laravel Models">Revisionable: package to log who did what and when in Laravel...</a></h3>            <div class="td-module-meta-info">
+                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2016-10-25T09:30:55+00:00">October 25, 2016</time></span>                            </div>
         </div>
 
         </div>
@@ -1046,10 +1046,10 @@ tdBlocksArray.push(block_td_uid_13_6016c12a93afe);
 
         <div class="td_module_6 td_module_wrap td-animation-stack">
 
-        <div class="td-module-thumb"><a href="https://laraveldaily.com/csrf-protection-difference-laravel-4-x-5-0-and-5-1/" rel="bookmark" class="td-image-wrap" title="CSRF protection difference: Laravel 4.x, 5.0 and 5.1"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=" alt="" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/themes/Newspaper/images/no-thumb/td_100x70.png" width="100" height="70"></a></div>
+        <div class="td-module-thumb"><a href="https://laraveldaily.com/did-you-know-about-havingraw-function/" rel="bookmark" class="td-image-wrap" title="Did you know about havingRaw() function?"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=" alt="" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/themes/Newspaper/images/no-thumb/td_100x70.png" width="100" height="70"></a></div>
         <div class="item-details">
-            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/csrf-protection-difference-laravel-4-x-5-0-and-5-1/" rel="bookmark" title="CSRF protection difference: Laravel 4.x, 5.0 and 5.1">CSRF protection difference: Laravel 4.x, 5.0 and 5.1</a></h3>            <div class="td-module-meta-info">
-                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2015-07-23T12:04:38+00:00">July 23, 2015</time></span>                            </div>
+            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/did-you-know-about-havingraw-function/" rel="bookmark" title="Did you know about havingRaw() function?">Did you know about havingRaw() function?</a></h3>            <div class="td-module-meta-info">
+                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2015-09-22T10:08:41+00:00">September 22, 2015</time></span>                            </div>
         </div>
 
         </div>
@@ -1061,10 +1061,10 @@ tdBlocksArray.push(block_td_uid_13_6016c12a93afe);
 
         <div class="td_module_6 td_module_wrap td-animation-stack">
 
-        <div class="td-module-thumb"><a href="https://laraveldaily.com/class-form-not-found-in-laravel-5/" rel="bookmark" class="td-image-wrap" title="Class ‘Form’ not found in Laravel 5?"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=" alt="" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/themes/Newspaper/images/no-thumb/td_100x70.png" width="100" height="70"></a></div>
+        <div class="td-module-thumb"><a href="https://laraveldaily.com/auth-login-how-to-check-more-than-just-emailpassword/" rel="bookmark" class="td-image-wrap" title="Auth Login: how to check more than just email/password?"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=" alt="" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/themes/Newspaper/images/no-thumb/td_100x70.png" width="100" height="70"></a></div>
         <div class="item-details">
-            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/class-form-not-found-in-laravel-5/" rel="bookmark" title="Class ‘Form’ not found in Laravel 5?">Class ‘Form’ not found in Laravel 5?</a></h3>            <div class="td-module-meta-info">
-                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2015-07-01T10:42:32+00:00">July 1, 2015</time></span>                            </div>
+            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/auth-login-how-to-check-more-than-just-emailpassword/" rel="bookmark" title="Auth Login: how to check more than just email/password?">Auth Login: how to check more than just email/password?</a></h3>            <div class="td-module-meta-info">
+                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2015-09-01T05:54:28+00:00">September 1, 2015</time></span>                            </div>
         </div>
 
         </div>
@@ -1076,10 +1076,10 @@ tdBlocksArray.push(block_td_uid_13_6016c12a93afe);
 
         <div class="td_module_6 td_module_wrap td-animation-stack">
 
-        <div class="td-module-thumb"><a href="https://laraveldaily.com/simple-laravel-multi-tenancy-with-single-trait/" rel="bookmark" class="td-image-wrap" title="Simple Laravel Multi-Tenancy with Single Trait"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=" alt="" title="Simple Laravel Multi-Tenancy with Single Trait" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/uploads/2019/02/simple-laravel-multi-tenancy-100x70.png" width="100" height="70"></a></div>
+        <div class="td-module-thumb"><a href="https://laraveldaily.com/eloquent-incrementing-columns-without-update-function/" rel="bookmark" class="td-image-wrap" title="Eloquent: incrementing columns without update() function"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=" alt="" title="Eloquent: incrementing columns without update() function" data-type="image_tag" data-img-url="" width="" height=""></a></div>
         <div class="item-details">
-            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/simple-laravel-multi-tenancy-with-single-trait/" rel="bookmark" title="Simple Laravel Multi-Tenancy with Single Trait">Simple Laravel Multi-Tenancy with Single Trait</a></h3>            <div class="td-module-meta-info">
-                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2019-02-26T14:21:47+00:00">February 26, 2019</time></span>                            </div>
+            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/eloquent-incrementing-columns-without-update-function/" rel="bookmark" title="Eloquent: incrementing columns without update() function">Eloquent: incrementing columns without update() function</a></h3>            <div class="td-module-meta-info">
+                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2015-07-20T14:18:22+00:00">July 20, 2015</time></span>                            </div>
         </div>
 
         </div>
@@ -1091,10 +1091,10 @@ tdBlocksArray.push(block_td_uid_13_6016c12a93afe);
 
         <div class="td_module_6 td_module_wrap td-animation-stack">
 
-        <div class="td-module-thumb"><a href="https://laraveldaily.com/eloquent-get-latest-row-relationship/" rel="bookmark" class="td-image-wrap" title="Eloquent: Get the Latest Row from Relationship"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=" alt="" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/themes/Newspaper/images/no-thumb/td_100x70.png" width="100" height="70"></a></div>
+        <div class="td-module-thumb"><a href="https://laraveldaily.com/laravel-saas-free-trial-implementation/" rel="bookmark" class="td-image-wrap" title="Laravel SaaS: Free Trial Implementation"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=" alt="" title="Laravel SaaS: Free Trial Implementation" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/uploads/2019/03/Screen-Shot-2019-03-06-at-7.50.02-PM-100x70.png" width="100" height="70"></a></div>
         <div class="item-details">
-            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/eloquent-get-latest-row-relationship/" rel="bookmark" title="Eloquent: Get the Latest Row from Relationship">Eloquent: Get the Latest Row from Relationship</a></h3>            <div class="td-module-meta-info">
-                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2017-01-23T17:17:36+00:00">January 23, 2017</time></span>                            </div>
+            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/laravel-saas-free-trial-implementation/" rel="bookmark" title="Laravel SaaS: Free Trial Implementation">Laravel SaaS: Free Trial Implementation</a></h3>            <div class="td-module-meta-info">
+                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2019-03-06T20:15:40+00:00">March 6, 2019</time></span>                            </div>
         </div>
 
         </div>
@@ -1106,10 +1106,10 @@ tdBlocksArray.push(block_td_uid_13_6016c12a93afe);
 
         <div class="td_module_6 td_module_wrap td-animation-stack">
 
-        <div class="td-module-thumb"><a href="https://laraveldaily.com/pyrocms-another-new-laravel-based-system/" rel="bookmark" class="td-image-wrap" title="PyroCMS 3: another (new!) Laravel-based system"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=" alt="" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/themes/Newspaper/images/no-thumb/td_100x70.png" width="100" height="70"></a></div>
+        <div class="td-module-thumb"><a href="https://laraveldaily.com/multiple-file-upload-with-dropzone-js-and-laravel-medialibrary-package/" rel="bookmark" class="td-image-wrap" title="Multiple File Upload with Dropzone.js and Laravel MediaLibrary Package"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=" alt="" title="Multiple File Upload with Dropzone.js and Laravel MediaLibrary Package" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/uploads/2019/01/dropzone-laravel-100x70.png" width="100" height="70"></a></div>
         <div class="item-details">
-            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/pyrocms-another-new-laravel-based-system/" rel="bookmark" title="PyroCMS 3: another (new!) Laravel-based system">PyroCMS 3: another (new!) Laravel-based system</a></h3>            <div class="td-module-meta-info">
-                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2016-08-16T16:25:26+00:00">August 16, 2016</time></span>                            </div>
+            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/multiple-file-upload-with-dropzone-js-and-laravel-medialibrary-package/" rel="bookmark" title="Multiple File Upload with Dropzone.js and Laravel MediaLibrary Package">Multiple File Upload with Dropzone.js and Laravel MediaLibrary Package</a></h3>            <div class="td-module-meta-info">
+                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2019-01-22T13:15:54+00:00">January 22, 2019</time></span>                            </div>
         </div>
 
         </div>
@@ -1121,10 +1121,10 @@ tdBlocksArray.push(block_td_uid_13_6016c12a93afe);
 
         <div class="td_module_6 td_module_wrap td-animation-stack">
 
-        <div class="td-module-thumb"><a href="https://laraveldaily.com/hackathon-starter-boilerplate-package-for-quick-start/" rel="bookmark" class="td-image-wrap" title="Laravel Hackathon Starter – boilerplate package for quick start"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=" alt="" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/themes/Newspaper/images/no-thumb/td_100x70.png" width="100" height="70"></a></div>
+        <div class="td-module-thumb"><a href="https://laraveldaily.com/auth-login-with-username-instead-of-email/" rel="bookmark" class="td-image-wrap" title="Auth: login with username instead of email"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=" alt="" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/themes/Newspaper/images/no-thumb/td_100x70.png" width="100" height="70"></a></div>
         <div class="item-details">
-            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/hackathon-starter-boilerplate-package-for-quick-start/" rel="bookmark" title="Laravel Hackathon Starter – boilerplate package for quick start">Laravel Hackathon Starter – boilerplate package for quick start</a></h3>            <div class="td-module-meta-info">
-                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2016-02-23T20:18:12+00:00">February 23, 2016</time></span>                            </div>
+            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/auth-login-with-username-instead-of-email/" rel="bookmark" title="Auth: login with username instead of email">Auth: login with username instead of email</a></h3>            <div class="td-module-meta-info">
+                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2016-01-06T21:09:45+00:00">January 6, 2016</time></span>                            </div>
         </div>
 
         </div>
@@ -1136,10 +1136,10 @@ tdBlocksArray.push(block_td_uid_13_6016c12a93afe);
 
         <div class="td_module_6 td_module_wrap td-animation-stack">
 
-        <div class="td-module-thumb"><a href="https://laraveldaily.com/laraquiz-well-know-laravel/" rel="bookmark" class="td-image-wrap" title="LaraQuiz: how well do you know Laravel?"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=" alt="" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/themes/Newspaper/images/no-thumb/td_100x70.png" width="100" height="70"></a></div>
+        <div class="td-module-thumb"><a href="https://laraveldaily.com/laravel-clients-laravel-not-symfony/" rel="bookmark" class="td-image-wrap" title="Laravel for Clients: why Laravel and not Symfony?"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=" alt="" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/themes/Newspaper/images/no-thumb/td_100x70.png" width="100" height="70"></a></div>
         <div class="item-details">
-            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/laraquiz-well-know-laravel/" rel="bookmark" title="LaraQuiz: how well do you know Laravel?">LaraQuiz: how well do you know Laravel?</a></h3>            <div class="td-module-meta-info">
-                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2016-12-13T12:50:36+00:00">December 13, 2016</time></span>                            </div>
+            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/laravel-clients-laravel-not-symfony/" rel="bookmark" title="Laravel for Clients: why Laravel and not Symfony?">Laravel for Clients: why Laravel and not Symfony?</a></h3>            <div class="td-module-meta-info">
+                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2016-08-30T09:02:53+00:00">August 30, 2016</time></span>                            </div>
         </div>
 
         </div>
@@ -1149,7 +1149,7 @@ tdBlocksArray.push(block_td_uid_13_6016c12a93afe);
 		<script>
 
 			jQuery(window).load(function () {
-				jQuery('body').find('#td_uid_3_6016c12a8ace0 .td-element-style').each(function (index, element) {
+				jQuery('body').find('#td_uid_3_6016dfa91184d .td-element-style').each(function (index, element) {
 					jQuery(element).css('opacity', 1);
 					return;
 				});
@@ -1177,7 +1177,7 @@ tdBlocksArray.push(block_td_uid_13_6016c12a93afe);
 							refWindow = window;
 						}
 
-						$content.find('#td_uid_3_6016c12a8ace0 .td-element-style').each(function (index, element) {
+						$content.find('#td_uid_3_6016dfa91184d .td-element-style').each(function (index, element) {
 							jQuery(element).css('opacity', 1);
 							return;
 						});
@@ -1240,7 +1240,7 @@ tdBlocksArray.push(block_td_uid_13_6016c12a93afe);
         Version: 9.2 (rara)
         Deploy mode: deploy
         
-        uid: 6016c12a96cf6
+        uid: 6016dfa91c84b
     -->
 
     
@@ -1356,8 +1356,8 @@ code {
 						</script>
 
 
-						<textarea class="tdw-css-writer-editor td_live_css_uid_1_6016c12a96e0d"></textarea>
-						<div id="td_live_css_uid_1_6016c12a96e0d" class="td-code-editor"></div>
+						<textarea class="tdw-css-writer-editor td_live_css_uid_1_6016dfa91c920"></textarea>
+						<div id="td_live_css_uid_1_6016dfa91c920" class="td-code-editor"></div>
 
 
 						<script>
@@ -1368,7 +1368,7 @@ code {
 									tdLiveCssInject.init();
 
 
-									var editor_textarea = jQuery('.td_live_css_uid_1_6016c12a96e0d');
+									var editor_textarea = jQuery('.td_live_css_uid_1_6016dfa91c920');
 									var languageTools = ace.require("ace/ext/language_tools");
 									var tdcCompleter = {
 										getCompletions: function (editor, session, pos, prefix, callback) {
@@ -1429,7 +1429,7 @@ code {
 									};
 									languageTools.addCompleter(tdcCompleter);
 
-									window.editor = ace.edit("td_live_css_uid_1_6016c12a96e0d");
+									window.editor = ace.edit("td_live_css_uid_1_6016dfa91c920");
                                     window.editor.$blockScrolling = Infinity;
 
                                     // 'change' handler is written as function because it's called by tdc_on_add_css_live_components (of wp_footer hook)

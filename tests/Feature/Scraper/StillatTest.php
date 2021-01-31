@@ -14,6 +14,6 @@ class StillatTest extends Scraper
 
     public function testStillatContentWillBeSavedIntoPosts()
     {
-        dd($this->crawler->saveHtml());
+        $this->crawler->run();
     }
 }

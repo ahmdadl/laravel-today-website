@@ -50,7 +50,7 @@
 
     
     <meta name="csrf-param" content="authenticity_token">
-<meta name="csrf-token" content="Fzdqu4smmZMm2QSTYrZN4KLWg9IvO7EmPXViuyX+BLkhmxEd8nN1ALjjjfEF5EEW8UwhAvqTtfu7kntbjrZoSg==">
+<meta name="csrf-token" content="nbdKS6d4VsMvkY7Bu53Q70bGw0OTJOKCgpMQOYl42x147E/oCukGluazTFR4n6PxluivjFR1AMYOTWH6bdr2Vg==">
 
     <link rel="stylesheet" media="all" href="/assets/community/application-180aa70ddf043c9e9a77a7a276e1ff109d1e017c1f201a95b9b77bbd28e0a882.css">
     <script src="/assets/community/prerequisites-d767b66db7c8ba7d47a922cfce41c73d40601b3586be6f96107d5cd25cc752b8.js"></script>

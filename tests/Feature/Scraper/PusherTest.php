@@ -14,6 +14,6 @@ class PusherTest extends Scraper
 
     public function testPusherContentWillBeSavedIntoPosts()
     {
-        dd($this->crawler->saveHtml());
+        $this->crawler->run();
     }
 }

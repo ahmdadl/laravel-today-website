@@ -14,6 +14,6 @@ class LaravelDailyTest extends Scraper
 
     public function testLaraDailyContentWillBeSavedIntoPosts()
     {
-        $this->crawler->saveHtml();
+        $this->crawler->run();
     }
 }

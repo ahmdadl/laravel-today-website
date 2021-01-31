@@ -14,6 +14,6 @@ class DigitalOceanTest extends Scraper
 
     public function testDOContentWillBeSavedIntoPosts()
     {
-        $this->crawler->saveHtml();
+        $this->crawler->run();
     }    
 }

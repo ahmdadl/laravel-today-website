@@ -14,6 +14,6 @@ class DorKyTest extends Scraper
 
     public function testDoKContentWillBeSavedIntoPosts()
     {
-        $this->crawler->saveHtml();
+        $this->crawler->run();
     }    
 }

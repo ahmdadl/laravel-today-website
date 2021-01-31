@@ -14,6 +14,6 @@ class VegibitTest extends Scraper
 
     public function testVegibitContentWillBeSavedIntoPosts()
     {
-        dd($this->crawler->saveHtml());
+        $this->crawler->run();
     }
 }

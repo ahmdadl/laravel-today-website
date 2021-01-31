@@ -124,7 +124,7 @@ class AddProvider extends Command
             $req .
             '"
         ];';
-        $crawler = 'dd($this->crawler->saveHtml());';
+        $crawler = '$this->crawler->run();';
         return <<<STR
         <?php
 
