@@ -8,8 +8,7 @@
     @else
     {{-- @php $provider->loadMissing('owner') @endphp --}}
     <div class='flex'>
-        <div class='w-1/3 h-32 bg-center bg-cover rounded' style="background-image: url('{{$owner?->image_url}}')">
-        </div>
+        <img class='object-cover w-1/3 bg-center rounded h-28' src="{{$owner?->image_url}}" />
         <div class='w-2/3 ml-1 text-left'>
             <a href='{{$owner?->url}}' target='_blank' class='text-lg font-bold text-red-600 capitalize dark:text-red-400 hover:underline'>{{$owner?->name}}</a>
             <p class='text-left text-gray-500'>

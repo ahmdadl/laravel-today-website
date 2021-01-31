@@ -20,14 +20,14 @@ class ProviderSeeder extends Seeder
 
         $users = User::all();
 
-        Provider::create([
-            'user_id' => $users->first()->id,
-            'title' => 'Laravel News',
-            'url' => 'https://laravel-news.com/',
-            'request_url' => 'https://laravel-news.com/category/news',
-            'bio' => '© 2012 - 2021 LARAVEL NEWS — BY ERIC L.BARNES - A DIVISION OF DOTDEV INC',
-            'status' => Provider::APPROVED,
-        ]);
+        // Provider::create([
+        //     'user_id' => $users->first()->id,
+        //     'title' => 'Laravel News',
+        //     'url' => 'https://laravel-news.com/',
+        //     'request_url' => 'https://laravel-news.com/category/news',
+        //     'bio' => '© 2012 - 2021 LARAVEL NEWS — BY ERIC L.BARNES - A DIVISION OF DOTDEV INC',
+        //     'status' => Provider::APPROVED,
+        // ]);
 
         Provider::factory()
             ->count(5)

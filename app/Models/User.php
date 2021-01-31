@@ -51,9 +51,9 @@ class User extends \TCG\Voyager\Models\User
      */
     public function getImageUrlAttribute(): string
     {
-        return is_null($this->image) || empty($this->image)
+        return is_null($this->avatar) || empty($this->avatar)
             ? "https://images.test/users/5.jpg"
-            : $this->image;
+            : url('/storage/' . $this->avatar);
     }
 
     public function provider(): HasOne
