@@ -22,12 +22,14 @@ class PostSeeder extends Seeder
         $categories = Category::all();
 
         Provider::all()->each(function (Provider $provider) use ($categories) {
-            Post::factory()
+            if ($provider->id !== 1) {
+                Post::factory()
                 ->count(random_int(10, 31))
                 ->create([
                     'category_slug' => $categories->random()->slug,
                     'provider_slug' => $provider->slug,
                 ]);
+            }
         });
 
         DB::commit();
