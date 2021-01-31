@@ -115,15 +115,15 @@ return [
         EntryType::EXCEPTION => [
             'telescope-toolbar::collectors.exceptions',
         ],
-        EntryType::VIEW => [
-            'telescope-toolbar::collectors.views',
-        ],
+        // EntryType::VIEW => [
+        //     'telescope-toolbar::collectors.views',
+        // ],
         EntryType::QUERY => [
             'telescope-toolbar::collectors.queries',
         ],
-        EntryType::CACHE => [
-            'telescope-toolbar::collectors.cache',
-        ],
+        // EntryType::CACHE => [
+        //     'telescope-toolbar::collectors.cache',
+        // ],
         EntryType::LOG => [
             'telescope-toolbar::collectors.logs',
         ],
@@ -139,21 +139,21 @@ return [
         EntryType::JOB => [
             'telescope-toolbar::collectors.jobs',
         ],
-        EntryType::COMMAND => [
-            'telescope-toolbar::collectors.commands',
-        ],
+        // EntryType::COMMAND => [
+        //     'telescope-toolbar::collectors.commands',
+        // ],
         EntryType::DUMP => [
             'telescope-toolbar::collectors.dumps',
         ],
         EntryType::EVENT => [
             'telescope-toolbar::collectors.events',
         ],
-        EntryType::MODEL => [
-            'telescope-toolbar::collectors.models',
-        ],
-        EntryType::REDIS => [
-            'telescope-toolbar::collectors.redis',
-        ],
+        // EntryType::MODEL => [
+        //     'telescope-toolbar::collectors.models',
+        // ],
+        // EntryType::REDIS => [
+        //     'telescope-toolbar::collectors.redis',
+        // ],
         EntryType::SCHEDULED_TASK => [
 
         ],
