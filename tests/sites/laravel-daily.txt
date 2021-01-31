@@ -1,0 +1,1497 @@
+<!doctype html><html> <!--<![endif]-->
+<head>
+    <title>Laravel Tips &amp; Tutorials - Laravel Daily</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="pingback" href="https://laraveldaily.com/xmlrpc.php">
+    
+<!-- This site is optimized with the Yoast SEO plugin v9.3 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="https://laraveldaily.com/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Laravel Tips &amp; Tutorials - Laravel Daily">
+<meta property="og:description" content="Like our articles?Check out our Laravel online courses!">
+<meta property="og:url" content="https://laraveldaily.com/">
+<meta property="og:site_name" content="Laravel Daily">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Like our articles?Check out our Laravel online courses!">
+<meta name="twitter:title" content="Laravel Tips &amp; Tutorials - Laravel Daily">
+<meta name="twitter:creator" content="@povilaskorop">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://laraveldaily.com/#website","url":"https://laraveldaily.com/","name":"Laravel Daily","potentialAction":{"@type":"SearchAction","target":"https://laraveldaily.com/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="Laravel Daily » Feed" href="https://laraveldaily.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Laravel Daily » Comments Feed" href="https://laraveldaily.com/comments/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/laraveldaily.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.0.11"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="https://laraveldaily.com/wp-includes/css/dist/block-library/style.min.css?ver=5.0.11" type="text/css" media="all">
+<link rel="stylesheet" id="td-plugin-multi-purpose-css" href="https://laraveldaily.com/wp-content/plugins/td-composer/td-multi-purpose/style.css?ver=c05702a41ebbb3f5c0473f6df376a5d3" type="text/css" media="all">
+<link rel="stylesheet" id="google-fonts-style-css" href="https://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400%2C400italic%2C600%2C600italic%2C700%7CRoboto%3A300%2C400%2C400italic%2C500%2C500italic%2C700%2C900&amp;ver=9.2" type="text/css" media="all">
+<link rel="stylesheet" id="td-theme-css" href="https://laraveldaily.com/wp-content/themes/Newspaper/style.css?ver=9.2" type="text/css" media="all">
+<script type="text/javascript" src="https://laraveldaily.com/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+<script type="text/javascript" src="https://laraveldaily.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+<link rel="https://api.w.org/" href="https://laraveldaily.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://laraveldaily.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://laraveldaily.com/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.0.11">
+<link rel="shortlink" href="https://laraveldaily.com/">
+<link rel="alternate" type="application/json+oembed" href="https://laraveldaily.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flaraveldaily.com%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://laraveldaily.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flaraveldaily.com%2F&amp;format=xml">
+			<script>
+				window.tdwGlobal = {"adminUrl":"https:\/\/laraveldaily.com\/wp-admin\/","wpRestNonce":"751e9a9ff8","wpRestUrl":"https:\/\/laraveldaily.com\/wp-json\/","permalinkStructure":"\/%postname%\/"};
+			</script>
+			<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+    		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		
+<!-- JS generated by theme -->
+
+<script>
+    
+    
+
+	    var tdBlocksArray = []; //here we store all the items for the current page
+
+	    //td_block class - each ajax block uses a object of this class for requests
+	    function tdBlock() {
+		    this.id = '';
+		    this.block_type = 1; //block type id (1-234 etc)
+		    this.atts = '';
+		    this.td_column_number = '';
+		    this.td_current_page = 1; //
+		    this.post_count = 0; //from wp
+		    this.found_posts = 0; //from wp
+		    this.max_num_pages = 0; //from wp
+		    this.td_filter_value = ''; //current live filter value
+		    this.is_ajax_running = false;
+		    this.td_user_action = ''; // load more or infinite loader (used by the animation)
+		    this.header_color = '';
+		    this.ajax_pagination_infinite_stop = ''; //show load more at page x
+	    }
+
+
+        // td_js_generator - mini detector
+        (function(){
+            var htmlTag = document.getElementsByTagName("html")[0];
+
+	        if ( navigator.userAgent.indexOf("MSIE 10.0") > -1 ) {
+                htmlTag.className += ' ie10';
+            }
+
+            if ( !!navigator.userAgent.match(/Trident.*rv\:11\./) ) {
+                htmlTag.className += ' ie11';
+            }
+
+	        if ( navigator.userAgent.indexOf("Edge") > -1 ) {
+                htmlTag.className += ' ieEdge';
+            }
+
+            if ( /(iPad|iPhone|iPod)/g.test(navigator.userAgent) ) {
+                htmlTag.className += ' td-md-is-ios';
+            }
+
+            var user_agent = navigator.userAgent.toLowerCase();
+            if ( user_agent.indexOf("android") > -1 ) {
+                htmlTag.className += ' td-md-is-android';
+            }
+
+            if ( -1 !== navigator.userAgent.indexOf('Mac OS X')  ) {
+                htmlTag.className += ' td-md-is-os-x';
+            }
+
+            if ( /chrom(e|ium)/.test(navigator.userAgent.toLowerCase()) ) {
+               htmlTag.className += ' td-md-is-chrome';
+            }
+
+            if ( -1 !== navigator.userAgent.indexOf('Firefox') ) {
+                htmlTag.className += ' td-md-is-firefox';
+            }
+
+            if ( -1 !== navigator.userAgent.indexOf('Safari') && -1 === navigator.userAgent.indexOf('Chrome') ) {
+                htmlTag.className += ' td-md-is-safari';
+            }
+
+            if( -1 !== navigator.userAgent.indexOf('IEMobile') ){
+                htmlTag.className += ' td-md-is-iemobile';
+            }
+
+        })();
+
+
+
+
+        var tdLocalCache = {};
+
+        ( function () {
+            "use strict";
+
+            tdLocalCache = {
+                data: {},
+                remove: function (resource_id) {
+                    delete tdLocalCache.data[resource_id];
+                },
+                exist: function (resource_id) {
+                    return tdLocalCache.data.hasOwnProperty(resource_id) && tdLocalCache.data[resource_id] !== null;
+                },
+                get: function (resource_id) {
+                    return tdLocalCache.data[resource_id];
+                },
+                set: function (resource_id, cachedData) {
+                    tdLocalCache.remove(resource_id);
+                    tdLocalCache.data[resource_id] = cachedData;
+                }
+            };
+        })();
+
+    
+    
+var tds_login_sing_in_widget="show";
+var td_viewport_interval_list=[{"limitBottom":767,"sidebarWidth":228},{"limitBottom":1018,"sidebarWidth":300},{"limitBottom":1140,"sidebarWidth":324}];
+var td_animation_stack_effect="type0";
+var tds_animation_stack=true;
+var td_animation_stack_specific_selectors=".entry-thumb, img";
+var td_animation_stack_general_selectors=".td-animation-stack img, .td-animation-stack .entry-thumb, .post img";
+var td_ajax_url="https:\/\/laraveldaily.com\/wp-admin\/admin-ajax.php?td_theme_name=Newspaper&v=9.2";
+var td_get_template_directory_uri="https:\/\/laraveldaily.com\/wp-content\/themes\/Newspaper";
+var tds_snap_menu="smart_snap_always";
+var tds_logo_on_sticky="show_header_logo";
+var tds_header_style="";
+var td_please_wait="Please wait...";
+var td_email_user_pass_incorrect="User or password incorrect!";
+var td_email_user_incorrect="Email or username incorrect!";
+var td_email_incorrect="Email incorrect!";
+var tds_more_articles_on_post_enable="";
+var tds_more_articles_on_post_time_to_wait="";
+var tds_more_articles_on_post_pages_distance_from_top=0;
+var tds_theme_color_site_wide="#4db2ec";
+var tds_smart_sidebar="enabled";
+var tdThemeName="Newspaper";
+var td_magnific_popup_translation_tPrev="Previous (Left arrow key)";
+var td_magnific_popup_translation_tNext="Next (Right arrow key)";
+var td_magnific_popup_translation_tCounter="%curr% of %total%";
+var td_magnific_popup_translation_ajax_tError="The content from %url% could not be loaded.";
+var td_magnific_popup_translation_image_tError="The image #%curr% could not be loaded.";
+var tdDateNamesI18n={"month_names":["January","February","March","April","May","June","July","August","September","October","November","December"],"month_names_short":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"day_names":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"day_names_short":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]};
+var td_ad_background_click_link="";
+var td_ad_background_click_target="";
+</script>
+
+
+<!-- Header style compiled by theme -->
+
+<style>
+    
+.block-title > span,
+    .block-title > span > a,
+    .block-title > a,
+    .block-title > label,
+    .widgettitle,
+    .widgettitle:after,
+    .td-trending-now-title,
+    .td-trending-now-wrapper:hover .td-trending-now-title,
+    .wpb_tabs li.ui-tabs-active a,
+    .wpb_tabs li:hover a,
+    .vc_tta-container .vc_tta-color-grey.vc_tta-tabs-position-top.vc_tta-style-classic .vc_tta-tabs-container .vc_tta-tab.vc_active > a,
+    .vc_tta-container .vc_tta-color-grey.vc_tta-tabs-position-top.vc_tta-style-classic .vc_tta-tabs-container .vc_tta-tab:hover > a,
+    .td_block_template_1 .td-related-title .td-cur-simple-item,
+    .woocommerce .product .products h2:not(.woocommerce-loop-product__title),
+    .td-subcat-filter .td-subcat-dropdown:hover .td-subcat-more,
+    .td-weather-information:before,
+    .td-weather-week:before,
+    .td_block_exchange .td-exchange-header:before,
+    .td-theme-wrap .td_block_template_3 .td-block-title > *,
+    .td-theme-wrap .td_block_template_4 .td-block-title > *,
+    .td-theme-wrap .td_block_template_7 .td-block-title > *,
+    .td-theme-wrap .td_block_template_9 .td-block-title:after,
+    .td-theme-wrap .td_block_template_10 .td-block-title::before,
+    .td-theme-wrap .td_block_template_11 .td-block-title::before,
+    .td-theme-wrap .td_block_template_11 .td-block-title::after,
+    .td-theme-wrap .td_block_template_14 .td-block-title,
+    .td-theme-wrap .td_block_template_15 .td-block-title:before,
+    .td-theme-wrap .td_block_template_17 .td-block-title:before {
+        background-color: #222222;
+    }
+
+    .woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+    	background-color: #222222 !important;
+    }
+
+    .block-title,
+    .td_block_template_1 .td-related-title,
+    .wpb_tabs .wpb_tabs_nav,
+    .vc_tta-container .vc_tta-color-grey.vc_tta-tabs-position-top.vc_tta-style-classic .vc_tta-tabs-container,
+    .woocommerce div.product .woocommerce-tabs ul.tabs:before,
+    .td-theme-wrap .td_block_template_5 .td-block-title > *,
+    .td-theme-wrap .td_block_template_17 .td-block-title,
+    .td-theme-wrap .td_block_template_17 .td-block-title::before {
+        border-color: #222222;
+    }
+
+    .td-theme-wrap .td_block_template_4 .td-block-title > *:before,
+    .td-theme-wrap .td_block_template_17 .td-block-title::after {
+        border-color: #222222 transparent transparent transparent;
+    }
+    
+    .td-theme-wrap .td_block_template_4 .td-related-title .td-cur-simple-item:before {
+        border-color: #222222 transparent transparent transparent !important;
+    }
+
+    
+    .td-footer-wrapper,
+    .td-footer-wrapper .td_block_template_7 .td-block-title > *,
+    .td-footer-wrapper .td_block_template_17 .td-block-title,
+    .td-footer-wrapper .td-block-title-wrap .td-wrapper-pulldown-filter {
+        background-color: #111111;
+    }
+
+    
+    .td-footer-wrapper::before {
+        background-size: cover;
+    }
+
+    
+    .td-footer-wrapper::before {
+        background-position: center center;
+    }
+
+    
+    .td-footer-wrapper::before {
+        opacity: 0.1;
+    }
+
+
+
+    
+    .td-post-content p,
+    .td-post-content {
+        font-size:18px;
+	
+    }
+    
+    .post blockquote p,
+    .page blockquote p,
+    .td-post-text-content blockquote p {
+        font-family:Verdana, Geneva, sans-serif;
+	font-size:18px;
+	font-style:normal;
+	text-transform:none;
+	
+    }
+    
+    .post .td_quote_box p,
+    .page .td_quote_box p {
+        font-size:20px;
+	
+    }
+    
+    .post .td_pull_quote p,
+    .page .td_pull_quote p {
+        font-size:20px;
+	
+    }
+    
+    .td-post-content li {
+        font-family:Verdana, Geneva, sans-serif;
+	font-size:18px;
+	
+    }
+    
+    .td-post-content h1 {
+        font-size:40px;
+	
+    }
+    
+    .td-post-content h2 {
+        font-size:34px;
+	
+    }
+    
+    .td-post-content h3 {
+        font-size:28px;
+	
+    }
+</style>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-64361490-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-64361490-1');
+</script>
+
+<!-- Button style compiled by theme -->
+
+<style>
+    
+</style>
+
+	<style id="tdw-css-placeholder"></style></head>
+
+<body class="home page-template-default page page-id-2367 homepage global-block-template-1 td-animation-stack-type0 td-full-layout" itemscope="itemscope" itemtype="https://schema.org/WebPage">
+
+        <div class="td-scroll-up"><i class="td-icon-menu-up"></i></div>
+    
+    <div class="td-menu-background"></div>
+<div id="td-mobile-nav">
+    <div class="td-mobile-container">
+        <!-- mobile menu top section -->
+        <div class="td-menu-socials-wrap">
+            <!-- socials -->
+            <div class="td-menu-socials">
+                
+        <span class="td-social-icon-wrap">
+            <a target="_blank" href="https://www.facebook.com/laraveldaily/" title="Facebook">
+                <i class="td-icon-font td-icon-facebook"></i>
+            </a>
+        </span>
+        <span class="td-social-icon-wrap">
+            <a target="_blank" href="https://twitter.com/dailylaravel" title="Twitter">
+                <i class="td-icon-font td-icon-twitter"></i>
+            </a>
+        </span>
+        <span class="td-social-icon-wrap">
+            <a target="_blank" href="https://www.youtube.com/channel/UCTuplgOBi6tJIlesIboymGA" title="Youtube">
+                <i class="td-icon-font td-icon-youtube"></i>
+            </a>
+        </span>            </div>
+            <!-- close button -->
+            <div class="td-mobile-close">
+                <a href="#"><i class="td-icon-close-mobile"></i></a>
+            </div>
+        </div>
+
+        <!-- login section -->
+                    <div class="td-menu-login-section">
+                
+    <div class="td-guest-wrap">
+        <div class="td-menu-avatar"><div class="td-avatar-container"><img alt="" src="https://secure.gravatar.com/avatar/?s=80&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/?s=160&amp;d=mm&amp;r=g 2x" class="avatar avatar-80 photo avatar-default" height="80" width="80"></div></div>
+        <div class="td-menu-login"><a id="login-link-mob">Sign in</a></div>
+    </div>
+            </div>
+        
+        <!-- menu section -->
+        <div class="td-mobile-content">
+            <div class="menu-main-menu-container"><ul id="menu-main-menu" class="td-mobile-main-menu"><li id="menu-item-2383" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2367 current_page_item menu-item-first menu-item-2383"><a href="https://laraveldaily.com/">Laravel Tutorials</a></li>
+<li id="menu-item-2384" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2384"><a href="https://laraveldaily.teachable.com">Laravel Courses</a></li>
+<li id="menu-item-3320" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3320"><a href="https://laraveldaily.com/our-projects/">Our projects and clients</a></li>
+<li id="menu-item-2385" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2385"><a href="https://laraveldaily.com/about-project/">About Author</a></li>
+<li id="menu-item-2465" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2465"><a href="https://laraveldaily.com/contact-us/">Contact – Hire our Team</a></li>
+</ul></div>        </div>
+    </div>
+
+    <!-- register/login section -->
+            <div id="login-form-mobile" class="td-register-section">
+            
+            <div id="td-login-mob" class="td-login-animation td-login-hide-mob">
+            	<!-- close button -->
+	            <div class="td-login-close">
+	                <a href="#" class="td-back-button"><i class="td-icon-read-down"></i></a>
+	                <div class="td-login-title">Sign in</div>
+	                <!-- close button -->
+		            <div class="td-mobile-close">
+		                <a href="#"><i class="td-icon-close-mobile"></i></a>
+		            </div>
+	            </div>
+	            <div class="td-login-form-wrap">
+	                <div class="td-login-panel-title"><span>Welcome!</span>Log into your account</div>
+	                <div class="td_display_err"></div>
+	                <div class="td-login-inputs"><input class="td-login-input" type="text" name="login_email" id="login_email-mob" value="" required><label>your username</label></div>
+	                <div class="td-login-inputs"><input class="td-login-input" type="password" name="login_pass" id="login_pass-mob" value="" required><label>your password</label></div>
+	                <input type="button" name="login_button" id="login_button-mob" class="td-login-button" value="LOG IN">
+	                <div class="td-login-info-text">
+	                <a href="#" id="forgot-pass-link-mob">Forgot your password?</a>
+	                </div>
+	                
+	                
+	                
+                </div>
+            </div>
+
+            
+            
+            
+            
+            <div id="td-forgot-pass-mob" class="td-login-animation td-login-hide-mob">
+                <!-- close button -->
+	            <div class="td-forgot-pass-close">
+	                <a href="#" class="td-back-button"><i class="td-icon-read-down"></i></a>
+	                <div class="td-login-title">Password recovery</div>
+	            </div>
+	            <div class="td-login-form-wrap">
+	                <div class="td-login-panel-title">Recover your password</div>
+	                <div class="td_display_err"></div>
+	                <div class="td-login-inputs"><input class="td-login-input" type="text" name="forgot_email" id="forgot_email-mob" value="" required><label>your email</label></div>
+	                <input type="button" name="forgot_button" id="forgot_button-mob" class="td-login-button" value="Send My Pass">
+                </div>
+            </div>
+        </div>
+    </div>    <div class="td-search-background"></div>
+<div class="td-search-wrap-mob">
+	<div class="td-drop-down-search" aria-labelledby="td-header-search-button">
+		<form method="get" class="td-search-form" action="https://laraveldaily.com/">
+			<!-- close button -->
+			<div class="td-search-close">
+				<a href="#"><i class="td-icon-close-mobile"></i></a>
+			</div>
+			<div role="search" class="td-search-input">
+				<span>Search</span>
+				<input id="td-header-search-mob" type="text" value="" name="s" autocomplete="off">
+			</div>
+		</form>
+		<div id="td-aj-search-mob"></div>
+	</div>
+</div>    
+    
+    <div id="td-outer-wrap" class="td-theme-wrap">
+    
+        <!--
+Header style 1
+-->
+
+
+<div class="td-header-wrap td-header-style-1 ">
+    
+    <div class="td-header-top-menu-full td-container-wrap ">
+        <div class="td-container td-header-row td-header-top-menu">
+            <!-- LOGIN MODAL -->
+
+                <div id="login-form" class="white-popup-block mfp-hide mfp-with-anim">
+                    <div class="td-login-wrap">
+                        <a href="#" class="td-back-button"><i class="td-icon-modal-back"></i></a>
+                        <div id="td-login-div" class="td-login-form-div td-display-block">
+                            <div class="td-login-panel-title">Sign in</div>
+                            <div class="td-login-panel-descr">Welcome! Log into your account</div>
+                            <div class="td_display_err"></div>
+                            <div class="td-login-inputs"><input class="td-login-input" type="text" name="login_email" id="login_email" value="" required><label>your username</label></div>
+	                        <div class="td-login-inputs"><input class="td-login-input" type="password" name="login_pass" id="login_pass" value="" required><label>your password</label></div>
+                            <input type="button" name="login_button" id="login_button" class="wpb_button btn td-login-button" value="Login">
+                            <div class="td-login-info-text"><a href="#" id="forgot-pass-link">Forgot your password? Get help</a></div>
+                            
+                            
+                            
+                            
+                        </div>
+
+                        
+
+                         <div id="td-forgot-pass-div" class="td-login-form-div td-display-none">
+                            <div class="td-login-panel-title">Password recovery</div>
+                            <div class="td-login-panel-descr">Recover your password</div>
+                            <div class="td_display_err"></div>
+                            <div class="td-login-inputs"><input class="td-login-input" type="text" name="forgot_email" id="forgot_email" value="" required><label>your email</label></div>
+                            <input type="button" name="forgot_button" id="forgot_button" class="wpb_button btn td-login-button" value="Send My Password">
+                            <div class="td-login-info-text">A password will be e-mailed to you.</div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                        </div>
+    </div>
+
+    <div class="td-banner-wrap-full td-logo-wrap-full td-container-wrap ">
+        <div class="td-container td-header-row td-header-header">
+            <div class="td-header-sp-logo">
+                <h1 class="td-logo">            <a class="td-main-logo" href="https://laraveldaily.com/">
+                <img src="https://laraveldaily.com/wp-content/uploads/2018/12/laravel-daily-2.png" alt="">
+                <span class="td-visual-hidden">Laravel Daily</span>
+            </a>
+        </h1>            </div>
+                            <div class="td-header-sp-recs">
+                    <div class="td-header-rec-wrap">
+    <div class="td-a-rec td-a-rec-id-header  td_uid_1_6016c12a87553_rand td_block_template_1"><div class="td-all-devices"><a href="/weekly-laravel-newsletter?utm_source=internal&amp;utm_campaign=top_banner"><img src="/wp-content/uploads/2018/12/laravel-articles.png"></a></div></div>
+</div>                </div>
+                    </div>
+    </div>
+
+    <div class="td-header-menu-wrap-full td-container-wrap ">
+        
+        <div class="td-header-menu-wrap td-header-gradient ">
+            <div class="td-container td-header-row td-header-main-menu">
+                <div id="td-header-menu" role="navigation">
+    <div id="td-top-mobile-toggle"><a href="#"><i class="td-icon-font td-icon-mobile"></i></a></div>
+    <div class="td-main-menu-logo td-logo-in-header">
+        		<a class="td-mobile-logo td-sticky-header" href="https://laraveldaily.com/">
+			<img src="https://laraveldaily.com/wp-content/uploads/2018/12/laravel-daily-2.png" alt="">
+		</a>
+			<a class="td-header-logo td-sticky-header" href="https://laraveldaily.com/">
+			<img src="https://laraveldaily.com/wp-content/uploads/2018/12/laravel-daily-2.png" alt="">
+		</a>
+	    </div>
+    <div class="menu-main-menu-container"><ul id="menu-main-menu-1" class="sf-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2367 current_page_item menu-item-first td-menu-item td-normal-menu menu-item-2383"><a href="https://laraveldaily.com/">Laravel Tutorials</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom td-menu-item td-normal-menu menu-item-2384"><a href="https://laraveldaily.teachable.com">Laravel Courses</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-3320"><a href="https://laraveldaily.com/our-projects/">Our projects and clients</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-2385"><a href="https://laraveldaily.com/about-project/">About Author</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-2465"><a href="https://laraveldaily.com/contact-us/">Contact – Hire our Team</a></li>
+</ul></div></div>
+
+
+    <div class="header-search-wrap">
+        <div class="td-search-btns-wrap">
+            <a id="td-header-search-button" href="#" role="button" class="dropdown-toggle " data-toggle="dropdown"><i class="td-icon-search"></i></a>
+            <a id="td-header-search-button-mob" href="#" role="button" class="dropdown-toggle " data-toggle="dropdown"><i class="td-icon-search"></i></a>
+        </div>
+
+        <div class="td-drop-down-search" aria-labelledby="td-header-search-button">
+            <form method="get" class="td-search-form" action="https://laraveldaily.com/">
+                <div role="search" class="td-head-form-search-wrap">
+                    <input id="td-header-search" type="text" value="" name="s" autocomplete="off"><input class="wpb_button wpb_btn-inverse btn" type="submit" id="td-header-search-top" value="Search">
+                </div>
+            </form>
+            <div id="td-aj-search"></div>
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+
+</div>        
+            <div class="td-main-content-wrap td-main-page-wrap td-container-wrap">
+                <div class="tdc-content-wrap">
+                    <div id="td_uid_1_6016c12a880b5" class="tdc-row"><div class="vc_row td_uid_2_6016c12a880ba_rand  wpb_row td-pb-row">
+<style scoped>
+
+/* custom css */
+.td_uid_2_6016c12a880ba_rand {
+                    min-height: 0;
+                }
+</style><div class="vc_column td_uid_3_6016c12a881ca_rand  wpb_column vc_column_container tdc-column td-pb-span12"><div class="wpb_wrapper"><div class="td_block_wrap td_block_big_grid_3 td_uid_4_6016c12a8825a_rand td-grid-style-1 td-hover-1 td-big-grids td-pb-border-top td_block_template_1" data-td-block-uid="td_uid_4_6016c12a8825a"><div id="td_uid_4_6016c12a8825a" class="td_block_inner"><div class="td-big-grid-wrapper">
+        <div class="td_module_mx5 td-animation-stack td-big-grid-post-0 td-big-grid-post td-big-thumb">
+            <div class="td-module-thumb"><a href="https://laraveldaily.com/free-e-book-40-laravel-quick-tips-and-counting/" rel="bookmark" class="td-image-wrap" title="FREE E-book: 100 Laravel Quick Tips (and counting)"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAhYAAAHOAQMAAAD+DNJPAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAADVJREFUeNrtwQENAAAAwiD7p7bHBwwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAICEA3q4AAGK1CNoAAAAAElFTkSuQmCC" alt="" title="FREE E-book: 100 Laravel Quick Tips (and counting)" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/uploads/2020/04/laravel-quick-tips-534x315.png" width="534" height="315"></a></div>            <div class="td-meta-info-container">
+                <div class="td-meta-align">
+                    <div class="td-big-grid-meta">
+                                                <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/free-e-book-40-laravel-quick-tips-and-counting/" rel="bookmark" title="FREE E-book: 100 Laravel Quick Tips (and counting)">FREE E-book: 100 Laravel Quick Tips (and counting)</a></h3>                    </div>
+                    <div class="td-module-meta-info">
+                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2020-04-20T16:49:40+00:00">April 20, 2020</time></span>                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="td-big-grid-scroll">
+        <div class="td_module_mx11 td-animation-stack td-big-grid-post-1 td-big-grid-post td-medium-thumb">
+            <div class="td-module-thumb"><a href="https://laraveldaily.com/8-tricks-with-laravel-timestamps/" rel="bookmark" class="td-image-wrap" title="8 Tricks with Laravel Timestamps"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAhUAAAEFAQMAAABuFIc7AAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAACdJREFUeNrtwQENAAAAwiD7p7bHBwwAAAAAAAAAAAAAAAAAAAAAIORFVAABqJvmiQAAAABJRU5ErkJggg==" alt="" title="8 Tricks with Laravel Timestamps" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/uploads/2019/12/Eloquent-Timestamps-1-533x261.png" width="533" height="261"></a></div>            <div class="td-meta-info-container">
+                <div class="td-meta-align">
+                    <div class="td-big-grid-meta">
+                                                <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/8-tricks-with-laravel-timestamps/" rel="bookmark" title="8 Tricks with Laravel Timestamps">8 Tricks with Laravel Timestamps</a></h3>                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        
+        <div class="td_module_mx6 td-animation-stack td-big-grid-post-2 td-big-grid-post td-small-thumb">
+            <div class="td-module-thumb"><a href="https://laraveldaily.com/auth-register-with-two-steps-optional-fields-for-country-and-bio/" rel="bookmark" class="td-image-wrap" title="Laravel Two-Step Registration: Optional Fields for Country and Bio"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQkAAADGAQMAAAD7b+fyAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAAB1JREFUWMPtwQENAAAAwiD7p7bHBwwAAAAAAADSDhsSAAGoWlW2AAAAAElFTkSuQmCC" alt="" title="Laravel Two-Step Registration: Optional Fields for Country and Bio" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/uploads/2019/07/Screen-Shot-2019-07-24-at-8.26.28-AM-265x198.png" width="265" height="198"></a></div>            <div class="td-meta-info-container">
+                <div class="td-meta-align">
+                    <div class="td-big-grid-meta">
+                                                <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/auth-register-with-two-steps-optional-fields-for-country-and-bio/" rel="bookmark" title="Laravel Two-Step Registration: Optional Fields for Country and Bio">Laravel Two-Step Registration: Optional Fields for Country and Bio</a></h3>                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        
+        <div class="td_module_mx6 td-animation-stack td-big-grid-post-3 td-big-grid-post td-small-thumb">
+            <div class="td-module-thumb"><a href="https://laraveldaily.com/how-to-structure-routes-in-large-laravel-projects/" rel="bookmark" class="td-image-wrap" title="How to Structure Routes in Large Laravel Projects?"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQkAAADGAQMAAAD7b+fyAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAAB1JREFUWMPtwQENAAAAwiD7p7bHBwwAAAAAAADSDhsSAAGoWlW2AAAAAElFTkSuQmCC" alt="" title="How to Structure Routes in Large Laravel Projects?" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/uploads/2019/06/Laravel-Routes-in-Bigger-Projects-265x198.png" width="265" height="198"></a></div>            <div class="td-meta-info-container">
+                <div class="td-meta-align">
+                    <div class="td-big-grid-meta">
+                                                <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/how-to-structure-routes-in-large-laravel-projects/" rel="bookmark" title="How to Structure Routes in Large Laravel Projects?">How to Structure Routes in Large Laravel Projects?</a></h3>                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        </div></div><div class="clearfix"></div></div></div> <!-- ./block --></div></div></div></div>
+		<script>
+
+			jQuery(window).load(function () {
+				jQuery('body').find('#td_uid_1_6016c12a880b5 .td-element-style').each(function (index, element) {
+					jQuery(element).css('opacity', 1);
+					return;
+				});
+			});
+
+		</script>
+
+		
+			<script>
+
+				jQuery(window).ready(function () {
+
+					// We need timeout because the content must be rendered and interpreted on client
+					setTimeout(function () {
+
+						var $content = jQuery('body').find('#tdc-live-iframe'),
+							refWindow = undefined;
+
+						if ($content.length) {
+							$content = $content.contents();
+							refWindow = document.getElementById('tdc-live-iframe').contentWindow || document.getElementById('tdc-live-iframe').contentDocument;
+
+						} else {
+							$content = jQuery('body');
+							refWindow = window;
+						}
+
+						$content.find('#td_uid_1_6016c12a880b5 .td-element-style').each(function (index, element) {
+							jQuery(element).css('opacity', 1);
+							return;
+						});
+					});
+
+				}, 200);
+			</script>
+
+			<div id="td_uid_3_6016c12a8ace0" class="tdc-row"><div class="vc_row td_uid_5_6016c12a8ace5_rand td-ss-row wpb_row td-pb-row">
+<style scoped>
+
+/* custom css */
+.td_uid_5_6016c12a8ace5_rand {
+                    min-height: 0;
+                }
+</style><div class="vc_column td_uid_6_6016c12a8ae07_rand  wpb_column vc_column_container tdc-column td-pb-span8"><div class="wpb_wrapper"><div class="td_block_wrap td_block_11 td_uid_7_6016c12a8aee6_rand td_with_ajax_pagination td-pb-border-top td_block_template_1 td-column-2" data-td-block-uid="td_uid_7_6016c12a8aee6"><script>var block_td_uid_7_6016c12a8aee6 = new tdBlock();
+block_td_uid_7_6016c12a8aee6.id = "td_uid_7_6016c12a8aee6";
+block_td_uid_7_6016c12a8aee6.atts = '{"limit":"10","td_filter_default_txt":"All","category_id":"","sort":"","custom_title":"NEWEST ARTICLES","ajax_pagination":"next_prev","separator":"","custom_url":"","block_template_id":"","m10_tl":"","m10_el":"","post_ids":"","category_ids":"","tag_slug":"","autors_id":"","installed_post_types":"","offset":"","el_class":"","td_ajax_filter_type":"","td_ajax_filter_ids":"","td_ajax_preloading":"","f_header_font_header":"","f_header_font_title":"Block header","f_header_font_settings":"","f_header_font_family":"","f_header_font_size":"","f_header_font_line_height":"","f_header_font_style":"","f_header_font_weight":"","f_header_font_transform":"","f_header_font_spacing":"","f_header_":"","f_ajax_font_title":"Ajax categories","f_ajax_font_settings":"","f_ajax_font_family":"","f_ajax_font_size":"","f_ajax_font_line_height":"","f_ajax_font_style":"","f_ajax_font_weight":"","f_ajax_font_transform":"","f_ajax_font_spacing":"","f_ajax_":"","f_more_font_title":"Load more button","f_more_font_settings":"","f_more_font_family":"","f_more_font_size":"","f_more_font_line_height":"","f_more_font_style":"","f_more_font_weight":"","f_more_font_transform":"","f_more_font_spacing":"","f_more_":"","m10f_title_font_header":"","m10f_title_font_title":"Article title","m10f_title_font_settings":"","m10f_title_font_family":"","m10f_title_font_size":"","m10f_title_font_line_height":"","m10f_title_font_style":"","m10f_title_font_weight":"","m10f_title_font_transform":"","m10f_title_font_spacing":"","m10f_title_":"","m10f_cat_font_title":"Article category tag","m10f_cat_font_settings":"","m10f_cat_font_family":"","m10f_cat_font_size":"","m10f_cat_font_line_height":"","m10f_cat_font_style":"","m10f_cat_font_weight":"","m10f_cat_font_transform":"","m10f_cat_font_spacing":"","m10f_cat_":"","m10f_meta_font_title":"Article meta info","m10f_meta_font_settings":"","m10f_meta_font_family":"","m10f_meta_font_size":"","m10f_meta_font_line_height":"","m10f_meta_font_style":"","m10f_meta_font_weight":"","m10f_meta_font_transform":"","m10f_meta_font_spacing":"","m10f_meta_":"","m10f_ex_font_title":"Article excerpt","m10f_ex_font_settings":"","m10f_ex_font_family":"","m10f_ex_font_size":"","m10f_ex_font_line_height":"","m10f_ex_font_style":"","m10f_ex_font_weight":"","m10f_ex_font_transform":"","m10f_ex_font_spacing":"","m10f_ex_":"","ajax_pagination_infinite_stop":"","css":"","tdc_css":"","td_column_number":2,"header_color":"","color_preset":"","border_top":"","class":"td_uid_7_6016c12a8aee6_rand","tdc_css_class":"td_uid_7_6016c12a8aee6_rand","tdc_css_class_style":"td_uid_7_6016c12a8aee6_rand_style"}';
+block_td_uid_7_6016c12a8aee6.td_column_number = "2";
+block_td_uid_7_6016c12a8aee6.block_type = "td_block_11";
+block_td_uid_7_6016c12a8aee6.post_count = "10";
+block_td_uid_7_6016c12a8aee6.found_posts = "312";
+block_td_uid_7_6016c12a8aee6.header_color = "";
+block_td_uid_7_6016c12a8aee6.ajax_pagination_infinite_stop = "";
+block_td_uid_7_6016c12a8aee6.max_num_pages = "32";
+tdBlocksArray.push(block_td_uid_7_6016c12a8aee6);
+</script><div class="td-block-title-wrap"><h4 class="block-title td-block-title"><span class="td-pulldown-size">NEWEST ARTICLES</span></h4></div><div id="td_uid_7_6016c12a8aee6" class="td_block_inner">
+
+	<div class="td-block-span12">
+
+        <div class="td_module_10 td_module_wrap td-animation-stack">
+            <div class="td-module-thumb"><a href="https://laraveldaily.com/free-e-book-40-laravel-quick-tips-and-counting/" rel="bookmark" class="td-image-wrap" title="FREE E-book: 100 Laravel Quick Tips (and counting)"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANoAAACWAQMAAACCSQSPAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABpJREFUWMPtwQENAAAAwiD7p7bHBwwAAAAg7RD+AAGXD7BoAAAAAElFTkSuQmCC" alt="" title="FREE E-book: 100 Laravel Quick Tips (and counting)" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/uploads/2020/04/laravel-quick-tips-218x150.png" width="218" height="150"></a></div>
+            <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/free-e-book-40-laravel-quick-tips-and-counting/" rel="bookmark" title="FREE E-book: 100 Laravel Quick Tips (and counting)">FREE E-book: 100 Laravel Quick Tips (and counting)</a></h3>
+                <div class="td-module-meta-info">
+                                                                    <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2020-04-20T16:49:40+00:00">April 20, 2020</time></span>                        <div class="td-module-comments"><a href="https://laraveldaily.com/free-e-book-40-laravel-quick-tips-and-counting/#comments">13</a></div>                </div>
+
+                <div class="td-excerpt">
+                    Laravel is full of hidden gems, undocumented or less-known features, functions parameters and "hacks". While finding them in work of my team, I decided to compile them into an e-book.                </div>
+            </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+        <div class="td_module_10 td_module_wrap td-animation-stack">
+            <div class="td-module-thumb"><a href="https://laraveldaily.com/8-tricks-with-laravel-timestamps/" rel="bookmark" class="td-image-wrap" title="8 Tricks with Laravel Timestamps"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANoAAACWAQMAAACCSQSPAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABpJREFUWMPtwQENAAAAwiD7p7bHBwwAAAAg7RD+AAGXD7BoAAAAAElFTkSuQmCC" alt="" title="8 Tricks with Laravel Timestamps" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/uploads/2019/12/Eloquent-Timestamps-1-218x150.png" width="218" height="150"></a></div>
+            <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/8-tricks-with-laravel-timestamps/" rel="bookmark" title="8 Tricks with Laravel Timestamps">8 Tricks with Laravel Timestamps</a></h3>
+                <div class="td-module-meta-info">
+                                                                    <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2019-12-31T10:27:24+00:00">December 31, 2019</time></span>                        <div class="td-module-comments"><a href="https://laraveldaily.com/8-tricks-with-laravel-timestamps/#comments">10</a></div>                </div>
+
+                <div class="td-excerpt">
+                    
+By default, Laravel Eloquent models assume your table has timestamp fields - created_at and updated_at. But there's plenty of things you can...                </div>
+            </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+        <div class="td_module_10 td_module_wrap td-animation-stack">
+            <div class="td-module-thumb"><a href="https://laraveldaily.com/taylor-otwell-laravel-7-will-move-auth-controllers-into-ui-package/" rel="bookmark" class="td-image-wrap" title="Taylor Otwell: Laravel 7 Will Move Auth Controllers into UI Package"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANoAAACWAQMAAACCSQSPAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABpJREFUWMPtwQENAAAAwiD7p7bHBwwAAAAg7RD+AAGXD7BoAAAAAElFTkSuQmCC" alt="Laravel Auth controllers" title="Taylor Otwell: Laravel 7 Will Move Auth Controllers into UI Package" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/uploads/2019/12/Screen-Shot-2019-12-27-at-11.06.25-AM-218x150.png" width="218" height="150"></a></div>
+            <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/taylor-otwell-laravel-7-will-move-auth-controllers-into-ui-package/" rel="bookmark" title="Taylor Otwell: Laravel 7 Will Move Auth Controllers into UI Package">Taylor Otwell: Laravel 7 Will Move Auth Controllers into UI Package</a></h3>
+                <div class="td-module-meta-info">
+                                                                    <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2019-12-27T11:07:22+00:00">December 27, 2019</time></span>                        <div class="td-module-comments"><a href="https://laraveldaily.com/taylor-otwell-laravel-7-will-move-auth-controllers-into-ui-package/#respond">0</a></div>                </div>
+
+                <div class="td-excerpt">
+                    I've been listening to Laravel Snippet podcast by Taylor Otwell, and heard some news about upcoming Laravel 7, which I think is pretty important for blog readers to know. So, changes are coming to Auth scaffolding.                </div>
+            </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+        <div class="td_module_10 td_module_wrap td-animation-stack">
+            <div class="td-module-thumb"><a href="https://laraveldaily.com/upload-and-parse-csv-with-laravel-medialibrary-and-spreadsheetreader/" rel="bookmark" class="td-image-wrap" title="Upload and Parse CSV with Laravel MediaLibrary and SpreadsheetReader"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANoAAACWAQMAAACCSQSPAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABpJREFUWMPtwQENAAAAwiD7p7bHBwwAAAAg7RD+AAGXD7BoAAAAAElFTkSuQmCC" alt="" title="Upload and Parse CSV with Laravel MediaLibrary and SpreadsheetReader" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/uploads/2019/08/Screen-Shot-2019-08-25-at-10.02.49-AM-218x150.png" width="218" height="150"></a></div>
+            <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/upload-and-parse-csv-with-laravel-medialibrary-and-spreadsheetreader/" rel="bookmark" title="Upload and Parse CSV with Laravel MediaLibrary and SpreadsheetReader">Upload and Parse CSV with Laravel MediaLibrary and SpreadsheetReader</a></h3>
+                <div class="td-module-meta-info">
+                                                                    <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2019-08-25T10:03:52+00:00">August 25, 2019</time></span>                        <div class="td-module-comments"><a href="https://laraveldaily.com/upload-and-parse-csv-with-laravel-medialibrary-and-spreadsheetreader/#comments">3</a></div>                </div>
+
+                <div class="td-excerpt">
+                    Quick example of a code I had to write recently. Task is simple - upload CSV and parse it. Also save that file and the record, which user uploaded it. Let's take a look.                </div>
+            </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+        <div class="td_module_10 td_module_wrap td-animation-stack">
+            <div class="td-module-thumb"><a href="https://laraveldaily.com/eloquent-recursive-hasmany-relationship-with-unlimited-subcategories/" rel="bookmark" class="td-image-wrap" title="Eloquent: Recursive hasMany Relationship with Unlimited Subcategories"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANoAAACWAQMAAACCSQSPAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABpJREFUWMPtwQENAAAAwiD7p7bHBwwAAAAg7RD+AAGXD7BoAAAAAElFTkSuQmCC" alt="" title="Eloquent: Recursive hasMany Relationship with Unlimited Subcategories" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/uploads/2019/08/Screen-Shot-2019-08-18-at-9.34.56-PM-218x150.png" width="218" height="150"></a></div>
+            <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/eloquent-recursive-hasmany-relationship-with-unlimited-subcategories/" rel="bookmark" title="Eloquent: Recursive hasMany Relationship with Unlimited Subcategories">Eloquent: Recursive hasMany Relationship with Unlimited Subcategories</a></h3>
+                <div class="td-module-meta-info">
+                                                                    <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2019-08-18T21:38:11+00:00">August 18, 2019</time></span>                        <div class="td-module-comments"><a href="https://laraveldaily.com/eloquent-recursive-hasmany-relationship-with-unlimited-subcategories/#comments">46</a></div>                </div>
+
+                <div class="td-excerpt">
+                    
+Quite often in e-shops you can see many level of categories and subcategories, sometimes even unlimited. This article will show you how...                </div>
+            </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+        <div class="td_module_10 td_module_wrap td-animation-stack">
+            <div class="td-module-thumb"><a href="https://laraveldaily.com/the-biggest-problem-with-eloquent-accessors-magic/" rel="bookmark" class="td-image-wrap" title="The Biggest Problem with Eloquent Accessors “Magic”"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANoAAACWAQMAAACCSQSPAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABpJREFUWMPtwQENAAAAwiD7p7bHBwwAAAAg7RD+AAGXD7BoAAAAAElFTkSuQmCC" alt="" title="The Biggest Problem with Eloquent Accessors “Magic”" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/uploads/2019/08/eloquent-accessors-218x150.png" width="218" height="150"></a></div>
+            <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/the-biggest-problem-with-eloquent-accessors-magic/" rel="bookmark" title="The Biggest Problem with Eloquent Accessors “Magic”">The Biggest Problem with Eloquent Accessors “Magic”</a></h3>
+                <div class="td-module-meta-info">
+                                                                    <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2019-08-17T13:20:03+00:00">August 17, 2019</time></span>                        <div class="td-module-comments"><a href="https://laraveldaily.com/the-biggest-problem-with-eloquent-accessors-magic/#comments">21</a></div>                </div>
+
+                <div class="td-excerpt">
+                    I confess - during five years of working with Laravel, I've been fascinated by its "magic" and how little code is needed to actually make things work. But recently, as my projects grew in size, that "magic" started to become a problem. One of the typical example is Eloquent Accessors, so in this article I will put an argument against using them, and what to do instead.                </div>
+            </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+        <div class="td_module_10 td_module_wrap td-animation-stack">
+            <div class="td-module-thumb"><a href="https://laraveldaily.com/eloquent-get-array-of-ids-from-collection-pluck-or-modelkeys/" rel="bookmark" class="td-image-wrap" title="Get Array of IDs from Eloquent Collection: pluck() or modelKeys()"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANoAAACWAQMAAACCSQSPAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABpJREFUWMPtwQENAAAAwiD7p7bHBwwAAAAg7RD+AAGXD7BoAAAAAElFTkSuQmCC" alt="" title="Get Array of IDs from Eloquent Collection: pluck() or modelKeys()" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/uploads/2019/08/Eloquent_-Get-Array-of-IDs-218x150.png" width="218" height="150"></a></div>
+            <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/eloquent-get-array-of-ids-from-collection-pluck-or-modelkeys/" rel="bookmark" title="Get Array of IDs from Eloquent Collection: pluck() or modelKeys()">Get Array of IDs from Eloquent Collection: pluck() or modelKeys()</a></h3>
+                <div class="td-module-meta-info">
+                                                                    <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2019-08-08T09:52:09+00:00">August 8, 2019</time></span>                        <div class="td-module-comments"><a href="https://laraveldaily.com/eloquent-get-array-of-ids-from-collection-pluck-or-modelkeys/#respond">0</a></div>                </div>
+
+                <div class="td-excerpt">
+                    There are situations where you need to get array of IDs for some records in collection/table. I will show you two quick ways to do it - one is pretty popular, and another is a function which I found out only today.                </div>
+            </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+        <div class="td_module_10 td_module_wrap td-animation-stack">
+            <div class="td-module-thumb"><a href="https://laraveldaily.com/get-newest-oldest-records-from-pivot-table-in-belongstomany/" rel="bookmark" class="td-image-wrap" title="Laravel: Get Newest/Oldest Records from Pivot Table in BelongsToMany"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANoAAACWAQMAAACCSQSPAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABpJREFUWMPtwQENAAAAwiD7p7bHBwwAAAAg7RD+AAGXD7BoAAAAAElFTkSuQmCC" alt="" title="Laravel: Get Newest/Oldest Records from Pivot Table in BelongsToMany" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/uploads/2019/08/Screen-Shot-2019-08-06-at-10.10.43-PM-218x150.png" width="218" height="150"></a></div>
+            <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/get-newest-oldest-records-from-pivot-table-in-belongstomany/" rel="bookmark" title="Laravel: Get Newest/Oldest Records from Pivot Table in BelongsToMany">Laravel: Get Newest/Oldest Records from Pivot Table in BelongsToMany</a></h3>
+                <div class="td-module-meta-info">
+                                                                    <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2019-08-06T22:11:58+00:00">August 6, 2019</time></span>                        <div class="td-module-comments"><a href="https://laraveldaily.com/get-newest-oldest-records-from-pivot-table-in-belongstomany/#respond">0</a></div>                </div>
+
+                <div class="td-excerpt">
+                    Default belongsToMany relationship in Laravel works really well - you can easily attach, detach or sync records. But what if you want to order pivot records by newest or oldest? This article will show you how.                </div>
+            </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+        <div class="td_module_10 td_module_wrap td-animation-stack">
+            <div class="td-module-thumb"><a href="https://laraveldaily.com/auth-register-with-two-steps-optional-fields-for-country-and-bio/" rel="bookmark" class="td-image-wrap" title="Laravel Two-Step Registration: Optional Fields for Country and Bio"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANoAAACWAQMAAACCSQSPAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABpJREFUWMPtwQENAAAAwiD7p7bHBwwAAAAg7RD+AAGXD7BoAAAAAElFTkSuQmCC" alt="" title="Laravel Two-Step Registration: Optional Fields for Country and Bio" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/uploads/2019/07/Screen-Shot-2019-07-24-at-8.26.28-AM-218x150.png" width="218" height="150"></a></div>
+            <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/auth-register-with-two-steps-optional-fields-for-country-and-bio/" rel="bookmark" title="Laravel Two-Step Registration: Optional Fields for Country and Bio">Laravel Two-Step Registration: Optional Fields for Country and Bio</a></h3>
+                <div class="td-module-meta-info">
+                                                                    <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2019-07-24T08:51:41+00:00">July 24, 2019</time></span>                        <div class="td-module-comments"><a href="https://laraveldaily.com/auth-register-with-two-steps-optional-fields-for-country-and-bio/#comments">2</a></div>                </div>
+
+                <div class="td-excerpt">
+                    Nowadays, we have a lot of Laravel tutorial about some syntax or package, but I think there's not enough written with real-life mini-projects, close to real demands of the clients. So will try to write more of these, and this is one of them: imagine a project where you need to have two-step registration process, with some optional fields in the second step. Let's build it in Laravel.                </div>
+            </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+        <div class="td_module_10 td_module_wrap td-animation-stack">
+            <div class="td-module-thumb"><a href="https://laraveldaily.com/laravel-login-and-register-forms-on-the-same-page/" rel="bookmark" class="td-image-wrap" title="Laravel: Login and Register forms on the same page"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANoAAACWAQMAAACCSQSPAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABpJREFUWMPtwQENAAAAwiD7p7bHBwwAAAAg7RD+AAGXD7BoAAAAAElFTkSuQmCC" alt="" title="Laravel: Login and Register forms on the same page" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/uploads/2019/07/Screen-Shot-2019-07-01-at-7.26.51-AM-218x150.png" width="218" height="150"></a></div>
+            <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/laravel-login-and-register-forms-on-the-same-page/" rel="bookmark" title="Laravel: Login and Register forms on the same page">Laravel: Login and Register forms on the same page</a></h3>
+                <div class="td-module-meta-info">
+                                                                    <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2019-07-01T08:07:01+00:00">July 1, 2019</time></span>                        <div class="td-module-comments"><a href="https://laraveldaily.com/laravel-login-and-register-forms-on-the-same-page/#comments">7</a></div>                </div>
+
+                <div class="td-excerpt">
+                    Quite often, especially in e-shop projects, you can see a page to login or register before finishing the purchase. But Laravel has these two routes as separate login and register pages. So how to merge them together and avoid conflicts?                </div>
+            </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 --></div><div class="td-next-prev-wrap"><a href="#" class="td-ajax-prev-page ajax-page-disabled" id="prev-page-td_uid_7_6016c12a8aee6" data-td_block_id="td_uid_7_6016c12a8aee6"><i class="td-icon-font td-icon-menu-left"></i></a><a href="#" class="td-ajax-next-page" id="next-page-td_uid_7_6016c12a8aee6" data-td_block_id="td_uid_7_6016c12a8aee6"><i class="td-icon-font td-icon-menu-right"></i></a></div></div> <!-- ./block --></div></div><div class="vc_column td_uid_8_6016c12a904c2_rand  wpb_column vc_column_container tdc-column td-pb-span4"><div class="wpb_wrapper"><div class="td-a-rec td-a-rec-id-custom_ad_1  td_uid_9_6016c12a90530_rand td_block_template_1"><div class="td-all-devices">
+<a href="https://laraveldaily.teachable.com/?utm_source=laraveldaily&amp;utm_campaign=sidebar_banner" target="_blank"><img src="/wp-content/uploads/2018/12/online-courses.png"></a></div></div><div class="td_block_wrap td_block_social_counter td_uid_10_6016c12a90704_rand td-social-style4 td-social-colored td-pb-border-top td_block_template_1"><div class="td-block-title-wrap"><h4 class="block-title td-block-title"><span class="td-pulldown-size">STAY CONNECTED</span></h4></div><div class="td-social-list"><div class="td_social_type td-pb-margin-side td_social_facebook"><div class="td-social-box"><div class="td-sp td-sp-facebook"></div><span class="td_social_info">2,225</span><span class="td_social_info td_social_info_name">Fans</span><span class="td_social_button"><a href="https://www.facebook.com/LaravelDaily">Like</a></span></div></div><div class="td_social_type td-pb-margin-side td_social_twitter"><div class="td-social-box"><div class="td-sp td-sp-twitter"></div><span class="td_social_info">14,676</span><span class="td_social_info td_social_info_name">Followers</span><span class="td_social_button"><a href="https://twitter.com/DailyLaravel">Follow</a></span></div></div><div class="td_social_type td-pb-margin-side td_social_youtube"><div class="td-social-box"><div class="td-sp td-sp-youtube"></div><span class="td_social_info">11,800</span><span class="td_social_info td_social_info_name">Subscribers</span><span class="td_social_button"><a href="https://www.youtube.com/channel/UCTuplgOBi6tJIlesIboymGA">Subscribe</a></span></div></div></div></div> <!-- ./block --><div class="td-a-rec td-a-rec-id-custom_ad_2  td_uid_11_6016c12a908dd_rand td_block_template_1"><div class="td-all-devices"><a href="https://quickadminpanel.com?utm_source=laraveldaily&amp;utm_campaign=sidebar_banner" target="_blank"><img src="/wp-content/uploads/2018/12/quick-admin-panel-1.png"></a></div></div><div class="td_block_wrap td_block_15 td_uid_12_6016c12a90a6c_rand td-pb-border-top td_block_template_1 td-column-1 td_block_padding" data-td-block-uid="td_uid_12_6016c12a90a6c">
+<style>
+.td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td-pulldown-filter-link:hover,
+            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td-subcat-item a:hover,
+            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td-subcat-item .td-cur-simple-item {
+                color: #dd9933;
+            }
+
+            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .block-title > *,
+            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td-subcat-dropdown:hover .td-subcat-more {
+                background-color: #dd9933;
+            }
+            .td-theme-wrap .td-footer-wrapper .td_uid_12_6016c12a90a6c_rand .block-title > * {
+                padding: 6px 7px 5px;
+                line-height: 1;
+            }
+
+            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .block-title {
+                border-color: #dd9933;
+            }
+
+            
+            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td_module_wrap:hover .entry-title a,
+            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td_quote_on_blocks,
+            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td-opacity-cat .td-post-category:hover,
+            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td-opacity-read .td-read-more a:hover,
+            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td-opacity-author .td-post-author-name a:hover,
+            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td-instagram-user a {
+                color: #dd9933;
+            }
+
+            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td-next-prev-wrap a:hover,
+            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td-load-more-wrap a:hover {
+                background-color: #dd9933;
+                border-color: #dd9933;
+            }
+
+            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td-read-more a,
+            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td-weather-information:before,
+            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td-weather-week:before,
+            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td-exchange-header:before,
+            .td-theme-wrap .td-footer-wrapper .td_uid_12_6016c12a90a6c_rand .td-post-category,
+            .td-theme-wrap .td_uid_12_6016c12a90a6c_rand .td-post-category:hover {
+                background-color: #dd9933;
+            }
+</style><script>var block_td_uid_12_6016c12a90a6c = new tdBlock();
+block_td_uid_12_6016c12a90a6c.id = "td_uid_12_6016c12a90a6c";
+block_td_uid_12_6016c12a90a6c.atts = '{"category_id":"","limit":"4","custom_title":"NEWEST VIDEOS","td_filter_default_txt":"All","ajax_pagination":"","sort":"","tag_slug":"video","header_color":"#dd9933","separator":"","custom_url":"","block_template_id":"","mx4_tl":"","post_ids":"","category_ids":"","autors_id":"","installed_post_types":"","offset":"","el_class":"","td_ajax_filter_type":"","td_ajax_filter_ids":"","td_ajax_preloading":"","f_header_font_header":"","f_header_font_title":"Block header","f_header_font_settings":"","f_header_font_family":"","f_header_font_size":"","f_header_font_line_height":"","f_header_font_style":"","f_header_font_weight":"","f_header_font_transform":"","f_header_font_spacing":"","f_header_":"","f_ajax_font_title":"Ajax categories","f_ajax_font_settings":"","f_ajax_font_family":"","f_ajax_font_size":"","f_ajax_font_line_height":"","f_ajax_font_style":"","f_ajax_font_weight":"","f_ajax_font_transform":"","f_ajax_font_spacing":"","f_ajax_":"","f_more_font_title":"Load more button","f_more_font_settings":"","f_more_font_family":"","f_more_font_size":"","f_more_font_line_height":"","f_more_font_style":"","f_more_font_weight":"","f_more_font_transform":"","f_more_font_spacing":"","f_more_":"","mx4f_title_font_header":"","mx4f_title_font_title":"Article title","mx4f_title_font_settings":"","mx4f_title_font_family":"","mx4f_title_font_size":"","mx4f_title_font_line_height":"","mx4f_title_font_style":"","mx4f_title_font_weight":"","mx4f_title_font_transform":"","mx4f_title_font_spacing":"","mx4f_title_":"","mx4f_cat_font_title":"Article category tag","mx4f_cat_font_settings":"","mx4f_cat_font_family":"","mx4f_cat_font_size":"","mx4f_cat_font_line_height":"","mx4f_cat_font_style":"","mx4f_cat_font_weight":"","mx4f_cat_font_transform":"","mx4f_cat_font_spacing":"","mx4f_cat_":"","ajax_pagination_infinite_stop":"","css":"","tdc_css":"","td_column_number":1,"color_preset":"","border_top":"","class":"td_uid_12_6016c12a90a6c_rand","tdc_css_class":"td_uid_12_6016c12a90a6c_rand","tdc_css_class_style":"td_uid_12_6016c12a90a6c_rand_style"}';
+block_td_uid_12_6016c12a90a6c.td_column_number = "1";
+block_td_uid_12_6016c12a90a6c.block_type = "td_block_15";
+block_td_uid_12_6016c12a90a6c.post_count = "4";
+block_td_uid_12_6016c12a90a6c.found_posts = "22";
+block_td_uid_12_6016c12a90a6c.header_color = "#dd9933";
+block_td_uid_12_6016c12a90a6c.ajax_pagination_infinite_stop = "";
+block_td_uid_12_6016c12a90a6c.max_num_pages = "6";
+tdBlocksArray.push(block_td_uid_12_6016c12a90a6c);
+</script><div class="td-block-title-wrap"><h4 class="block-title td-block-title"><span class="td-pulldown-size">NEWEST VIDEOS</span></h4></div><div id="td_uid_12_6016c12a90a6c" class="td_block_inner td-column-1"><div class="td-cust-row">
+
+	<div class="td-block-span12">
+
+        <div class="td_module_mx4 td_module_wrap td-animation-stack">
+            <div class="td-module-image">
+                <div class="td-module-thumb"><a href="https://laraveldaily.com/top-5-all-time-must-watch-videos-from-laracon/" rel="bookmark" class="td-image-wrap" title="Top 5 All-Time Must-Watch Videos from Laracon"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANoAAACWAQMAAACCSQSPAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABpJREFUWMPtwQENAAAAwiD7p7bHBwwAAAAg7RD+AAGXD7BoAAAAAElFTkSuQmCC" alt="" title="Top 5 All-Time Must-Watch Videos from Laracon" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/uploads/2019/03/top-5-laracon-videos-218x150.png" width="218" height="150"></a></div>                            </div>
+
+            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/top-5-all-time-must-watch-videos-from-laracon/" rel="bookmark" title="Top 5 All-Time Must-Watch Videos from Laracon">Top 5 All-Time Must-Watch Videos from Laracon</a></h3>
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+        <div class="td_module_mx4 td_module_wrap td-animation-stack">
+            <div class="td-module-image">
+                <div class="td-module-thumb"><a href="https://laraveldaily.com/how-much-i-earn-from-this-laraveldaily-blog-all-numbers/" rel="bookmark" class="td-image-wrap" title="How Much I Earn From This LaravelDaily Blog [ALL NUMBERS]"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANoAAACWAQMAAACCSQSPAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABpJREFUWMPtwQENAAAAwiD7p7bHBwwAAAAg7RD+AAGXD7BoAAAAAElFTkSuQmCC" alt="" title="How Much I Earn From This LaravelDaily Blog [ALL NUMBERS]" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/uploads/2019/02/laraveldaily-revenue-218x150.png" width="218" height="150"></a></div>                            </div>
+
+            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/how-much-i-earn-from-this-laraveldaily-blog-all-numbers/" rel="bookmark" title="How Much I Earn From This LaravelDaily Blog [ALL NUMBERS]">How Much I Earn From This LaravelDaily Blog [ALL NUMBERS]</a></h3>
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 --></div><div class="td-cust-row">
+
+	<div class="td-block-span12">
+
+        <div class="td_module_mx4 td_module_wrap td-animation-stack">
+            <div class="td-module-image">
+                <div class="td-module-thumb"><a href="https://laraveldaily.com/laravel-wink-package-wordpress-mini-alternative-for-laravel/" rel="bookmark" class="td-image-wrap" title="Laravel Wink Package: WordPress Mini-Alternative for Laravel?"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANoAAACWAQMAAACCSQSPAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABpJREFUWMPtwQENAAAAwiD7p7bHBwwAAAAg7RD+AAGXD7BoAAAAAElFTkSuQmCC" alt="" title="Laravel Wink Package: WordPress Mini-Alternative for Laravel?" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/uploads/2018/12/Untitled-Design-2-218x150.jpg" width="218" height="150"></a></div>                            </div>
+
+            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/laravel-wink-package-wordpress-mini-alternative-for-laravel/" rel="bookmark" title="Laravel Wink Package: WordPress Mini-Alternative for Laravel?">Laravel Wink Package: WordPress Mini-Alternative for Laravel?</a></h3>
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+        <div class="td_module_mx4 td_module_wrap td-animation-stack">
+            <div class="td-module-image">
+                <div class="td-module-thumb"><a href="https://laraveldaily.com/eloquentfilter-package-review-process-get-query-without-if-statements/" rel="bookmark" class="td-image-wrap" title="EloquentFilter Package Review: Process GET Query Without IF Statements"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANoAAACWAQMAAACCSQSPAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABpJREFUWMPtwQENAAAAwiD7p7bHBwwAAAAg7RD+AAGXD7BoAAAAAElFTkSuQmCC" alt="" title="EloquentFilter Package Review: Process GET Query Without IF Statements" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/uploads/2018/12/Untitled-Design-2-218x150.jpg" width="218" height="150"></a></div>                            </div>
+
+            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/eloquentfilter-package-review-process-get-query-without-if-statements/" rel="bookmark" title="EloquentFilter Package Review: Process GET Query Without IF Statements">EloquentFilter Package Review: Process GET Query Without IF Statements</a></h3>
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 --></div></div></div> <!-- ./block --><div class="clearfix"></div><div class="td_block_wrap td_block_7 td_uid_13_6016c12a93afe_rand td-pb-border-top td_block_template_1 td-column-1 td_block_padding" data-td-block-uid="td_uid_13_6016c12a93afe">
+<style>
+.td-theme-wrap .td_uid_13_6016c12a93afe_rand .td-pulldown-filter-link:hover,
+            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .td-subcat-item a:hover,
+            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .td-subcat-item .td-cur-simple-item {
+                color: #383838;
+            }
+
+            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .block-title > *,
+            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .td-subcat-dropdown:hover .td-subcat-more {
+                background-color: #383838;
+            }
+            .td-theme-wrap .td-footer-wrapper .td_uid_13_6016c12a93afe_rand .block-title > * {
+                padding: 6px 7px 5px;
+                line-height: 1;
+            }
+
+            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .block-title {
+                border-color: #383838;
+            }
+
+            
+            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .td_module_wrap:hover .entry-title a,
+            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .td_quote_on_blocks,
+            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .td-opacity-cat .td-post-category:hover,
+            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .td-opacity-read .td-read-more a:hover,
+            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .td-opacity-author .td-post-author-name a:hover,
+            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .td-instagram-user a {
+                color: #383838;
+            }
+
+            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .td-next-prev-wrap a:hover,
+            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .td-load-more-wrap a:hover {
+                background-color: #383838;
+                border-color: #383838;
+            }
+
+            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .td-read-more a,
+            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .td-weather-information:before,
+            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .td-weather-week:before,
+            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .td-exchange-header:before,
+            .td-theme-wrap .td-footer-wrapper .td_uid_13_6016c12a93afe_rand .td-post-category,
+            .td-theme-wrap .td_uid_13_6016c12a93afe_rand .td-post-category:hover {
+                background-color: #383838;
+            }
+</style><script>var block_td_uid_13_6016c12a93afe = new tdBlock();
+block_td_uid_13_6016c12a93afe.id = "td_uid_13_6016c12a93afe";
+block_td_uid_13_6016c12a93afe.atts = '{"category_id":"","limit":"8","custom_title":"RANDOM ARTICLES","td_filter_default_txt":"All","ajax_pagination":"","sort":"random_posts","header_color":"#383838","separator":"","custom_url":"","block_template_id":"","m6_tl":"","post_ids":"","category_ids":"","tag_slug":"","autors_id":"","installed_post_types":"","offset":"","el_class":"","td_ajax_filter_type":"","td_ajax_filter_ids":"","td_ajax_preloading":"","f_header_font_header":"","f_header_font_title":"Block header","f_header_font_settings":"","f_header_font_family":"","f_header_font_size":"","f_header_font_line_height":"","f_header_font_style":"","f_header_font_weight":"","f_header_font_transform":"","f_header_font_spacing":"","f_header_":"","f_ajax_font_title":"Ajax categories","f_ajax_font_settings":"","f_ajax_font_family":"","f_ajax_font_size":"","f_ajax_font_line_height":"","f_ajax_font_style":"","f_ajax_font_weight":"","f_ajax_font_transform":"","f_ajax_font_spacing":"","f_ajax_":"","f_more_font_title":"Load more button","f_more_font_settings":"","f_more_font_family":"","f_more_font_size":"","f_more_font_line_height":"","f_more_font_style":"","f_more_font_weight":"","f_more_font_transform":"","f_more_font_spacing":"","f_more_":"","m6f_title_font_header":"","m6f_title_font_title":"Article title","m6f_title_font_settings":"","m6f_title_font_family":"","m6f_title_font_size":"","m6f_title_font_line_height":"","m6f_title_font_style":"","m6f_title_font_weight":"","m6f_title_font_transform":"","m6f_title_font_spacing":"","m6f_title_":"","m6f_cat_font_title":"Article category tag","m6f_cat_font_settings":"","m6f_cat_font_family":"","m6f_cat_font_size":"","m6f_cat_font_line_height":"","m6f_cat_font_style":"","m6f_cat_font_weight":"","m6f_cat_font_transform":"","m6f_cat_font_spacing":"","m6f_cat_":"","m6f_meta_font_title":"Article meta info","m6f_meta_font_settings":"","m6f_meta_font_family":"","m6f_meta_font_size":"","m6f_meta_font_line_height":"","m6f_meta_font_style":"","m6f_meta_font_weight":"","m6f_meta_font_transform":"","m6f_meta_font_spacing":"","m6f_meta_":"","ajax_pagination_infinite_stop":"","css":"","tdc_css":"","td_column_number":1,"color_preset":"","border_top":"","class":"td_uid_13_6016c12a93afe_rand","tdc_css_class":"td_uid_13_6016c12a93afe_rand","tdc_css_class_style":"td_uid_13_6016c12a93afe_rand_style"}';
+block_td_uid_13_6016c12a93afe.td_column_number = "1";
+block_td_uid_13_6016c12a93afe.block_type = "td_block_7";
+block_td_uid_13_6016c12a93afe.post_count = "8";
+block_td_uid_13_6016c12a93afe.found_posts = "312";
+block_td_uid_13_6016c12a93afe.header_color = "#383838";
+block_td_uid_13_6016c12a93afe.ajax_pagination_infinite_stop = "";
+block_td_uid_13_6016c12a93afe.max_num_pages = "39";
+tdBlocksArray.push(block_td_uid_13_6016c12a93afe);
+</script><div class="td-block-title-wrap"><h4 class="block-title td-block-title"><span class="td-pulldown-size">RANDOM ARTICLES</span></h4></div><div id="td_uid_13_6016c12a93afe" class="td_block_inner">
+
+	<div class="td-block-span12">
+
+        <div class="td_module_6 td_module_wrap td-animation-stack">
+
+        <div class="td-module-thumb"><a href="https://laraveldaily.com/use-laravel-observers-and-global-scopes-to-create-user-multi-tenancy/" rel="bookmark" class="td-image-wrap" title="Use Laravel Observers and Global Scopes to Create User Multi-Tenancy"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=" alt="" title="Use Laravel Observers and Global Scopes to Create User Multi-Tenancy" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/uploads/2018/08/Multi-Tenancy-1-100x70.png" width="100" height="70"></a></div>
+        <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/use-laravel-observers-and-global-scopes-to-create-user-multi-tenancy/" rel="bookmark" title="Use Laravel Observers and Global Scopes to Create User Multi-Tenancy">Use Laravel Observers and Global Scopes to Create User Multi-Tenancy</a></h3>            <div class="td-module-meta-info">
+                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2018-08-11T13:31:35+00:00">August 11, 2018</time></span>                            </div>
+        </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+        <div class="td_module_6 td_module_wrap td-animation-stack">
+
+        <div class="td-module-thumb"><a href="https://laraveldaily.com/csrf-protection-difference-laravel-4-x-5-0-and-5-1/" rel="bookmark" class="td-image-wrap" title="CSRF protection difference: Laravel 4.x, 5.0 and 5.1"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=" alt="" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/themes/Newspaper/images/no-thumb/td_100x70.png" width="100" height="70"></a></div>
+        <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/csrf-protection-difference-laravel-4-x-5-0-and-5-1/" rel="bookmark" title="CSRF protection difference: Laravel 4.x, 5.0 and 5.1">CSRF protection difference: Laravel 4.x, 5.0 and 5.1</a></h3>            <div class="td-module-meta-info">
+                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2015-07-23T12:04:38+00:00">July 23, 2015</time></span>                            </div>
+        </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+        <div class="td_module_6 td_module_wrap td-animation-stack">
+
+        <div class="td-module-thumb"><a href="https://laraveldaily.com/class-form-not-found-in-laravel-5/" rel="bookmark" class="td-image-wrap" title="Class ‘Form’ not found in Laravel 5?"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=" alt="" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/themes/Newspaper/images/no-thumb/td_100x70.png" width="100" height="70"></a></div>
+        <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/class-form-not-found-in-laravel-5/" rel="bookmark" title="Class ‘Form’ not found in Laravel 5?">Class ‘Form’ not found in Laravel 5?</a></h3>            <div class="td-module-meta-info">
+                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2015-07-01T10:42:32+00:00">July 1, 2015</time></span>                            </div>
+        </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+        <div class="td_module_6 td_module_wrap td-animation-stack">
+
+        <div class="td-module-thumb"><a href="https://laraveldaily.com/simple-laravel-multi-tenancy-with-single-trait/" rel="bookmark" class="td-image-wrap" title="Simple Laravel Multi-Tenancy with Single Trait"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=" alt="" title="Simple Laravel Multi-Tenancy with Single Trait" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/uploads/2019/02/simple-laravel-multi-tenancy-100x70.png" width="100" height="70"></a></div>
+        <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/simple-laravel-multi-tenancy-with-single-trait/" rel="bookmark" title="Simple Laravel Multi-Tenancy with Single Trait">Simple Laravel Multi-Tenancy with Single Trait</a></h3>            <div class="td-module-meta-info">
+                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2019-02-26T14:21:47+00:00">February 26, 2019</time></span>                            </div>
+        </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+        <div class="td_module_6 td_module_wrap td-animation-stack">
+
+        <div class="td-module-thumb"><a href="https://laraveldaily.com/eloquent-get-latest-row-relationship/" rel="bookmark" class="td-image-wrap" title="Eloquent: Get the Latest Row from Relationship"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=" alt="" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/themes/Newspaper/images/no-thumb/td_100x70.png" width="100" height="70"></a></div>
+        <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/eloquent-get-latest-row-relationship/" rel="bookmark" title="Eloquent: Get the Latest Row from Relationship">Eloquent: Get the Latest Row from Relationship</a></h3>            <div class="td-module-meta-info">
+                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2017-01-23T17:17:36+00:00">January 23, 2017</time></span>                            </div>
+        </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+        <div class="td_module_6 td_module_wrap td-animation-stack">
+
+        <div class="td-module-thumb"><a href="https://laraveldaily.com/pyrocms-another-new-laravel-based-system/" rel="bookmark" class="td-image-wrap" title="PyroCMS 3: another (new!) Laravel-based system"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=" alt="" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/themes/Newspaper/images/no-thumb/td_100x70.png" width="100" height="70"></a></div>
+        <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/pyrocms-another-new-laravel-based-system/" rel="bookmark" title="PyroCMS 3: another (new!) Laravel-based system">PyroCMS 3: another (new!) Laravel-based system</a></h3>            <div class="td-module-meta-info">
+                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2016-08-16T16:25:26+00:00">August 16, 2016</time></span>                            </div>
+        </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+        <div class="td_module_6 td_module_wrap td-animation-stack">
+
+        <div class="td-module-thumb"><a href="https://laraveldaily.com/hackathon-starter-boilerplate-package-for-quick-start/" rel="bookmark" class="td-image-wrap" title="Laravel Hackathon Starter – boilerplate package for quick start"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=" alt="" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/themes/Newspaper/images/no-thumb/td_100x70.png" width="100" height="70"></a></div>
+        <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/hackathon-starter-boilerplate-package-for-quick-start/" rel="bookmark" title="Laravel Hackathon Starter – boilerplate package for quick start">Laravel Hackathon Starter – boilerplate package for quick start</a></h3>            <div class="td-module-meta-info">
+                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2016-02-23T20:18:12+00:00">February 23, 2016</time></span>                            </div>
+        </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+        <div class="td_module_6 td_module_wrap td-animation-stack">
+
+        <div class="td-module-thumb"><a href="https://laraveldaily.com/laraquiz-well-know-laravel/" rel="bookmark" class="td-image-wrap" title="LaraQuiz: how well do you know Laravel?"><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=" alt="" data-type="image_tag" data-img-url="https://laraveldaily.com/wp-content/themes/Newspaper/images/no-thumb/td_100x70.png" width="100" height="70"></a></div>
+        <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="https://laraveldaily.com/laraquiz-well-know-laravel/" rel="bookmark" title="LaraQuiz: how well do you know Laravel?">LaraQuiz: how well do you know Laravel?</a></h3>            <div class="td-module-meta-info">
+                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2016-12-13T12:50:36+00:00">December 13, 2016</time></span>                            </div>
+        </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 --></div></div> <!-- ./block --></div></div></div></div>
+		<script>
+
+			jQuery(window).load(function () {
+				jQuery('body').find('#td_uid_3_6016c12a8ace0 .td-element-style').each(function (index, element) {
+					jQuery(element).css('opacity', 1);
+					return;
+				});
+			});
+
+		</script>
+
+		
+			<script>
+
+				jQuery(window).ready(function () {
+
+					// We need timeout because the content must be rendered and interpreted on client
+					setTimeout(function () {
+
+						var $content = jQuery('body').find('#tdc-live-iframe'),
+							refWindow = undefined;
+
+						if ($content.length) {
+							$content = $content.contents();
+							refWindow = document.getElementById('tdc-live-iframe').contentWindow || document.getElementById('tdc-live-iframe').contentDocument;
+
+						} else {
+							$content = jQuery('body');
+							refWindow = window;
+						}
+
+						$content.find('#td_uid_3_6016c12a8ace0 .td-element-style').each(function (index, element) {
+							jQuery(element).css('opacity', 1);
+							return;
+						});
+					});
+
+				}, 200);
+			</script>
+
+			<div class="widget_text td_block_template_1 awac-wrapper"><div class="widget_text td_block_template_1 awac widget custom_html-2"><div class="textwidget custom-html-widget"><div style="margin-top: 15px; border: 1px solid #CCC; padding: 10px; background-color: #F7F7F7; font-size: 24px; text-align:center">
+	Like our articles?<br>Check out our <a href="https://laraveldaily.teachable.com/?utm_source=laraveldaily&amp;utm_campaign=post_footer" target="_blank">Laravel online courses!</a>
+</div></div></div></div>                </div>
+                            </div> <!-- /.td-main-content-wrap -->
+
+
+            <!-- Instagram -->
+
+
+
+
+	<!-- Footer -->
+	<div class="td-footer-wrapper td-container-wrap td-footer-template-13 ">
+    <div class="td-container">
+        <div class="td-pb-row">
+            <div class="td-pb-span12">
+                
+                <div class="footer-social-wrap td-social-style-2">
+                    
+            <span class="td-social-icon-wrap">
+                <a target="_blank" href="https://www.facebook.com/laraveldaily/" title="Facebook">
+                    <i class="td-icon-font td-icon-facebook"></i>
+                    <span class="td-social-name">Facebook</span>
+                </a>
+            </span>
+            <span class="td-social-icon-wrap">
+                <a target="_blank" href="https://twitter.com/dailylaravel" title="Twitter">
+                    <i class="td-icon-font td-icon-twitter"></i>
+                    <span class="td-social-name">Twitter</span>
+                </a>
+            </span>
+            <span class="td-social-icon-wrap">
+                <a target="_blank" href="https://www.youtube.com/channel/UCTuplgOBi6tJIlesIboymGA" title="Youtube">
+                    <i class="td-icon-font td-icon-youtube"></i>
+                    <span class="td-social-name">Youtube</span>
+                </a>
+            </span>                </div>
+            </div>
+        </div>
+    </div>
+</div>
+	<!-- Sub Footer -->
+	
+
+</div><!--close td-outer-wrap-->
+
+
+
+    <!--
+
+        Theme: Newspaper by tagDiv.com 2017
+        Version: 9.2 (rara)
+        Deploy mode: deploy
+        
+        uid: 6016c12a96cf6
+    -->
+
+    
+<!-- Custom css from theme panel -->
+<style type="text/css" media="screen">
+/* custom css theme panel */
+.td-post-content img {
+    border: 1px solid #ccc;
+}
+
+.td-post-content a {
+    text-decoration: underline;
+}
+
+code {
+    padding: 2px 0 !important;
+    font-size: 16px;
+}
+</style>
+
+<script type="text/javascript" src="https://laraveldaily.com/wp-content/themes/Newspaper/js/tagdiv_theme.min.js?ver=9.2"></script>
+<script type="text/javascript" src="https://laraveldaily.com/wp-includes/js/comment-reply.min.js?ver=5.0.11"></script>
+<script type="text/javascript" src="https://laraveldaily.com/wp-includes/js/wp-embed.min.js?ver=5.0.11"></script>
+
+<!-- JS generated by theme -->
+
+<script>
+    
+
+	
+
+		(function(){
+			var html_jquery_obj = jQuery('html');
+
+			if (html_jquery_obj.length && (html_jquery_obj.is('.ie8') || html_jquery_obj.is('.ie9'))) {
+
+				var path = 'https://laraveldaily.com/wp-content/themes/Newspaper/style.css';
+
+				jQuery.get(path, function(data) {
+
+					var str_split_separator = '#td_css_split_separator';
+					var arr_splits = data.split(str_split_separator);
+					var arr_length = arr_splits.length;
+
+					if (arr_length > 1) {
+
+						var dir_path = 'https://laraveldaily.com/wp-content/themes/Newspaper';
+						var splited_css = '';
+
+						for (var i = 0; i < arr_length; i++) {
+							if (i > 0) {
+								arr_splits[i] = str_split_separator + ' ' + arr_splits[i];
+							}
+							//jQuery('head').append('<style>' + arr_splits[i] + '');
+
+							var formated_str = arr_splits[i].replace(/\surl\(\'(?!data\:)/gi, function regex_function(str) {
+								return ' url(\'' + dir_path + '/' + str.replace(/url\(\'/gi, '').replace(/^\s+|\s+$/gm,'');
+							});
+
+							splited_css += "<style>" + formated_str + "";
+						}
+
+						var td_theme_css = jQuery('link#td-theme-css');
+
+						if (td_theme_css.length) {
+							td_theme_css.after(splited_css);
+						}
+					}
+				});
+			}
+		})();
+
+	
+	
+</script>
+
+
+
+			<div id="tdw-css-writer" style="display: none" class="tdw-drag-dialog tdc-window-sidebar">
+				<header>
+
+				
+					<a title="Editor" class="tdw-tab tdc-tab-active" href="#" data-tab-content="tdw-tab-editor">Edit with Live CSS</a>
+					<div class="tdw-less-info" title="This will be red when errors are detected in your CSS and LESS"></div>
+				
+				</header>
+				<div class="tdw-content">
+
+					
+					<div class="tdw-tabs-content tdw-tab-editor tdc-tab-content-active">
+
+
+						<script>
+
+							(function(jQuery, undefined) {
+
+								jQuery(window).ready(function() {
+
+									if ( 'undefined' !== typeof tdcAdminIFrameUI ) {
+										var $liveIframe  = tdcAdminIFrameUI.getLiveIframe();
+
+										if ( $liveIframe.length ) {
+											$liveIframe.load(function() {
+												$liveIframe.contents().find( 'body').append( '<textarea class="tdw-css-writer-editor" style="display: none">' );
+											});
+										}
+									}
+
+								});
+
+							})(jQuery);
+
+						</script>
+
+
+						<textarea class="tdw-css-writer-editor td_live_css_uid_1_6016c12a96e0d"></textarea>
+						<div id="td_live_css_uid_1_6016c12a96e0d" class="td-code-editor"></div>
+
+
+						<script>
+							jQuery(window).load(function (){
+
+								if ( 'undefined' !== typeof tdLiveCssInject ) {
+
+									tdLiveCssInject.init();
+
+
+									var editor_textarea = jQuery('.td_live_css_uid_1_6016c12a96e0d');
+									var languageTools = ace.require("ace/ext/language_tools");
+									var tdcCompleter = {
+										getCompletions: function (editor, session, pos, prefix, callback) {
+											if (prefix.length === 0) {
+												callback(null, []);
+												return
+											}
+
+											if ('undefined' !== typeof tdcAdminIFrameUI) {
+
+												var data = {
+													error: undefined,
+													getShortcode: ''
+												};
+
+												tdcIFrameData.getShortcodeFromData(data);
+
+												if (!_.isUndefined(data.error)) {
+													tdcDebug.log(data.error);
+												}
+
+												if (!_.isUndefined(data.getShortcode)) {
+
+													var regex = /el_class=\"([A-Za-z0-9_-]*\s*)+\"/g,
+														results = data.getShortcode.match(regex);
+
+													var elClasses = {};
+
+													for (var i = 0; i < results.length; i++) {
+														var currentClasses = results[i]
+															.replace('el_class="', '')
+															.replace('"', '')
+															.split(' ');
+
+														for (var j = 0; j < currentClasses.length; j++) {
+															if (_.isUndefined(elClasses[currentClasses[j]])) {
+																elClasses[currentClasses[j]] = '';
+															}
+														}
+													}
+
+													var arrElClasses = [];
+
+													for (var prop in elClasses) {
+														arrElClasses.push(prop);
+													}
+
+													callback(null, arrElClasses.map(function (item) {
+														return {
+															name: item,
+															value: item,
+															meta: 'in_page'
+														}
+													}));
+												}
+											}
+										}
+									};
+									languageTools.addCompleter(tdcCompleter);
+
+									window.editor = ace.edit("td_live_css_uid_1_6016c12a96e0d");
+                                    window.editor.$blockScrolling = Infinity;
+
+                                    // 'change' handler is written as function because it's called by tdc_on_add_css_live_components (of wp_footer hook)
+									// We did it to reattach the existing compiled css to the new content received from server.
+									window.editorChangeHandler = function () {
+										//tdwState.lessWasEdited = true;
+
+										window.onbeforeunload = function () {
+											if (tdwState.lessWasEdited) {
+												return "You have attempted to leave this page. Are you sure?";
+											}
+											return false;
+										};
+
+										var editorValue = editor.getSession().getValue();
+
+										editor_textarea.val(editorValue);
+
+										if ('undefined' !== typeof tdcAdminIFrameUI) {
+											tdcAdminIFrameUI.getLiveIframe().contents().find('.tdw-css-writer-editor:first').val(editorValue);
+
+											// Mark the content as modified
+											// This is important for showing info when composer closes
+                                            tdcMain.setContentModified();
+										}
+
+										tdLiveCssInject.less();
+									};
+
+									editor.getSession().setValue(editor_textarea.val());
+									editor.getSession().on('change', editorChangeHandler);
+
+									editor.setTheme("ace/theme/textmate");
+									editor.setShowPrintMargin(false);
+									editor.getSession().setMode("ace/mode/less");
+                                    editor.getSession().setUseWrapMode(true);
+									editor.setOptions({
+										enableBasicAutocompletion: true,
+										enableSnippets: true,
+										enableLiveAutocompletion: false
+									});
+
+								}
+
+							});
+						</script>
+
+					</div>
+				</div>
+
+				<footer>
+
+					
+						<a href="#" class="tdw-save-css">Save</a>
+						<div class="tdw-more-info-text">Write CSS OR LESS and hit save. CTRL + SPACE for auto-complete.</div>
+
+					
+					<div class="tdw-resize"></div>
+				</footer>
+			</div>
+			
+<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us11.list-manage.com","uuid":"a459401212599a54203d036ee","lid":"91c1337873","uniqueMethods":true}) })</script>
+
+</body>
+</html>
