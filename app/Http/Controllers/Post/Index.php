@@ -44,8 +44,11 @@ class Index extends Controller
             'q' => 'required|string|min:3|max:255',
         ]);
 
+        $q = strtolower($q);
+
         $posts = $posts
-            ->where('title', 'LIKE', "%$q%")
+            ->whereRaw("LOWER(title) LIKE ?")
+            ->addBinding("%$q%")
             ->orWhere('provider_slug', 'LIKE', '%' . Str::slug($q) . '%')
             ->paginate();
 
