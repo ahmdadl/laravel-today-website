@@ -19,13 +19,13 @@ class LaravelNewsScraperTest extends Scraper
 
         $this->assertTrue(
             Post::whereTitle(
-                'Enlightn: Boost your Laravel App’s Performance & Security (sponsor)',
+                'Laravel Console Wizard',
             )->exists(),
         );
 
         $this->assertTrue(
-            Post::whereTitle('Laravel 8.22 Released')
-                ->whereAuthor('Paul Redmond')
+            Post::whereTitle('Laravel is moving to a yearly major release cycle')
+                ->whereAuthor('Eric L. Barnes')
                 ->exists(),
         );
     }

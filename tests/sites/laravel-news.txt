@@ -1,5 +1,4 @@
-<!doctype html>
-<html>
+<!doctype html><html>
 <head>
 <title>News
 </title>
@@ -27,17 +26,17 @@
         window.Config = {};
     </script>
 </head>
-<body class="font-sans text-base leading-loose bg-off-white text-grey-darker">
-<nav x-data="{ navIsOpen: false, toggleNav: toggleNav }" :class="navIsOpen ? 'h-full' : ''" class="fixed w-full bg-white shadow md:relative md:top-0 z-300 lg:border-t-4 border-red">
-<div class="container items-center lg:flex">
-<div class="flex items-center justify-between flex-shrink-0 px-5">
-<a class="flex items-center py-4 text-red hover:text-red-darker" href="https://laravel-news.com">
-<svg class="inline-block rounded-sm w-11" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 183 174" style="enable-background:new 0 0 183 174;" xml:space="preserve" fill="currentColor">
+<body class="bg-off-white font-sans text-base text-grey-darker leading-loose">
+<nav x-data="{ navIsOpen: false, toggleNav: toggleNav }" :class="navIsOpen ? 'h-full' : ''" class="md:relative w-full bg-white fixed md:top-0 z-300 w-full lg:border-t-4 border-red shadow">
+<div class="lg:flex items-center container">
+<div class="px-5 flex flex-shrink-0 items-center justify-between">
+<a class="text-red py-4 flex items-center hover:text-red-darker" href="https://laravel-news.com">
+<svg class="inline-block w-11 rounded-sm" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 183 174" style="enable-background:new 0 0 183 174;" xml:space="preserve" fill="currentColor">
 <g>
 <path class="st0" d="M183-4H0c0,0,0,0,0,0v173.2c0,2.6,2.1,4.8,4.8,4.8h173.5c2.6,0,4.7-2.1,4.7-4.7L183-4C183-4,183-4,183-4z M87.9,129.1C87.9,129.2,87.9,129.2,87.9,129.1c0,1-0.8,1.8-1.8,1.8H48.2h0c0,0,0,0,0,0c-2.5,0-4.5-2-4.5-4.5V44.9c0,0,0-0.1,0-0.1 c0-1,0.8-1.7,1.8-1.7h6.8c0,0,0.1,0,0.1,0c1,0,1.7,0.8,1.7,1.8v76.3h32c0,0,0.1,0,0.1,0c1,0,1.7,0.8,1.7,1.8V129.1z M141,128.3  c0,0,0,0.1,0,0.1c0,1.4-1.2,2.6-2.7,2.5h-7.6c-0.7,0-1.3-0.1-1.9-0.4c-0.6-0.3-1.1-0.8-1.4-1.3L87.5,59.5v48.8c0,0,0,0.1,0,0.1 c0,1-0.8,1.7-1.8,1.7h-6.3c0,0-0.1,0-0.1,0c-1,0-1.7-0.8-1.7-1.8V45.7c0,0,0-0.1,0-0.1c0-1.4,1.2-2.6,2.7-2.5h7.5 c0.7,0,1.3,0.1,1.9,0.4c0.6,0.3,1.1,0.8,1.4,1.3l40,69.7V44.9c0,0,0-0.1,0-0.1c0-1,0.8-1.7,1.8-1.7h6.3c0,0,0.1,0,0.1,0 c1,0,1.7,0.8,1.7,1.8V128.3z"></path>
 </g>
 </svg>
-<h4 class="mb-0 ml-4 font-bold tracking-tight text-grey-darkest">Laravel News</h4>
+<h4 class="font-bold text-grey-darkest mb-0 ml-4 tracking-tight">Laravel News</h4>
 </a>
 <button type="button" class="nav__hamburger lg:hidden focus:outline-none">
 <div class="hamburger-box">
@@ -45,10 +44,10 @@
 </div>
 </button>
 </div>
-<div x-cloak :class="navIsOpen ? '' : 'hidden'" class="fixed items-center w-full h-full overflow-y-auto lg:flex bg-grey-darkest lg:bg-transparent lg:static">
-<div class="flex items-center order-3 w-full bg-white border-t-2 lg:border-t-0 border-off-white lg:justify-end lg:w-auto">
-<form class="flex items-center w-full bg-white lg:border-l-2 border-off-white lg:justify-end lg:w-auto" action="/search">
-<input type="text" placeholder="Search" name="q" class="flex-1 py-8 pl-8 placeholder-red lg:py-6 focus:outline-none">
+<div x-cloak :class="navIsOpen ? '' : 'hidden'" class="lg:flex overflow-y-auto items-center bg-grey-darkest lg:bg-transparent h-full w-full fixed lg:static">
+<div class="border-t-2 lg:border-t-0 border-off-white bg-white flex items-center lg:justify-end w-full lg:w-auto order-3">
+<form class="lg:border-l-2 border-off-white bg-white flex items-center lg:justify-end w-full lg:w-auto" action="/search">
+<input type="text" placeholder="Search" name="q" class="placeholder-red flex-1 py-8 pl-8 lg:py-6 focus:outline-none">
 <button type="submit" class="block py-8 pr-8 lg:py-6 focus:outline-none">
 <svg class="block w-4 h-4 text-grey hover:text-red">
 <use xlink:href="#icon-search">
@@ -56,8 +55,8 @@
 </button>
 </form>
 </div>
-<div class="order-1 w-full px-5 my-6 text-2xl text-white font-miriam lg:text-base lg:my-0 lg:w-auto md:text-grey">
-<ul class="flex-wrap items-center justify-center pl-0 text-center list-none sm:flex">
+<div class="font-miriam text-2xl lg:text-base my-6 lg:my-0 px-5 w-full lg:w-auto order-1 text-white md:text-grey">
+<ul class="list-none pl-0 sm:flex flex-wrap items-center justify-center text-center">
 <li class="sm:mr-8"><a class="text-inherit hover:text-red" href="https://laravel-news.com/blog">Blog</a></li>
 <li class="sm:mr-8"><a class="text-inherit hover:text-red" href="/category/laravel-tutorials">Tutorials</a></li>
 <li class="sm:mr-8"><a class="text-inherit hover:text-red" href="/category/laravel-packages">Packages</a></li>
@@ -65,28 +64,28 @@
 <li class="sm:mr-8"><a class="text-inherit hover:text-red" href="https://laravel-news.com/newsletter">Newsletter</a></li>
 </ul>
 </div>
-<ul class="flex items-center justify-center flex-1 order-2 pl-0 list-none lg:justify-end lg:pl-0 lg:pr-3">
-<li class="m-3 xl:ml-0"><a href="https://twitter.com/laravelnews" class="flex items-center justify-center p-2 text-white transition rounded-full lg:p-0 lg:text-grey lg:hover:text-twitter bg-twitter lg:bg-transparent hover:bg-black lg:hover:bg-transparent"><svg class="block w-4 h-4 leading-none">
+<ul class="list-none pl-0 flex items-center justify-center lg:justify-end flex-1 lg:pl-0 lg:pr-3 order-2">
+<li class="m-3 xl:ml-0"><a href="https://twitter.com/laravelnews" class="flex items-center justify-center rounded-full p-2 lg:p-0 text-white lg:text-grey lg:hover:text-twitter bg-twitter lg:bg-transparent hover:bg-black lg:hover:bg-transparent transition"><svg class="w-4 h-4 block leading-none">
 <use xlink:href="#icon-twitter">
 </use></svg></a></li>
-<li class="m-3"><a href="https://www.facebook.com/laravelnews" class="flex items-center justify-center p-2 text-white transition rounded-full lg:p-0 lg:text-grey lg:hover:text-facebook bg-facebook lg:bg-transparent hover:bg-black lg:hover:bg-transparent"><svg class="block w-4 h-4 leading-none">
+<li class="m-3"><a href="https://www.facebook.com/laravelnews" class="flex items-center justify-center rounded-full p-2 lg:p-0 text-white lg:text-grey lg:hover:text-facebook bg-facebook lg:bg-transparent hover:bg-black lg:hover:bg-transparent transition"><svg class="w-4 h-4 block leading-none">
 <use xlink:href="#icon-facebook">
 </use></svg></a></li>
-<li class="m-3"><a rel="nofollow" href="https://www.linkedin.com/company/laravel-news" class="flex items-center justify-center p-2 text-white transition rounded-full lg:p-0 lg:text-grey lg:hover:text-linkedin bg-linkedin lg:bg-transparent hover:bg-black lg:hover:bg-transparent"><svg class="block w-4 h-4 leading-none">
+<li class="m-3"><a rel="nofollow" href="https://www.linkedin.com/company/laravel-news" class="flex items-center justify-center rounded-full p-2 lg:p-0 text-white lg:text-grey lg:hover:text-linkedin bg-linkedin lg:bg-transparent hover:bg-black lg:hover:bg-transparent transition"><svg class="w-4 h-4 block leading-none">
 <use xlink:href="#icon-linkedin">
 </use></svg></a></li>
 </ul>
 <div class="my-8 lg:hidden">
-<ol class="flex-wrap items-center justify-center pl-0 font-sans text-center list-none sm:flex">
-<li class="block" style="letter-spacing: 2.2px;"><a class="block mx-4 my-3 text-xs uppercase text-grey" href="/category/laravel-tutorials">Laravel Tutorials</a></li>
-<li class="block" style="letter-spacing: 2.2px;"><a class="block mx-4 my-3 text-xs uppercase text-grey" href="/category/laravel-packages">Laravel Packages</a></li>
-<li class="block" style="letter-spacing: 2.2px;"><a class="block mx-4 my-3 text-xs uppercase text-grey" href="/category/laravel-books">Laravel Books</a></li>
-<li class="block" style="letter-spacing: 2.2px;"><a class="block mx-4 my-3 text-xs uppercase text-grey" href="/category/interviews">The Artisan Files</a></li>
-<li class="block" style="letter-spacing: 2.2px;"><a class="block mx-4 my-3 text-xs uppercase text-grey" href="/category/laravel-applications">Laravel Applications</a></li>
-<li class="block" style="letter-spacing: 2.2px;"><a class="block mx-4 my-3 text-xs uppercase text-grey" href="/category/homestead">Laravel Homestead</a></li>
+<ol class="list-none pl-0 sm:flex flex-wrap items-center justify-center text-center font-sans">
+<li class="block" style="letter-spacing: 2.2px;"><a class="block text-xs text-grey uppercase mx-4 my-3" href="/category/laravel-tutorials">Laravel Tutorials</a></li>
+<li class="block" style="letter-spacing: 2.2px;"><a class="block text-xs text-grey uppercase mx-4 my-3" href="/category/laravel-packages">Laravel Packages</a></li>
+<li class="block" style="letter-spacing: 2.2px;"><a class="block text-xs text-grey uppercase mx-4 my-3" href="/category/laravel-books">Laravel Books</a></li>
+<li class="block" style="letter-spacing: 2.2px;"><a class="block text-xs text-grey uppercase mx-4 my-3" href="/category/interviews">The Artisan Files</a></li>
+<li class="block" style="letter-spacing: 2.2px;"><a class="block text-xs text-grey uppercase mx-4 my-3" href="/category/laravel-applications">Laravel Applications</a></li>
+<li class="block" style="letter-spacing: 2.2px;"><a class="block text-xs text-grey uppercase mx-4 my-3" href="/category/homestead">Laravel Homestead</a></li>
 </ol>
-<div class="pb-8 text-center">
-<img class="inline-block w-32 m-8 mx-auto" src="/assets/images/min/dark-ln-elephant.png">
+<div class="text-center pb-8">
+<img class="m-8 w-32 mx-auto inline-block" src="/assets/images/min/dark-ln-elephant.png">
 </div>
 </div>
 </div>
@@ -94,476 +93,478 @@
 </nav>
 <main class="site-main">
 <div class="container py-8">
-<div class="flex flex-col items-center justify-center md:flex-row md:items-start --mx-5">
-<div class="w-full px-5 mb-6 md:w-3/5 lg:w-2/3">
-<h1 class="mb-2 md:text-6xl">News</h1>
-<div class="w-full mx-0 card card--post">
+<div class="flex flex-col md:flex-row items-center md:items-start justify-center --mx-5">
+<div class="w-full md:w-3/5 lg:w-2/3 px-5 mb-6">
+<h1 class="md:text-6xl mb-2">News</h1>
+<div class="card w-full card--post mx-0">
+<div class="post__image">
+<a href="/laravel-console-wizard">
+<img src="https://i0.wp.com/wp.laravel-news.com/wp-content/uploads/2021/01/laravel-console-wizard-featured.png?fit=2220%2C1125&amp;ssl=1?resize=1400%2C709" alt="Laravel Console Wizard">
+</a>
+</div>
+<div class="prose max-w-full lg:prose-lg truncate text-grey">
+<span class="label text-xs">
+News
+<span class="text-grey"> / </span>
+<span class="text-grey">January 29, 2021</span>
+</span>
+<h2 class="text-2xl md:text-4xl"><a class="text-red hover:text-red-dark transition" href="/laravel-console-wizard">Laravel Console Wizard</a></h2>
+<p>Laravel Console WIzzard is a package for creating multi-step wizards with complex input inside the console.</p>
+<a class="absolute bottom-0 left-0 ml-8 inline-block z-200 text-grey-lighter text-sm hover:text-red transition" href="/laravel-console-wizard">Read more…</a>
+</div>
+<div class="post__footer sm:flex items-end justify-between border-t border-grey-lightest py-4">
+<div class="post__author flex items-center">
+<img class="block rounded-full w-12 mr-4" src="https://www.gravatar.com/avatar/d9691184a54bfa1defe3dc7d625bc959?s=130">
+<div class="author__content leading-none">
+<h4 class="font-sans text-black font-bold mb-2">by <a class="text-red hover:text-red-darker transition" href="/@paulredmond">Paul Redmond</a></h4>
+<div class="flex items-center text-sm author__links">
+<span class="inline-block"><a class="text-grey inline-block" href="https://twitter.com/@paulredmond" rel="nofollow"><svg class="w-3 h-3 inline-block"><use xlink:href="#icon-twitter"></use></svg></a></span>
+<span class="inline-block"><a class="text-grey inline-block" href="https://github.com/paulredmond" rel="nofollow"><svg class="w-3 h-3 inline-block"><use xlink:href="#icon-github"></use></svg></a></span>
+</div>
+</div>
+
+</div>
+<ul class="pt-3 sm:pt-0 flex items-center list-none pl-0">
+</ul>
+</div>
+</div>
+<div class="card w-full card--post mx-0">
+<div class="post__image">
+<a href="/use-basecamps-hotwire-in-laravel">
+<img src="https://i0.wp.com/wp.laravel-news.com/wp-content/uploads/2021/01/turbo-laravel-featured.png?fit=2220%2C1125&amp;ssl=1?resize=1400%2C709" alt="Use Basecamp’s Hotwire in Laravel">
+</a>
+</div>
+<div class="prose max-w-full lg:prose-lg truncate text-grey">
+<span class="label text-xs">
+News
+<span class="text-grey"> / </span>
+<span class="text-grey">January 28, 2021</span>
+</span>
+<h2 class="text-2xl md:text-4xl"><a class="text-red hover:text-red-dark transition" href="/use-basecamps-hotwire-in-laravel">Use Basecamp’s Hotwire in Laravel</a></h2>
+<p>Turbo Laravel is a package that gives you a set of conventions to get the most out of Hotwire in Laravel. Turbo is inspired by the turbo-rails gem, giving Laravel developers a similar experience as those developing with Hotwire in the Ruby world.</p>
+<a class="absolute bottom-0 left-0 ml-8 inline-block z-200 text-grey-lighter text-sm hover:text-red transition" href="/use-basecamps-hotwire-in-laravel">Read more…</a>
+</div>
+<div class="post__footer sm:flex items-end justify-between border-t border-grey-lightest py-4">
+<div class="post__author flex items-center">
+<img class="block rounded-full w-12 mr-4" src="https://www.gravatar.com/avatar/d9691184a54bfa1defe3dc7d625bc959?s=130">
+<div class="author__content leading-none">
+<h4 class="font-sans text-black font-bold mb-2">by <a class="text-red hover:text-red-darker transition" href="/@paulredmond">Paul Redmond</a></h4>
+<div class="flex items-center text-sm author__links">
+<span class="inline-block"><a class="text-grey inline-block" href="https://twitter.com/@paulredmond" rel="nofollow"><svg class="w-3 h-3 inline-block"><use xlink:href="#icon-twitter"></use></svg></a></span>
+<span class="inline-block"><a class="text-grey inline-block" href="https://github.com/paulredmond" rel="nofollow"><svg class="w-3 h-3 inline-block"><use xlink:href="#icon-github"></use></svg></a></span>
+</div>
+</div>
+
+</div>
+<ul class="pt-3 sm:pt-0 flex items-center list-none pl-0">
+<li class="bg-red hover:bg-red-darker transition px-2 rounded-sm text-sm mr-3 sm:mr-0 sm:ml-3"><a class="text-white" href="/tag/packages">packages</a></li>
+</ul>
+</div>
+</div>
+<div class="card w-full card--post mx-0">
+<div class="post__image">
+<a href="/yearly-release-cycle">
+<img src="https://i2.wp.com/wp.laravel-news.com/wp-content/uploads/2019/11/release-process.jpg?fit=1400%2C708&amp;ssl=1?resize=1400%2C709" alt="Laravel is moving to a yearly major release cycle">
+</a>
+</div>
+<div class="prose max-w-full lg:prose-lg truncate text-grey">
+<span class="label text-xs">
+News
+<span class="text-grey"> / </span>
+<span class="text-grey">January 27, 2021</span>
+</span>
+<h2 class="text-2xl md:text-4xl"><a class="text-red hover:text-red-dark transition" href="/yearly-release-cycle">Laravel is moving to a yearly major release cycle</a></h2>
+<p>The Laravel team has announced that effective immediately Laravel is moving to a yearly release cycle on major versions instead of the six-month cycle it’s been on for the past few years. </p>
+<a class="absolute bottom-0 left-0 ml-8 inline-block z-200 text-grey-lighter text-sm hover:text-red transition" href="/yearly-release-cycle">Read more…</a>
+</div>
+<div class="post__footer sm:flex items-end justify-between border-t border-grey-lightest py-4">
+<div class="post__author flex items-center">
+<img class="block rounded-full w-12 mr-4" src="https://www.gravatar.com/avatar/0e7b6742f9d7e1a8a213d74b429b9e8f?s=130">
+<div class="author__content leading-none">
+<h4 class="font-sans text-black font-bold mb-2">by <a class="text-red hover:text-red-darker transition" href="/@ericlbarnes">Eric L. Barnes</a></h4>
+<div class="flex items-center text-sm author__links">
+<span class="inline-block"><a class="text-grey inline-block" href="https://twitter.com/ericlbarnes" rel="nofollow"><svg class="w-3 h-3 inline-block"><use xlink:href="#icon-twitter"></use></svg></a></span>
+<span class="inline-block"><a class="text-grey inline-block" href="https://facebook.com/ericlbarnes.dev" rel="nofollow"><svg class="w-3 h-3 inline-block"><use xlink:href="#icon-facebook"></use></svg></a></span>
+<span class="inline-block"><a class="text-grey inline-block" href="https://github.com/ericbarnes" rel="nofollow"><svg class="w-3 h-3 inline-block"><use xlink:href="#icon-github"></use></svg></a></span>
+</div>
+</div>
+
+</div>
+<ul class="pt-3 sm:pt-0 flex items-center list-none pl-0">
+</ul>
+</div>
+</div>
+<div class="card w-full card--post mx-0">
+<div class="post__image">
+<a href="/parallel-testing">
+<img src="https://i2.wp.com/wp.laravel-news.com/wp-content/uploads/2021/01/featured-parallel-testing.jpg?fit=2200%2C1100&amp;ssl=1?resize=1400%2C709" alt="Parallel Testing is now in Laravel v8">
+</a>
+</div>
+<div class="prose max-w-full lg:prose-lg truncate text-grey">
+<span class="label text-xs">
+News
+<span class="text-grey"> / </span>
+<span class="text-grey">January 27, 2021</span>
+</span>
+<h2 class="text-2xl md:text-4xl"><a class="text-red hover:text-red-dark transition" href="/parallel-testing">Parallel Testing is now in Laravel v8</a></h2>
+<p>Starting with Laravel v8.25, parallel testing is now available and the built-in `artisan test` command adds support through a `–parallel` flag. With this, it will run your tests simultaneously across multiple processes to significantly speed up the time required to run the entire test suite.</p>
+<a class="absolute bottom-0 left-0 ml-8 inline-block z-200 text-grey-lighter text-sm hover:text-red transition" href="/parallel-testing">Read more…</a>
+</div>
+<div class="post__footer sm:flex items-end justify-between border-t border-grey-lightest py-4">
+<div class="post__author flex items-center">
+<img class="block rounded-full w-12 mr-4" src="https://www.gravatar.com/avatar/0e7b6742f9d7e1a8a213d74b429b9e8f?s=130">
+<div class="author__content leading-none">
+<h4 class="font-sans text-black font-bold mb-2">by <a class="text-red hover:text-red-darker transition" href="/@ericlbarnes">Eric L. Barnes</a></h4>
+<div class="flex items-center text-sm author__links">
+<span class="inline-block"><a class="text-grey inline-block" href="https://twitter.com/ericlbarnes" rel="nofollow"><svg class="w-3 h-3 inline-block"><use xlink:href="#icon-twitter"></use></svg></a></span>
+<span class="inline-block"><a class="text-grey inline-block" href="https://facebook.com/ericlbarnes.dev" rel="nofollow"><svg class="w-3 h-3 inline-block"><use xlink:href="#icon-facebook"></use></svg></a></span>
+<span class="inline-block"><a class="text-grey inline-block" href="https://github.com/ericbarnes" rel="nofollow"><svg class="w-3 h-3 inline-block"><use xlink:href="#icon-github"></use></svg></a></span>
+</div>
+</div>
+
+</div>
+<ul class="pt-3 sm:pt-0 flex items-center list-none pl-0">
+</ul>
+</div>
+</div>
+<div class="card w-full card--post mx-0">
+<div class="post__image">
+<a href="/laravel-package-tools">
+<img src="https://i1.wp.com/wp.laravel-news.com/wp-content/uploads/2021/01/laravel-package-tools-featured.png?fit=2220%2C1125&amp;ssl=1?resize=1400%2C709" alt="Simplifying Service Providers With Laravel Package Tools">
+</a>
+</div>
+<div class="prose max-w-full lg:prose-lg truncate text-grey">
+<span class="label text-xs">
+News
+<span class="text-grey"> / </span>
+<span class="text-grey">January 26, 2021</span>
+</span>
+<h2 class="text-2xl md:text-4xl"><a class="text-red hover:text-red-dark transition" href="/laravel-package-tools">Simplifying Service Providers With Laravel Package Tools</a></h2>
+<p>Laravel Package Tools is a package that provides an opinionated base service provider used to streamline the registration of your package’s config files, migrations, commands, and more.</p>
+<a class="absolute bottom-0 left-0 ml-8 inline-block z-200 text-grey-lighter text-sm hover:text-red transition" href="/laravel-package-tools">Read more…</a>
+</div>
+<div class="post__footer sm:flex items-end justify-between border-t border-grey-lightest py-4">
+<div class="post__author flex items-center">
+<img class="block rounded-full w-12 mr-4" src="https://www.gravatar.com/avatar/d9691184a54bfa1defe3dc7d625bc959?s=130">
+<div class="author__content leading-none">
+<h4 class="font-sans text-black font-bold mb-2">by <a class="text-red hover:text-red-darker transition" href="/@paulredmond">Paul Redmond</a></h4>
+<div class="flex items-center text-sm author__links">
+<span class="inline-block"><a class="text-grey inline-block" href="https://twitter.com/@paulredmond" rel="nofollow"><svg class="w-3 h-3 inline-block"><use xlink:href="#icon-twitter"></use></svg></a></span>
+<span class="inline-block"><a class="text-grey inline-block" href="https://github.com/paulredmond" rel="nofollow"><svg class="w-3 h-3 inline-block"><use xlink:href="#icon-github"></use></svg></a></span>
+</div>
+</div>
+
+</div>
+<ul class="pt-3 sm:pt-0 flex items-center list-none pl-0">
+<li class="bg-red hover:bg-red-darker transition px-2 rounded-sm text-sm mr-3 sm:mr-0 sm:ml-3"><a class="text-white" href="/tag/packages">packages</a></li>
+</ul>
+</div>
+</div>
+<div class="card w-full card--post mx-0">
+<div class="post__image">
+<a href="/laravel-versions">
+<img src="https://i2.wp.com/wp.laravel-news.com/wp-content/uploads/2021/01/laravelversions.jpg?fit=2200%2C1100&amp;ssl=1?resize=1400%2C709" alt="Laravel Versions">
+</a>
+</div>
+<div class="prose max-w-full lg:prose-lg truncate text-grey">
+<span class="label text-xs">
+News
+<span class="text-grey"> / </span>
+<span class="text-grey">January 26, 2021</span>
+</span>
+<h2 class="text-2xl md:text-4xl"><a class="text-red hover:text-red-dark transition" href="/laravel-versions">Laravel Versions</a></h2>
+<p>Laravel Versions is a new project that features release dates and timelines for security and bug fixes for all versions of Laravel. It currently contains all publicly-known information about past and future versions of Laravel including the latest patch release, release date, date bugfixes end, date security fixes end, and whether it’s LTS. </p>
+<a class="absolute bottom-0 left-0 ml-8 inline-block z-200 text-grey-lighter text-sm hover:text-red transition" href="/laravel-versions">Read more…</a>
+</div>
+<div class="post__footer sm:flex items-end justify-between border-t border-grey-lightest py-4">
+<div class="post__author flex items-center">
+<img class="block rounded-full w-12 mr-4" src="https://www.gravatar.com/avatar/0e7b6742f9d7e1a8a213d74b429b9e8f?s=130">
+<div class="author__content leading-none">
+<h4 class="font-sans text-black font-bold mb-2">by <a class="text-red hover:text-red-darker transition" href="/@ericlbarnes">Eric L. Barnes</a></h4>
+<div class="flex items-center text-sm author__links">
+<span class="inline-block"><a class="text-grey inline-block" href="https://twitter.com/ericlbarnes" rel="nofollow"><svg class="w-3 h-3 inline-block"><use xlink:href="#icon-twitter"></use></svg></a></span>
+<span class="inline-block"><a class="text-grey inline-block" href="https://facebook.com/ericlbarnes.dev" rel="nofollow"><svg class="w-3 h-3 inline-block"><use xlink:href="#icon-facebook"></use></svg></a></span>
+<span class="inline-block"><a class="text-grey inline-block" href="https://github.com/ericbarnes" rel="nofollow"><svg class="w-3 h-3 inline-block"><use xlink:href="#icon-github"></use></svg></a></span>
+</div>
+</div>
+
+</div>
+<ul class="pt-3 sm:pt-0 flex items-center list-none pl-0">
+</ul>
+</div>
+</div>
+<div class="card w-full card--post mx-0">
 <div class="post__image">
 <a href="/enlightn">
 <img src="https://i1.wp.com/wp.laravel-news.com/wp-content/uploads/2021/01/Enlightn_LN_Post_Banner_2200x1100.jpg?fit=2200%2C1100&amp;ssl=1?resize=1400%2C709" alt="Enlightn: Boost your Laravel App’s Performance &amp; Security (sponsor)">
 </a>
 </div>
-<div class="max-w-full prose truncate lg:prose-lg text-grey">
-<span class="text-xs label">
+<div class="prose max-w-full lg:prose-lg truncate text-grey">
+<span class="label text-xs">
 News
 <span class="text-grey"> / </span>
 <span class="text-grey">January 25, 2021</span>
-<span class="text-empty"></span>
 </span>
-<h2 class="text-2xl md:text-4xl"><a class="transition text-red hover:text-red-dark" href="/enlightn">Enlightn: Boost your Laravel App’s Performance &amp; Security (sponsor)</a></h2>
+<h2 class="text-2xl md:text-4xl"><a class="text-red hover:text-red-dark transition" href="/enlightn">Enlightn: Boost your Laravel App’s Performance &amp; Security (sponsor)</a></h2>
 <p>Enlightn is an amazing tool that helps you boost your Laravel application’s performance and security. It has 120 automated checks that scan your application code, hit your routes, and check your server configurations to provide recommendations on improving performance, security and code reliability.</p>
-<a class="absolute bottom-0 left-0 inline-block ml-8 text-sm transition z-200 text-grey-lighter hover:text-red" href="/enlightn">Read more…</a>
+<a class="absolute bottom-0 left-0 ml-8 inline-block z-200 text-grey-lighter text-sm hover:text-red transition" href="/enlightn">Read more…</a>
 </div>
-<div class="items-end justify-between py-4 border-t post__footer sm:flex border-grey-lightest">
-<div class="flex items-center post__author">
-<img class="block w-12 mr-4 rounded-full" src="https://www.gravatar.com/avatar/0e7b6742f9d7e1a8a213d74b429b9e8f?s=130">
-<div class="leading-none author__content">
-<h4 class="mb-2 font-sans font-bold text-black">by <a class="transition text-red hover:text-red-darker" href="/@ericlbarnes">Eric L. Barnes</a></h4>
+<div class="post__footer sm:flex items-end justify-between border-t border-grey-lightest py-4">
+<div class="post__author flex items-center">
+<img class="block rounded-full w-12 mr-4" src="https://www.gravatar.com/avatar/0e7b6742f9d7e1a8a213d74b429b9e8f?s=130">
+<div class="author__content leading-none">
+<h4 class="font-sans text-black font-bold mb-2">by <a class="text-red hover:text-red-darker transition" href="/@ericlbarnes">Eric L. Barnes</a></h4>
 <div class="flex items-center text-sm author__links">
-<span class="inline-block"><a class="inline-block text-grey" href="https://twitter.com/ericlbarnes" rel="nofollow"><svg class="inline-block w-3 h-3"><use xlink:href="#icon-twitter"></use></svg></a></span>
-<span class="inline-block"><a class="inline-block text-grey" href="https://facebook.com/ericlbarnes.dev" rel="nofollow"><svg class="inline-block w-3 h-3"><use xlink:href="#icon-facebook"></use></svg></a></span>
-<span class="inline-block"><a class="inline-block text-grey" href="https://github.com/ericbarnes" rel="nofollow"><svg class="inline-block w-3 h-3"><use xlink:href="#icon-github"></use></svg></a></span>
+<span class="inline-block"><a class="text-grey inline-block" href="https://twitter.com/ericlbarnes" rel="nofollow"><svg class="w-3 h-3 inline-block"><use xlink:href="#icon-twitter"></use></svg></a></span>
+<span class="inline-block"><a class="text-grey inline-block" href="https://facebook.com/ericlbarnes.dev" rel="nofollow"><svg class="w-3 h-3 inline-block"><use xlink:href="#icon-facebook"></use></svg></a></span>
+<span class="inline-block"><a class="text-grey inline-block" href="https://github.com/ericbarnes" rel="nofollow"><svg class="w-3 h-3 inline-block"><use xlink:href="#icon-github"></use></svg></a></span>
 </div>
 </div>
 
 </div>
-<ul class="flex items-center pt-3 pl-0 list-none sm:pt-0">
+<ul class="pt-3 sm:pt-0 flex items-center list-none pl-0">
 </ul>
 </div>
 </div>
-<div class="w-full mx-0 card card--post">
+<div class="card w-full card--post mx-0">
 <div class="post__image">
 <a href="/understanding-the-sole-query-builder-method">
 <img src="https://i2.wp.com/wp.laravel-news.com/wp-content/uploads/2021/01/laravel-sole-featured.png?fit=2220%2C1125&amp;ssl=1?resize=1400%2C709" alt="Understanding the sole() Query Builder Method">
 </a>
 </div>
-<div class="max-w-full prose truncate lg:prose-lg text-grey">
-<span class="text-xs label">
+<div class="prose max-w-full lg:prose-lg truncate text-grey">
+<span class="label text-xs">
 News
- <span class="text-grey"> / </span>
+<span class="text-grey"> / </span>
 <span class="text-grey">January 22, 2021</span>
 </span>
-<h2 class="text-2xl md:text-4xl"><a class="transition text-red hover:text-red-dark" href="/understanding-the-sole-query-builder-method">Understanding the sole() Query Builder Method</a></h2>
+<h2 class="text-2xl md:text-4xl"><a class="text-red hover:text-red-dark transition" href="/understanding-the-sole-query-builder-method">Understanding the sole() Query Builder Method</a></h2>
 <p>Laravel 8.23.0 introduces a sole() method to the query builder, which retrieves a single record but also has additional assertions.</p>
-<a class="absolute bottom-0 left-0 inline-block ml-8 text-sm transition z-200 text-grey-lighter hover:text-red" href="/understanding-the-sole-query-builder-method">Read more…</a>
+<a class="absolute bottom-0 left-0 ml-8 inline-block z-200 text-grey-lighter text-sm hover:text-red transition" href="/understanding-the-sole-query-builder-method">Read more…</a>
 </div>
-<div class="items-end justify-between py-4 border-t post__footer sm:flex border-grey-lightest">
-<div class="flex items-center post__author">
-<img class="block w-12 mr-4 rounded-full" src="https://www.gravatar.com/avatar/d9691184a54bfa1defe3dc7d625bc959?s=130">
-<div class="leading-none author__content">
-<h4 class="mb-2 font-sans font-bold text-black">by <a class="transition text-red hover:text-red-darker" href="/@paulredmond">Paul Redmond</a></h4>
+<div class="post__footer sm:flex items-end justify-between border-t border-grey-lightest py-4">
+<div class="post__author flex items-center">
+<img class="block rounded-full w-12 mr-4" src="https://www.gravatar.com/avatar/d9691184a54bfa1defe3dc7d625bc959?s=130">
+<div class="author__content leading-none">
+<h4 class="font-sans text-black font-bold mb-2">by <a class="text-red hover:text-red-darker transition" href="/@paulredmond">Paul Redmond</a></h4>
 <div class="flex items-center text-sm author__links">
-<span class="inline-block"><a class="inline-block text-grey" href="https://twitter.com/@paulredmond" rel="nofollow"><svg class="inline-block w-3 h-3"><use xlink:href="#icon-twitter"></use></svg></a></span>
-<span class="inline-block"><a class="inline-block text-grey" href="https://github.com/paulredmond" rel="nofollow"><svg class="inline-block w-3 h-3"><use xlink:href="#icon-github"></use></svg></a></span>
+<span class="inline-block"><a class="text-grey inline-block" href="https://twitter.com/@paulredmond" rel="nofollow"><svg class="w-3 h-3 inline-block"><use xlink:href="#icon-twitter"></use></svg></a></span>
+<span class="inline-block"><a class="text-grey inline-block" href="https://github.com/paulredmond" rel="nofollow"><svg class="w-3 h-3 inline-block"><use xlink:href="#icon-github"></use></svg></a></span>
 </div>
 </div>
 
 </div>
-<ul class="flex items-center pt-3 pl-0 list-none sm:pt-0">
-<li class="px-2 mr-3 text-sm transition rounded-sm bg-red hover:bg-red-darker sm:mr-0 sm:ml-3"><a class="text-white" href="/tag/laravel-8">Laravel 8</a></li>
+<ul class="pt-3 sm:pt-0 flex items-center list-none pl-0">
+<li class="bg-red hover:bg-red-darker transition px-2 rounded-sm text-sm mr-3 sm:mr-0 sm:ml-3"><a class="text-white" href="/tag/laravel-8">Laravel 8</a></li>
 </ul>
 </div>
 </div>
-<div class="w-full mx-0 card card--post">
+<div class="card w-full card--post mx-0">
 <div class="post__image">
-<a href="/laravel-markdown-to-html-macro">
+ <a href="/laravel-markdown-to-html-macro">
 <img src="https://i2.wp.com/wp.laravel-news.com/wp-content/uploads/2021/01/markdown-logo-featured.png?fit=2220%2C1125&amp;ssl=1?resize=1400%2C709" alt="Laravel String Markdown Macro">
 </a>
 </div>
-<div class="max-w-full prose truncate lg:prose-lg text-grey">
-<span class="text-xs label">
+<div class="prose max-w-full lg:prose-lg truncate text-grey">
+<span class="label text-xs">
 News
 <span class="text-grey"> / </span>
 <span class="text-grey">January 21, 2021</span>
 </span>
-<h2 class="text-2xl md:text-4xl"><a class="transition text-red hover:text-red-dark" href="/laravel-markdown-to-html-macro">Laravel String Markdown Macro</a></h2>
+<h2 class="text-2xl md:text-4xl"><a class="text-red hover:text-red-dark transition" href="/laravel-markdown-to-html-macro">Laravel String Markdown Macro</a></h2>
 <p>Sometimes you have some markdown data that you’d like to convert into HTML for display on the web. While modern PHP packages make this simple, we can streamline this conversion even more in Laravel using a String macro!</p>
-<a class="absolute bottom-0 left-0 inline-block ml-8 text-sm transition z-200 text-grey-lighter hover:text-red" href="/laravel-markdown-to-html-macro">Read more…</a>
+<a class="absolute bottom-0 left-0 ml-8 inline-block z-200 text-grey-lighter text-sm hover:text-red transition" href="/laravel-markdown-to-html-macro">Read more…</a>
 </div>
-<div class="items-end justify-between py-4 border-t post__footer sm:flex border-grey-lightest">
-<div class="flex items-center post__author">
-<img class="block w-12 mr-4 rounded-full" src="https://www.gravatar.com/avatar/d9691184a54bfa1defe3dc7d625bc959?s=130">
-<div class="leading-none author__content">
-<h4 class="mb-2 font-sans font-bold text-black">by <a class="transition text-red hover:text-red-darker" href="/@paulredmond">Paul Redmond</a></h4>
+<div class="post__footer sm:flex items-end justify-between border-t border-grey-lightest py-4">
+<div class="post__author flex items-center">
+<img class="block rounded-full w-12 mr-4" src="https://www.gravatar.com/avatar/d9691184a54bfa1defe3dc7d625bc959?s=130">
+<div class="author__content leading-none">
+<h4 class="font-sans text-black font-bold mb-2">by <a class="text-red hover:text-red-darker transition" href="/@paulredmond">Paul Redmond</a></h4>
 <div class="flex items-center text-sm author__links">
-<span class="inline-block"><a class="inline-block text-grey" href="https://twitter.com/@paulredmond" rel="nofollow"><svg class="inline-block w-3 h-3"><use xlink:href="#icon-twitter"></use></svg></a></span>
-<span class="inline-block"><a class="inline-block text-grey" href="https://github.com/paulredmond" rel="nofollow"><svg class="inline-block w-3 h-3"><use xlink:href="#icon-github"></use></svg></a></span>
+<span class="inline-block"><a class="text-grey inline-block" href="https://twitter.com/@paulredmond" rel="nofollow"><svg class="w-3 h-3 inline-block"><use xlink:href="#icon-twitter"></use></svg></a></span>
+<span class="inline-block"><a class="text-grey inline-block" href="https://github.com/paulredmond" rel="nofollow"><svg class="w-3 h-3 inline-block"><use xlink:href="#icon-github"></use></svg></a></span>
 </div>
 </div>
 
 </div>
-<ul class="flex items-center pt-3 pl-0 list-none sm:pt-0">
+<ul class="pt-3 sm:pt-0 flex items-center list-none pl-0">
 </ul>
 </div>
 </div>
-<div class="w-full mx-0 card card--post">
+<div class="card w-full card--post mx-0">
 <div class="post__image">
 <a href="/laravel-8-23-0">
 <img src="https://i1.wp.com/wp.laravel-news.com/wp-content/uploads/2020/08/laravel8.jpg?fit=1400%2C708&amp;ssl=1?resize=1400%2C709" alt="Laravel 8.23 Released">
 </a>
 </div>
-<div class="max-w-full prose truncate lg:prose-lg text-grey">
-<span class="text-xs label">
+<div class="prose max-w-full lg:prose-lg truncate text-grey">
+<span class="label text-xs">
 News
 <span class="text-grey"> / </span>
 <span class="text-grey">January 20, 2021</span>
 </span>
-<h2 class="text-2xl md:text-4xl"><a class="transition text-red hover:text-red-dark" href="/laravel-8-23-0">Laravel 8.23 Released</a></h2>
+<h2 class="text-2xl md:text-4xl"><a class="text-red hover:text-red-dark transition" href="/laravel-8-23-0">Laravel 8.23 Released</a></h2>
 <p>The Laravel team released 8.23 yesterday with a new sole() query builder method, enhancements to throw_if() and throw_unless(), and the latest changes in the 8.x branch:</p>
-<a class="absolute bottom-0 left-0 inline-block ml-8 text-sm transition z-200 text-grey-lighter hover:text-red" href="/laravel-8-23-0">Read more…</a>
+<a class="absolute bottom-0 left-0 ml-8 inline-block z-200 text-grey-lighter text-sm hover:text-red transition" href="/laravel-8-23-0">Read more…</a>
 </div>
-<div class="items-end justify-between py-4 border-t post__footer sm:flex border-grey-lightest">
-<div class="flex items-center post__author">
-<img class="block w-12 mr-4 rounded-full" src="https://www.gravatar.com/avatar/d9691184a54bfa1defe3dc7d625bc959?s=130">
-<div class="leading-none author__content">
-<h4 class="mb-2 font-sans font-bold text-black">by <a class="transition text-red hover:text-red-darker" href="/@paulredmond">Paul Redmond</a></h4>
-<div class="flex items-center text-sm author__links">
-<span class="inline-block"><a class="inline-block text-grey" href="https://twitter.com/@paulredmond" rel="nofollow"><svg class="inline-block w-3 h-3"><use xlink:href="#icon-twitter"></use></svg></a></span>
-<span class="inline-block"><a class="inline-block text-grey" href="https://github.com/paulredmond" rel="nofollow"><svg class="inline-block w-3 h-3"><use xlink:href="#icon-github"></use></svg></a></span>
+<div class="post__footer sm:flex items-end justify-between border-t border-grey-lightest py-4">
+<div class="post__author flex items-center">
+<img class="block rounded-full w-12 mr-4" src="https://www.gravatar.com/avatar/d9691184a54bfa1defe3dc7d625bc959?s=130">
+<div class="author__content leading-none">
+<h4 class="font-sans text-black font-bold mb-2">by <a class="text-red hover:text-red-darker transition" href="/@paulredmond">Paul Redmond</a></h4>
+ <div class="flex items-center text-sm author__links">
+<span class="inline-block"><a class="text-grey inline-block" href="https://twitter.com/@paulredmond" rel="nofollow"><svg class="w-3 h-3 inline-block"><use xlink:href="#icon-twitter"></use></svg></a></span>
+<span class="inline-block"><a class="text-grey inline-block" href="https://github.com/paulredmond" rel="nofollow"><svg class="w-3 h-3 inline-block"><use xlink:href="#icon-github"></use></svg></a></span>
 </div>
 </div>
 
 </div>
-<ul class="flex items-center pt-3 pl-0 list-none sm:pt-0">
-<li class="px-2 mr-3 text-sm transition rounded-sm bg-red hover:bg-red-darker sm:mr-0 sm:ml-3"><a class="text-white" href="/tag/laravel-8">Laravel 8</a></li>
-<li class="px-2 mr-3 text-sm transition rounded-sm bg-red hover:bg-red-darker sm:mr-0 sm:ml-3"><a class="text-white" href="/tag/releases">Releases</a></li>
+<ul class="pt-3 sm:pt-0 flex items-center list-none pl-0">
+<li class="bg-red hover:bg-red-darker transition px-2 rounded-sm text-sm mr-3 sm:mr-0 sm:ml-3"><a class="text-white" href="/tag/laravel-8">Laravel 8</a></li>
+<li class="bg-red hover:bg-red-darker transition px-2 rounded-sm text-sm mr-3 sm:mr-0 sm:ml-3"><a class="text-white" href="/tag/releases">Releases</a></li>
 </ul>
 </div>
 </div>
-<div class="w-full mx-0 card card--post">
+<div class="card w-full card--post mx-0">
 <div class="post__image">
 <a href="/openapi-initializer">
 <img src="https://i0.wp.com/wp.laravel-news.com/wp-content/uploads/2021/01/open-api-initializer-featured.png?fit=2220%2C1125&amp;ssl=1?resize=1400%2C709" alt="OpenAPI Initializer">
 </a>
 </div>
-<div class="max-w-full prose truncate lg:prose-lg text-grey">
-<span class="text-xs label">
+<div class="prose max-w-full lg:prose-lg truncate text-grey">
+<span class="label text-xs">
 News
 <span class="text-grey"> / </span>
 <span class="text-grey">January 19, 2021</span>
 </span>
-<h2 class="text-2xl md:text-4xl"><a class="transition text-red hover:text-red-dark" href="/openapi-initializer">OpenAPI Initializer</a></h2>
+<h2 class="text-2xl md:text-4xl"><a class="text-red hover:text-red-dark transition" href="/openapi-initializer">OpenAPI Initializer</a></h2>
 <p>OpenAPI Initializer is a Laravel package that provides a straightforward command to scaffold an OpenAPI spec file.</p>
-<a class="absolute bottom-0 left-0 inline-block ml-8 text-sm transition z-200 text-grey-lighter hover:text-red" href="/openapi-initializer">Read more…</a>
+<a class="absolute bottom-0 left-0 ml-8 inline-block z-200 text-grey-lighter text-sm hover:text-red transition" href="/openapi-initializer">Read more…</a>
 </div>
-<div class="items-end justify-between py-4 border-t post__footer sm:flex border-grey-lightest">
-<div class="flex items-center post__author">
-<img class="block w-12 mr-4 rounded-full" src="https://www.gravatar.com/avatar/d9691184a54bfa1defe3dc7d625bc959?s=130">
-<div class="leading-none author__content">
-<h4 class="mb-2 font-sans font-bold text-black">by <a class="transition text-red hover:text-red-darker" href="/@paulredmond">Paul Redmond</a></h4>
+<div class="post__footer sm:flex items-end justify-between border-t border-grey-lightest py-4">
+<div class="post__author flex items-center">
+<img class="block rounded-full w-12 mr-4" src="https://www.gravatar.com/avatar/d9691184a54bfa1defe3dc7d625bc959?s=130">
+<div class="author__content leading-none">
+<h4 class="font-sans text-black font-bold mb-2">by <a class="text-red hover:text-red-darker transition" href="/@paulredmond">Paul Redmond</a></h4>
 <div class="flex items-center text-sm author__links">
-<span class="inline-block"><a class="inline-block text-grey" href="https://twitter.com/@paulredmond" rel="nofollow"><svg class="inline-block w-3 h-3"><use xlink:href="#icon-twitter"></use></svg></a></span>
-<span class="inline-block"><a class="inline-block text-grey" href="https://github.com/paulredmond" rel="nofollow"><svg class="inline-block w-3 h-3"><use xlink:href="#icon-github"></use></svg></a></span>
+<span class="inline-block"><a class="text-grey inline-block" href="https://twitter.com/@paulredmond" rel="nofollow"><svg class="w-3 h-3 inline-block"><use xlink:href="#icon-twitter"></use></svg></a></span>
+<span class="inline-block"><a class="text-grey inline-block" href="https://github.com/paulredmond" rel="nofollow"><svg class="w-3 h-3 inline-block"><use xlink:href="#icon-github"></use></svg></a></span>
 </div>
 </div>
 
 </div>
-<ul class="flex items-center pt-3 pl-0 list-none sm:pt-0">
+<ul class="pt-3 sm:pt-0 flex items-center list-none pl-0">
 </ul>
 </div>
 </div>
-<div class="w-full mx-0 card card--post">
+<div class="card w-full card--post mx-0">
 <div class="post__image">
 <a href="/harpoon">
 <img src="https://i2.wp.com/wp.laravel-news.com/wp-content/uploads/2021/01/harpoon-laravel-news-2200x1100-1.png?fit=2200%2C1100&amp;ssl=1?resize=1400%2C709" alt="Harpoon: Next generation time tracking and billing (sponsor)">
 </a>
 </div>
-<div class="max-w-full prose truncate lg:prose-lg text-grey">
-<span class="text-xs label">
+<div class="prose max-w-full lg:prose-lg truncate text-grey">
+<span class="label text-xs">
 News
 <span class="text-grey"> / </span>
 <span class="text-grey">January 18, 2021</span>
 </span>
-<h2 class="text-2xl md:text-4xl"><a class="transition text-red hover:text-red-dark" href="/harpoon">Harpoon: Next generation time tracking and billing (sponsor)</a></h2>
+<h2 class="text-2xl md:text-4xl"><a class="text-red hover:text-red-dark transition" href="/harpoon">Harpoon: Next generation time tracking and billing (sponsor)</a></h2>
 <p>Meet Harpoon, the next generation time-tracking and billing software that not only records your financial past, but also helps you plan and predict a profitable future. Find out why thriving agencies, studios, and freelancers from around the globe are billing millions and millions in revenue using Harpoon.</p>
-<a class="absolute bottom-0 left-0 inline-block ml-8 text-sm transition z-200 text-grey-lighter hover:text-red" href="/harpoon">Read more…</a>
+<a class="absolute bottom-0 left-0 ml-8 inline-block z-200 text-grey-lighter text-sm hover:text-red transition" href="/harpoon">Read more…</a>
 </div>
-<div class="items-end justify-between py-4 border-t post__footer sm:flex border-grey-lightest">
-<div class="flex items-center post__author">
-<img class="block w-12 mr-4 rounded-full" src="https://www.gravatar.com/avatar/0e7b6742f9d7e1a8a213d74b429b9e8f?s=130">
-<div class="leading-none author__content">
-<h4 class="mb-2 font-sans font-bold text-black">by <a class="transition text-red hover:text-red-darker" href="/@ericlbarnes">Eric L. Barnes</a></h4>
+<div class="post__footer sm:flex items-end justify-between border-t border-grey-lightest py-4">
+<div class="post__author flex items-center">
+<img class="block rounded-full w-12 mr-4" src="https://www.gravatar.com/avatar/0e7b6742f9d7e1a8a213d74b429b9e8f?s=130">
+<div class="author__content leading-none">
+<h4 class="font-sans text-black font-bold mb-2">by <a class="text-red hover:text-red-darker transition" href="/@ericlbarnes">Eric L. Barnes</a></h4>
 <div class="flex items-center text-sm author__links">
-<span class="inline-block"><a class="inline-block text-grey" href="https://twitter.com/ericlbarnes" rel="nofollow"><svg class="inline-block w-3 h-3"><use xlink:href="#icon-twitter"></use></svg></a></span>
-<span class="inline-block"><a class="inline-block text-grey" href="https://facebook.com/ericlbarnes.dev" rel="nofollow"><svg class="inline-block w-3 h-3"><use xlink:href="#icon-facebook"></use></svg></a></span>
-<span class="inline-block"><a class="inline-block text-grey" href="https://github.com/ericbarnes" rel="nofollow"><svg class="inline-block w-3 h-3"><use xlink:href="#icon-github"></use></svg></a></span>
+<span class="inline-block"><a class="text-grey inline-block" href="https://twitter.com/ericlbarnes" rel="nofollow"><svg class="w-3 h-3 inline-block"><use xlink:href="#icon-twitter"></use></svg></a></span>
+<span class="inline-block"><a class="text-grey inline-block" href="https://facebook.com/ericlbarnes.dev" rel="nofollow"><svg class="w-3 h-3 inline-block"><use xlink:href="#icon-facebook"></use></svg></a></span>
+<span class="inline-block"><a class="text-grey inline-block" href="https://github.com/ericbarnes" rel="nofollow"><svg class="w-3 h-3 inline-block"><use xlink:href="#icon-github"></use></svg></a></span>
 </div>
 </div>
 
 </div>
-<ul class="flex items-center pt-3 pl-0 list-none sm:pt-0">
+<ul class="pt-3 sm:pt-0 flex items-center list-none pl-0">
 </ul>
 </div>
 </div>
-<div class="w-full mx-0 card card--post">
-<div class="post__image">
-<a href="/squire-static-eloquent-model-library">
-<img src="https://i1.wp.com/wp.laravel-news.com/wp-content/uploads/2021/01/squire.png?fit=2200%2C1100&amp;ssl=1?resize=1400%2C709" alt="Squire: Static Eloquent Model Library">
-</a>
-</div>
-<div class="max-w-full prose truncate lg:prose-lg text-grey">
-<span class="text-xs label">
-News
-<span class="text-grey"> / </span>
-<span class="text-grey">January 15, 2021</span>
-</span>
-<h2 class="text-2xl md:text-4xl"><a class="transition text-red hover:text-red-dark" href="/squire-static-eloquent-model-library">Squire: Static Eloquent Model Library</a></h2>
-<p>Squire is a library of prebuilt static Eloquent models for common fixture data. It provides information about countries, currencies, airports and more to your Laravel app, without the use of a third-party API.</p>
-<a class="absolute bottom-0 left-0 inline-block ml-8 text-sm transition z-200 text-grey-lighter hover:text-red" href="/squire-static-eloquent-model-library">Read more…</a>
-</div>
-<div class="items-end justify-between py-4 border-t post__footer sm:flex border-grey-lightest">
-<div class="flex items-center post__author">
-<img class="block w-12 mr-4 rounded-full" src="https://www.gravatar.com/avatar/7346a50f56e08e00d388350197305a41?s=130">
-<div class="leading-none author__content">
-<h4 class="mb-2 font-sans font-bold text-black">by <a class="transition text-red hover:text-red-darker" href="/@danjharrin">Dan Harrin</a></h4>
-<div class="flex items-center text-sm author__links">
-<span class="inline-block"><a class="inline-block text-grey" href="https://twitter.com/@DanJHarrin" rel="nofollow"><svg class="inline-block w-3 h-3"><use xlink:href="#icon-twitter"></use></svg></a></span>
-<span class="inline-block"><a class="inline-block text-grey" href="https://github.com/DanHarrin" rel="nofollow"><svg class="inline-block w-3 h-3"><use xlink:href="#icon-github"></use></svg></a></span>
-</div>
-</div>
-
-</div>
-<ul class="flex items-center pt-3 pl-0 list-none sm:pt-0">
-</ul>
-</div>
-</div>
-<div class="w-full mx-0 card card--post">
-<div class="post__image">
-<a href="/organize-laravel-applications-with-actions">
-<img src="https://i0.wp.com/wp.laravel-news.com/wp-content/uploads/2021/01/laravel-actions-2-0-featured.png?fit=2220%2C1125&amp;ssl=1?resize=1400%2C709" alt="Organize Laravel Applications With Actions">
-</a>
-</div>
-<div class="max-w-full prose truncate lg:prose-lg text-grey">
-<span class="text-xs label">
-News
-<span class="text-grey"> / </span>
-<span class="text-grey">January 14, 2021</span>
-</span>
-<h2 class="text-2xl md:text-4xl"><a class="transition text-red hover:text-red-dark" href="/organize-laravel-applications-with-actions">Organize Laravel Applications With Actions</a></h2>
-<p>The Laravel actions package provides a new way to organize your Laravel applications’ logic by focusing on *actions*. Using this technique, you can execute the same class as a controller, a command, a job, and a listener.</p>
- <a class="absolute bottom-0 left-0 inline-block ml-8 text-sm transition z-200 text-grey-lighter hover:text-red" href="/organize-laravel-applications-with-actions">Read more…</a>
-</div>
-<div class="items-end justify-between py-4 border-t post__footer sm:flex border-grey-lightest">
-<div class="flex items-center post__author">
-<img class="block w-12 mr-4 rounded-full" src="https://www.gravatar.com/avatar/d9691184a54bfa1defe3dc7d625bc959?s=130">
-<div class="leading-none author__content">
-<h4 class="mb-2 font-sans font-bold text-black">by <a class="transition text-red hover:text-red-darker" href="/@paulredmond">Paul Redmond</a></h4>
-<div class="flex items-center text-sm author__links">
-<span class="inline-block"><a class="inline-block text-grey" href="https://twitter.com/@paulredmond" rel="nofollow"><svg class="inline-block w-3 h-3"><use xlink:href="#icon-twitter"></use></svg></a></span>
-<span class="inline-block"><a class="inline-block text-grey" href="https://github.com/paulredmond" rel="nofollow"><svg class="inline-block w-3 h-3"><use xlink:href="#icon-github"></use></svg></a></span>
-</div>
-</div>
-
-</div>
-<ul class="flex items-center pt-3 pl-0 list-none sm:pt-0">
-</ul>
-</div>
-</div>
-<div class="w-full mx-0 card card--post">
-<div class="post__image">
-<a href="/laravel-8-22-0">
-<img src="https://i1.wp.com/wp.laravel-news.com/wp-content/uploads/2020/08/laravel8.jpg?fit=1400%2C708&amp;ssl=1?resize=1400%2C709" alt="Laravel 8.22 Released">
-</a>
-</div>
-<div class="max-w-full prose truncate lg:prose-lg text-grey">
-<span class="text-xs label">
-News
-<span class="text-grey"> / </span>
-<span class="text-grey">January 13, 2021</span>
-</span>
-<h2 class="text-2xl md:text-4xl"><a class="transition text-red hover:text-red-dark" href="/laravel-8-22-0">Laravel 8.22 Released</a></h2>
-<p>The Laravel team released 8.22 yesterday with a new event fake assertion, a collection method to reduce associative arrays to a single value, and the latest changes in the 8.x branch.</p>
-<a class="absolute bottom-0 left-0 inline-block ml-8 text-sm transition z-200 text-grey-lighter hover:text-red" href="/laravel-8-22-0">Read more…</a>
-</div>
-<div class="items-end justify-between py-4 border-t post__footer sm:flex border-grey-lightest">
-<div class="flex items-center post__author">
-<img class="block w-12 mr-4 rounded-full" src="https://www.gravatar.com/avatar/d9691184a54bfa1defe3dc7d625bc959?s=130">
-<div class="leading-none author__content">
-<h4 class="mb-2 font-sans font-bold text-black">by <a class="transition text-red hover:text-red-darker" href="/@paulredmond">Paul Redmond</a></h4>
-<div class="flex items-center text-sm author__links">
-<span class="inline-block"><a class="inline-block text-grey" href="https://twitter.com/@paulredmond" rel="nofollow"><svg class="inline-block w-3 h-3"><use xlink:href="#icon-twitter"></use></svg></a></span>
-<span class="inline-block"><a class="inline-block text-grey" href="https://github.com/paulredmond" rel="nofollow"><svg class="inline-block w-3 h-3"><use xlink:href="#icon-github"></use></svg></a></span>
-</div>
-</div>
-
-</div>
-<ul class="flex items-center pt-3 pl-0 list-none sm:pt-0">
-</ul>
-</div>
-</div>
-<div class="w-full mx-0 card card--post">
-<div class="post__image">
-<a href="/ray-desktop-debugging-for-laravel">
-<img src="https://i1.wp.com/wp.laravel-news.com/wp-content/uploads/2021/01/ray-featuredimage.png?fit=2200%2C1100&amp;ssl=1?resize=1400%2C709" alt="Ray desktop debugging for Laravel (sponsor)">
-</a>
-</div>
-<div class="max-w-full prose truncate lg:prose-lg text-grey">
-<span class="text-xs label">
-News
-<span class="text-grey"> / </span>
-<span class="text-grey">January 11, 2021</span>
-</span>
-<h2 class="text-2xl md:text-4xl"><a class="transition text-red hover:text-red-dark" href="/ray-desktop-debugging-for-laravel">Ray desktop debugging for Laravel (sponsor)</a></h2>
-<p>Ray is a beautiful, lightweight desktop app for MacOS, Windows and Linux that helps you debug your Laravel application faster. Instead of sending your dump statements to the browser, you can send them to the Ray, where we can display them beautifully.</p>
-<a class="absolute bottom-0 left-0 inline-block ml-8 text-sm transition z-200 text-grey-lighter hover:text-red" href="/ray-desktop-debugging-for-laravel">Read more…</a>
-</div>
-<div class="items-end justify-between py-4 border-t post__footer sm:flex border-grey-lightest">
-<div class="flex items-center post__author">
-<img class="block w-12 mr-4 rounded-full" src="https://www.gravatar.com/avatar/0e7b6742f9d7e1a8a213d74b429b9e8f?s=130">
-<div class="leading-none author__content">
-<h4 class="mb-2 font-sans font-bold text-black">by <a class="transition text-red hover:text-red-darker" href="/@ericlbarnes">Eric L. Barnes</a></h4>
-<div class="flex items-center text-sm author__links">
-<span class="inline-block"><a class="inline-block text-grey" href="https://twitter.com/ericlbarnes" rel="nofollow"><svg class="inline-block w-3 h-3"><use xlink:href="#icon-twitter"></use></svg></a></span>
-<span class="inline-block"><a class="inline-block text-grey" href="https://facebook.com/ericlbarnes.dev" rel="nofollow"><svg class="inline-block w-3 h-3"><use xlink:href="#icon-facebook"></use></svg></a></span>
-<span class="inline-block"><a class="inline-block text-grey" href="https://github.com/ericbarnes" rel="nofollow"><svg class="inline-block w-3 h-3"><use xlink:href="#icon-github"></use></svg></a></span>
-</div>
-</div>
-
-</div>
-<ul class="flex items-center pt-3 pl-0 list-none sm:pt-0">
-</ul>
-</div>
-</div>
-<div class="w-full mx-0 card card--post">
-<div class="post__image">
-<a href="/ray-desktop-debugging-for-php">
-<img src="https://i0.wp.com/wp.laravel-news.com/wp-content/uploads/2021/01/ray-php-desktop-debugging.png?fit=2220%2C1125&amp;ssl=1?resize=1400%2C709" alt="Ray Desktop Debugging for PHP">
-</a>
-</div>
-<div class="max-w-full prose truncate lg:prose-lg text-grey">
-<span class="text-xs label">
-News
-<span class="text-grey"> / </span>
-<span class="text-grey">January 07, 2021</span>
-</span>
-<h2 class="text-2xl md:text-4xl"><a class="transition text-red hover:text-red-dark" href="/ray-desktop-debugging-for-php">Ray Desktop Debugging for PHP</a></h2>
-<p>Ray is a desktop app for macOS and Windows that displays PHP debugging information in a dedicated window.</p>
-<a class="absolute bottom-0 left-0 inline-block ml-8 text-sm transition z-200 text-grey-lighter hover:text-red" href="/ray-desktop-debugging-for-php">Read more…</a>
-</div>
-<div class="items-end justify-between py-4 border-t post__footer sm:flex border-grey-lightest">
-<div class="flex items-center post__author">
-<img class="block w-12 mr-4 rounded-full" src="https://www.gravatar.com/avatar/d9691184a54bfa1defe3dc7d625bc959?s=130">
-<div class="leading-none author__content">
-<h4 class="mb-2 font-sans font-bold text-black">by <a class="transition text-red hover:text-red-darker" href="/@paulredmond">Paul Redmond</a></h4>
-<div class="flex items-center text-sm author__links">
-<span class="inline-block"><a class="inline-block text-grey" href="https://twitter.com/@paulredmond" rel="nofollow"><svg class="inline-block w-3 h-3"><use xlink:href="#icon-twitter"></use></svg></a></span>
-<span class="inline-block"><a class="inline-block text-grey" href="https://github.com/paulredmond" rel="nofollow"><svg class="inline-block w-3 h-3"><use xlink:href="#icon-github"></use></svg></a></span>
-</div>
-</div>
-
-</div>
-<ul class="flex items-center pt-3 pl-0 list-none sm:pt-0">
-</ul>
-</div>
-</div>
-<div class="w-full mx-0 card card--post">
-<div class="post__image">
-<a href="/pest-v1-0-is-now-released">
-<img src="https://i0.wp.com/wp.laravel-news.com/wp-content/uploads/2012/06/pest-logo.gif?fit=2200%2C1100&amp;ssl=1?resize=1400%2C709" alt="PEST v1.0 is now released">
-</a>
-</div>
-<div class="max-w-full prose truncate lg:prose-lg text-grey">
-<span class="text-xs label">
-News
-<span class="text-grey"> / </span>
-<span class="text-grey">January 07, 2021</span>
-</span>
-<h2 class="text-2xl md:text-4xl"><a class="transition text-red hover:text-red-dark" href="/pest-v1-0-is-now-released">PEST v1.0 is now released</a></h2>
-<p>Pest, a Testing Framework with a focus on simplicity, has just launched v1.</p>
-<a class="absolute bottom-0 left-0 inline-block ml-8 text-sm transition z-200 text-grey-lighter hover:text-red" href="/pest-v1-0-is-now-released">Read more…</a>
-</div>
-<div class="items-end justify-between py-4 border-t post__footer sm:flex border-grey-lightest">
-<div class="flex items-center post__author">
-<img class="block w-12 mr-4 rounded-full" src="https://www.gravatar.com/avatar/0e7b6742f9d7e1a8a213d74b429b9e8f?s=130">
-<div class="leading-none author__content">
-<h4 class="mb-2 font-sans font-bold text-black">by <a class="transition text-red hover:text-red-darker" href="/@ericlbarnes">Eric L. Barnes</a></h4>
-<div class="flex items-center text-sm author__links">
-<span class="inline-block"><a class="inline-block text-grey" href="https://twitter.com/ericlbarnes" rel="nofollow"><svg class="inline-block w-3 h-3"><use xlink:href="#icon-twitter"></use></svg></a></span>
-<span class="inline-block"><a class="inline-block text-grey" href="https://facebook.com/ericlbarnes.dev" rel="nofollow"><svg class="inline-block w-3 h-3"><use xlink:href="#icon-facebook"></use></svg></a></span>
-<span class="inline-block"><a class="inline-block text-grey" href="https://github.com/ericbarnes" rel="nofollow"><svg class="inline-block w-3 h-3"><use xlink:href="#icon-github"></use></svg></a></span>
-</div>
-</div>
-
-</div>
-<ul class="flex items-center pt-3 pl-0 list-none sm:pt-0">
-</ul>
-</div>
-</div>
-<nav class="flex items-center justify-between w-full mt-10 mb-4">
-<a href="" class="px-4 py-2 text-xs btn arrow--left btn--disabled hover:bg-grey-lightest"><svg class="inline-block w-3 h-3 mr-2 align-middle"><use xlink:href="#icon-arrow-left"></use></svg> Newer Posts</a>
-<a href="https://laravel-news.com/category/news?page=2" class="px-4 py-2 text-xs transition btn arrow--right bg-red hover:bg-red-darker">Older Posts <svg class="inline-block w-3 h-3 mr-2 align-middle"><use xlink:href="#icon-arrow-right"></use></svg></a>
+<nav class="flex items-center justify-between mt-10 mb-4 w-full">
+<a href="" class="btn px-4 py-2 text-xs arrow--left btn--disabled hover:bg-grey-lightest"><svg class="align-middle w-3 h-3 mr-2 inline-block"><use xlink:href="#icon-arrow-left"></use></svg> Newer Posts</a>
+<a href="https://laravel-news.com/category/news?page=2" class="btn px-4 py-2 text-xs arrow--right bg-red hover:bg-red-darker transition">Older Posts <svg class="align-middle w-3 h-3 mr-2 inline-block"><use xlink:href="#icon-arrow-right"></use></svg></a>
 </nav>
 </div>
-<div class="w-full px-5 md:w-2/5 lg:w-1/3">
-<div class="w-full mx-0 card bg-red">
-<div class="flex items-center justify-between py-5 pr-6 ml-8 border-b card__header border-semi-white">
-<h2 class="mb-0 text-4xl leading-tight text-white">Newsletter</h2>
-<img class="block header__icon" src="/assets/images/min/icon-newsletter.png">
+<div class="w-full md:w-2/5 lg:w-1/3 px-5">
+<div class="mx-0 card w-full bg-red">
+<div class="card__header ml-8 py-5 pr-6 flex items-center justify-between border-b border-semi-white">
+<h2 class="text-white mb-0 text-4xl leading-tight">Newsletter</h2>
+<img class="header__icon block" src="/assets/images/min/icon-newsletter.png">
 </div>
-<div class="px-6 py-5 card__content">
+<div class="card__content py-5 px-6">
 <p class="mb-4">Join 31,000+ others and never miss out on new tips, tutorials, and more.</p>
 <form action="https://laravelnews.createsend.com/t/d/s/owwr/" method="post" class="newsletter-form" data-area="home" onsubmit="fathom.trackGoal('JWLUPRAA', 0);">
 <input type="hidden" id="fieldhrcf" name="cm-fd-hrcf-mn" value="1">
-<input type="hidden" id="fieldhrcfdy" name="cm-fd-hrcf-dy" value="25">
+<input type="hidden" id="fieldhrcfdy" name="cm-fd-hrcf-dy" value="31">
 <input type="hidden" id="fieldhrcfyr" name="cm-fd-hrcf-yr" value="2021">
 <div class="flex w-full">
-<input class="flex-1 w-full border-r-0 rounded-r-none input" type="email" placeholder="Email Address" name="cm-owwr-owwr" required>
-<button class="p-4 transition rounded-r btn border-red-darker bg-red-darker hover:bg-black newsletter-subscribe">Subscribe</button>
+<input class="w-full flex-1 input w-full flex-1 border-r-0 rounded-r-none" type="email" placeholder="Email Address" name="cm-owwr-owwr" required>
+<button class="btn border-red-darker p-4 bg-red-darker rounded-r hover:bg-black transition newsletter-subscribe">Subscribe</button>
 </div>
 </form>
 </div>
 </div>
-<div class="w-full mx-0 text-center partners card">
-<div class="w-full px-6 py-5 card__content">
-<div class="text-xs bg-white label label--divider">
+<div class="partners mx-0 card w-full text-center">
+<div class="w-full card__content py-5 px-6">
+<div class="label label--divider text-xs bg-white">
 <span class="p-3 bg-white">Laravel News Partners</span>
 </div>
-<div class="flex flex-col items-center justify-center --mx-5">
-<a class="block mx-5 my-3" style="max-width: 200px" href="https://lightit.io/?utm_source=laravel-news&amp;utm_medium=banner&amp;utm_campaign=laravel-news-sponsor">
-<img src="/assets/images/light-it.png" title="Nearshore Laravel Development Agency" alt="Nearshore Laravel Development Agency">
-</a>
-<a class="block mx-5 my-3" style="max-width: 200px" href="https://www.honeybadger.io/for/laravel/?affiliate=vxYuzl">
-<img src="/assets/images/honeybadger-clear.png" title="Honeybadger" alt="Honeybadger">
-</a>
-<a class="block mx-5 my-3" style="max-width: 200px" href="https://simplebackups.io/?utm_source=laravelnews">
-<img src="/assets/images/simplebackups.png" title="SimpleBackups" alt="SimpleBackups">
-</a>
-<a class="block mx-5 my-3" style="max-width: 200px" href="https://codecourse.com?utm_source=laravel-news&amp;utm_medium=logo&amp;utm_campaign=laravel-news">
-<img src="/assets/images/codecourse.png" title="Codecourse" alt="Codecourse">
-</a>
-<a class="block mx-5 my-3" style="max-width: 200px" href="https://developers.ringcentral.com/">
-<img src="/assets/images/ringcentral.png" title="Ring Central" alt="Ring Central">
-</a>
-<a class="block mx-5 my-3" style="max-width: 200px" href="https://bagisto.com/en/?utm_campaign=laravelnews&amp;utm_content=titlesponsor&amp;utm_medium=logo&amp;utm_source=laravelnews">
-<img src="/assets/images/bagisto.png" title="Bagisto" alt="Bagisto">
-</a>
-<a class="block mx-5 my-3" style="max-width: 200px" href="https://beyondco.de?utm_source=laravel-news&amp;utm_medium=logo&amp;utm_campaign=laravel-news">
-<img src="/assets/images/beyondcode.jpg" title="BeyondCode" alt="BeyondCode">
-</a>
-<a class="block mx-5 my-3" style="max-width: 200px" href="https://tighten.co?utm_source=laravelnews&amp;utm_medium=Banner&amp;utm_campaign=laravelnews&amp;utm_content=Title%20Partner">
+<div class="--mx-5 flex flex-col items-center justify-center">
+<a class="my-3 mx-5 block" style="max-width: 200px" href="https://tighten.co?utm_source=laravelnews&amp;utm_medium=Banner&amp;utm_campaign=laravelnews&amp;utm_content=Title%20Partner">
 <img src="/assets/images/tighten-logo.png" title="Tighten" alt="Tighten">
 </a>
-<a class="block mx-5 my-3" style="max-width: 200px" href="https://akaunting.com/developers?utm_source=LaravelNews&amp;utm_medium=Banner&amp;utm_campaign=Developers">
+<a class="my-3 mx-5 block" style="max-width: 200px" href="https://devsquad.com/?utm_source=laravel-news&amp;utm_medium=cpc&amp;utm_campaign=laravelnews-sponser">
+<img src="/assets/images/logo-devsquad.png" title="Devsquad" alt="Devsquad">
+</a>
+<a class="my-3 mx-5 block" style="max-width: 200px" href="https://simplebackups.io/?utm_source=laravelnews">
+<img src="/assets/images/simplebackups.png" title="SimpleBackups" alt="SimpleBackups">
+</a>
+<a class="my-3 mx-5 block" style="max-width: 200px" href="https://akaunting.com/developers?utm_source=LaravelNews&amp;utm_medium=Banner&amp;utm_campaign=Developers">
 <img src="/assets/images/akaunting.png" title="akaunting" alt="akaunting">
 </a>
-<a class="block mx-5 my-3" style="max-width: 200px" href="https://scoutapm.com/?utm_campaign=laravelnews&amp;utm_content=titlesponsor&amp;utm_medium=logo&amp;utm_source=laravelnews">
-<img src="/assets/images/scoutapm.png" title="Scout APM" alt="Scout APM">
+<a class="my-3 mx-5 block" style="max-width: 200px" href="https://beyondco.de?utm_source=laravel-news&amp;utm_medium=logo&amp;utm_campaign=laravel-news">
+<img src="/assets/images/beyondcode.jpg" title="BeyondCode" alt="BeyondCode">
 </a>
-<a class="block mx-5 my-3" style="max-width: 200px" href="http://kirschbaumdevelopment.com/">
-<img src="/assets/images/kirshbaum.png" title="Kirschbaum Development Group" alt="Kirschbaum Development Group">
+<a class="my-3 mx-5 block" style="max-width: 200px" href="https://lightit.io/?utm_source=laravel-news&amp;utm_medium=banner&amp;utm_campaign=laravel-news-sponsor">
+<img src="/assets/images/light-it.png" title="Nearshore Laravel Development Agency" alt="Nearshore Laravel Development Agency">
 </a>
-<a class="block mx-5 my-3" style="max-width: 200px" href="https://laravelshift.com/">
+<a class="my-3 mx-5 block" style="max-width: 200px" href="https://laravelshift.com/">
 <img src="/assets/images/laravel-shift.png" title="Laravel Shift" alt="Laravel Shift">
 </a>
-<a class="block mx-5 my-3" style="max-width: 200px" href="https://devsquad.com/?utm_source=laravel-news&amp;utm_medium=cpc&amp;utm_campaign=laravelnews-sponser">
-<img src="/assets/images/logo-devsquad.png" title="Devsquad" alt="Devsquad">
+<a class="my-3 mx-5 block" style="max-width: 200px" href="https://developers.ringcentral.com/">
+<img src="/assets/images/ringcentral.png" title="Ring Central" alt="Ring Central">
+</a>
+<a class="my-3 mx-5 block" style="max-width: 200px" href="http://kirschbaumdevelopment.com/">
+<img src="/assets/images/kirshbaum.png" title="Kirschbaum Development Group" alt="Kirschbaum Development Group">
+</a>
+<a class="my-3 mx-5 block" style="max-width: 200px" href="https://bagisto.com/en/?utm_campaign=laravelnews&amp;utm_content=titlesponsor&amp;utm_medium=logo&amp;utm_source=laravelnews">
+<img src="/assets/images/bagisto.png" title="Bagisto" alt="Bagisto">
+</a>
+<a class="my-3 mx-5 block" style="max-width: 200px" href="https://codecourse.com?utm_source=laravel-news&amp;utm_medium=logo&amp;utm_campaign=laravel-news">
+<img src="/assets/images/codecourse.png" title="Codecourse" alt="Codecourse">
+</a>
+<a class="my-3 mx-5 block" style="max-width: 200px" href="https://scoutapm.com/?utm_campaign=laravelnews&amp;utm_content=titlesponsor&amp;utm_medium=logo&amp;utm_source=laravelnews">
+<img src="/assets/images/scoutapm.png" title="Scout APM" alt="Scout APM">
+</a>
+<a class="my-3 mx-5 block" style="max-width: 200px" href="https://www.honeybadger.io/for/laravel/?affiliate=vxYuzl">
+<img src="/assets/images/honeybadger-clear.png" title="Honeybadger" alt="Honeybadger">
 </a>
 </div>
 </div>
 </div>
 <div id="carbon" class="carbon-shadow">
 </div>
-<div id="fallback-widget" class="w-full mx-0 text-center card" style="display: none;">
+<div id="fallback-widget" class="mx-0 card w-full text-center" style="display: none;">
 <a href="https://madeinproduction.com/collections/t-shirts/products/laravel-news-unisex-tee">
 <img src="https://cdn.shopify.com/s/files/1/0804/9375/products/mockup-a58b40ec.jpg?v=1570115059">
 <div class="card__content">
@@ -571,42 +572,42 @@ News
 </div>
 </a>
 </div>
-<div class="w-full h-auto mx-0 text-white card bg-grey-darkest">
-<header class="flex items-center justify-between py-5 pr-6 ml-8 border-b card__header border-semi-white">
-<h2 class="mb-0 text-4xl leading-tight text-white">Laravel Jobs</h2>
-<img class="block header__icon" src="/assets/images/icon-chair.png">
+<div class="mx-0 card w-full bg-grey-darkest text-white h-auto">
+<header class="card__header ml-8 py-5 pr-6 flex items-center justify-between border-b border-semi-white">
+<h2 class="text-white mb-0 text-4xl leading-tight">Laravel Jobs</h2>
+ <img class="header__icon block" src="/assets/images/icon-chair.png">
 </header>
-<div class="h-auto card__content">
+<div class="card__content h-auto">
 <dl class="list-unstyled">
-<dt><a href="https://larajobs.com/job/1828/" class="font-bold text-white transition hover:text-grey-lighter" rel="nofollow">Full Stack PHP (Mid-Level/Senior) Programmer</a></dt>
-<dd class="mb-4 text-sm text-grey">
+<dt><a href="https://larajobs.com/job/1844/" class="font-bold text-white hover:text-grey-lighter transition" rel="nofollow">Senior Software Engineer</a></dt>
+<dd class="text-sm text-grey mb-4">
+Remote, USA only
+<br>Supporting Cast
+</dd>
+<dt><a href="https://larajobs.com/job/1828/" class="font-bold text-white hover:text-grey-lighter transition" rel="nofollow">Full Stack PHP (Mid-Level/Senior) Programmer</a></dt>
+<dd class="text-sm text-grey mb-4">
 Remote
 <br>PhoneBurner
 </dd>
-<dt><a href="https://larajobs.com/job/1821/" class="font-bold text-white transition hover:text-grey-lighter" rel="nofollow">Software Developer</a></dt>
-<dd class="mb-4 text-sm text-grey">
+<dt><a href="https://larajobs.com/job/1821/" class="font-bold text-white hover:text-grey-lighter transition" rel="nofollow">Software Developer</a></dt>
+<dd class="text-sm text-grey mb-4">
 Remote, (US &amp; Canada Only)
 <br>Patient Prism
 </dd>
-<dt><a href="https://larajobs.com/job/1816/" class="font-bold text-white transition hover:text-grey-lighter" rel="nofollow">Web Application Developer</a></dt>
-<dd class="mb-4 text-sm text-grey">
+<dt><a href="https://larajobs.com/job/1816/" class="font-bold text-white hover:text-grey-lighter transition" rel="nofollow">Web Application Developer</a></dt>
+<dd class="text-sm text-grey mb-4">
 Chicago Loop
 <br>Leading Real Estate Companies of the World
 </dd>
-<dt><a href="https://larajobs.com/job/1814/" class="font-bold text-white transition hover:text-grey-lighter" rel="nofollow">Multiple Laravel Developers (Part-Time)</a></dt>
-<dd class="mb-4 text-sm text-grey">
+<dt><a href="https://larajobs.com/job/1814/" class="font-bold text-white hover:text-grey-lighter transition" rel="nofollow">Multiple Laravel Developers (Part-Time)</a></dt>
+<dd class="text-sm text-grey mb-4">
 Remote, USA Only
 <br>The Great Escape Room
-</dd>
-<dt><a href="https://larajobs.com/job/1805/" class="font-bold text-white transition hover:text-grey-lighter" rel="nofollow">Software Developer</a></dt>
-<dd class="mb-4 text-sm text-grey">
-Remote (US &amp; Canada)
-<br>Alley
 </dd>
 </dl>
 </div>
 </div>
-<div class="w-full mx-0 text-center card">
+<div class="mx-0 card w-full text-center">
 <a href="https://learn.better.dev/beginner-tailwind/7kt9k?coupon=LRVL-NWS" rel="nofollow">
 <img src="https://i2.wp.com/wp.laravel-news.com/wp-content/uploads/2020/09/beginnertailwind.jpg">
 <div class="card__content">
@@ -616,43 +617,43 @@ Remote (US &amp; Canada)
 </div>
 </div>
 </div>
- </div>
+</div>
 </main>
-<footer class="clear-both text-xs text-center uppercase bg-grey-darkest font-miriam tracking-extra">
-<div class="container px-6 py-10 md:p-10">
-<ul class="flex items-center justify-center pl-0 list-none">
-<li><a rel="nofollow" href="https://twitter.com/laravelnews" class="flex items-center justify-center p-3 m-3 text-white transition rounded-full bg-twitter hover:bg-black"><svg class="block w-5 h-5"><use xlink:href="#icon-twitter"></use></svg></a></li>
-<li><a rel="nofollow" href="https://www.facebook.com/laravelnews" class="flex items-center justify-center p-3 m-3 text-white transition rounded-full bg-facebook hover:bg-black"><svg class="block w-5 h-5"><use xlink:href="#icon-facebook"></use></svg></a></li>
-<li><a rel="nofollow" href="https://instagram.com/laravelnews" class="flex items-center justify-center p-3 m-3 text-white transition rounded-full bg-grey hover:bg-black"><svg class="block w-5 h-5"><use xlink:href="#icon-instagram"></use></svg></a></li>
-<li><a rel="nofollow" href="https://www.linkedin.com/company/laravel-news" class="flex items-center justify-center p-3 m-3 text-white transition rounded-full bg-linkedin hover:bg-black"><svg class="block w-5 h-5"><use xlink:href="#icon-linkedin"></use></svg></a></li>
+<footer class="bg-grey-darkest font-miriam uppercase tracking-extra text-xs text-center clear-both">
+<div class="container py-10 px-6 md:p-10">
+<ul class="list-none pl-0 flex items-center justify-center">
+<li><a rel="nofollow" href="https://twitter.com/laravelnews" class="rounded-full flex items-center justify-center m-3 p-3 text-white bg-twitter hover:bg-black transition"><svg class="w-5 h-5 block"><use xlink:href="#icon-twitter"></use></svg></a></li>
+<li><a rel="nofollow" href="https://www.facebook.com/laravelnews" class="rounded-full flex items-center justify-center m-3 p-3 text-white bg-facebook hover:bg-black transition"><svg class="w-5 h-5 block"><use xlink:href="#icon-facebook"></use></svg></a></li>
+<li><a rel="nofollow" href="https://instagram.com/laravelnews" class="rounded-full flex items-center justify-center m-3 p-3 text-white bg-grey hover:bg-black transition"><svg class="w-5 h-5 block"><use xlink:href="#icon-instagram"></use></svg></a></li>
+<li><a rel="nofollow" href="https://www.linkedin.com/company/laravel-news" class="rounded-full flex items-center justify-center m-3 p-3 text-white bg-linkedin hover:bg-black transition"><svg class="w-5 h-5 block"><use xlink:href="#icon-linkedin"></use></svg></a></li>
 </ul>
 <nav class="my-6">
-<ol class="flex flex-wrap justify-center pl-0 list-none">
-<li class="mx-6 my-1"><a class="text-white transition hover:text-red" href="/links">Links</a></li>
-<li class="mx-6 my-1"><a class="text-white transition hover:text-red" href="/newsletter">Newsletter</a></li>
-<li class="mx-6 my-1"><a class="text-white transition hover:text-red" href="/advertising">Advertise</a></li>
-<li class="mx-6 my-1"><a class="text-white transition hover:text-red" href="/archive">Archive</a></li>
-<li class="mx-6 my-1"><a class="text-white transition hover:text-red" href="https://larajobs.com" rel="nofollow">Jobs</a></li>
-<li class="mx-6 my-1"><a class="text-white transition hover:text-red" href="/account" rel="nofollow">Your Account</a></li>
-<li class="mx-6 my-1"><a class="text-white transition hover:text-red" href="/contact">Contact</a></li>
+<ol class="list-none pl-0 flex flex-wrap justify-center">
+<li class="my-1 mx-6"><a class="text-white hover:text-red transition" href="/links">Links</a></li>
+<li class="my-1 mx-6"><a class="text-white hover:text-red transition" href="/newsletter">Newsletter</a></li>
+<li class="my-1 mx-6"><a class="text-white hover:text-red transition" href="/advertising">Advertise</a></li>
+ <li class="my-1 mx-6"><a class="text-white hover:text-red transition" href="/archive">Archive</a></li>
+<li class="my-1 mx-6"><a class="text-white hover:text-red transition" href="https://larajobs.com" rel="nofollow">Jobs</a></li>
+<li class="my-1 mx-6"><a class="text-white hover:text-red transition" href="/account" rel="nofollow">Your Account</a></li>
+<li class="my-1 mx-6"><a class="text-white hover:text-red transition" href="/contact">Contact</a></li>
 </ol>
 </nav>
 <nav>
-<ol class="flex flex-wrap justify-center pl-0 list-none">
-<li class="mx-6 my-1"><a class="transition text-grey hover:text-red" href="/category/news">News</a></li>
-<li class="mx-6 my-1"><a class="transition text-grey hover:text-red" href="/category/laravel-tutorials">Tutorials</a></li>
-<li class="mx-6 my-1"><a class="transition text-grey hover:text-red" href="/category/laravel-packages">Packages</a></li>
-<li class="mx-6 my-1"><a class="transition text-grey hover:text-red" href="/category/laravel-books">Books</a></li>
-<li class="mx-6 my-1"><a class="transition text-grey hover:text-red" href="/category/interviews">Interviews</a></li>
-<li class="mx-6 my-1"><a class="transition text-grey hover:text-red" href="/resources">Training Resources</a></li>
-<li class="mx-6 my-1"><a class="transition text-grey hover:text-red" href="/category/laravel-applications">Applications</a></li>
+<ol class="list-none pl-0 flex flex-wrap justify-center">
+<li class="my-1 mx-6"><a class="text-grey hover:text-red transition" href="/category/news">News</a></li>
+<li class="my-1 mx-6"><a class="text-grey hover:text-red transition" href="/category/laravel-tutorials">Tutorials</a></li>
+<li class="my-1 mx-6"><a class="text-grey hover:text-red transition" href="/category/laravel-packages">Packages</a></li>
+<li class="my-1 mx-6"><a class="text-grey hover:text-red transition" href="/category/laravel-books">Books</a></li>
+<li class="my-1 mx-6"><a class="text-grey hover:text-red transition" href="/category/interviews">Interviews</a></li>
+<li class="my-1 mx-6"><a class="text-grey hover:text-red transition" href="/resources">Training Resources</a></li>
+<li class="my-1 mx-6"><a class="text-grey hover:text-red transition" href="/category/laravel-applications">Applications</a></li>
 </ol>
 </nav>
 <div class="mt-16 text-center">
 <img src="/assets/images/min/dark-ln-elephant.png" class="inline-block mb-3" style="max-height: 175px">
-<p class="text-black-lighter">© 2012 - 2021 <a class="transition text-black-lighter hover:text-red" href="/">Laravel News</a> — By <a class="transition text-black-lighter hover:text-red" href="https://ericlbarnes.com">Eric L. Barnes</a> - A division of dotdev inc.</p>
+<p class="text-black-lighter">© 2012 - 2021 <a class="text-black-lighter hover:text-red transition" href="/">Laravel News</a> — By <a class="text-black-lighter hover:text-red transition" href="https://ericlbarnes.com">Eric L. Barnes</a> - A division of dotdev inc.</p>
 </div>
-<div class="w-16 mx-auto my-8 opacity-75 bg-grey-darker" style="height: 2px;"></div>
+<div class="my-8 mx-auto bg-grey-darker opacity-75 w-16" style="height: 2px;"></div>
 <div class="text-white">
 <p class="mb-3 text-xs">Design &amp; Front-end code by</p>
 <a href="https://zaengle.com/" class="tribute__logo">
