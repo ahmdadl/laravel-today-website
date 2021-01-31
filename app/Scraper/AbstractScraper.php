@@ -46,7 +46,7 @@ abstract class AbstractScraper
         $this->crawler = $this->goutte->request('GET', $this->provider->request_url);
     }
 
-    public function run(): void {
+    public function run(): bool {
         $arr = array_filter($this->extract(), fn ($i) => !is_null($i));
 
         foreach ($arr as $p) {
@@ -64,6 +64,8 @@ abstract class AbstractScraper
                 ]);
             } catch (QueryException | PDOException) {}
         }
+
+        return Post::whereTitle($arr[0]->title)->exists();
     }
 
     public function saveHtml(): ?bool
