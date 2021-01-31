@@ -1,0 +1,448 @@
+<!doctype html><html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+    <script type="text/javascript">
+        (function(){
+            var bsa = document.createElement('script');
+            bsa.type = 'text/javascript';
+            bsa.async = true;
+            bsa.src = '//s3.buysellads.com/ac/bsa.js';
+            (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+        })();
+    </script>
+    <!-- End BuySellAds Ad Code -->
+	<title>laravel – Vegibit</title>
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="Vegibit » Feed" href="https://vegibit.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Vegibit » Comments Feed" href="https://vegibit.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Vegibit » laravel Tag Feed" href="https://vegibit.com/tag/laravel/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/vegibit.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="crayon-css" href="https://vegibit.com/wp-content/plugins/crayon-syntax-highlighter/css/min/crayon.min.css?ver=_2.7.2_beta" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-theme-github-css" href="https://vegibit.com/wp-content/plugins/crayon-syntax-highlighter/themes/github/github.css?ver=_2.7.2_beta" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-font-verdana-css" href="https://vegibit.com/wp-content/plugins/crayon-syntax-highlighter/fonts/verdana.css?ver=_2.7.2_beta" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="https://vegibit.com/wp-includes/css/dist/block-library/style.min.css?ver=5.6" type="text/css" media="all">
+<link rel="stylesheet" id="open-iconic-bootstrap-css" href="https://vegibit.com/wp-content/themes/wp-bootstrap-4/assets/css/open-iconic-bootstrap.css?ver=v4.0.0" type="text/css" media="all">
+<link rel="stylesheet" id="bootstrap-4-css" href="https://vegibit.com/wp-content/themes/wp-bootstrap-4/assets/css/bootstrap.css?ver=v4.0.0" type="text/css" media="all">
+<link rel="stylesheet" id="wp-bootstrap-4-style-css" href="https://vegibit.com/wp-content/themes/wp-bootstrap-4/style.css?ver=1.0.2" type="text/css" media="all">
+<link rel="stylesheet" id="recent-posts-widget-with-thumbnails-public-style-css" href="https://vegibit.com/wp-content/plugins/recent-posts-widget-with-thumbnails/public.css?ver=7.0.2" type="text/css" media="all">
+<link rel="stylesheet" id="arpw-style-css" href="https://vegibit.com/wp-content/plugins/advanced-random-posts-widget/assets/css/arpw-frontend.css?ver=5.6" type="text/css" media="all">
+<script type="text/javascript" src="https://vegibit.com/wp-includes/js/jquery/jquery.min.js?ver=3.5.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://vegibit.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="crayon_js-js-extra">
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"_2.7.2_beta","is_admin":"0","ajaxurl":"https:\/\/vegibit.com\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Press %s to Copy, %s to Paste","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://vegibit.com/wp-content/plugins/crayon-syntax-highlighter/js/min/crayon.min.js?ver=_2.7.2_beta" id="crayon_js-js"></script>
+<link rel="https://api.w.org/" href="https://vegibit.com/wp-json/"><link rel="alternate" type="application/json" href="https://vegibit.com/wp-json/wp/v2/tags/11"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://vegibit.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://vegibit.com/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.6">
+			<style type="text/css">
+				.wb-bp-front-page .wp-bs-4-jumbotron {
+					background-image: url(https://vegibit.com/wp-content/themes/wp-bootstrap-4/assets/images/default-cover-img.jpeg);
+				}
+				.wp-bp-jumbo-overlay {
+					background: rgba(33,37,41, 0.7);
+				}
+			</style>
+		<meta name="twitter:partner" content="tfwp">
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="Tag: laravel">
+<style id="kirki-inline-styles">.custom-logo{height:60px;width:auto;}.navbar.bg-dark{background-color:#4285f4 !important;}.btn-link,.btn-outline-primary,.content-area .sp-the-post .entry-header .entry-title a:hover,a{color:#4285f4;}.btn-primary,.button.add_to_cart_button,.price_slider_amount button[type="submit"],.sp-services-section .sp-single-service .sp-service-icon,.wc-proceed-to-checkout .checkout-button.button,input[type="button"],input[type="reset"],input[type="submit"]{background-color:#4285f4;}.btn-outline-primary,.btn-primary,.button.add_to_cart_button,.price_slider_amount button[type="submit"],.wc-proceed-to-checkout .checkout-button.button,input[type="button"],input[type="reset"],input[type="submit"]{border-color:#4285f4;}.btn-outline-primary:hover{background-color:#4285f4;border-color:#4285f4;}.entry-title a:hover{color:#4285f4 !important;}.btn-outline-primary:focus,.btn-primary:focus{-webkit-box-shadow:0 0 0 0.1rem #4285f4;-moz-box-shadow:0 0 0 0.1rem #4285f4;box-shadow:0 0 0 0.1rem #4285f4;}.form-row.place-order button[type="submit"],.shop_table.shop_table_responsive.woocommerce-cart-form__contents button[type="submit"],.single-product .summary.entry-summary button[type="submit"]{background-color:#4285f4;border-color:#4285f4;}.btn-link:hover,.comments-link a:hover,.edit-link a:hover,.entry-meta a:hover,a:active,a:focus,a:hover{color:#4285f4;}.btn-primary:active,.btn-primary:focus,.btn-primary:hover,.btn-primary:not(:disabled):not(.disabled):active,.button.add_to_cart_button:hover,.price_slider_amount button[type="submit"]:hover,.wc-proceed-to-checkout .checkout-button.button:hover,input[type="button"]:active,input[type="button"]:focus,input[type="button"]:hover,input[type="submit"]:active,input[type="submit"]:focus,input[type="submit"]:hover{background-color:#4285f4;border-color:#4285f4;}.form-row.place-order button[type="submit"]:hover,.shop_table.shop_table_responsive.woocommerce-cart-form__contents button[type="submit"]:hover,.single-product .summary.entry-summary button[type="submit"]:hover{background-color:#4285f4 !important;border-color:#4285f4 !important;}.site-footer.bg-white{background-color:#ffffff !important;}.site-footer.text-muted{color:#6c757d !important;}.site-footer a{color:#007bff !important;}body,button,input,optgroup,select,textarea{font-family:inherit;}.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{font-family:inherit;}.container{max-width:1400px;}.elementor-section.elementor-section-boxed>.elementor-container{max-width:1400px;}</style>    <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+</head>
+
+<body class="archive tag tag-laravel tag-11 hfeed">
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	<header id="masthead" class="site-header ">
+		<nav id="site-navigation" class="main-navigation navbar navbar-expand-lg navbar-dark bg-dark">
+							
+				<div class="site-branding-text">
+							                    <h2 class="site-title h3 mb-0"><a href="https://vegibit.com/" rel="home" class="navbar-brand mb-0"> <img src="https://vegibit.com/themes/vegibit.png" width="50" height="50" class="rounded-circle d-inline-block align-center mr-2" alt="">Vegibit</a></h2>
+		                				</div>
+
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#primary-menu-wrap" aria-controls="primary-menu-wrap" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+                <div id="primary-menu-wrap" class="collapse navbar-collapse">
+				<ul id="primary-menu" class="navbar-nav ml-auto"><li class="nav-item    menu-item menu-item-type-custom menu-item-object-custom"><a href="https://vegibit.com/tag/docker/" class="nav-link">docker</a></li>
+<li class="nav-item    menu-item menu-item-type-custom menu-item-object-custom"><a href="https://vegibit.com/tag/python/" class="nav-link">python</a></li>
+<li class="nav-item    menu-item menu-item-type-custom menu-item-object-custom"><a href="https://vegibit.com/tag/django/" class="nav-link">django</a></li>
+<li class="nav-item    menu-item menu-item-type-taxonomy menu-item-object-post_tag"><a href="https://vegibit.com/tag/javascript/" class="nav-link">javascript</a></li>
+<li class="nav-item    menu-item menu-item-type-taxonomy menu-item-object-post_tag"><a href="https://vegibit.com/tag/css/" class="nav-link">css</a></li>
+<li class="nav-item    menu-item menu-item-type-taxonomy menu-item-object-post_tag"><a href="https://vegibit.com/tag/html/" class="nav-link">html</a></li>
+<li class="nav-item    menu-item menu-item-type-taxonomy menu-item-object-post_tag"><a href="https://vegibit.com/tag/php/" class="nav-link">php</a></li>
+<li class="nav-item    menu-item menu-item-type-taxonomy menu-item-object-post_tag"><a href="https://vegibit.com/tag/mysql/" class="nav-link">mysql</a></li>
+<li class="nav-item active   menu-item menu-item-type-taxonomy menu-item-object-post_tag current-menu-item"><a href="https://vegibit.com/tag/laravel/" class="nav-link">laravel</a></li>
+<li class="nav-item    menu-item menu-item-type-taxonomy menu-item-object-post_tag"><a href="https://vegibit.com/tag/wordpress/" class="nav-link">wordpress</a></li>
+<li class="nav-item    menu-item menu-item-type-taxonomy menu-item-object-post_tag"><a href="https://vegibit.com/tag/linux/" class="nav-link">linux</a></li>
+</ul>                <form class="form-inline my-2 my-lg-0" action="https://www.google.com/search">
+                    <input class="form-control mr-sm-2" name="q" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                    <input name="sourceid" type="hidden" value="vegibit"><input name="sitesearch" type="hidden" value="vegibit.com">
+                </form></div>
+					</nav><!-- #site-navigation -->
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
+
+
+	<div class="container">
+		<div class="row">
+
+							<div class="col-md-8 wp-bp-content-width">
+			
+				<div id="primary" class="content-area">
+					<main id="main" class="site-main">
+
+					
+						<header class="page-header mt-3r">
+							<h1 class="page-title">Tag: <span>laravel</span></h1>						</header><!-- .page-header -->
+
+						
+<article id="post-28410" class="card mt-3r post-28410 post type-post status-publish format-standard has-post-thumbnail hentry category-web-development tag-laravel tag-vuejs">
+	<div class="card-body">
+
+				<header class="entry-header">
+			<h2 class="entry-title card-title h1"><a href="https://vegibit.com/building-a-vue-front-end-for-a-laravel-api/" rel="bookmark">Building A Vue Front End For A Laravel API</a></h2>			<div class="entry-meta text-muted">
+							</div><!-- .entry-meta -->
+					</header><!-- .entry-header -->
+
+		
+					<div class="entry-summary">
+				<p><a href="https://vegibit.com/building-a-vue-front-end-for-a-laravel-api/"><img loading="lazy" src="https://vegibit.com/wp-content/uploads/2019/05/Building-A-Vue-Front-End-For-A-Laravel-API.png" alt="Building A Vue Front End For A Laravel API" width="400" height="300" class="alignleft size-full wp-image-28423" srcset="https://vegibit.com/wp-content/uploads/2019/05/Building-A-Vue-Front-End-For-A-Laravel-API.png 400w, https://vegibit.com/wp-content/uploads/2019/05/Building-A-Vue-Front-End-For-A-Laravel-API-300x225.png 300w" sizes="(max-width: 400px) 100vw, 400px"></a></p>
+<p class="lead">The previous article had us building a JSON Rest API using the Laravel Framework.  In this tutorial, we’ll use Vuejs to build a front end which can consume the API we have in place.  Instead of rendering blade files, we can use Vue components and AJAX to simply fetch the data we need to display from the API.  We’ll even learn a little bit about customizing the CSS in Laravel using SCSS and Laravel Mix.…</p>				<div class="">
+					<a href="https://vegibit.com/building-a-vue-front-end-for-a-laravel-api/" class="btn btn-outline-primary btn-lg">Continue Reading <small class="oi oi-chevron-right ml-1"></small></a>
+				</div>
+			</div><!-- .entry-summary -->
+		
+	</div>
+	<!-- /.card-body -->
+
+			<footer class="entry-footer card-footer text-muted">
+			
+			<span class="cat-links">
+				<span class="badge badge-light badge-pill"></span>
+			</span>
+
+			<span class="tags-links">
+				 <span class="badge badge-light badge-pill text-muted">#<a href="https://vegibit.com/tag/laravel/" rel="tag">laravel</a></span> <span class="badge badge-light badge-pill text-muted">#<a href="https://vegibit.com/tag/vuejs/" rel="tag">vuejs</a></span>			</span>
+
+				</footer><!-- .entry-footer -->
+	
+</article><!-- #post-28410 -->
+
+<article id="post-28379" class="card mt-3r post-28379 post type-post status-publish format-standard has-post-thumbnail hentry category-web-development tag-laravel tag-php">
+	<div class="card-body">
+
+				<header class="entry-header">
+			<h2 class="entry-title card-title h1"><a href="https://vegibit.com/laravel-api-resource-tutorial/" rel="bookmark">Laravel API Resource Tutorial</a></h2>			<div class="entry-meta text-muted">
+							</div><!-- .entry-meta -->
+					</header><!-- .entry-header -->
+
+		
+					<div class="entry-summary">
+				<p><a href="https://vegibit.com/laravel-api-resource-tutorial/"><img loading="lazy" src="https://vegibit.com/wp-content/uploads/2019/05/Laravel-API-Resource-Tutorial.png" alt="Laravel API Resource Tutorial" width="400" height="300" class="alignleft size-full wp-image-28396" srcset="https://vegibit.com/wp-content/uploads/2019/05/Laravel-API-Resource-Tutorial.png 400w, https://vegibit.com/wp-content/uploads/2019/05/Laravel-API-Resource-Tutorial-300x225.png 300w" sizes="(max-width: 400px) 100vw, 400px"></a></p>
+<p class="lead">In this tutorial we’ll build a full json crud api using Laravel and the new Eloquent API Resources feature.  This approach is used when you want to build the entire back end of your application using Laravel, while leaving the front end to Vue, React, or Angular.  By using Laravel and Eloquent API Resources, you can format your data responses however you like while also adding meta information, pagination links and information, custom data wrapping, conditional attributes, and relationships.…</p>				<div class="">
+					<a href="https://vegibit.com/laravel-api-resource-tutorial/" class="btn btn-outline-primary btn-lg">Continue Reading <small class="oi oi-chevron-right ml-1"></small></a>
+				</div>
+			</div><!-- .entry-summary -->
+		
+	</div>
+	<!-- /.card-body -->
+
+			<footer class="entry-footer card-footer text-muted">
+			
+			<span class="cat-links">
+				<span class="badge badge-light badge-pill"></span>
+			</span>
+
+			<span class="tags-links">
+				 <span class="badge badge-light badge-pill text-muted">#<a href="https://vegibit.com/tag/laravel/" rel="tag">laravel</a></span> <span class="badge badge-light badge-pill text-muted">#<a href="https://vegibit.com/tag/php/" rel="tag">php</a></span>			</span>
+
+				</footer><!-- .entry-footer -->
+	
+</article><!-- #post-28379 -->
+
+<article id="post-25813" class="card mt-3r post-25813 post type-post status-publish format-standard has-post-thumbnail hentry category-web-development tag-laravel">
+	<div class="card-body">
+
+				<header class="entry-header">
+			<h2 class="entry-title card-title h1"><a href="https://vegibit.com/25-popular-applications-built-with-laravel/" rel="bookmark">25 Popular Applications Built With Laravel</a></h2>			<div class="entry-meta text-muted">
+							</div><!-- .entry-meta -->
+					</header><!-- .entry-header -->
+
+		
+					<div class="entry-summary">
+				<p><a href="https://vegibit.com/25-popular-applications-built-with-laravel/"><img loading="lazy" src="https://vegibit.com/wp-content/uploads/2018/05/built-with-laravel.png" alt="built with laravel" width="400" height="300" class="alignleft size-full wp-image-25858" srcset="https://vegibit.com/wp-content/uploads/2018/05/built-with-laravel.png 400w, https://vegibit.com/wp-content/uploads/2018/05/built-with-laravel-300x225.png 300w" sizes="(max-width: 400px) 100vw, 400px"></a></p>
+<p class="lead">In this article we present some popular open source projects that use Laravel.  These include everything from personal music streaming servers to rapid API generator tools.  In addition, we’ll see a nice collection of content management systems, forums, and even social bookmarking style applications in this roundup.  Below you will find a short description and links to projects like Koel, CachetHQ, Flarum, October CMS, Laravel Voyager, Laravel Spreadsheet, MonicaHQ, Invoice Ninja, Laravel Boilerplate, Pyrocms, Polrproject, Laravel Generator, Pigjian, Vuedo, Laravel Charts, Laravel IO, Lavalite, Laravel Zero, Voten, Council, Canvas, Bookstackapp, and Apiato.…</p>				<div class="">
+					<a href="https://vegibit.com/25-popular-applications-built-with-laravel/" class="btn btn-outline-primary btn-lg">Continue Reading <small class="oi oi-chevron-right ml-1"></small></a>
+				</div>
+			</div><!-- .entry-summary -->
+		
+	</div>
+	<!-- /.card-body -->
+
+			<footer class="entry-footer card-footer text-muted">
+			
+			<span class="cat-links">
+				<span class="badge badge-light badge-pill"></span>
+			</span>
+
+			<span class="tags-links">
+				 <span class="badge badge-light badge-pill text-muted">#<a href="https://vegibit.com/tag/laravel/" rel="tag">laravel</a></span>			</span>
+
+				</footer><!-- .entry-footer -->
+	
+</article><!-- #post-25813 -->
+
+<article id="post-25393" class="card mt-3r post-25393 post type-post status-publish format-standard has-post-thumbnail hentry category-web-development tag-laravel tag-vuejs">
+	<div class="card-body">
+
+				<header class="entry-header">
+			<h2 class="entry-title card-title h1"><a href="https://vegibit.com/vuejs-image-upload/" rel="bookmark">VueJS Image Upload</a></h2>			<div class="entry-meta text-muted">
+							</div><!-- .entry-meta -->
+					</header><!-- .entry-header -->
+
+		
+					<div class="entry-summary">
+				<p><a href="https://vegibit.com/vuejs-image-upload/"><img loading="lazy" src="https://vegibit.com/wp-content/uploads/2018/02/VueJS-Image-Upload.png" alt="VueJS Image Upload" width="400" height="300" class="alignleft size-full wp-image-25410"></a></p>
+<p class="lead">In this tutorial we’ll create a VueJS image upload component so that users can upload an image to use as an avatar in the application.  The goal is to re create the mechanism of an image upload via an html form, however it will all be done in a Vue component.  This will allow for real time image updating in the browser, in addition to putting the image in storage and setting the avatar image path in the database in one fell swoop.…</p>				<div class="">
+					<a href="https://vegibit.com/vuejs-image-upload/" class="btn btn-outline-primary btn-lg">Continue Reading <small class="oi oi-chevron-right ml-1"></small></a>
+				</div>
+			</div><!-- .entry-summary -->
+		
+	</div>
+	<!-- /.card-body -->
+
+			<footer class="entry-footer card-footer text-muted">
+			
+			<span class="cat-links">
+				<span class="badge badge-light badge-pill"></span>
+			</span>
+
+			<span class="tags-links">
+				 <span class="badge badge-light badge-pill text-muted">#<a href="https://vegibit.com/tag/laravel/" rel="tag">laravel</a></span> <span class="badge badge-light badge-pill text-muted">#<a href="https://vegibit.com/tag/vuejs/" rel="tag">vuejs</a></span>			</span>
+
+				</footer><!-- .entry-footer -->
+	
+</article><!-- #post-25393 -->
+
+<article id="post-25376" class="card mt-3r post-25376 post type-post status-publish format-standard has-post-thumbnail hentry category-web-development tag-jquery tag-laravel">
+	<div class="card-body">
+
+				<header class="entry-header">
+			<h2 class="entry-title card-title h1"><a href="https://vegibit.com/jquery-autocomplete-as-you-type/" rel="bookmark">jQuery Autocomplete As You Type</a></h2>			<div class="entry-meta text-muted">
+							</div><!-- .entry-meta -->
+					</header><!-- .entry-header -->
+
+		
+					<div class="entry-summary">
+				<p><a href="https://vegibit.com/jquery-autocomplete-as-you-type/"><img loading="lazy" src="https://vegibit.com/wp-content/uploads/2018/02/jQuery-Autocomplete-As-You-Type.png" alt="jQuery Autocomplete As You Type" width="400" height="300" class="alignleft size-full wp-image-25377"></a></p>
+<p class="lead">This tutorial will add the feature of autocomplete as you type.  In the form where a user can enter a reply to a thread, we want the application to automatically start fetching usernames to choose from when you type a string that begins with the @ symbol.  There is a jQuery plugin built for this exact purpose called <a href="https://github.com/ichord/At.js/">At.js</a>.  In addition to autocomplete of usernames, the plugin also offers emoji like characters such as smileys, coffee cups, and more.…</p>				<div class="">
+					<a href="https://vegibit.com/jquery-autocomplete-as-you-type/" class="btn btn-outline-primary btn-lg">Continue Reading <small class="oi oi-chevron-right ml-1"></small></a>
+				</div>
+			</div><!-- .entry-summary -->
+		
+	</div>
+	<!-- /.card-body -->
+
+			<footer class="entry-footer card-footer text-muted">
+			
+			<span class="cat-links">
+				<span class="badge badge-light badge-pill"></span>
+			</span>
+
+			<span class="tags-links">
+				 <span class="badge badge-light badge-pill text-muted">#<a href="https://vegibit.com/tag/jquery/" rel="tag">jquery</a></span> <span class="badge badge-light badge-pill text-muted">#<a href="https://vegibit.com/tag/laravel/" rel="tag">laravel</a></span>			</span>
+
+				</footer><!-- .entry-footer -->
+	
+</article><!-- #post-25376 -->
+
+<article id="post-25351" class="card mt-3r post-25351 post type-post status-publish format-standard has-post-thumbnail hentry category-web-development tag-laravel">
+	<div class="card-body">
+
+				<header class="entry-header">
+			<h2 class="entry-title card-title h1"><a href="https://vegibit.com/mentions-and-notifications/" rel="bookmark">Mentions And Notifications</a></h2>			<div class="entry-meta text-muted">
+							</div><!-- .entry-meta -->
+					</header><!-- .entry-header -->
+
+		
+					<div class="entry-summary">
+				<p><a href="https://vegibit.com/mentions-and-notifications/"><img loading="lazy" src="https://vegibit.com/wp-content/uploads/2018/02/Mentions-And-Notifications.png" alt="Mentions And Notifications" width="400" height="300" class="alignleft size-full wp-image-25355"></a></p>
+<p class="lead">Community based websites often times allow you to mention another user by screen name.  For example, if you post a message to Twitter and include a user’s name including the @ symbol, then the user will get a notification that you mentioned them.  This tutorial will recreate that type of feature in the forum based application we have been building.  In the replies area of threads, if a user types in a reply and includes @Tom as an example, then when Tom logs into his account he should see a notification in the upper right navigation bar area to alert him that he has a thread to check out.…</p>				<div class="">
+					<a href="https://vegibit.com/mentions-and-notifications/" class="btn btn-outline-primary btn-lg">Continue Reading <small class="oi oi-chevron-right ml-1"></small></a>
+				</div>
+			</div><!-- .entry-summary -->
+		
+	</div>
+	<!-- /.card-body -->
+
+			<footer class="entry-footer card-footer text-muted">
+			
+			<span class="cat-links">
+				<span class="badge badge-light badge-pill"></span>
+			</span>
+
+			<span class="tags-links">
+				 <span class="badge badge-light badge-pill text-muted">#<a href="https://vegibit.com/tag/laravel/" rel="tag">laravel</a></span>			</span>
+
+				</footer><!-- .entry-footer -->
+	
+</article><!-- #post-25351 -->
+
+<article id="post-25332" class="card mt-3r post-25332 post type-post status-publish format-standard has-post-thumbnail hentry category-web-development tag-laravel">
+	<div class="card-body">
+
+				<header class="entry-header">
+			<h2 class="entry-title card-title h1"><a href="https://vegibit.com/how-to-highlight-new-content-for-returning-visitors/" rel="bookmark">How To Highlight New Content For Returning Visitors</a></h2>			<div class="entry-meta text-muted">
+							</div><!-- .entry-meta -->
+					</header><!-- .entry-header -->
+
+		
+					<div class="entry-summary">
+				<p><a href="https://vegibit.com/how-to-highlight-new-content-for-returning-visitors/"><img loading="lazy" src="https://vegibit.com/wp-content/uploads/2018/02/How-To-Highlight-New-Content-For-Returning-Visitors.png" alt="How To Highlight New Content For Returning Visitors" width="400" height="300" class="alignleft size-full wp-image-25338"></a></p>
+<p class="lead">The goal of this lesson will be to set up a mechanism where by we can highlight new content to returning visitors of the website.  So for example, consider a user visits the site and reads all of the threads on the front page and then leaves for the day.  Later, a different visitor visits the site and adds a new reply to say three different threads.…</p>				<div class="">
+					<a href="https://vegibit.com/how-to-highlight-new-content-for-returning-visitors/" class="btn btn-outline-primary btn-lg">Continue Reading <small class="oi oi-chevron-right ml-1"></small></a>
+				</div>
+			</div><!-- .entry-summary -->
+		
+	</div>
+	<!-- /.card-body -->
+
+			<footer class="entry-footer card-footer text-muted">
+			
+			<span class="cat-links">
+				<span class="badge badge-light badge-pill"></span>
+			</span>
+
+			<span class="tags-links">
+				 <span class="badge badge-light badge-pill text-muted">#<a href="https://vegibit.com/tag/laravel/" rel="tag">laravel</a></span>			</span>
+
+				</footer><!-- .entry-footer -->
+	
+</article><!-- #post-25332 -->
+
+<article id="post-25315" class="card mt-3r post-25315 post type-post status-publish format-standard has-post-thumbnail hentry category-web-development tag-laravel tag-vuejs">
+	<div class="card-body">
+
+				<header class="entry-header">
+			<h2 class="entry-title card-title h1"><a href="https://vegibit.com/setup-notifications-for-subscribed-users/" rel="bookmark">Setup Notifications For Subscribed Users</a></h2>			<div class="entry-meta text-muted">
+							</div><!-- .entry-meta -->
+					</header><!-- .entry-header -->
+
+		
+					<div class="entry-summary">
+				<p><a href="https://vegibit.com/setup-notifications-for-subscribed-users/"><img loading="lazy" src="https://vegibit.com/wp-content/uploads/2018/02/Setup-Notifications-For-Subscribed-Users.png" alt="Setup Notifications For Subscribed Users" width="400" height="300" class="alignleft size-full wp-image-25316"></a></p>
+<p class="lead">In the last tutorial, we saw how to set up the ability for a user to subscribe to a thread.  So what does that mean for the user?  Well, if they are subscribed to the thread, then they likely would like to stay up to date with any new replies or activity on that thread.  In this tutorial, we’ll look at how to set up Notifications.…</p>				<div class="">
+					<a href="https://vegibit.com/setup-notifications-for-subscribed-users/" class="btn btn-outline-primary btn-lg">Continue Reading <small class="oi oi-chevron-right ml-1"></small></a>
+				</div>
+			</div><!-- .entry-summary -->
+		
+	</div>
+	<!-- /.card-body -->
+
+			<footer class="entry-footer card-footer text-muted">
+			
+			<span class="cat-links">
+				<span class="badge badge-light badge-pill"></span>
+			</span>
+
+			<span class="tags-links">
+				 <span class="badge badge-light badge-pill text-muted">#<a href="https://vegibit.com/tag/laravel/" rel="tag">laravel</a></span> <span class="badge badge-light badge-pill text-muted">#<a href="https://vegibit.com/tag/vuejs/" rel="tag">vuejs</a></span>			</span>
+
+				</footer><!-- .entry-footer -->
+	
+</article><!-- #post-25315 -->
+
+	<nav class="navigation posts-navigation" role="navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Posts navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://vegibit.com/tag/laravel/page/2/" class="btn btn-outline-primary mb-4">Next</a></div></div>
+	</nav>
+					</main><!-- #main -->
+				</div><!-- #primary -->
+			</div>
+			<!-- /.col-md-8 -->
+
+												<div class="col-md-4 wp-bp-sidebar-width">
+										
+<aside id="secondary" class="widget-area sidebar-1-area mt-3r">
+	<section id="arpw-widget-3" class="vbsidebarcard card widget border-bottom arpw-widget-random"><div class="arpw-random-post "><ul class="arpw-ul"><li class="arpw-li arpw-clearfix"><a href="https://vegibit.com/angular-structural-directives/" rel="bookmark"><img width="50" height="38" src="https://vegibit.com/wp-content/uploads/2018/12/Angular-Structural-Directives.png" class="arpw-thumbnail alignleft wp-post-image" alt="Angular Structural Directives" loading="lazy" srcset="https://vegibit.com/wp-content/uploads/2018/12/Angular-Structural-Directives.png 400w, https://vegibit.com/wp-content/uploads/2018/12/Angular-Structural-Directives-300x225.png 300w" sizes="(max-width: 50px) 100vw, 50px"></a><a class="arpw-title" href="https://vegibit.com/angular-structural-directives/" rel="bookmark">Angular Structural Directives</a></li><li class="arpw-li arpw-clearfix"><a href="https://vegibit.com/json-web-token-authentication-with-node-js/" rel="bookmark"><img width="50" height="38" src="https://vegibit.com/wp-content/uploads/2018/07/JSON-Web-Token-Authentication-With-Node.png" class="arpw-thumbnail alignleft wp-post-image" alt="JSON Web Token Authentication With Node.js" loading="lazy" srcset="https://vegibit.com/wp-content/uploads/2018/07/JSON-Web-Token-Authentication-With-Node.png 400w, https://vegibit.com/wp-content/uploads/2018/07/JSON-Web-Token-Authentication-With-Node-300x225.png 300w" sizes="(max-width: 50px) 100vw, 50px"></a><a class="arpw-title" href="https://vegibit.com/json-web-token-authentication-with-node-js/" rel="bookmark">JSON Web Token Authentication With Node.js</a></li><li class="arpw-li arpw-clearfix"><a href="https://vegibit.com/python-class-examples/" rel="bookmark"><img width="50" height="50" src="https://vegibit.com/wp-content/uploads/2020/01/python-class-tutorial-50x50.png" class="arpw-thumbnail alignleft wp-post-image" alt="Python Class Examples" loading="lazy" srcset="https://vegibit.com/wp-content/uploads/2020/01/python-class-tutorial-50x50.png 50w, https://vegibit.com/wp-content/uploads/2020/01/python-class-tutorial-150x150.png 150w" sizes="(max-width: 50px) 100vw, 50px"></a><a class="arpw-title" href="https://vegibit.com/python-class-examples/" rel="bookmark">Python Class Examples</a></li><li class="arpw-li arpw-clearfix"><a href="https://vegibit.com/how-to-run-nginx-using-docker/" rel="bookmark"><img width="50" height="50" src="https://vegibit.com/wp-content/uploads/2020/09/How-To-Run-Nginx-Using-Docker-50x50.png" class="arpw-thumbnail alignleft wp-post-image" alt="How To Run Nginx Using Docker" loading="lazy" srcset="https://vegibit.com/wp-content/uploads/2020/09/How-To-Run-Nginx-Using-Docker-50x50.png 50w, https://vegibit.com/wp-content/uploads/2020/09/How-To-Run-Nginx-Using-Docker-150x150.png 150w" sizes="(max-width: 50px) 100vw, 50px"></a><a class="arpw-title" href="https://vegibit.com/how-to-run-nginx-using-docker/" rel="bookmark">How To Run Nginx Using Docker</a></li><li class="arpw-li arpw-clearfix"><a href="https://vegibit.com/python-statistics-tutorial/" rel="bookmark"><img width="50" height="50" src="https://vegibit.com/wp-content/uploads/2020/01/Python-Statistics-Tutorial-50x50.png" class="arpw-thumbnail alignleft wp-post-image" alt="Python Statistics Tutorial" loading="lazy" srcset="https://vegibit.com/wp-content/uploads/2020/01/Python-Statistics-Tutorial-50x50.png 50w, https://vegibit.com/wp-content/uploads/2020/01/Python-Statistics-Tutorial-150x150.png 150w" sizes="(max-width: 50px) 100vw, 50px"></a><a class="arpw-title" href="https://vegibit.com/python-statistics-tutorial/" rel="bookmark">Python Statistics Tutorial</a></li><li class="arpw-li arpw-clearfix"><a href="https://vegibit.com/css-position-tutorial/" rel="bookmark"><img width="50" height="38" src="https://vegibit.com/wp-content/uploads/2018/09/CSS-Position-Tutorial.png" class="arpw-thumbnail alignleft wp-post-image" alt="CSS Position Tutorial" loading="lazy" srcset="https://vegibit.com/wp-content/uploads/2018/09/CSS-Position-Tutorial.png 400w, https://vegibit.com/wp-content/uploads/2018/09/CSS-Position-Tutorial-300x225.png 300w" sizes="(max-width: 50px) 100vw, 50px"></a><a class="arpw-title" href="https://vegibit.com/css-position-tutorial/" rel="bookmark">CSS Position Tutorial</a></li><li class="arpw-li arpw-clearfix"><a href="https://vegibit.com/tkinter-simple-comment-app/" rel="bookmark"><img width="50" height="50" src="https://vegibit.com/wp-content/uploads/2020/01/Tkinter-Simple-Comment-App-50x50.png" class="arpw-thumbnail alignleft wp-post-image" alt="Tkinter Simple Comment App" loading="lazy" srcset="https://vegibit.com/wp-content/uploads/2020/01/Tkinter-Simple-Comment-App-50x50.png 50w, https://vegibit.com/wp-content/uploads/2020/01/Tkinter-Simple-Comment-App-150x150.png 150w" sizes="(max-width: 50px) 100vw, 50px"></a><a class="arpw-title" href="https://vegibit.com/tkinter-simple-comment-app/" rel="bookmark">Tkinter Simple Comment App</a></li><li class="arpw-li arpw-clearfix"><a href="https://vegibit.com/python-abs-function/" rel="bookmark"><img width="50" height="50" src="https://vegibit.com/wp-content/uploads/2020/11/Python-abs-Function-50x50.png" class="arpw-thumbnail alignleft wp-post-image" alt="Python abs() Function" loading="lazy" srcset="https://vegibit.com/wp-content/uploads/2020/11/Python-abs-Function-50x50.png 50w, https://vegibit.com/wp-content/uploads/2020/11/Python-abs-Function-150x150.png 150w" sizes="(max-width: 50px) 100vw, 50px"></a><a class="arpw-title" href="https://vegibit.com/python-abs-function/" rel="bookmark">Python abs() Function</a></li><li class="arpw-li arpw-clearfix"><a href="https://vegibit.com/django-urls-and-views/" rel="bookmark"><img width="50" height="50" src="https://vegibit.com/wp-content/uploads/2020/02/Django-URLs-and-Views-50x50.png" class="arpw-thumbnail alignleft wp-post-image" alt="Django URLs and Views" loading="lazy" srcset="https://vegibit.com/wp-content/uploads/2020/02/Django-URLs-and-Views-50x50.png 50w, https://vegibit.com/wp-content/uploads/2020/02/Django-URLs-and-Views-150x150.png 150w" sizes="(max-width: 50px) 100vw, 50px"></a><a class="arpw-title" href="https://vegibit.com/django-urls-and-views/" rel="bookmark">Django URLs and Views</a></li><li class="arpw-li arpw-clearfix"><a href="https://vegibit.com/angular-templates-and-styles/" rel="bookmark"><img width="50" height="38" src="https://vegibit.com/wp-content/uploads/2018/11/Angular-Templates-and-Styles.png" class="arpw-thumbnail alignleft wp-post-image" alt="Angular Templates and Styles" loading="lazy" srcset="https://vegibit.com/wp-content/uploads/2018/11/Angular-Templates-and-Styles.png 400w, https://vegibit.com/wp-content/uploads/2018/11/Angular-Templates-and-Styles-300x225.png 300w" sizes="(max-width: 50px) 100vw, 50px"></a><a class="arpw-title" href="https://vegibit.com/angular-templates-and-styles/" rel="bookmark">Angular Templates and Styles</a></li><li class="arpw-li arpw-clearfix"><a href="https://vegibit.com/document-object-model-tutorial/" rel="bookmark"><img width="50" height="50" src="https://vegibit.com/wp-content/uploads/2014/05/document-object-model-tutorial-1-50x50.png" class="arpw-thumbnail alignleft wp-post-image" alt="Document Object Model Tutorial" loading="lazy" srcset="https://vegibit.com/wp-content/uploads/2014/05/document-object-model-tutorial-1-50x50.png 50w, https://vegibit.com/wp-content/uploads/2014/05/document-object-model-tutorial-1-150x150.png 150w" sizes="(max-width: 50px) 100vw, 50px"></a><a class="arpw-title" href="https://vegibit.com/document-object-model-tutorial/" rel="bookmark">Document Object Model Tutorial</a></li><li class="arpw-li arpw-clearfix"><a href="https://vegibit.com/the-3-most-common-types-of-cloud-computing/" rel="bookmark"><img width="50" height="50" src="https://vegibit.com/wp-content/uploads/2013/09/cloud-types-50x50.png" class="arpw-thumbnail alignleft wp-post-image" alt="The 3 Most Common Types of Cloud Computing" loading="lazy" srcset="https://vegibit.com/wp-content/uploads/2013/09/cloud-types-50x50.png 50w, https://vegibit.com/wp-content/uploads/2013/09/cloud-types-150x150.png 150w" sizes="(max-width: 50px) 100vw, 50px"></a><a class="arpw-title" href="https://vegibit.com/the-3-most-common-types-of-cloud-computing/" rel="bookmark">The 3 Most Common Types of Cloud Computing</a></li></ul></div><!-- Generated by https://wordpress.org/plugins/advanced-random-posts-widget/ --></section><section id="arpw-widget-4" class="vbsidebarcard card widget border-bottom arpw-widget-random"><div class="arpw-random-post "><ul class="arpw-ul"><li class="arpw-li arpw-clearfix"><a href="https://vegibit.com/laravel-validation/" rel="bookmark"><img width="50" height="50" src="https://vegibit.com/wp-content/uploads/2014/03/Laravel-Validation-1-50x50.png" class="arpw-thumbnail alignleft wp-post-image" alt="Laravel Validation" loading="lazy" srcset="https://vegibit.com/wp-content/uploads/2014/03/Laravel-Validation-1-50x50.png 50w, https://vegibit.com/wp-content/uploads/2014/03/Laravel-Validation-1-150x150.png 150w" sizes="(max-width: 50px) 100vw, 50px"></a><a class="arpw-title" href="https://vegibit.com/laravel-validation/" rel="bookmark">Laravel Validation</a></li><li class="arpw-li arpw-clearfix"><a href="https://vegibit.com/install-laravel-on-windows/" rel="bookmark"><img width="50" height="50" src="https://vegibit.com/wp-content/uploads/2014/01/Install-Laravel-on-Windows-1-50x50.png" class="arpw-thumbnail alignleft wp-post-image" alt="Install Laravel on Windows" loading="lazy" srcset="https://vegibit.com/wp-content/uploads/2014/01/Install-Laravel-on-Windows-1-50x50.png 50w, https://vegibit.com/wp-content/uploads/2014/01/Install-Laravel-on-Windows-1-150x150.png 150w" sizes="(max-width: 50px) 100vw, 50px"></a><a class="arpw-title" href="https://vegibit.com/install-laravel-on-windows/" rel="bookmark">Install Laravel on Windows</a></li><li class="arpw-li arpw-clearfix"><a href="https://vegibit.com/learning-about-regular-expressions/" rel="bookmark"><img width="50" height="50" src="https://vegibit.com/wp-content/uploads/2014/12/Learning-About-Regular-Expressions-1-50x50.jpg" class="arpw-thumbnail alignleft wp-post-image" alt="Learning About Regular Expressions" loading="lazy" srcset="https://vegibit.com/wp-content/uploads/2014/12/Learning-About-Regular-Expressions-1-50x50.jpg 50w, https://vegibit.com/wp-content/uploads/2014/12/Learning-About-Regular-Expressions-1-150x150.jpg 150w" sizes="(max-width: 50px) 100vw, 50px"></a><a class="arpw-title" href="https://vegibit.com/learning-about-regular-expressions/" rel="bookmark">Learning About Regular Expressions</a></li><li class="arpw-li arpw-clearfix"><a href="https://vegibit.com/php-string-helper-functions/" rel="bookmark"><img width="50" height="50" src="https://vegibit.com/wp-content/uploads/2014/03/php-string-helper-functions-1-50x50.png" class="arpw-thumbnail alignleft wp-post-image" alt="PHP String Helper Functions" loading="lazy" srcset="https://vegibit.com/wp-content/uploads/2014/03/php-string-helper-functions-1-50x50.png 50w, https://vegibit.com/wp-content/uploads/2014/03/php-string-helper-functions-1-150x150.png 150w" sizes="(max-width: 50px) 100vw, 50px"></a><a class="arpw-title" href="https://vegibit.com/php-string-helper-functions/" rel="bookmark">PHP String Helper Functions</a></li><li class="arpw-li arpw-clearfix"><a href="https://vegibit.com/getting-your-database-set-up-for-use-with-laravel/" rel="bookmark"><img width="50" height="50" src="https://vegibit.com/wp-content/uploads/2017/04/set-up-laravel-database-1-50x50.png" class="arpw-thumbnail alignleft wp-post-image" alt="Getting Your Database Set Up For Use With Laravel" loading="lazy" srcset="https://vegibit.com/wp-content/uploads/2017/04/set-up-laravel-database-1-50x50.png 50w, https://vegibit.com/wp-content/uploads/2017/04/set-up-laravel-database-1-150x150.png 150w" sizes="(max-width: 50px) 100vw, 50px"></a><a class="arpw-title" href="https://vegibit.com/getting-your-database-set-up-for-use-with-laravel/" rel="bookmark">Getting Your Database Set Up For Use With Laravel</a></li><li class="arpw-li arpw-clearfix"><a href="https://vegibit.com/how-to-use-view-composers/" rel="bookmark"><img width="50" height="50" src="https://vegibit.com/wp-content/uploads/2018/01/How-To-Use-View-Composers-1-50x50.png" class="arpw-thumbnail alignleft wp-post-image" alt="How To Use View Composers" loading="lazy" srcset="https://vegibit.com/wp-content/uploads/2018/01/How-To-Use-View-Composers-1-50x50.png 50w, https://vegibit.com/wp-content/uploads/2018/01/How-To-Use-View-Composers-1-150x150.png 150w" sizes="(max-width: 50px) 100vw, 50px"></a><a class="arpw-title" href="https://vegibit.com/how-to-use-view-composers/" rel="bookmark">How To Use View Composers</a></li><li class="arpw-li arpw-clearfix"><a href="https://vegibit.com/c-classes-and-objects/" rel="bookmark"><img width="50" height="38" src="https://vegibit.com/wp-content/uploads/2019/02/C-Classes-And-Objects.png" class="arpw-thumbnail alignleft wp-post-image" alt="C# Classes And Objects" loading="lazy" srcset="https://vegibit.com/wp-content/uploads/2019/02/C-Classes-And-Objects.png 400w, https://vegibit.com/wp-content/uploads/2019/02/C-Classes-And-Objects-300x225.png 300w" sizes="(max-width: 50px) 100vw, 50px"></a><a class="arpw-title" href="https://vegibit.com/c-classes-and-objects/" rel="bookmark">C# Classes And Objects</a></li><li class="arpw-li arpw-clearfix"><a href="https://vegibit.com/wordpress-theme-development-tutorial-step-by-step/" rel="bookmark"><img width="50" height="50" src="https://vegibit.com/wp-content/uploads/2017/06/WordPress-Theme-Development-Tutorial-Step-By-Step-1-50x50.png" class="arpw-thumbnail alignleft wp-post-image" alt="WordPress Theme Development Tutorial Step By Step" loading="lazy" srcset="https://vegibit.com/wp-content/uploads/2017/06/WordPress-Theme-Development-Tutorial-Step-By-Step-1-50x50.png 50w, https://vegibit.com/wp-content/uploads/2017/06/WordPress-Theme-Development-Tutorial-Step-By-Step-1-150x150.png 150w" sizes="(max-width: 50px) 100vw, 50px"></a><a class="arpw-title" href="https://vegibit.com/wordpress-theme-development-tutorial-step-by-step/" rel="bookmark">WordPress Theme Development Tutorial Step By Step</a></li><li class="arpw-li arpw-clearfix"><a href="https://vegibit.com/developing-with-vuejs-and-php/" rel="bookmark"><img width="50" height="50" src="https://vegibit.com/wp-content/uploads/2016/02/vuejs-and-php-1-50x50.jpg" class="arpw-thumbnail alignleft wp-post-image" alt="Developing With VueJS and PHP" loading="lazy" srcset="https://vegibit.com/wp-content/uploads/2016/02/vuejs-and-php-1-50x50.jpg 50w, https://vegibit.com/wp-content/uploads/2016/02/vuejs-and-php-1-150x150.jpg 150w" sizes="(max-width: 50px) 100vw, 50px"></a><a class="arpw-title" href="https://vegibit.com/developing-with-vuejs-and-php/" rel="bookmark">Developing With VueJS and PHP</a></li><li class="arpw-li arpw-clearfix"><a href="https://vegibit.com/laravel-collections-tutorial/" rel="bookmark"><img width="50" height="50" src="https://vegibit.com/wp-content/uploads/2015/10/laravel-collections-50x50.jpg" class="arpw-thumbnail alignleft wp-post-image" alt="Laravel Collections Tutorial" loading="lazy" srcset="https://vegibit.com/wp-content/uploads/2015/10/laravel-collections-50x50.jpg 50w, https://vegibit.com/wp-content/uploads/2015/10/laravel-collections-150x150.jpg 150w" sizes="(max-width: 50px) 100vw, 50px"></a><a class="arpw-title" href="https://vegibit.com/laravel-collections-tutorial/" rel="bookmark">Laravel Collections Tutorial</a></li><li class="arpw-li arpw-clearfix"><a href="https://vegibit.com/refactor-the-laravel-regex-tool-to-use-repositories-and-dependency-injection/" rel="bookmark"><img width="50" height="50" src="https://vegibit.com/wp-content/uploads/2014/12/Refactor-The-Laravel-Regex-Tool-To-Use-Repositories-and-Dependency-Injection-1-50x50.jpg" class="arpw-thumbnail alignleft wp-post-image" alt="Refactor The Laravel Regex Tool To Use Repositories and Dependency Injection" loading="lazy" srcset="https://vegibit.com/wp-content/uploads/2014/12/Refactor-The-Laravel-Regex-Tool-To-Use-Repositories-and-Dependency-Injection-1-50x50.jpg 50w, https://vegibit.com/wp-content/uploads/2014/12/Refactor-The-Laravel-Regex-Tool-To-Use-Repositories-and-Dependency-Injection-1-150x150.jpg 150w" sizes="(max-width: 50px) 100vw, 50px"></a><a class="arpw-title" href="https://vegibit.com/refactor-the-laravel-regex-tool-to-use-repositories-and-dependency-injection/" rel="bookmark">Refactor The Laravel Regex Tool To Use Repositories and Dependency Injection</a></li><li class="arpw-li arpw-clearfix"><a href="https://vegibit.com/process-returned-mysql-query-results-in-php/" rel="bookmark"><img width="50" height="50" src="https://vegibit.com/wp-content/uploads/2014/10/4-Cool-Ways-To-Process-Returned-MySQL-Query-Results-In-PHP-1-50x50.jpg" class="arpw-thumbnail alignleft wp-post-image" alt="Process Returned MySQL Query Results In PHP" loading="lazy" srcset="https://vegibit.com/wp-content/uploads/2014/10/4-Cool-Ways-To-Process-Returned-MySQL-Query-Results-In-PHP-1-50x50.jpg 50w, https://vegibit.com/wp-content/uploads/2014/10/4-Cool-Ways-To-Process-Returned-MySQL-Query-Results-In-PHP-1-150x150.jpg 150w" sizes="(max-width: 50px) 100vw, 50px"></a><a class="arpw-title" href="https://vegibit.com/process-returned-mysql-query-results-in-php/" rel="bookmark">Process Returned MySQL Query Results In PHP</a></li></ul></div><!-- Generated by https://wordpress.org/plugins/advanced-random-posts-widget/ --></section></aside><!-- #secondary -->
+					</div>
+					<!-- /.col-md-4 -->
+					</div>
+		<!-- /.row -->
+	</div>
+	<!-- /.container -->
+
+
+</div><!-- #content -->
+
+<footer id="colophon" class="site-footer text-center bg-white mt-4 text-muted">
+
+    <section class="footer-widgets text-left">
+        <div class="container">
+            <div class="row">
+                                
+                                
+                                
+                            </div>
+            <!-- /.row -->
+        </div>
+    </section>
+
+    <div id="vbsiteinfo" class="container">
+        <div class="site-info">
+            <small><a href="https://vegibit.com/about-vegibit/">About</a> <a href="https://vegibit.com/privacy-policy/">Privacy</a> <a href="https://vegibit.com/terms-of-service/">Terms</a>
+                <a href="https://vegibit.com/user-site-map/">User Site Map</a> © 2013 - 2020 Vegibit.com
+            </small>
+        </div><!-- .site-info -->
+    </div>
+    <!-- /.container -->
+</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type="text/javascript" src="https://vegibit.com/wp-content/themes/wp-bootstrap-4/assets/js/bootstrap.js?ver=v4.0.0" id="bootstrap-4-js-js"></script>
+<script type="text/javascript" id="q2w3_fixed_widget-js-extra">
+/* <![CDATA[ */
+var q2w3_sidebar_options = [{"sidebar":"sidebar-1","margin_top":10,"margin_bottom":0,"stop_id":"","screen_max_width":1004,"screen_max_height":0,"width_inherit":false,"refresh_interval":1500,"window_load_hook":false,"disable_mo_api":false,"widgets":["arpw-widget-4"]}];
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://vegibit.com/wp-content/plugins/q2w3-fixed-widget/js/q2w3-fixed-widget.min.js?ver=5.1.9" id="q2w3_fixed_widget-js"></script>
+<script type="text/javascript" src="https://vegibit.com/wp-includes/js/wp-embed.min.js?ver=5.6" id="wp-embed-js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56b1f346909d731a" async></script>
+<script type="text/javascript">
+    var addthis_config = addthis_config || {};
+    addthis_config.data_track_addressbar = false;
+    addthis_config.data_track_clickback = false;
+</script>
+<script>
+    (function () {
+        if (typeof _bsa !== 'undefined' && _bsa) {
+            _bsa.init('fancybar', 'CK7ICKJU', 'placement:vegibitcom');
+        }
+    })();
+</script>
+</body>
+</html>
