@@ -33,9 +33,9 @@ abstract class AbstractScraper
     {
         if ($this->isTest) {
             $this->crawler = new Crawler();
-            $this->crawler->addHtmlContent(file_get_contents(
-                base_path('tests/sites/laravel_news.txt')
-            ));
+            // $this->crawler->addHtmlContent(file_get_contents(
+            //     base_path('tests/sites/'. $this->provider->slug .'.txt')
+            // ));
             return;
         }
 
@@ -58,6 +58,16 @@ abstract class AbstractScraper
                 'author_img' => $p->author?->img,
             ]);
         }
+    }
+
+    public function saveHtml(): ?bool
+    {
+        $this->crawler = $this->goutte->request('GET', $this->provider->request_url);
+
+        $done = file_put_contents(base_path('tests/sites/') . $this->provider->slug . '.txt', "<!doctype html><html>".
+        $this->crawler->html() . "</html>");
+
+        return $done;
     }
 
     protected function item(
