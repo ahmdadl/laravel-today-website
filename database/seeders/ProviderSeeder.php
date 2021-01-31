@@ -24,6 +24,7 @@ class ProviderSeeder extends Seeder
             ->count(5)
             ->state(fn () => [
                 "user_id" => $users->random()->id,
+                'status' => Provider::APPROVED, 
             ])
             ->create();
         
