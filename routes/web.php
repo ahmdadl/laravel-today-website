@@ -56,9 +56,9 @@ Route::prefix('/providers')->group(function () {
 
 require __DIR__ . '/auth.php';
 
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});
+// Route::group(['prefix' => 'admin'], function () {
+//     Voyager::routes();
+// });
 
 Route::get('/{provider}', GetPostsByProvider::class)->where(
     'provider',

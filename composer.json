@@ -11,6 +11,7 @@
         "php": "^8.0",
         "artesaos/seotools": "^0.20.0",
         "cviebrock/eloquent-sluggable": "^8.0",
+        "encore/laravel-admin": "^1.8",
         "enlightn/enlightn": "^1.4",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
