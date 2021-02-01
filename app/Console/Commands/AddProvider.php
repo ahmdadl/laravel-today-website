@@ -43,7 +43,7 @@ class AddProvider extends Command
      */
     public function handle()
     {
-        $title = Str::title($this->argument('title'));
+        $title = str_replace('-', '', Str::title($this->argument('title')));
         $req_url = $this->argument('req_url');
 
         $this->warn('Creating Scraper for: ' . $title);
@@ -71,7 +71,9 @@ class AddProvider extends Command
 
         $this->info('files created successfully');
 
-        if ($this->hasOption('-d')) return;
+        if ($this->hasOption('-d')) {
+            return;
+        }
 
         $this->warn('dumping provider html data...');
 
