@@ -7,7 +7,6 @@ use App\Actions\RejectProvider;
 use App\FormFields\StateFormField;
 use Enlightn\Enlightn\EnlightnServiceProvider;
 use Illuminate\Support\ServiceProvider;
-use TCG\Voyager\Facades\Voyager;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -21,7 +20,6 @@ class AppServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->app->register(EnlightnServiceProvider::class);
         }
-        Voyager::addFormField(StateFormField::class);
     }
 
     /**
@@ -31,7 +29,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Voyager::addAction(ApproveProvider::class);
-        Voyager::addAction(RejectProvider::class);
+        // 
     }
 }
