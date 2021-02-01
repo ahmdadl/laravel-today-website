@@ -5,16 +5,16 @@ namespace App\Actions;
 use App\Models\Provider;
 use TCG\Voyager\Actions\AbstractAction;
 
-class ApproveProvider extends AbstractAction
+class RejectProvider extends AbstractAction
 {
     public function getTitle()
     {
-        return 'Approve';
+        return 'Reject';
     }
 
     public function getIcon()
     {
-        return 'voyager-check';
+        return 'voyager-skull';
     }
 
     public function getPolicy()
@@ -25,10 +25,10 @@ class ApproveProvider extends AbstractAction
     public function getAttributes()
     {
         return [
-            'class' => 'btn btn-sm btn-primary pull-right approve mx-1',
+            'class' => 'btn btn-sm btn-danger pull-right mx-1 approve',
             'data-id' => $this->data->{$this->data->getKeyName()},
             'id'      => 'approve-'.$this->data->{$this->data->getKeyName()},
-            'data-state' => Provider::APPROVED,
+            'data-state' => Provider::Rejected,
         ];
     }
 
