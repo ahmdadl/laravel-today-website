@@ -18,8 +18,9 @@ class StateFormField extends AbstractHandler
 
         $provider_class = new ReflectionClass('App\Models\Provider');
         $states = $provider_class->getConstants(
-            ReflectionClassConstant::IS_PRIVATE,
+            ReflectionClassConstant::IS_PUBLIC,
         );
+        $states = array_filter($states, fn($x) => is_int($x));
 
         return view('formfields.state', [
             'row' => $row,
