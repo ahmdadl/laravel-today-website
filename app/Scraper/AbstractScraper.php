@@ -46,7 +46,7 @@ abstract class AbstractScraper
         $this->crawler = $this->goutte->request('GET', $this->provider->request_url);
     }
 
-    public function run(): bool {
+    public function run(): bool | null {
         $arr = array_filter($this->extract(), fn ($i) => !is_null($i));
 
         foreach ($arr as $p) {
@@ -65,7 +65,7 @@ abstract class AbstractScraper
             } catch (QueryException | PDOException) {}
         }
 
-        return Post::whereTitle($arr[0]->title)->exists();
+        return isset($arr[0]) ? Post::whereTitle($arr[0]->title)->exists() : null;
     }
 
     public function saveHtml(): ?bool
@@ -95,9 +95,9 @@ abstract class AbstractScraper
 
     protected function findEl(Crawler $node, string $selector): ?Crawler
     {
-        $node = $node->filter($selector);
+        $node = $node?->filter($selector);
 
-        return is_null($node->getNode(0)) ? null : $node;
+        return is_null($node?->getNode(0)) ? null : $node;
     }
 
     protected abstract function extract(): array;
