@@ -82,4 +82,18 @@ class ProviderController extends Controller
 
         return view('provider.check');
     }
+
+    public function updateStatus(int $id)
+    {
+        $this->authorize('browse_admin');
+
+        ['state' => $state] = request()->validate([
+            'state' => 'required|integer|min:0|max:3',
+        ]);
+
+        $provider = Provider::findOrFail($id);
+        $provider->status = $state;
+
+        return response()->json(['updated' => $provider->update()]);
+    }
 }

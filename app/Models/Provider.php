@@ -14,9 +14,9 @@ class Provider extends Model
     use HasFactory;
     use sluggable;
 
-    private const PENDING = 0;
-    private const APPROVED = 1;
-    private const Rejected = 2;
+    public const PENDING = 0;
+    public const APPROVED = 1;
+    public const Rejected = 2;
 
     public $timestamps = false;
 

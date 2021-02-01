@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Actions\ApproveProvider;
 use App\FormFields\StateFormField;
 use Enlightn\Enlightn\EnlightnServiceProvider;
 use Illuminate\Support\ServiceProvider;
@@ -29,6 +30,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Voyager::addAction(ApproveProvider::class);
     }
 }

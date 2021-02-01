@@ -48,6 +48,10 @@ Route::prefix('/providers')->group(function () {
 
     Route::get('/check', [ProviderController::class, 'checkState']);
     Route::post('/check', [ProviderController::class, 'checkState']);
+
+    Route::put('/{id}', [ProviderController::class, 'updateStatus'])
+        ->middleware('auth')
+        ->whereNumber('id');
 });
 
 require __DIR__ . '/auth.php';
@@ -60,4 +64,3 @@ Route::get('/{provider}', GetPostsByProvider::class)->where(
     'provider',
     "^[a-z0-9]+(?:-[a-z0-9]+)*$",
 );
-

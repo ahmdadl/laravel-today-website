@@ -109,4 +109,25 @@ class ProviderControllerTest extends TestCase
         ])->assertStatus(204);
     }
     
+    public function testOnlyAdminCanUpdateProvider()
+    {
+        $this->user->save();
+        $this->provider->save();
+        // $this->withoutExceptionHandling();
+        $this->putJson(self::BASE_URI . $this->provider->slug)->assertUnauthorized();
+
+        $this->actingAs($this->user)->putJson(self::BASE_URI . $this->provider->slug)->assertForbidden();
+    }
+
+    // public function testAdminCanUpdateProvider()
+    // {
+    //     $this->user->save();
+    //     $this->provider->save();
+
+    //     $this->actingAs($this->user)->putJson(self::BASE_URI . $this->provider->slug, [
+    //         'state' => Provider::Rejected
+    //     ])->assertOk()->assertJson(['updated' => true]);
+
+    //     $this->assertTrue(Provider::whereStatus(Provider::Rejected)->exists());
+    // }
 }
