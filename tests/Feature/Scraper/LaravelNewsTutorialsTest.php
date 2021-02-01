@@ -9,7 +9,7 @@ class LaravelNewsTutorialsTest extends Scraper
 {
     protected string $type = LaravelNewsTutorials::class;
     protected array $providerAttr = [
-        'title' => 'LaravelNewsTutorials',
+        'title' => 'Laravel News Tutorials',
         'request_url' => 'https://laravel-news.com/category/laravel-tutorials',
     ];
 

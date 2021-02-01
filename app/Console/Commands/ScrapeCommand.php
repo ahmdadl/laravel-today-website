@@ -73,7 +73,7 @@ class ScrapeCommand extends Command
         $done = (new $class(
             $this->category,
             $provider,
-            $this->hasOption('test'),
+            $this->option('test'),
         ))->run();
 
         if (!$done) {
