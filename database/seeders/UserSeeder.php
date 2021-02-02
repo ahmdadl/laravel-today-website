@@ -17,7 +17,7 @@ class UserSeeder extends Seeder
     public function run()
     {
         User::factory()
-            ->count(3)
+            ->count(4)
             ->sequence(
                 $this->provUser(
                     'Laravel News',
@@ -34,6 +34,11 @@ class UserSeeder extends Seeder
                     'https://code.tutsplus.com',
                     'https://static.tutsplus.com/packs/media/images/favicon-4822c2463d591273c6c8eea96b1422e3.png',
                 ),
+                $this->provUser(
+                    'Scott Robinson',
+                    'https://dor.ky/',
+                    'https://dor.ky/assets/images/favicons/favicon-32x32.png',
+                )
             )
             ->create();
 

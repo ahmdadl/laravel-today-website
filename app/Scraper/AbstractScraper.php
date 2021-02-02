@@ -17,17 +17,16 @@ abstract class AbstractScraper
 {
     protected Client $goutte;
     protected Crawler $crawler;
+    protected Category $category;
 
-    // protected string $baseUri;
-    // protected string $requestUri;
-    // protected int $authorId;
+    protected string $categorySlug = 'news';
 
     public function __construct(
-        protected Category $category,
         protected Provider $provider,
         protected bool $isTest = false
     ) {
         $this->goutte = app('goutte');
+        $this->category = Category::whereSlug($this->categorySlug)->first();
         $this->getInstance();
     }
 

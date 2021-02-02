@@ -26,7 +26,7 @@ class ProviderSeeder extends Seeder
             'Laravel News',
             'https://laravel-news.com',
             'https://laravel-news.com/category/news',
-            '© 2012 - 2021 LARAVEL NEWS — BY ERIC L.BARNES - A DIVISION OF DOTDEV INC',
+            'Your official news source for the Laravel PHP Framework',
         );
         $this->prov(
             'Laravel News',
@@ -43,15 +43,23 @@ class ProviderSeeder extends Seeder
             'Laravel Code Tutorials by Envato Tuts+',
         );
 
-        Provider::factory()
-            ->count(5)
-            ->state(
-                fn() => [
-                    'user_id' => $users->random()->id,
-                    'status' => Provider::APPROVED,
-                ],
-            )
-            ->create();
+        $this->prov(
+            'Scott Robinson',
+            'Dor-Ky',
+            'https://dor.ky',
+            'https://dor.ky/tagged/laravel/',
+            'I`m a software developer located in Staffordshire, United Kingdom specialising in PHP, Laravel and APIs. I love  sharing the things I learn'
+        );
+
+        // Provider::factory()
+        //     ->count(5)
+        //     ->state(
+        //         fn() => [
+        //             'user_id' => $users->random()->id,
+        //             'status' => Provider::APPROVED,
+        //         ],
+        //     )
+        //     ->create();
 
         DB::commit();
     }

@@ -2,15 +2,12 @@
 
 namespace App\Console\Commands;
 
-use App\Models\Category;
 use App\Models\Provider;
 use Illuminate\Console\Command;
 use Str;
 
 class ScrapeCommand extends Command
 {
-    protected Category $category;
-
     /**
      * The name and signature of the console command.
      *
@@ -18,7 +15,6 @@ class ScrapeCommand extends Command
      */
     protected $signature = 'scrape
                 {provider? : provider slug}
-                {category=news : category slug}
                 {--t|test : use local saved data}';
 
     /**
@@ -45,10 +41,6 @@ class ScrapeCommand extends Command
      */
     public function handle()
     {
-        $this->category = Category::whereSlug(
-            $this->argument('category'),
-        )->first();
-
         if ($this->hasArgument('provider')) {
             return $this->one($this->argument('provider'));
         }
@@ -71,7 +63,6 @@ class ScrapeCommand extends Command
         $this->warn('Begin Scraping: ' . $provider->title . '...');
 
         $done = (new $class(
-            $this->category,
             $provider,
             $this->option('test'),
         ))->run();
