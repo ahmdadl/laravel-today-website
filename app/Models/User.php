@@ -52,9 +52,9 @@ class User extends Model
      */
     public function getImageUrlAttribute(): string
     {
-        return is_null($this->avatar) || empty($this->avatar)
+        return is_null($this->image) || empty($this->image)
             ? "https://images.test/users/5.jpg"
-            : url('/storage/' . $this->avatar);
+            : $this->image;
     }
 
     public function provider(): HasOne
