@@ -17,12 +17,10 @@ final class LaravelNewsTutorials extends AbstractScraper
                 $img = $this->findEl($node, '.card__image img')?->first()?->attr('src');
                 $con = $this->findEl($node, '.card__content')?->first();
                 $title = $con?->filter('h4')?->first()?->text();
-                $created_at = Carbon::createFromTimeString(
-                    $this
-                        ->findEl($con, "span.label text-xs")
-                        ?->last()
-                        ?->text() . " 00:00" ?? Carbon::now()
-                );
+                $created_at =  $this
+                    ->findEl($con, "span.label text-xs")
+                    ?->last()
+                    ?->text();
 
                 return $this->item($title, $link, $created_at, $img);
             });

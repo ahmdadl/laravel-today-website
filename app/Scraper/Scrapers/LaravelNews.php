@@ -21,12 +21,10 @@ final class LaravelNews extends AbstractScraper
                     ?->first()
                     ?->attr('src');
 
-                $created_at = Carbon::createFromTimeString(
-                    $this
-                        ->findEl($node, ".prose > span > span")
-                        ?->last()
-                        ?->text() . " 00:00" ?? Carbon::now()
-                );
+                $created_at = $this
+                    ->findEl($node, ".prose > span > span")
+                    ?->last()
+                    ?->text();
                 $author = $this->findEl($node, '.post__author')?->first();
                 $authorLink = $this->findEl($author, ".author__content > h4 > a")?->first();
 

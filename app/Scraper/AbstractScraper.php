@@ -81,10 +81,13 @@ abstract class AbstractScraper
     protected function item(
         string $title,
         string $url,
-        string $created_at,
+        ?string $created_at,
         ?string $image = null,
         ?object $author = null
     ): object {
+        $created_at = Carbon::createFromTimeString(
+            ($created_at ?? Carbon::today()->toDateString()) . " 00:00"
+        );
         return (object) compact('title', 'url', 'image', 'created_at', 'author');
     }
 
