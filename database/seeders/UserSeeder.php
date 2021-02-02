@@ -17,7 +17,7 @@ class UserSeeder extends Seeder
     public function run()
     {
         User::factory()
-            ->count(2)
+            ->count(3)
             ->sequence(
                 $this->provUser(
                     'Laravel News',
@@ -28,6 +28,11 @@ class UserSeeder extends Seeder
                     'Scotch io',
                     'https://scotch.io',
                     'https://scotch.io/favicon-32x32.png',
+                ),
+                $this->provUser(
+                    'Envato Tuts+',
+                    'https://code.tutsplus.com',
+                    'https://static.tutsplus.com/packs/media/images/favicon-4822c2463d591273c6c8eea96b1422e3.png',
                 ),
             )
             ->create();
@@ -48,7 +53,7 @@ class UserSeeder extends Seeder
     ): array {
         $name = Str::title($name);
         $slug = Str::slug($name);
-        $email = $name . '@' . $name . '.com';
+        $email = $slug . '@' . $slug . '.com';
         $password = Hash::make(bin2hex(random_bytes(9)));
 
         return compact('name', 'url', 'image', 'url', 'password', 'email');
