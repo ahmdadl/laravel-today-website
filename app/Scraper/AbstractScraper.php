@@ -34,7 +34,7 @@ abstract class AbstractScraper
     private function getInstance(): void
     {
         if ($this->isTest) {
-            $fileName = 'tests/sites/'. $this->provider->slug .'.txt';
+            $fileName = 'tests/sites/'. $this->provider->slug .'.html';
             if (!file_exists($fileName)) return;
             $this->crawler = new Crawler();
             $this->crawler->addHtmlContent(file_get_contents(
@@ -72,7 +72,7 @@ abstract class AbstractScraper
     {
         $this->crawler = $this->goutte->request('GET', $this->provider->request_url);
 
-        $done = file_put_contents(base_path('tests/sites/') . $this->provider->slug . '.txt', "<!doctype html><html>".
+        $done = file_put_contents(base_path('tests/sites/') . $this->provider->slug . '.html', "<!doctype html><html>".
         $this->crawler->html() . "</html>");
 
         return $done;
