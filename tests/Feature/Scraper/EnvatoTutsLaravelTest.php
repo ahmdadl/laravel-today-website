@@ -9,7 +9,7 @@ class CodeTutsTest extends Scraper
 {
     protected string $type = EnvatoTutsLaravel::class;
     protected array $providerAttr = [
-        'title' => 'Code Tuts',
+        'title' => 'envato Tuts Laravel',
         'request_url' => 'https://code.tutsplus.com/categories/laravel'
     ];
 

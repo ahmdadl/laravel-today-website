@@ -9,7 +9,7 @@ class DorKyTest extends Scraper
 {
     protected string $type = DorKy::class;
     protected array $providerAttr = [
-        'title' => 'Dor dot Ky',
+        'title' => 'Dor Ky',
         'request_url' => 'https://dor.ky/tagged/laravel/',
     ];
 

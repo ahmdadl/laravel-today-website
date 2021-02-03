@@ -3,11 +3,11 @@
 namespace Tests\Feature\Scraper;
 
 use App\Models\Post;
-use App\Scraper\Scrapers\DigitalOcean;
+use App\Scraper\Scrapers\DigitaloceanLaravel;
 
 class DigitaloceanLaravelTest extends Scraper
 {
-    protected string $type = DigitalOcean::class;
+    protected string $type = DigitaloceanLaravel::class;
     protected array $providerAttr = [
         'title' => 'DigitalOcean laravel',
         'request_url' =>
