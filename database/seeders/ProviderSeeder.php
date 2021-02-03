@@ -75,6 +75,14 @@ class ProviderSeeder extends Seeder
             'I have been blogging about software development since 2012, and developing since the early 2000s. Proficiencies include C#, PHP, Laravel, parsers, and data management'
         );
 
+        $this->prov(
+            'Povilas Korop',
+            'Laravel Daily',
+            'https://laraveldaily.com',
+            'https://laraveldaily.com',
+            'Laravel Tips & Tutorials - Laravel Daily'
+        );
+
         // Provider::factory()
         //     ->count(5)
         //     ->state(
