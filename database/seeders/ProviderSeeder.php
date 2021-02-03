@@ -83,6 +83,14 @@ class ProviderSeeder extends Seeder
             'Laravel Tips & Tutorials - Laravel Daily'
         );
 
+        $this->prov(
+            'Vegibit',
+            'Vegibit',
+            'https://vegibit.com',
+            'https://vegibit.com/tag/laravel/',
+            'laravel & Vegibit'
+        );
+
         // Provider::factory()
         //     ->count(5)
         //     ->state(
