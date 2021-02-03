@@ -42,11 +42,14 @@ class ScrapeCommand extends Command
      */
     public function handle()
     {
-        if ($this->hasArgument('provider')) {
+        if (null !== $this->argument('provider')) {
             return $this->one($this->argument('provider'));
         }
 
         // scrape all providers
+        Provider::all()->each(
+            fn(Provider $provider) => $this->one($provider->slug),
+        );
     }
 
     private function one(string $slug)
@@ -67,13 +70,10 @@ class ScrapeCommand extends Command
 
         $this->warn('Begin Scraping: ' . $provider->title . '...');
 
-        $done = (new $class(
-            $provider,
-            $this->option('test'),
-        ))->run();
+        $done = (new $class($provider, $this->option('test')))->run();
 
         if (!$done) {
-            $this->error('an error occured');
+            $this->error('an error occured scraping provider');
             return;
         }
 
