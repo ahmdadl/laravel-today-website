@@ -55,11 +55,11 @@ abstract class AbstractScraper
                     'provider_slug' => $this->provider->slug,
                     'title' => $p->title,
                     'url' => $p->url,
-                    'image' => $p->image,
+                    'image' => $p?->image,
                     'created_at' => $p->created_at,
-                    'author' => $p->author?->name,
-                    'author_url' => $p->author?->uri,
-                    'author_img' => $p->author?->img,
+                    'author' => $p?->author?->name,
+                    'author_url' => $p?->author?->uri,
+                    'author_img' => $p?->author?->img,
                 ]);
             } catch (QueryException | PDOException) {}
         }

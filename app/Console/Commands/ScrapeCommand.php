@@ -15,6 +15,7 @@ class ScrapeCommand extends Command
      */
     protected $signature = 'scrape
                 {provider? : provider slug}
+                {class? : provider class name}
                 {--t|test : use local saved data}';
 
     /**
@@ -59,6 +60,10 @@ class ScrapeCommand extends Command
 
         $class =
             '\App\Scraper\Scrapers\\' . str_replace('-', '', Str::title($slug));
+
+        if (null !== $this->argument('class')) {
+            $class = '\App\Scraper\Scrapers\\' . $this->argument('class');
+        }
 
         $this->warn('Begin Scraping: ' . $provider->title . '...');
 

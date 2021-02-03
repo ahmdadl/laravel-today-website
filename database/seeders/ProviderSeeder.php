@@ -51,6 +51,14 @@ class ProviderSeeder extends Seeder
             'I`m a software developer located in Staffordshire, United Kingdom specialising in PHP, Laravel and APIs. I love  sharing the things I learn'
         );
 
+        $this->prov(
+            'DigitalOcean',
+            'DigitalOcean laravel',
+            'https://www.digitalocean.com',
+            'https://www.digitalocean.com/community/search?q=laravel&primary_filter=newest&type=tutorials',
+            'Technical tutorials, Q&A, events — This is an inclusive place where developers can find or lend support and discover new ways to contribute to the community'
+        );
+
         // Provider::factory()
         //     ->count(5)
         //     ->state(

@@ -28,7 +28,7 @@ class CreateProvidersTable extends Migration
                 ->index();
             $table->string('url');
             $table->string('request_url')->unique()->index();
-            $table->string('bio', 140)->nullable();
+            $table->string('bio', 180)->nullable();
             $table
                 ->unsignedTinyInteger('status')
                 ->default(Provider::PENDING)

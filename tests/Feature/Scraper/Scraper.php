@@ -27,9 +27,10 @@ abstract class Scraper extends TestCase
     {
         parent::setUp();
 
-        $this->category = Category::factory()->create([
-            'title' => $this->categoryTitle,
-        ]);
+        $this->category = (Category::factory()
+            ->count(2)
+            ->sequence(['title' => 'news'], ['title' => 'tutorial'])
+            ->create())->first();
         $this->provider = Provider::factory()->create($this->providerAttr);
         $this->crawler = $this->getCrawler($this->type);
 
@@ -38,6 +39,6 @@ abstract class Scraper extends TestCase
 
     private function getCrawler($class): AbstractScraper
     {
-        return new $class($this->category, $this->provider, true);
+        return new $class($this->provider, true);
     }
 }
