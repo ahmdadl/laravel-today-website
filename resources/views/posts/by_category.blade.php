@@ -5,7 +5,7 @@
         'owner' => $owner ?? null,
     ])
 
-    @if($posts->count() > 15)
+    @if($posts->count())
     <div class='pt-6 mt-5'>
         <hr class='mt-5 mb-2 border border-gray-500' />
         {{$posts->links()}}
