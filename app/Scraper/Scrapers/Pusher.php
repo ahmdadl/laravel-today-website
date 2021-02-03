@@ -7,6 +7,8 @@ use Symfony\Component\DomCrawler\Crawler;
 
 final class Pusher extends AbstractScraper
 {
+    protected string $categorySlug = 'tutorial';
+
     protected function extract(): array
     {
         return $this->crawler->filter('div.css-df8fv.e1xbdcly1')?->each(function (Crawler $node) {

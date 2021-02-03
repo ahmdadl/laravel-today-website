@@ -67,6 +67,14 @@ class ProviderSeeder extends Seeder
             'Pusher tutorials, learn what you can build with Pusher'
         );
 
+        $this->prov(
+            'John Koster',
+            'Stillat',
+            'https://stillat.com',
+            'https://stillat.com/category/laravel-5',
+            'I have been blogging about software development since 2012, and developing since the early 2000s. Proficiencies include C#, PHP, Laravel, parsers, and data management'
+        );
+
         // Provider::factory()
         //     ->count(5)
         //     ->state(

@@ -8,6 +8,8 @@ use Symfony\Component\DomCrawler\Crawler;
 
 final class LaravelNewsTutorials extends AbstractScraper
 {
+    protected string $categorySlug = 'tutorial';
+
     protected function extract(): array
     {
         return $this->crawler
