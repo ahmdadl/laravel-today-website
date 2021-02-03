@@ -3,6 +3,7 @@
 namespace App\Admin\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Encore\Admin\Controllers\Dashboard;
 use Encore\Admin\Layout\Column;
 use Encore\Admin\Layout\Content;
@@ -12,10 +13,13 @@ class HomeController extends Controller
 {
     public function index(Content $content)
     {
+        $usersCount = User::count();
+        // $
+
         return $content
             ->title('Dashboard')
-            ->description('Description...')
-            ->header('page header')
+            // ->description('Description...')
+            // ->header('page header')
             // ->breadcrumb(
             //     ['text' => 'Dashboard', 'url' => '/admin'],
             //     ['text' => 'User management', 'url' => '/admin/users'],

@@ -4030,6 +4030,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/css/admin.css":
+/*!*********************************!*\
+  !*** ./resources/css/admin.css ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./node_modules/process/browser.js":
 /*!*****************************************!*\
   !*** ./node_modules/process/browser.js ***!
@@ -4596,7 +4609,8 @@ function __classPrivateFieldSet(receiver, privateMap, value) {
 /******/ 		
 /******/ 		var deferredModules = [
 /******/ 			["./resources/js/app.ts"],
-/******/ 			["./resources/css/app.css"]
+/******/ 			["./resources/css/app.css"],
+/******/ 			["./resources/css/admin.css"]
 /******/ 		];
 /******/ 		// no chunk on demand loading
 /******/ 		
