@@ -59,6 +59,14 @@ class ProviderSeeder extends Seeder
             'Technical tutorials, Q&A, events — This is an inclusive place where developers can find or lend support and discover new ways to contribute to the community'
         );
 
+        $this->prov(
+            'Pusher',
+            'Pusher',
+            'https://pusher.com',
+            'https://pusher.com/tutorials?tag=Laravel',
+            'Pusher tutorials, learn what you can build with Pusher'
+        );
+
         // Provider::factory()
         //     ->count(5)
         //     ->state(
