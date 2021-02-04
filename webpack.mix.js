@@ -14,13 +14,20 @@ const mix = require('laravel-mix');
 const postcssPlugins = [
     require('postcss-import'),
     require('precss'),
-    require('tailwindcss'),
     require('autoprefixer'),
 ];
 
 mix.ts('resources/js/app.ts', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', postcssPlugins)
-    .postCss('resources/css/admin.css', 'public/css', postcssPlugins)
+    .postCss(
+        'resources/css/app.css',
+        'public/css',
+        postcssPlugins.concat([require('tailwindcss')('./tailwind.config.js')])
+    )
+    .postCss(
+        'resources/css/admin.css',
+        'public/css',
+        postcssPlugins.concat([require('tailwindcss')('./adminTW.config.js')])
+    )
     .webpackConfig(require('./webpack.config'))
     .version();
 // .browserSync({
