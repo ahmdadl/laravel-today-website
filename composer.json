@@ -18,11 +18,13 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "hedronium/spaceless-blade": "^3.0",
         "jxlwqq/material-ui": "^1.0",
+        "laravel-admin-ext/backup": "^1.1",
         "laravel-admin-ext/helpers": "1.*",
         "laravel-admin-ext/log-viewer": "^1.0",
         "laravel-admin-ext/scheduling": "^1.1",
         "laravel/framework": "^8.12",
         "laravel/ui": "^3.2",
+        "spatie/laravel-backup": "^7.2",
         "tobiasdierich/gauge": "^0.0.5",
         "weidner/goutte": "^2.0"
     },
