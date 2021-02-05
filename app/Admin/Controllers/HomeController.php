@@ -27,11 +27,6 @@ class HomeController extends Controller
 
         $postsLikes = Post::get(['title', 'liked']);
 
-        // dd(Provider::select('slug')
-        // ->withCount('posts')
-        // ->groupBy('slug')
-        // ->get(''));
-
         $providersPosts = Provider::select('slug')
             ->withCount('posts')
             ->groupBy('slug')

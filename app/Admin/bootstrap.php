@@ -21,3 +21,7 @@
 Encore\Admin\Form::forget(['map', 'editor']);
 Admin::css('/css/admin.css');
 Admin::js('https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js');
+
+Admin::navbar(function (\Encore\Admin\Widgets\Navbar $navbar) {
+    $navbar->right(view('admin.navbar'));
+});
