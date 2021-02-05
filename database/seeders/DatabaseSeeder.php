@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use Artisan;
 use DB;
 use Encore\Admin\Auth\Database\AdminTablesSeeder as AdminSeeder;
 use Illuminate\Database\Seeder;
@@ -23,5 +24,10 @@ class DatabaseSeeder extends Seeder
             PostSeeder::class,
             AdminTablesSeeder::class,
         ]);
+
+        Artisan::call('admin:import backup');
+        Artisan::call('admin:import helpers');
+        Artisan::call('admin:import log-viewer');
+        Artisan::call('admin:import scheduling');
     }
 }

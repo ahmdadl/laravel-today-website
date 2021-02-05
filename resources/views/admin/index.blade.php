@@ -32,7 +32,7 @@
         </div>
     </div>
 
-    <hr class='my-5 border-gray-400 w-80' />
+    {{-- <hr class='my-5 border-gray-400 w-80' /> --}}
 
     {{-- <div class='grid grid-cols-1 gap-3 sm:grid-cols-2'>
         <div class='text-white bg-gray-700'>

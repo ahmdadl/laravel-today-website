@@ -2,7 +2,11 @@
 
 namespace Database\Seeders;
 
+use Encore\Admin\Auth\Database\Administrator;
 use Encore\Admin\Auth\Database\Menu;
+use Encore\Admin\Auth\Database\Permission;
+use Encore\Admin\Auth\Database\Role;
+use Hash;
 use Illuminate\Database\Seeder;
 
 class AdminTablesSeeder extends Seeder
@@ -32,11 +36,29 @@ class AdminTablesSeeder extends Seeder
 
         // \Encore\Admin\Auth\Database\Permission::insert([]);
 
-        // \Encore\Admin\Auth\Database\Role::insert([]);
+        Role::insert([
+            'name' => 'Reader',
+            'slug' => 'reader',
+        ]);
 
         // pivot tables
         // DB::table('admin_role_menu')->insert([]);
 
         // DB::table('admin_role_permissions')->insert([]);
+
+        Administrator::create([
+            'username' => 'admin2',
+            'password' => Hash::make('admin'),
+            'name' => 'Ahmed Adel',
+        ]);
+        Administrator::latest()
+            ->first()
+            ->roles()
+            ->save(Role::latest()->first());
+
+        Role::latest()
+            ->first()
+            ->permissions()
+            ->save(Permission::whereSlug('dashboard')->sole());
     }
 }
