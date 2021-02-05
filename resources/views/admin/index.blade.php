@@ -15,10 +15,13 @@
     </div>
 
     <div class='grid grid-cols-1 gap-2'>
-        <div class='relative' style='height: 30rem'>
+        <div class='relative' style='height: 32rem'>
             <canvas id="postsOverTime" width="200" height="200"></canvas>
         </div>
-        <div class='relative' style='height: 30rem'>
+        <div class='relative' style='height: 32rem'>
+            <canvas id="providersPosts" width="200" height="200"></canvas>
+        </div>
+        <div class='relative' style='height: 32rem'>
             <canvas id="postsLikes" width="200" height="200"></canvas>
         </div>
     </div>
@@ -38,11 +41,19 @@
         );
         createChart(
             'postsLikes',
-            {!! json_encode($postsLikes->map(fn ($x) => $x->title)) !!},
+            {!! json_encode($postsLikes->map(fn ($x) => \Str::limit($x->title, 10))) !!},
             {{ $postsLikes->map(fn ($x) => $x->liked) }},
             'Likes',
             {{$postsLikes->count()}},
             'Posts Likes'
+        );
+        createChart(
+            'providersPosts',
+            {!! json_encode($providersPosts->map(fn ($x) => \Str::title(str_replace("-", " ", $x->slug)))) !!},
+            {{ $providersPosts->map(fn ($x) => $x->posts_count) }},
+            'posts',
+            {{$providersPosts->count()}},
+            'Posts per Provider'
         );
     });
 
@@ -72,7 +83,7 @@ function createChart(id, labels, data, label, count, text) {
                 }],
                 xAxes: [{
                     ticks: {
-                        callback: (x) => x.substr(0, 10) + '...'
+                        // callback: (x) => x.substr(0, 20) + '...'
                     }
                 }]
             },
