@@ -24,9 +24,28 @@
         <div class='relative' style='height: 33rem'>
             <canvas id="postsLikes" width="200" height="200"></canvas>
         </div>
+        <div class='relative' style='height: 33rem'>
+            <canvas id="PopularPosts" width="200" height="200"></canvas>
+        </div>
     </div>
 
-    <hr class='my-3 border-gray-400 w-80' />
+    <hr class='my-5 border-gray-400 w-80' />
+
+    {{-- <div class='grid grid-cols-1 gap-3 sm:grid-cols-2'>
+        <div class='text-white bg-gray-700'>
+            <h2 class='p-3 m-0 text-2xl font-semibold bg-green-700'>Top Popular Posts</h2>
+            <div class=''>
+                <ul class='list-none'>
+                    @foreach($postsLikes->take(10) as $post)
+                        <li class='flex justify-between p-2 space-x-3 border-b border-gray-600'>
+                            <span>{{$post->title}}</span>
+                            <span class='text-2xl font-semibold likesCount'>{{$post->liked}}</span>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+    </div> --}}
 </div>
 
 <script>
@@ -38,7 +57,6 @@
             ) !!},
             {{ $postsChart->map(fn ($x) => $x->count) }},
           'Posts',
-          {{$postsChart->count()}},
           'Posts over Time'
         );
         createChart(
@@ -46,7 +64,6 @@
             {!! json_encode($postsLikes->map(fn ($x) => \Str::limit($x->title, 10))) !!},
             {{ $postsLikes->map(fn ($x) => $x->liked) }},
             'Likes',
-            {{$postsLikes->count()}},
             'Posts Likes'
         );
         createChart(
@@ -54,13 +71,23 @@
             {!! json_encode($providersPosts->map(fn ($x) => \Str::title(str_replace("-", " ", $x->slug)))) !!},
             {{ $providersPosts->map(fn ($x) => $x->posts_count) }},
             'posts',
-            {{$providersPosts->count()}},
             'Posts per Provider'
         );
+        createChart(
+            'PopularPosts',
+            {!! json_encode(($postsLikes->take(15))->map(fn ($x) => \Str::limit($x->title, 11))) !!},
+            {{ ($postsLikes->take(15))->map(fn ($x) => $x->liked) }},
+            'likes',
+            'Popular Posts'
+        );
+
+        // $('.likesCount').each(function () {
+        //     $(this).text(formatNum($(this).text()))
+        // });
     });
 
 
-function createChart(id, labels, data, label, count, text) {
+function createChart(id, labels, data, label, text) {
     var ctx = document.getElementById(id).getContext('2d');
     var bg = random_rgb();
     var myChart = new Chart(ctx, {
@@ -105,6 +132,25 @@ function random_rgb() {
     // mutible by 350 to make the color always lighter
     var o = Math.round, r = Math.random, s = 350;
     return o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s);
+}
+function formatNum (num) {
+    var si = [
+        { value: 1, symbol: "" },
+        { value: 1E3, symbol: "k" },
+        { value: 1E6, symbol: "M" },
+        { value: 1E9, symbol: "G" },
+        { value: 1E12, symbol: "T" },
+        { value: 1E15, symbol: "P" },
+        { value: 1E18, symbol: "E" }
+    ];
+    var rx = /\.0+$|(\.[0-9]*[1-9])0+$/;
+    var i;
+    for (i = si.length - 1; i > 0; i--) {
+        if (num >= si[i].value) {
+        break;
+        }
+    }
+    return (num / si[i].value).toFixed(1).replace(rx, "$1") + si[i].symbol;
 }
 </script>
 
