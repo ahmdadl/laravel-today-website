@@ -7,6 +7,7 @@ use App\Models\Post;
 use App\Models\Provider;
 use App\Models\User;
 use Arr;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class PostFactory extends Factory
@@ -35,10 +36,11 @@ class PostFactory extends Factory
             // "content" => $this->faker->paragraph,
             "url" => $this->faker->url,
             "image" => $imageUri . random_int(1, 16) . ".jpg",
-            'liked' => random_int(500, 90000),
+            'liked' => random_int(500, 9000),
             'author' => $hasAuthor ? $this->faker->name : null,
             'author_img' => $hasAuthor ? $userImagesUri . random_int(1, 8) . ".jpg" : null,
             'author_url' => $hasAuthor ? $this->faker->url . '/byMe' : null,
+            'created_at' => (Carbon::parse($this->faker->dateTimeThisMonth))->format('d-m-y') . 'T00:00:00',
         ];
     }
 }

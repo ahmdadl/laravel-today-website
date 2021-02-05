@@ -22,17 +22,22 @@ class HomeController extends Controller
         $postsChart = Post::selectRaw('count(id)')
             ->selectRaw('created_at')
             ->groupBy('created_at')
+            ->orderBy('created_at')
             ->get('');
 
-        // $postsChart = array_map(
-        //     fn($x) => $x['count'],
-        //     $postsChart->toArray(),
-        // );
-
-        // dd($postsChart->map(fn ($x) => $x->count));
+        $postsLikes = Post::get(['title', 'liked']);
 
         return $content
             ->title('Dashboard')
-            ->view('admin.index', compact('users', 'posts', 'providers', 'postsChart'));
+            ->view(
+                'admin.index',
+                compact(
+                    'users',
+                    'posts',
+                    'providers',
+                    'postsChart',
+                    'postsLikes',
+                ),
+            );
     }
 }

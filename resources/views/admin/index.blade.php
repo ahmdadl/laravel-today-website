@@ -14,33 +14,83 @@
         </div>
     </div>
 
-    <div class='grid grid-cols-1 gap-2 md:grid-cols-2'>
-        <div class='relative' style='height: 35rem'>
-            <canvas id="myChart" width="200" height="200"></canvas>
+    <div class='grid grid-cols-1 gap-2'>
+        <div class='relative' style='height: 30rem'>
+            <canvas id="postsOverTime" width="200" height="200"></canvas>
+        </div>
+        <div class='relative' style='height: 30rem'>
+            <canvas id="postsLikes" width="200" height="200"></canvas>
         </div>
     </div>
 </div>
 
 <script>
     $(function () {
-        var ctx = document.getElementById("myChart").getContext('2d');
-        var myChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: {!! json_encode($postsChart->map(fn ($x) => $x->created_at->format('d M Y'))) !!},
-                datasets: [{
-                    label: 'posts',
-                    data: {{$postsChart->map(fn ($x) => $x->count)}},
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.5)',
-                        ...Array(58).fill(0).map(x => "#" + ((1<<24)*Math.random() | 0).toString(16))
-                    ],
-                }]
-            },
-            options: {
-                maintainAspectRatio: false,
-            }
-        });
+        createChart(
+            'postsOverTime',
+            {!! json_encode($postsChart->map(
+                fn ($x) => $x->created_at->format('d M Y'))
+            ) !!},
+            {{ $postsChart->map(fn ($x) => $x->count) }},
+          'Posts',
+          {{$postsChart->count()}},
+          'Posts over Time'
+        );
+        createChart(
+            'postsLikes',
+            {!! json_encode($postsLikes->map(fn ($x) => $x->title)) !!},
+            {{ $postsLikes->map(fn ($x) => $x->liked) }},
+            'Likes',
+            {{$postsLikes->count()}},
+            'Posts Likes'
+        );
     });
 
+
+function createChart(id, labels, data, label, count, text) {
+    var ctx = document.getElementById(id).getContext('2d');
+    var bg = random_rgb();
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels,
+            datasets: [{
+                fill: false,
+                label,
+                data,
+                backgroundColor: 'rgb('+ bg +')',
+                borderColor: 'rgb('+ bg +', 0.3)'
+            }]
+        },
+        options: {
+            maintainAspectRatio: false,
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true,
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        callback: (x) => x.substr(0, 10) + '...'
+                    }
+                }]
+            },
+            defaults: {
+                global: {
+                    defaultColor: 'rgba(255, 0, 0, 1)'
+                } 
+            },
+            title: {
+                display: true,
+                text
+            }
+        }
+    });
+}
+function random_rgb() {
+    // mutible by 100 to make the color always dark
+    var o = Math.round, r = Math.random, s = 100;
+    return o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s);
+}
 </script>
