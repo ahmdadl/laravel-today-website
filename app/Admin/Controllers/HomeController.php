@@ -3,6 +3,8 @@
 namespace App\Admin\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Post;
+use App\Models\Provider;
 use App\Models\User;
 use Encore\Admin\Controllers\Dashboard;
 use Encore\Admin\Layout\Column;
@@ -13,33 +15,24 @@ class HomeController extends Controller
 {
     public function index(Content $content)
     {
-        $usersCount = User::count();
-        // $
+        $users = User::count();
+        $posts = Post::count();
+        $providers = Provider::count();
+
+        $postsChart = Post::selectRaw('count(id)')
+            ->selectRaw('created_at')
+            ->groupBy('created_at')
+            ->get('');
+
+        // $postsChart = array_map(
+        //     fn($x) => $x['count'],
+        //     $postsChart->toArray(),
+        // );
+
+        // dd($postsChart->map(fn ($x) => $x->count));
 
         return $content
             ->title('Dashboard')
-            // ->description('Description...')
-            // ->header('page header')
-            // ->breadcrumb(
-            //     ['text' => 'Dashboard', 'url' => '/admin'],
-            //     ['text' => 'User management', 'url' => '/admin/users'],
-            //     ['text' => 'Edit user'],
-            // )
-            // ->row(Dashboard::title())
-            // ->row(function (Row $row) {
-
-            //     $row->column(4, function (Column $column) {
-            //         $column->append(Dashboard::environment());
-            //     });
-
-            //     $row->column(4, function (Column $column) {
-            //         $column->append(Dashboard::extensions());
-            //     });
-
-            //     $row->column(4, function (Column $column) {
-            //         $column->append(Dashboard::dependencies());
-            //     });
-            // })
-            ->view('dashboard');
+            ->view('admin.index', compact('users', 'posts', 'providers', 'postsChart'));
     }
 }
