@@ -7,6 +7,8 @@ use App\Http\Controllers\Post\GetProviders;
 use App\Http\Controllers\Post\Index;
 use App\Http\Controllers\Post\Like;
 use App\Http\Controllers\ProviderController;
+use Database\Seeders\AdminTablesSeeder;
+use Encore\Admin\Auth\Database\Menu;
 use Illuminate\Support\Facades\Route;
 
 /*

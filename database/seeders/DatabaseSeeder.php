@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use DB;
+use Encore\Admin\Auth\Database\AdminTablesSeeder as AdminSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -15,11 +16,12 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            AdminTablesSeeder::class,
+            AdminSeeder::class,
             UserSeeder::class,
             CategorySeeder::class,
             ProviderSeeder::class,
             PostSeeder::class,
+            AdminTablesSeeder::class,
         ]);
     }
 }

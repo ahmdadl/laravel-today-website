@@ -102,4 +102,8 @@ a {
 .lazyloaded:not([src]) {
     background-image: none;
 }
+
+.main-sidebar, .content-wrapper {
+    margin-top: 6rem;
+}
 /*! purgecss end ignore */

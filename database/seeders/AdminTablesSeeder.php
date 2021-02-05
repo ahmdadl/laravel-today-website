@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use DB;
+use Encore\Admin\Auth\Database\Menu;
 use Illuminate\Database\Seeder;
 
 class AdminTablesSeeder extends Seeder
@@ -15,44 +15,28 @@ class AdminTablesSeeder extends Seeder
     public function run()
     {
         // base tables
-        \Encore\Admin\Auth\Database\Menu::truncate();
-        \Encore\Admin\Auth\Database\Menu::insert(
-            [
-                // 'title' => 'Users',
-                // 'icon' => 'fa-user',
-                // 'uri' => '/users',
-            ]
-        );
+        Menu::insert([
+            'parent_id' => 0,
+            'order' => 9,
+            'title' => 'Providers',
+            'icon' => 'fa-rocket',
+            'uri' => '/providers',
+        ]);
+        Menu::insert([
+            'parent_id' => 0,
+            'order' => 8,
+            'title' => 'Users',
+            'icon' => 'fa-user',
+            'uri' => '/users',
+        ]);
 
-        \Encore\Admin\Auth\Database\Permission::truncate();
-        \Encore\Admin\Auth\Database\Permission::insert(
-            [
+        // \Encore\Admin\Auth\Database\Permission::insert([]);
 
-            ]
-        );
-
-        \Encore\Admin\Auth\Database\Role::truncate();
-        \Encore\Admin\Auth\Database\Role::insert(
-            [
-
-            ]
-        );
+        // \Encore\Admin\Auth\Database\Role::insert([]);
 
         // pivot tables
-        DB::table('admin_role_menu')->truncate();
-        DB::table('admin_role_menu')->insert(
-            [
+        // DB::table('admin_role_menu')->insert([]);
 
-            ]
-        );
-
-        DB::table('admin_role_permissions')->truncate();
-        DB::table('admin_role_permissions')->insert(
-            [
-
-            ]
-        );
-
-        // finish
+        // DB::table('admin_role_permissions')->insert([]);
     }
 }
