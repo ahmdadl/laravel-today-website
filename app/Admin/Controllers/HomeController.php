@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Post;
 use App\Models\Provider;
 use App\Models\User;
+use DB;
 use Encore\Admin\Controllers\Dashboard;
 use Encore\Admin\Layout\Column;
 use Encore\Admin\Layout\Content;
@@ -32,6 +33,11 @@ class HomeController extends Controller
             ->groupBy('slug')
             ->get('');
 
+        $providersPopular = Provider::select(DB::raw('providers.slug, sum(posts.liked)'))
+            ->join('posts', 'posts.provider_slug', '=', 'providers.slug')
+            ->groupBy('providers.slug')
+            ->get('');
+
         return $content
             ->title('Dashboard')
             ->view(
@@ -43,6 +49,7 @@ class HomeController extends Controller
                     'postsChart',
                     'postsLikes',
                     'providersPosts',
+                    'providersPopular',
                 ),
             );
     }

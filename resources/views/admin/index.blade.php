@@ -25,6 +25,9 @@
             <canvas id="postsLikes" width="200" height="200"></canvas>
         </div>
         <div class='relative' style='height: 33rem'>
+            <canvas id="providersPopular" width="200" height="200"></canvas>
+        </div>
+        <div class='relative' style='height: 33rem'>
             <canvas id="PopularPosts" width="200" height="200"></canvas>
         </div>
     </div>
@@ -64,7 +67,7 @@
             {!! json_encode($postsLikes->map(fn ($x) => \Str::limit($x->title, 10))) !!},
             {{ $postsLikes->map(fn ($x) => $x->liked) }},
             'Likes',
-            'Posts Likes'
+            'Posts Likes',
         );
         createChart(
             'providersPosts',
@@ -72,6 +75,13 @@
             {{ $providersPosts->map(fn ($x) => $x->posts_count) }},
             'posts',
             'Posts per Provider'
+        );
+        createChart(
+            'providersPopular',
+            {!! json_encode($providersPopular->map(fn ($x) => \Str::title(str_replace("-", " ", $x->slug)))) !!},
+            {{ $providersPopular->map(fn ($x) => $x->sum) }},
+            'Likes',
+            'providers posts Likes',
         );
         createChart(
             'PopularPosts',
@@ -86,8 +96,36 @@
         // });
     });
 
+function random_rgb() {
+    // mutible by 350 to make the color always lighter
+    var o = Math.round, r = Math.random, s = 350;
+    return o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s);
+}
+function formatNum (num) {
+    var si = [
+        { value: 1, symbol: "" },
+        { value: 1E3, symbol: "k" },
+        { value: 1E6, symbol: "M" },
+        { value: 1E9, symbol: "G" },
+        { value: 1E12, symbol: "T" },
+        { value: 1E15, symbol: "P" },
+        { value: 1E18, symbol: "E" }
+    ];
+    var rx = /\.0+$|(\.[0-9]*[1-9])0+$/;
+    var i;
+    for (i = si.length - 1; i > 0; i--) {
+        if (num >= si[i].value) {
+        break;
+        }
+    }
+    return (num / si[i].value).toFixed(1).replace(rx, "$1") + si[i].symbol;
+}
 
-function createChart(id, labels, data, label, text) {
+function createChart(id, labels, data, label, text, updateTooltip) {
+    if (typeof updateTooltip === 'undefined') {
+        updateTooltip = (x) => x;
+    }
+
     var ctx = document.getElementById(id).getContext('2d');
     var bg = random_rgb();
     var myChart = new Chart(ctx, {
@@ -112,45 +150,36 @@ function createChart(id, labels, data, label, text) {
                 }],
                 xAxes: [{
                     ticks: {
-                        // callback: (x) => x.substr(0, 20) + '...'
+                        // callback: xAxisTxt,
                     }
                 }]
             },
             defaults: {
                 global: {
-                    defaultColor: 'rgba(255, 0, 0, 1)'
-                } 
+                    defaultColor: 'rgba(255, 0, 0, 1)',
+                },
             },
             title: {
                 display: true,
                 text
+            },
+            tooltips: {
+                callbacks: {
+                    label: function (item, data) {
+                        let label = item.label || '';
+
+                        if (label) {
+                            label += ': ';
+                        }
+
+                        label += formatNum(item.value);
+                        
+                        return updateTooltip(label);
+                    }
+                }
             }
         }
     });
-}
-function random_rgb() {
-    // mutible by 350 to make the color always lighter
-    var o = Math.round, r = Math.random, s = 350;
-    return o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s);
-}
-function formatNum (num) {
-    var si = [
-        { value: 1, symbol: "" },
-        { value: 1E3, symbol: "k" },
-        { value: 1E6, symbol: "M" },
-        { value: 1E9, symbol: "G" },
-        { value: 1E12, symbol: "T" },
-        { value: 1E15, symbol: "P" },
-        { value: 1E18, symbol: "E" }
-    ];
-    var rx = /\.0+$|(\.[0-9]*[1-9])0+$/;
-    var i;
-    for (i = si.length - 1; i > 0; i--) {
-        if (num >= si[i].value) {
-        break;
-        }
-    }
-    return (num / si[i].value).toFixed(1).replace(rx, "$1") + si[i].symbol;
 }
 </script>
 
