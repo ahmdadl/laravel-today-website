@@ -10,6 +10,7 @@
     "require": {
         "php": "^8.0",
         "artesaos/seotools": "^0.20.0",
+        "brianium/paratest": "^6.2",
         "cviebrock/eloquent-sluggable": "^8.0",
         "encore/laravel-admin": "^1.8",
         "enlightn/enlightn": "^1.4",

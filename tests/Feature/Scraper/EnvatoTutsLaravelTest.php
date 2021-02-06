@@ -5,7 +5,7 @@ namespace Tests\Feature\Scraper;
 use App\Models\Post;
 use App\Scraper\Scrapers\EnvatoTutsLaravel;
 
-class CodeTutsTest extends Scraper
+class EnvatoTutsLaravelTest extends Scraper
 {
     protected string $type = EnvatoTutsLaravel::class;
     protected array $providerAttr = [
