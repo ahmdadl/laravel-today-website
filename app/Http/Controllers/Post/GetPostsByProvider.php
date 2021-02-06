@@ -27,8 +27,9 @@ class GetPostsByProvider extends Controller
             fn () => $provider->owner
         );
         return view('posts.by_category', [
-            'posts' => Post::whereProviderSlug($provider->slug)
-                ->orderByDesc('liked')
+            'posts' => Post::withCount('likes')
+                ->whereProviderSlug($provider->slug)
+                ->orderByDesc('likes_count')
                 ->orderByDesc('created_at')
                 ->paginate(),
             'provider' => $provider,

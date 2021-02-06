@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 use DB;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Post extends Model
 {
@@ -16,7 +17,7 @@ class Post extends Model
     protected $guarded = [];
 
     protected $casts = [
-        'liked' => 'int'
+        'liked' => 'int',
     ];
 
     protected $appends = ['image_url'];
@@ -29,8 +30,8 @@ class Post extends Model
     public function sluggable(): array
     {
         return [
-            "slug" => [
-                "source" => "title",
+            'slug' => [
+                'source' => 'title',
             ],
         ];
     }
@@ -48,27 +49,40 @@ class Post extends Model
     public function getImageUrlAttribute(): string
     {
         return is_null($this->image) || empty($this->image)
-            ? "https://images.test/posts/5.jpg"
+            ? 'https://images.test/posts/5.jpg'
             : $this->image;
     }
 
     public function category(): BelongsTo
     {
-        return $this->belongsTo(Category::class, "category_slug", "slug");
+        return $this->belongsTo(Category::class, 'category_slug', 'slug');
     }
 
     public function provider(): BelongsTo
     {
-        return $this->belongsTo(Provider::class, "provider_slug", "slug")->with('owner');
+        return $this->belongsTo(Provider::class, 'provider_slug', 'slug')->with(
+            'owner',
+        );
     }
 
-    public function like(): int
+    public function likes(): HasMany
     {
-        return $this->increment('liked');
+        return $this->hasMany(PostLike::class, 'post_slug', 'slug');
     }
 
-    public function dislike(): int
+    public function like(string $cookie, ?string $ip = null): PostLike
     {
-        return $this->decrement('liked');
+        return $this->likes()->create([
+            'post_slug' => $this->slug,
+            'cookie' => $cookie,
+            'ip' => $ip ?? request()->ip(),
+        ]);
+    }
+
+    public function dislike(): void
+    {
+        PostLike::wherePostSlug($this->slug)
+            ->limit(1)
+            ->delete();
     }
 }

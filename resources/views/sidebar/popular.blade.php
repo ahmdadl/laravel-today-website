@@ -46,7 +46,7 @@
                         <div class='flex flex-wrap justify-between ml-1 space-x-1 font-semibold w3/4 md:ml-2'>
                             <span class='text-xs text-left' x-text='post.title'></span>
                             <span class='text-sm text-right text-gray-800 dark:text-gray-100'
-                                x-text='$store.common.formatNum(post.liked)'></span>
+                                x-text='$store.common.formatNum(post.likes_count)'></span>
                         </div>
                     </div>
                 </a>

@@ -18,13 +18,13 @@ class CreatePostsTable extends Migration
             $table->string("provider_slug");
             $table->string("category_slug");
             $table->string("title")->unique();
-            $table->string("slug")->nullable()->index();
+            $table->string("slug")->unique()->nullable()->index();
             // $table->string("content")->default("");
             $table->string("url");
             $table->string("image")->nullable();
             $table->timestamps();
             $table->dateTime("scraped_at")->useCurrent();
-            $table->unsignedInteger('liked')->default(0);
+            // $table->unsignedInteger('liked')->default(0);
             $table->string('author')->nullable();
             $table->string('author_img')->nullable();
             $table->string('author_url')->nullable();

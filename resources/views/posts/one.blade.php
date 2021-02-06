@@ -1,7 +1,7 @@
 <div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-2 gap-x-0 sm:gap-x-2'>
     @foreach($posts as $post)
         <article class="max-w-2xl mx-auto overflow-hidden bg-gray-200 rounded-lg shadow-md dark:bg-gray-800"
-            x-data="{slug: '{{ $post->slug }}', liked: {{ $post->liked }}}" id='{{ $post->slug }}'>
+            x-data="{slug: '{{ $post->slug }}', likes: {{ $post?->likes_count ?? 0 }}}" id='{{ $post->slug }}'>
             <img class="object-cover w-full h-48" src="{{ $post->image_url }}" alt="Avatar">
 
             <div class="p-6">
@@ -31,17 +31,17 @@
                     <div class='grid grid-cols-3 text-center'>
                         <span class="text-xl text-center">
                             <x-button bg='green' icon='fas fa-thumbs-up' clear='1' id='like'
-                                x-on:click="$store.post.like(slug, 'fa-thumbs-up').then(r => {if (r) liked += 1})">
+                                x-on:click="$store.post.like(slug, 'fa-thumbs-up').then(r => {if (r) likes += 1})">
                             </x-button>
                         </span>
                         <span class='text-xl font-bold text-center text-gray-700 break-all dark:text-gray-500'
-                            x-text='$store.common.formatNum(liked)'>
+                            x-text='$store.common.formatNum(likes)'>
                         </span>
                         <span class="text-xl text-center">
                             <x-button class='disabled:cursor-not-allowed' bg='red' icon='fas fa-thumbs-down' clear='1'
                                 id='dislike'
-                                x-on:click="liked >= 0 ? $store.post.like(slug, 'fa-thumbs-down', false).then(r => {if (r && liked >= 1) liked -= 1}) : null"
-                                x-bind:disabled='liked < 1'>
+                                x-on:click="likes >= 0 ? $store.post.like(slug, 'fa-thumbs-down', false).then(r => {if (r && likes >= 1) likes -= 1}) : null"
+                                x-bind:disabled='likes < 1'>
                             </x-button>
                         </span>
                     </div>

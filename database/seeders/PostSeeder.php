@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Category;
 use App\Models\Post;
+use App\Models\PostLike;
 use App\Models\Provider;
 use DB;
 use Illuminate\Database\Seeder;
@@ -23,12 +24,17 @@ class PostSeeder extends Seeder
 
         Provider::all()->each(function (Provider $provider) use ($categories) {
             if ($provider->id !== 1) {
-                Post::factory()
-                ->count(random_int(10, 31))
-                ->create([
-                    'category_slug' => $categories->random()->slug,
-                    'provider_slug' => $provider->slug,
-                ]);
+                $post = Post::factory()
+                    ->count(random_int(10, 31))
+                    ->create([
+                        'category_slug' => $categories->random()->slug,
+                        'provider_slug' => $provider->slug,
+                    ]);
+                $post->each(
+                    fn($p) => PostLike::factory()
+                        ->count(random_int(10, 80))
+                        ->create(['post_slug' => $p->slug]),
+                );
             }
         });
 

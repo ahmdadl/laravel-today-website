@@ -11,12 +11,14 @@
     <button {{ $attributes->merge([
     'type' => 'button', 
     'class' => 'inline-flex items-center hover:bg-'.$bg.'-700 active:bg-'.$bg.'-800' .$bgClasses. $border.' border '.$rounded.' font-semibold text-xs uppercase tracking-widest focus:outline-none focus:border-'.$bg.'-800 focus:shadow-outline-'.$bg.' disabled:opacity-25 transition ease-in-out duration-500',
-    ]) }} @if($spin) x-data x-on:click="$refs['{{$loaderId}}'].classList.remove('hidden');$refs['{{$loaderId}}'].classList.add('fas', 'fa-spin')" @endif>
-        @isset($icon)
-            <i id='loader' class='{{ $icon }} px-1'></i>
-            @if ($spin)
-                <i x-ref='{{$loaderId}}' class='hidden px-1 fa-cog'></i>
-            @endif
-        @endisset
-        {{ $slot }}
+    ]) }}>
+        <span @if($spin) x-data x-on:click="$refs['{{$loaderId}}'].classList.remove('hidden');$refs['{{$loaderId}}'].classList.add('fas', 'fa-spin')" @endif>
+            @isset($icon)
+                <i id='loader' class='{{ $icon }} px-1'></i>
+                @if ($spin)
+                    <i x-ref='{{$loaderId}}' class='hidden px-1 fa-cog'></i>
+                @endif
+            @endisset
+            {{ $slot }}
+        </span>
     </button>

@@ -4,6 +4,7 @@ namespace Tests\Unit;
 
 use App\Models\Category;
 use App\Models\Post;
+use App\Models\PostLike;
 use App\Models\Provider;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -64,20 +65,28 @@ class PostTest extends TestCase
         );
     }
 
-    public function testPostCanBeLikedAndDisliked()
+    public function testPostHasLikes()
     {
         $this->post->save();
 
-        $this->assertSame(0, $this->post->liked);
-        $this->post->like();
-        $this->assertSame(1, $this->post->liked);
-        $this->post->like();
-        $this->assertSame(2, $this->post->liked);
+        $this->assertNotNull($this->post->likes);
+
+        $this->assertCount(0, $this->post->likes);
+    }
+
+    public function testPostCanBeLikedAndDisliked()
+    {
+        $this->post->save();
+        $like = PostLike::factory()->make();
+
+        $this->assertCount(0, $this->post->likes);
+        $this->post->like($like->cookie);
+        $this->post->refresh();
+        $this->assertCount(1, $this->post->likes);
 
         $this->post->dislike();
-        $this->assertSame(1, $this->post->liked);
-        $this->post->dislike();
-        $this->assertSame(0, $this->post->liked);
+        $this->post->refresh();
+        $this->assertCount(0, $this->post->likes);
     }
     
 }

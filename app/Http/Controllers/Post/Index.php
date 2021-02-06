@@ -47,7 +47,7 @@ class Index extends Controller
         $q = strtolower($q);
 
         $posts = $posts
-            ->whereRaw("LOWER(title) LIKE ?")
+            ->whereRaw('LOWER(title) LIKE ?')
             ->addBinding("%$q%")
             ->orWhere('provider_slug', 'LIKE', '%' . Str::slug($q) . '%')
             ->paginate();
@@ -57,6 +57,8 @@ class Index extends Controller
 
     private function getPostBuilder(string $orderBy = 'created_at'): Builder
     {
-        return Post::with('provider')->orderByDesc($orderBy);
+        return Post::with('provider')
+            ->withCount('likes')
+            ->orderByDesc($orderBy);
     }
 }

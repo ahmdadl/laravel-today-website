@@ -22,8 +22,9 @@ class GetPostsByCategory extends Controller
 
         return view('posts.by_category', [
             'posts' => Post::with('provider')
+                ->withCount('likes')
                 ->whereCategorySlug($category->slug)
-                ->orderByDesc('liked')
+                ->orderByDesc('likes_count')
                 ->orderByDesc('created_at')
                 ->paginate(),
         ]);

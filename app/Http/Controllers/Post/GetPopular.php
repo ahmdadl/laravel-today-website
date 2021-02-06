@@ -30,7 +30,8 @@ class GetPopular extends Controller
 
         return response()->json(
             $posts
-                ->orderByDesc('liked')
+                ->withCount('likes')
+                ->orderByDesc('likes_count')
                 ->limit(5)
                 ->get(),
         );

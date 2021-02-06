@@ -36,7 +36,7 @@ class PostFactory extends Factory
             // "content" => $this->faker->paragraph,
             "url" => $this->faker->url,
             "image" => $imageUri . random_int(1, 16) . ".jpg",
-            'liked' => random_int(1, 1200),
+            // 'liked' => random_int(1, 1200),
             'author' => $hasAuthor ? $this->faker->name : null,
             'author_img' => $hasAuthor ? $userImagesUri . random_int(1, 8) . ".jpg" : null,
             'author_url' => $hasAuthor ? $this->faker->url . '/byMe' : null,
