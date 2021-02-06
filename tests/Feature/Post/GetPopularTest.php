@@ -4,6 +4,7 @@ namespace Tests\Feature\Post;
 
 use App\Models\Category;
 use App\Models\Post;
+use App\Models\PostLike;
 use App\Models\Provider;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Collection;
@@ -36,10 +37,15 @@ class GetPopularTest extends TestCase
             ->sequence([
                 'category_slug' => $this->category->slug,
                 'provider_slug' => $this->provider->slug,
-                'liked' => fn() => random_int(1, 255),
             ])
-            ->create()
-            ->sortByDesc('liked');
+            ->has(PostLike::factory()->count(6), 'likes')
+            ->create();
+
+        $this->posts->each(
+            fn($p) => PostLike::factory()
+                ->count(4)
+                ->create(['post_slug' => $p->slug]),
+        );
     }
 
     public function testUserCanGetPopularPostsByCategorySlug()

@@ -29,7 +29,6 @@ class PostTest extends TestCase
         $this->post = Post::factory()->make([
             'category_slug' => $this->category->slug,
             'provider_slug' => $this->provider->slug,
-            'liked' => 0,
         ]);
     }
 
