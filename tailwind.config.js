@@ -8,11 +8,24 @@ module.exports = {
         mode: 'all',
         preserveHtmlElements: false,
         content: [
-            './storage/framework/views/*.php',
-            './resources/views/*.blade.php',
-            './resources/views/**/*.blade.php',
+            // './storage/framework/views/*.php',
+            // './resources/views/*.blade.php',
+            './resources/views/auth/*.blade.php',
+            './resources/views/components/*.blade.php',
+            './resources/views/footer/*.blade.php',
+            './resources/views/index/*.blade.php',
+            './resources/views/layouts/*.blade.php',
+            './resources/views/posts/*.blade.php',
+            './resources/views/provider/*.blade.php',
+            './resources/views/sidebar/*.blade.php',
+            './resources/views/vendor/*.blade.php',
+            './resources/views/dashboard.blade.php',
+            './resources/views/footer.blade.php',
+            './resources/views/index.blade.php',
+            './resources/views/lost_classes.blade.php',
+            './resources/views/splash.blade.php',
             './resources/js/components/**/*.vue',
-            // './node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css'
+            './node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css'
         ],
         options: {
             safelist: {

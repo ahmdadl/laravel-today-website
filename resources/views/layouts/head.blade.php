@@ -30,8 +30,8 @@
 
 </script>
 
-<link rel="stylesheet" href="{{ mix('css/app.css') }}">
 <script src='/js/lazysizes.min.js' defer></script>
+<link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
 {{-- <script src="https://cdn.jsdelivr.net/gh/alpine-collective/alpine-magic-helpers@0.5.x/dist/component.min.js" defer>
 </script> --}}

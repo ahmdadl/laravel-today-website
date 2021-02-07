@@ -3,18 +3,65 @@
 @import 'tailwindcss/utilities';
 
 @import '@fortawesome/fontawesome-free/css/fontawesome.min.css';
-@import '@fortawesome/fontawesome-free/css/solid.min.css';
-@import '@fortawesome/fontawesome-free/css/brands.min.css';
+/* @import '@fortawesome/fontawesome-free/css/solid.min.css';
+@import '@fortawesome/fontawesome-free/css/brands.min.css'; */
 
 /*! purgecss start ignore */
+@font-face {
+    font-family: 'Font Awesome 5 Free';
+    src: url('fonts/fa-solid-900.eot?lwlvmc');
+    src: url('fonts/fa-solid-900.eot?lwlvmc#iefix') format('embedded-opentype'),
+        url('fonts/fa-solid-900.ttf?lwlvmc') format('truetype'),
+        url('fonts/fa-solid-900.woff?lwlvmc') format('woff'),
+        url('fonts/fa-solid-900.svg?lwlvmc#fa-solid-900') format('svg');
+
+    font-display: swap;
+}
+.fa,
+.fas {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+@font-face {
+    font-family: 'Font Awesome 5 Brands';
+    src: url('./fonts/fa-brands-400.eot?yvb6gh');
+    src: url('./fonts/fa-brands-400.eot?yvb6gh#iefix')
+            format('embedded-opentype'),
+        url('./fonts/fa-brands-400.ttf?yvb6gh') format('truetype'),
+        url('./fonts/fa-brands-400.woff?yvb6gh') format('woff'),
+        url('./fonts/fa-brands-400.svg?yvb6gh#fa-brands-400') format('svg');
+    font-display: swap;
+}
+.fab {
+    font-family: 'Font Awesome 5 Brands';
+    font-weight: 400;
+}
+
 .fa-trash-alt:before {
     content: '\f014';
 }
 .fa-refresh:before {
     content: '\f021';
 }
-.fa-spinner:before {
+.fa-spinner:before,
+.fa-cog:before {
     content: '\f110';
+}
+.fa-sign-in:before,
+.fa-sign-in-alt:before {
+    content: '\f090';
+}
+.fa-newspaper:before {
+    content: '\f1ea';
+}
+.fa-mortar-board:before {
+    content: '\f19d';
+}
+.fa-thumbs-up:before {
+    content: '\f087';
+}
+.fa-thumbs-down:before {
+    content: '\f088';
 }
 
 @layer utilities {
@@ -112,6 +159,6 @@ a {
 @media (min-width: 768px) {
     .md\:text-xs {
         font-size: 0.65rem;
-    }    
+    }
 }
 /*! purgecss end ignore */
