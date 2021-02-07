@@ -10,13 +10,13 @@
     <div class="min-h-screen">
         @include('layouts.navigation')
 
-        <main class="container px-1 py-4 mt-16">
-            <div class="row">
-                <div class='col-12 md:col-9'>
+        <main class="px-1 py-4 mt-16">
+            <div class="flex flex-wrap">
+                <div class='w-full px-1 lg:px-2 md:w-9/12'>
                     {{ $slot }}
                 </div>
     
-                <div class='col-12 md:col-3'>
+                <div class='w-full px-1 lg:px-2 md:w-3/12'>
                     {{ $sidebar }}
                 </div>
             </div>

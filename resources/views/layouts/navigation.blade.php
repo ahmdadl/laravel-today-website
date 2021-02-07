@@ -28,8 +28,8 @@
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 @can('browse_admin')
                     <x-nav-link href="/admin">
-                        <img class='inline-block object-cover w-10 h-10 mx-1 rounded-full'
-                            src='https://abo3adel.github.io/myImg.jpeg' alt='Ahmed Adel Profile Image' />
+                        <img class='inline-block object-cover w-10 h-10 mx-1 rounded-full lazyload'
+                            data-src='https://abo3adel.github.io/myImg.jpeg' alt='Ahmed Adel Profile Image' />
                     </x-nav-link>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
@@ -42,8 +42,8 @@
                     </form>
                 @else
                     <x-nav-link href="https://abo3adel.github.io/" target='_blank'>
-                        <img class='inline-block object-cover w-10 h-10 mx-1 rounded-full'
-                            src='https://abo3adel.github.io/myImg.jpeg' alt='Ahmed Adel Profile Image' />
+                        <img class='inline-block object-cover w-10 h-10 mx-1 rounded-full lazyload'
+                            data-src='https://abo3adel.github.io/myImg.jpeg' alt='Ahmed Adel Profile Image' />
                         <span class='inline-block'>Ahmed Adel</span>
                     </x-nav-link>
                 @endcan
@@ -53,8 +53,8 @@
                 <button @click="open = ! open"
                     class="inline-flex items-center justify-center text-gray-300 transition duration-500 ease-in-out border-4 border-transparent rounded-full w-13 h-13 hover:border-gray-200 focus:outline-none"
                     :class='{"border-gray-200": open}'>
-                    <img class='inline-block object-cover w-full h-full mx-1 rounded-full'
-                        src='https://abo3adel.github.io/myImg.jpeg' alt='Ahmed Adel Profile Image' />
+                    <img class='inline-block object-cover w-full h-full mx-1 rounded-full lazyload'
+                        data-src='https://abo3adel.github.io/myImg.jpeg' alt='Ahmed Adel Profile Image' />
                 </button>
             </div>
         </div>

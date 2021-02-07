@@ -8,7 +8,7 @@
             }}"
             
             id='{{ $post->slug }}'>
-            <img class="object-cover w-full h-48" src="{{ $post->image_url }}" alt="Avatar">
+            <img class="object-cover w-full h-48 lazyload" data-src="{{ $post->image_url }}" alt="Avatar">
 
             <div class="p-6">
                 <div>
@@ -21,7 +21,7 @@
                 <div class="mt-4">
                     <div class="flex items-center">
                         <div class="flex items-center">
-                            <img class="object-cover w-10 h-10 rounded-full" src="{{ $post?->author_img ?? 
+                            <img class="object-cover w-10 h-10 rounded-full lazyload" data-src="{{ $post?->author_img ?? 
                                 $owner?->image_url ?? $post->provider->owner->image_url }}"
                                 alt="{{ $owner?->name ?? $post->provider->owner->name }} Avatar">
                             <a href="{{ $post?->author_url ?? $owner?->url ?? $post->provider->owner->url }}"

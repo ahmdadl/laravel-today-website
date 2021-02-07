@@ -41,7 +41,7 @@
             <template x-for='post in posts' :key='post.slug'>
                 <a :href='post.url' target='_blank'
                     class='flex py-1 mt-3 transition duration-500 hover:bg-gray-300 dark:hover:bg-gray-700'>
-                    <img class='object-cover w-1/4 h-full rounded' :src='post.image_url' :alt="post.slug + ' Avarar'" />
+                    <img class='object-cover w-1/4 h-full rounded lazyload' :data-src='post.image_url' :alt="post.slug + ' Avarar'" />
                     <div class='relative w-full'>
                         <div class='flex justify-between ml-1 space-x-1 font-semibold w3/4 md:ml-2'>
                             <span class='text-xs text-left' x-text='post.title'></span>
