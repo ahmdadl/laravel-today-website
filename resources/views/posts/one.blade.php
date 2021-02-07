@@ -1,13 +1,20 @@
 <div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-2 gap-x-0 sm:gap-x-2'>
     @foreach($posts as $post)
-        <article class="max-w-2xl mx-auto overflow-hidden bg-gray-200 rounded-lg shadow-md dark:bg-gray-800"
-            x-data="{slug: '{{ $post->slug }}', likes: {{ $post?->likes_count ?? 0 }}, busy: false, isLiked: {{ $post->is_liked ? 1 : 0 }}, btnTxt: '{{$post->is_liked ? 'liked' : 'like'}}', old: '', addDislike: function () {
+        <article class="max-w-2xl mx-auto overflow-hidden bg-gray-200 rounded-lg shadow-md dark:bg-gray-800" x-data="{slug: '{{ $post->slug }}', likes: {{ $post?->likes_count ?? 0 }}, busy: false, isLiked: {{ $post->is_liked ? 1 : 0 }}, btnTxt: '{{ $post->is_liked ? 'liked' : 'like' }}', old: '', addDislike: function () {
                 if (!this.isLiked) return;
                 this.old = this.btnTxt;
                 this.btnTxt = 'dislike';
-            }}"
-            
-            id='{{ $post->slug }}'>
+                var icon = this.$refs['icon{{ $post->slug }}'].classList;
+                icon.remove('fa-thumbs-up');
+                icon.add('fa-thumbs-down');
+            }, removeDisLike: function () {
+                if (!this.old.length) return;
+                var icon = this.$refs['icon{{ $post->slug }}'].classList;
+                icon.remove('fa-thumbs-down');
+                icon.add('fa-thumbs-up');
+
+                return this.btnTxt = this.old;
+            }}" id='{{ $post->slug }}'>
             <img class="object-cover w-full h-48 lazyload" data-src="{{ $post->image_url }}" alt="Avatar">
 
             <div class="p-6">
@@ -36,10 +43,8 @@
                     <div class='flex flex-wrap text-center'>
                         <div class="w-1/2 text-xl text-left md:w-3/4">
                             <x-button bg='green' icon='fas fa-thumbs-up' clear='1' id='like'
-                                x-bind:class="{'bg-green-500 liked': isLiked}"
-                                x-on:mouseenter="addDislike()"
-                                x-on:mouseleave='old.length ? btnTxt=old : null'
-                                x-on:click="$store.post.like(slug, 'fa-thumbs-up', 'like', !isLiked).then(r => {
+                                x-bind:class="{'bg-green-500 liked': isLiked}" loader-id='{{ $post->slug }}'
+                                x-on:mouseenter="addDislike()" x-on:mouseleave='removeDisLike()' x-on:click="$store.post.like(slug, 'fa-thumbs-up', 'like', !isLiked).then(r => {
                                     if (r) {
                                         likes = isLiked ? likes - 1 : likes + 1;
                                         isLiked = !isLiked;

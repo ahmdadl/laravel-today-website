@@ -1,11 +1,9 @@
-@props(['icon', 'bg' => '', 'border' => 'px-3 py-2', 'clear' => false, 'rounded' => true, 'spin' => false])
+@props(['icon', 'bg' => '', 'border' => 'px-3 py-2', 'clear' => false, 'rounded' => true, 'spin' => false, 'loaderId' => random_int(1, 565654)])
 
 @php
     $bgClasses = $clear ? " text-$bg-500 bg-transparent hover:text-white border-$bg-500 " : ' bg-'.$bg.'-500 text-white border-transparent ';
 
     $rounded = $rounded ? 'rounded-md' : '';
-
-    $loaderId = "loader" . random_int(1, 565654);
 @endphp
 
     <button {{ $attributes->merge([
@@ -14,9 +12,9 @@
     ]) }}>
         <span @if($spin) x-data x-on:click="$refs['{{$loaderId}}'].classList.remove('hidden');$refs['{{$loaderId}}'].classList.add('fas', 'fa-spin')" @endif>
             @isset($icon)
-                <i id='loader' class='{{ $icon }} px-1'></i>
+                <i id='loader' x-ref='icon{{$loaderId}}' class='{{ $icon }} px-1'></i>
                 @if ($spin)
-                    <i x-ref='{{$loaderId}}' class='hidden px-1 fa-cog'></i>
+                    <i x-ref='loader{{$loaderId}}' class='hidden px-1 fa-cog'></i>
                 @endif
             @endisset
             {{ $slot }}
