@@ -28,13 +28,13 @@
                                 target='_blank' class="mx-2 text-sm font-semibold text-gray-700 dark:text-gray-200">{{
                             $post?->author ?? $owner?->name ?? $post->provider->owner->name}}</a>
                         </div>
-                        <span class="mx-1 text-xs text-gray-700 dark:text-gray-300">
+                        <span class="mx-1 text-xs text-right text-gray-700 dark:text-gray-300">
                             {{ $post->created_at->format('d M Y') }}
                         </span>
                     </div>
                     <hr class='my-2 border border-gray-400 dark:border-gray-700' />
-                    <div class='grid grid-cols-2 text-center'>
-                        <span class="text-xl text-center">
+                    <div class='flex flex-wrap text-center'>
+                        <div class="w-1/2 text-xl text-left md:w-3/4">
                             <x-button bg='green' icon='fas fa-thumbs-up' clear='1' id='like'
                                 x-bind:class="{'bg-green-500 liked': isLiked}"
                                 x-on:mouseenter="addDislike()"
@@ -47,12 +47,12 @@
                                         old = '';
                                     }
                                 }).finally(() => {busy = false})">
-                                <span class='hidden sm:inline' x-text='btnTxt'></span>
+                                <span class='hidden sm:inline md:text-xs' x-text='btnTxt'></span>
                             </x-button>
-                        </span>
-                        <span class='text-xl font-bold text-center text-gray-700 break-all dark:text-gray-500'
+                        </div>
+                        <div class='w-1/2 text-xl font-bold text-right text-gray-700 break-all md:w-1/4 dark:text-gray-500'
                             x-text='$store.common.formatNum(likes)'>
-                        </span>
+                        </div>
                         {{-- <span class="text-xl text-center">
                             <x-button bg='red' icon='fas fa-thumbs-down' clear='1' id='dislike'
                                 x-on:click="busy = true;likes >= 0 ? $store.post.like(slug, 'fa-thumbs-down', 'dislike', false).then(r => {if (r && likes >= 1) likes -= 1}).finally(() => busy = false) : null"

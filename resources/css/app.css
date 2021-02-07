@@ -106,7 +106,13 @@ a {
 .liked {
     color: #ffffff;
     &:hover {
-        @apply bg-red-600 border-red-800;
+        @apply bg-red-600 border-red-500;
     }
+}
+
+@media (min-width: 768px) {
+    .md\:text-xs {
+        font-size: 0.65rem;
+    }    
 }
 /*! purgecss end ignore */
