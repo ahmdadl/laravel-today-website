@@ -47,7 +47,8 @@ class ScrapeCommand extends Command
     public function handle()
     {
         if (null !== $this->argument('provider')) {
-            return $this->one($this->argument('provider'));
+            $this->one($this->argument('provider'));
+            return 0;
         }
 
         // scrape all providers

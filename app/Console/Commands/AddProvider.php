@@ -55,7 +55,7 @@ class AddProvider extends Command
 
         if (!$done) {
             $this->error('an error occured with scraper class');
-            return;
+            return 0;
         }
 
         $this->warn('Creating test class for: ' . $req_url);
@@ -66,13 +66,13 @@ class AddProvider extends Command
 
         if (!$done) {
             $this->error('an error occured with test class');
-            return;
+            return 0;
         }
 
         $this->info('files created successfully');
 
         if ($this->hasOption('-d')) {
-            return;
+            return 0;
         }
 
         $this->warn('dumping provider html data...');
@@ -90,7 +90,7 @@ class AddProvider extends Command
 
         if (!$done) {
             $this->error('an error occured with dumbing data');
-            return;
+            return 0;
         }
         $this->info($title . ' data was added successfully');
     }

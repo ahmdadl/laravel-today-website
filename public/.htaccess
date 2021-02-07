@@ -177,6 +177,13 @@
 
 </IfModule>
 
+Header always set Content-Security-Policy \
+"img-src *; \
+script-src 'unsafe-eval' 'unsafe-inline' 'self'; \
+style-src https://fonts.googleapis.com 'unsafe-inline' 'self'; \
+font-src https://fonts.gstatic.com 'self'; \
+default-src 'self';"
+
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes

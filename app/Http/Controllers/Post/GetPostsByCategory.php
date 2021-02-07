@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Post;
 use Artesaos\SEOTools\Facades\SEOMeta;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Cookie;
@@ -16,9 +18,9 @@ class GetPostsByCategory extends Controller
      * Handle the incoming request.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\View|Illuminate\Contracts\View\Factory
      */
-    public function __invoke(Request $request, Category $category)
+    public function __invoke(Request $request, Category $category): Factory | View
     {
         SEOMeta::setTitle($category->title . ' Posts');
 

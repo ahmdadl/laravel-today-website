@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Post;
 use Cache;
 use Carbon\Carbon;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View as ViewView;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\View\View;
 use Str;
@@ -16,9 +18,9 @@ class Index extends Controller
      * Handle the incoming request.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return Factory|ViewView
      */
-    public function __invoke()
+    public function __invoke(): Factory | ViewView
     {
         if (request('q')) {
             return $this->search(

@@ -7,6 +7,8 @@ use App\Models\Post;
 use App\Models\Provider;
 use Cache;
 use Carbon\Carbon;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use SEOMeta;
 
@@ -16,9 +18,9 @@ class GetPostsByProvider extends Controller
      * Handle the incoming request.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return View|Factory
      */
-    public function __invoke(Provider $provider)
+    public function __invoke(Provider $provider): Factory | View
     {
         SEOMeta::setTitle($provider->title . ' Provider');
 
