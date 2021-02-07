@@ -11,13 +11,16 @@
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link href="/category/news" :active='request()->is("category/news")'>
+                        <i class="px-1 fas fa-newspaper"></i>
                         News
                     </x-nav-link>
                     <x-nav-link href="/category/tutorial" :active="request()->is('category/tutorial')">
+                        <i class="px-1 fas fa-mortar-board"></i>
                         Tutorial
                     </x-nav-link>
                     <x-nav-link :href="route('add_provider')" :active="request()->routeIs('add_provider')"
                         class='hidden font-bold md:flex'>
+                        <i class="px-1 fas fa-plus"></i>
                         Submit a Provider
                     </x-nav-link>
                 </div>
@@ -64,12 +67,15 @@
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link href="/category/news" :active="request()->is('category/news')">
+                <i class='px-1 fas fa-newspaper'></i>
                 News
             </x-responsive-nav-link>
             <x-responsive-nav-link href="/category/tutorial" :active="request()->is('category/tutorial')">
+                <i class="px-1 fas fa-mortar-board"></i>
                 Tutorial
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('add_provider')" :active="request()->routeIs('add_provider')">
+                <i class="px-1 fas fa-plus"></i>
                 Submit a Provider
             </x-responsive-nav-link>
         </div>
