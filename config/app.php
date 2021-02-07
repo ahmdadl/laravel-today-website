@@ -229,6 +229,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'Goutte' => Weidner\Goutte\GoutteFacade::class,
+
+        'LikeIt' =>  App\Support\Facades\LikeItFacade::class,
     ],
 
 ];

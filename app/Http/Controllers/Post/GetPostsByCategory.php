@@ -7,6 +7,8 @@ use App\Models\Category;
 use App\Models\Post;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Cookie;
 
 class GetPostsByCategory extends Controller
 {

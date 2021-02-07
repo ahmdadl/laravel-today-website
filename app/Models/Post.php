@@ -17,7 +17,7 @@ class Post extends Model
     protected $guarded = [];
 
     protected $casts = [
-        'liked' => 'int',
+        'likes_count' => 'int',
     ];
 
     protected $appends = ['image_url'];
@@ -70,18 +70,20 @@ class Post extends Model
         return $this->hasMany(PostLike::class, 'post_slug', 'slug');
     }
 
-    public function like(string $cookie, ?string $ip = null): PostLike
+    public function like(string $cookie, ?string $ip = null): bool
     {
-        return $this->likes()->create([
+        return !!$this->likes()->create([
             'post_slug' => $this->slug,
             'cookie' => $cookie,
             'ip' => $ip ?? request()->ip(),
         ]);
     }
 
-    public function dislike(): void
+    public function dislike(string $cookie, ?string $ip = null): bool
     {
-        PostLike::wherePostSlug($this->slug)
+        return !!PostLike::wherePostSlug($this->slug)
+            ->whereCookie($cookie)
+            // ->whereIp($ip ?? request()->ip())
             ->limit(1)
             ->delete();
     }

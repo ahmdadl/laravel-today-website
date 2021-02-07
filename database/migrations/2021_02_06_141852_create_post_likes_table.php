@@ -16,7 +16,7 @@ class CreatePostLikesTable extends Migration
         Schema::create('post_likes', function (Blueprint $table) {
             $table->id();
             $table->string('post_slug')->index();
-            $table->string('cookie', 10);
+            $table->string('cookie')->unique();
             $table->string('ip');
 
             $table

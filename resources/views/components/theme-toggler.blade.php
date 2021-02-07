@@ -1,6 +1,6 @@
 <div class='flex' x-data>
     <button type='button' x-on:click.prevent="$store.common.toggleDark()"
-        class='p-2 focus:outline-none rounded' aria-label="Toggle theme">
+        class='p-2 rounded focus:outline-none' aria-label="Toggle theme">
         <svg class="w-5 h-5" x-show="$store.common.dark" aria-label="Apply light theme" role="image"
             fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd"
