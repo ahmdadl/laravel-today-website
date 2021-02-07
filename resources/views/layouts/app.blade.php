@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" x-data
     :class="{'theme-dark': $store.common.dark}">
-
 <head>
     @include('layouts.head')
 </head>

@@ -3,15 +3,15 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <meta name="author" content="Ahmed Adel">
 {!! SEOMeta::generate(true) !!}
-{{-- <title>{{ config('app.name', 'Laravel') }}</title> --}}
 <style>
     [x-cloak] {
         display: none;
     }
 </style>
-{{-- <link rel="preconnect" href="https://fonts.gstatic.com"> --}}
-{{-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="preload" as='style'
-    onload="this.onload=null; this.rel='stylesheet'"> --}}
+@include('splash')
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="preload" as='style'
+    onload="this.onload=null; this.rel='stylesheet'">
 
 <script>
     function prefersDark() {
