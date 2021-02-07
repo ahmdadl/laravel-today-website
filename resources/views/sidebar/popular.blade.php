@@ -43,7 +43,7 @@
                     class='flex py-1 mt-3 transition duration-500 hover:bg-gray-300 dark:hover:bg-gray-700'>
                     <img class='object-cover w-1/4 h-full rounded' :src='post.image_url' :alt="post.slug + ' Avarar'" />
                     <div class='relative w-full'>
-                        <div class='flex flex-wrap justify-between ml-1 space-x-1 font-semibold w3/4 md:ml-2'>
+                        <div class='flex justify-between ml-1 space-x-1 font-semibold w3/4 md:ml-2'>
                             <span class='text-xs text-left' x-text='post.title'></span>
                             <span class='text-sm text-right text-gray-800 dark:text-gray-100'
                                 x-text='$store.common.formatNum(post.likes_count)'></span>
