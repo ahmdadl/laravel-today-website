@@ -97,6 +97,7 @@ return [
 
     'ignore_paths' => [
         'nova-api*',
+        'gauge*',
     ],
 
     'ignore_commands' => [

@@ -5,6 +5,7 @@ namespace App\Support;
 use App\Models\PostLike;
 use Illuminate\Support\Facades\Cookie;
 use Crawler;
+use DB;
 use Illuminate\Http\Request;
 use Str;
 
@@ -82,4 +83,32 @@ final class LikeIt
         return Crawler::isCrawler();
     }
 
+    public function like(string $slug, ?string $ip = null): bool
+    {
+        if ($this->isLiked($slug)) {
+            return false;
+        }
+
+        return !!DB::table('post_likes')->insert([
+            'post_slug' => $slug,
+            'cookie' => $this->id(),
+            'ip' => $ip ?? request()->ip(),
+        ]);
+    }
+
+    public function dislike(string $slug, ?string $ip = null): bool
+    {
+        return !!PostLike::wherePostSlug($slug)
+            ->whereCookie($this->id())
+            // ->whereIp($ip ?? request()->ip())
+            ->limit(1)
+            ->delete();
+    }
+
+    public function isLiked(string $slug): bool
+    {
+        return PostLike::wherePostSlug($slug)
+        ->whereCookie($this->id())
+        ->exists();
+    }
 }

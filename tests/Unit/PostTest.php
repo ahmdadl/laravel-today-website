@@ -73,20 +73,20 @@ class PostTest extends TestCase
         $this->assertCount(0, $this->post->likes);
     }
 
-    public function testPostCanBeLikedAndDisliked()
-    {
-        $this->post->save();
-        $like = PostLike::factory()->make();
+    // public function testPostCanBeLikedAndDisliked()
+    // {
+    //     $this->post->save();
+    //     $like = PostLike::factory()->make();
 
-        $this->assertCount(0, $this->post->likes);
-        $this->post->like($like->cookie);
-        $this->post->refresh();
-        $this->assertCount(1, $this->post->likes);
+    //     $this->assertCount(0, $this->post->likes);
+    //     $this->post->like($like->cookie);
+    //     $this->post->refresh();
+    //     $this->assertCount(1, $this->post->likes);
 
-        $this->post->dislike($like->cookie);
-        $this->post->refresh();
-        $this->assertCount(0, $this->post->likes);
-    }
+    //     $this->post->dislike($like->cookie);
+    //     $this->post->refresh();
+    //     $this->assertCount(0, $this->post->likes);
+    // }
     
     public function testPostHasIsLikedAttr()
     {
@@ -94,19 +94,19 @@ class PostTest extends TestCase
         $this->assertFalse($this->post->is_liked);
     }
     
-    public function testPostCanBeLikedOnceBySameCookie()
-    {
-        $this->post->save();
-        $like = PostLike::factory()->make();
+    // public function testPostCanBeLikedOnceBySameCookie()
+    // {
+    //     $this->post->save();
+    //     $like = PostLike::factory()->make();
 
-        $this->assertCount(0, $this->post->likes);
-        $this->post->like($like->cookie);
-        $this->post->refresh();
-        $this->assertCount(1, $this->post->likes);
+    //     $this->assertCount(0, $this->post->likes);
+    //     $this->post->like($like->cookie);
+    //     $this->post->refresh();
+    //     $this->assertCount(1, $this->post->likes);
 
-        $this->post->like($like->cookie);
-        $this->post->refresh();
-        $this->assertCount(1, $this->post->likes);
-    }
+    //     $this->post->like($like->cookie);
+    //     $this->post->refresh();
+    //     $this->assertCount(1, $this->post->likes);
+    // }
     
 }

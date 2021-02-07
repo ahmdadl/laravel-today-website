@@ -17,13 +17,13 @@ class Like extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function __invoke(Request $request, Post $post)
+    public function __invoke(Request $request, string $post)
     {
         $res = request()->validate([
             'like' => 'nullable',
         ]);
 
-        $liked = isset($res['like']) ? $post->like(LikeIt::id()) : $post->dislike(LikeIt::id());
+        $liked = isset($res['like']) ? LikeIt::like($post) : LikeIt::dislike($post);
 
         if (!$liked) {
             return response()->noContent();
