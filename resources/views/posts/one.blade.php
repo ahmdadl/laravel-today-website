@@ -47,7 +47,7 @@
                                         old = '';
                                     }
                                 }).finally(() => {busy = false})">
-                                <span class='hidden sm:inline md:text-xs' x-text='btnTxt'></span>
+                                <span class='md:text-xs' x-text='btnTxt'></span>
                             </x-button>
                         </div>
                         <div class='w-1/2 text-xl font-bold text-right text-gray-700 break-all md:w-1/4 dark:text-gray-500'

@@ -26,8 +26,10 @@
             </div>
 
             <div class="col-span-6 mx-auto h-80 hero-image">
-                <?xml version="1.0" encoding="UTF-8"?>
-                <x-application-logo class='h-full text-red-500 fill-current dark:text-red-600 animate-bounce'></x-application-logo>
+                <div class='animate-bounce'>
+                    <x-application-logo class='h-full fill-current' w='250' h='250'>
+                    </x-application-logo>
+                </div>
             </div>
         </div>
     </div>
