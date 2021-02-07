@@ -94,4 +94,19 @@ class PostTest extends TestCase
         $this->assertFalse($this->post->is_liked);
     }
     
+    public function testPostCanBeLikedOnceBySameCookie()
+    {
+        $this->post->save();
+        $like = PostLike::factory()->make();
+
+        $this->assertCount(0, $this->post->likes);
+        $this->post->like($like->cookie);
+        $this->post->refresh();
+        $this->assertCount(1, $this->post->likes);
+
+        $this->post->like($like->cookie);
+        $this->post->refresh();
+        $this->assertCount(1, $this->post->likes);
+    }
+    
 }

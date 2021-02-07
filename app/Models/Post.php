@@ -61,9 +61,7 @@ class Post extends Model
      */
     public function getIsLikedAttribute(): bool
     {
-        return PostLike::wherePostSlug($this->slug)
-            ->whereCookie(LikeIt::id())
-            ->exists();
+        return $this->checkIfLiked(LikeIt::id());
     }
 
     public function category(): BelongsTo
@@ -85,6 +83,10 @@ class Post extends Model
 
     public function like(string $cookie, ?string $ip = null): bool
     {
+        if ($this->checkIfLiked($cookie)) {
+            return false;
+        }
+
         return !!$this->likes()->create([
             'post_slug' => $this->slug,
             'cookie' => $cookie,
@@ -99,5 +101,12 @@ class Post extends Model
             // ->whereIp($ip ?? request()->ip())
             ->limit(1)
             ->delete();
+    }
+
+    private function checkIfLiked(string $cookie): bool
+    {
+        return PostLike::wherePostSlug($this->slug)
+        ->whereCookie($cookie)
+        ->exists();
     }
 }
