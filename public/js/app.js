@@ -3881,17 +3881,16 @@ var $notify = new Notify(); // @ts-ignore
 window.Spruce.store('axios', (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)({}, (axios__WEBPACK_IMPORTED_MODULE_2___default()))); // @ts-ignore
 
 window.Spruce.store('post', {
-  like: function like(slug, icon, isLike) {
+  like: function like(slug, icon, btnId, isLike) {
     if (isLike === void 0) {
       isLike = true;
     }
 
     return (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__awaiter)(void 0, void 0, void 0, function () {
-      var btnId, loader, btn, data, res;
+      var loader, btn, data, res;
       return (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__generator)(this, function (_a) {
         switch (_a.label) {
           case 0:
-            btnId = isLike ? 'like' : 'dislike';
             loader = document.querySelector("#" + slug + " #" + btnId + " #loader");
             btn = document.querySelector("#" + slug + " #" + btnId);
             loader.classList.add('fa-spin', 'fa-cog');
@@ -3900,9 +3899,12 @@ window.Spruce.store('post', {
             data = isLike ? {
               like: true
             } : {};
+            console.log(isLike);
             return [4
             /*yield*/
-            , axios__WEBPACK_IMPORTED_MODULE_2___default().post("/" + slug + "/like", data)];
+            , axios__WEBPACK_IMPORTED_MODULE_2___default().post("/" + slug + "/like", data)["catch"](function (err) {
+              return null;
+            })];
 
           case 1:
             res = _a.sent();
@@ -3910,7 +3912,7 @@ window.Spruce.store('post', {
             loader.classList.add(icon);
             btn.removeAttribute('disabled');
 
-            if (res.status !== 201) {
+            if (!res || res.status !== 201) {
               $notify.error('an error was occured, please');
               return [2
               /*return*/

@@ -8,6 +8,7 @@ use Cviebrock\EloquentSluggable\Sluggable;
 use DB;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use LikeIt;
 
 class Post extends Model
 {
@@ -20,7 +21,7 @@ class Post extends Model
         'likes_count' => 'int',
     ];
 
-    protected $appends = ['image_url'];
+    protected $appends = ['image_url', 'is_liked'];
 
     /**
      * Return the sluggable configuration array for this model.
@@ -51,6 +52,18 @@ class Post extends Model
         return is_null($this->image) || empty($this->image)
             ? 'https://images.test/posts/5.jpg'
             : $this->image;
+    }
+
+    /**
+     * check if current user liked this post before
+     *
+     * @return boolean
+     */
+    public function getIsLikedAttribute(): bool
+    {
+        return PostLike::wherePostSlug($this->slug)
+            ->whereCookie(LikeIt::id())
+            ->exists();
     }
 
     public function category(): BelongsTo

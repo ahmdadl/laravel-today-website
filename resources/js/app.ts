@@ -63,8 +63,7 @@ window.Spruce.store('axios', {
 
 // @ts-ignore
 window.Spruce.store('post', {
-    like: async (slug: string, icon: string, isLike: boolean = true): Promise<boolean | null> => {
-        const btnId = isLike ? 'like' : 'dislike'
+    like: async (slug: string, icon: string, btnId: string, isLike: boolean = true): Promise<boolean | null> => {
         const loader = document.querySelector(
             `#${slug} #${btnId} #loader`
         ) as HTMLElement;
@@ -75,13 +74,15 @@ window.Spruce.store('post', {
 
         let data = isLike ? { like: true } : {};
 
-        const res = await Axios.post(`/${slug}/like`, data);
-        
+        console.log(isLike);
+
+        const res = await Axios.post(`/${slug}/like`, data).catch(err => null);
+
         loader.classList.remove('fa-spin', 'fa-cog');
         loader.classList.add(icon);
         btn.removeAttribute('disabled');
 
-        if (res.status !== 201) {
+        if (!res || res.status !== 201) {
             $notify.error('an error was occured, please');
             return null;
         }

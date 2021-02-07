@@ -102,4 +102,11 @@ a {
 .lazyloaded:not([src]) {
     background-image: none;
 }
+
+.liked {
+    color: #ffffff;
+    &:hover {
+        @apply bg-red-600 border-red-800;
+    }
+}
 /*! purgecss end ignore */

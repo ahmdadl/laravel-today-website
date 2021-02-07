@@ -1,7 +1,13 @@
 <div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-2 gap-x-0 sm:gap-x-2'>
     @foreach($posts as $post)
         <article class="max-w-2xl mx-auto overflow-hidden bg-gray-200 rounded-lg shadow-md dark:bg-gray-800"
-            x-data="{slug: '{{ $post->slug }}', likes: {{ $post?->likes_count ?? 0 }}}" id='{{ $post->slug }}'>
+            x-data="{slug: '{{ $post->slug }}', likes: {{ $post?->likes_count ?? 0 }}, busy: false, isLiked: {{ $post->is_liked ? 1 : 0 }}, btnTxt: '{{$post->is_liked ? 'liked' : 'like'}}', old: '', addDislike: function () {
+                if (!this.isLiked) return;
+                this.old = this.btnTxt;
+                this.btnTxt = 'dislike';
+            }}"
+            
+            id='{{ $post->slug }}'>
             <img class="object-cover w-full h-48" src="{{ $post->image_url }}" alt="Avatar">
 
             <div class="p-6">
@@ -15,12 +21,11 @@
                 <div class="mt-4">
                     <div class="flex items-center">
                         <div class="flex items-center">
-                            <img class="object-cover w-10 h-10 rounded-full"
-                                src="{{ $post?->author_img ?? 
+                            <img class="object-cover w-10 h-10 rounded-full" src="{{ $post?->author_img ?? 
                                 $owner?->image_url ?? $post->provider->owner->image_url }}"
                                 alt="{{ $owner?->name ?? $post->provider->owner->name }} Avatar">
-                            <a href="{{ $post?->author_url ?? $owner?->url ?? $post->provider->owner->url }}" target='_blank'
-                                class="mx-2 text-sm font-semibold text-gray-700 dark:text-gray-200">{{
+                            <a href="{{ $post?->author_url ?? $owner?->url ?? $post->provider->owner->url }}"
+                                target='_blank' class="mx-2 text-sm font-semibold text-gray-700 dark:text-gray-200">{{
                             $post?->author ?? $owner?->name ?? $post->provider->owner->name}}</a>
                         </div>
                         <span class="mx-1 text-xs text-gray-700 dark:text-gray-300">
@@ -28,22 +33,32 @@
                         </span>
                     </div>
                     <hr class='my-2 border border-gray-400 dark:border-gray-700' />
-                    <div class='grid grid-cols-3 text-center'>
+                    <div class='grid grid-cols-2 text-center'>
                         <span class="text-xl text-center">
                             <x-button bg='green' icon='fas fa-thumbs-up' clear='1' id='like'
-                                x-on:click="$store.post.like(slug, 'fa-thumbs-up').then(r => {if (r) likes += 1})">
+                                x-bind:class="{'bg-green-500 liked': isLiked}"
+                                x-on:mouseenter="addDislike()"
+                                x-on:mouseleave='old.length ? btnTxt=old : null'
+                                x-on:click="$store.post.like(slug, 'fa-thumbs-up', 'like', !isLiked).then(r => {
+                                    if (r) {
+                                        likes = isLiked ? likes - 1 : likes + 1;
+                                        isLiked = !isLiked;
+                                        btnTxt = isLiked ? 'liked' : 'like';
+                                        old = '';
+                                    }
+                                }).finally(() => {busy = false})">
+                                <span class='hidden sm:inline' x-text='btnTxt'></span>
                             </x-button>
                         </span>
                         <span class='text-xl font-bold text-center text-gray-700 break-all dark:text-gray-500'
                             x-text='$store.common.formatNum(likes)'>
                         </span>
-                        <span class="text-xl text-center">
-                            <x-button class='disabled:cursor-not-allowed' bg='red' icon='fas fa-thumbs-down' clear='1'
-                                id='dislike'
-                                x-on:click="likes >= 0 ? $store.post.like(slug, 'fa-thumbs-down', false).then(r => {if (r && likes >= 1) likes -= 1}) : null"
+                        {{-- <span class="text-xl text-center">
+                            <x-button bg='red' icon='fas fa-thumbs-down' clear='1' id='dislike'
+                                x-on:click="busy = true;likes >= 0 ? $store.post.like(slug, 'fa-thumbs-down', 'dislike', false).then(r => {if (r && likes >= 1) likes -= 1}).finally(() => busy = false) : null"
                                 x-bind:disabled='likes < 1'>
                             </x-button>
-                        </span>
+                        </span> --}}
                     </div>
                 </div>
             </div>

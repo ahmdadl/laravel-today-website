@@ -88,4 +88,10 @@ class PostTest extends TestCase
         $this->assertCount(0, $this->post->likes);
     }
     
+    public function testPostHasIsLikedAttr()
+    {
+        $this->post->save();
+        $this->assertFalse($this->post->is_liked);
+    }
+    
 }
