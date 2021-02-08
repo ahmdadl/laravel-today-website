@@ -45,18 +45,23 @@ class AdminTablesSeeder extends Seeder
         // DB::table('admin_role_menu')->insert([]);
 
         // DB::table('admin_role_permissions')->insert([]);
-
+        Administrator::truncate();
         Administrator::create([
-            'username' => 'admin2',
-            'password' => Hash::make('admin'),
+            'username' => 'ninjacoder',
+            'password' => Hash::make(env('ADMIN_PASS')),
             'name' => 'Ahmed Adel',
         ]);
-        Administrator::latest()
+        Administrator::create([
+            'username' => 'user',
+            'password' => Hash::make('user'),
+            'name' => 'Any User',
+        ]);
+        Administrator::orderByDesc('id')
             ->first()
             ->roles()
             ->save(Role::latest()->first());
 
-        Role::latest()
+        Role::orderByDesc('id')
             ->first()
             ->permissions()
             ->save(Permission::whereSlug('dashboard')->sole());
