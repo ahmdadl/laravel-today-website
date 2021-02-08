@@ -7,6 +7,8 @@ use Symfony\Component\DomCrawler\Crawler;
 
 final class Vegibit extends AbstractScraper
 {
+    protected string $categorySlug = 'tutorial';
+
     protected function extract(): array
     {
         return $this->crawler->filter('article.card.post > div.card-body')->each(function (Crawler $node) {
