@@ -112,7 +112,7 @@
                 </div>
             </div>
             <div>
-                <x-button type='submit' bg='green' icon='fas fa-save' class='w-1/3' x-bind:disable="!name.length ||!email || !$store.common.testMail(email)|| !title || !$store.common.testUrl(home_url) ||!$store.common.testUrl(req_url)" :spin='1'>Save</x-button>
+                <x-button type='submit' bg='green' icon='fas fa-save' class='w-1/3' x-bind:disabled="!name.length ||!email || !$store.common.testMail(email)|| !title || !$store.common.testUrl(home_url) ||!$store.common.testUrl(req_url)" :spin='1'>Save</x-button>
                 <x-button clear='1' type='reset' bg='orange' icon='fas fa-times' class='w-1/3 mx-3 text-right'>reset
                 </x-button>
             </div>
