@@ -22,10 +22,10 @@
             <canvas id="providersPosts" width="200" height="200"></canvas>
         </div>
         <div class='relative' style='height: 33rem'>
-            <canvas id="postsLikes" width="200" height="200"></canvas>
+            <canvas id="providersPopular" width="200" height="200"></canvas>
         </div>
         <div class='relative' style='height: 33rem'>
-            <canvas id="providersPopular" width="200" height="200"></canvas>
+            <canvas id="postsLikes" width="200" height="200"></canvas>
         </div>
         <div class='relative' style='height: 33rem'>
             <canvas id="PopularPosts" width="200" height="200"></canvas>
@@ -65,7 +65,7 @@
         createChart(
             'postsLikes',
             {!! json_encode($postsLikes->map(fn ($x) => \Str::limit($x->title, 10))) !!},
-            {{ $postsLikes->map(fn ($x) => $x->liked) }},
+            {{ $postsLikes->map(fn ($x) => $x->likes_count) }},
             'Likes',
             'Posts Likes',
         );
@@ -78,15 +78,15 @@
         );
         createChart(
             'providersPopular',
-            {!! json_encode($providersPopular->map(fn ($x) => \Str::title(str_replace("-", " ", $x->slug)))) !!},
-            {{ $providersPopular->map(fn ($x) => $x->sum) }},
+            {!! json_encode($providersPopular->map(fn ($x, $inx) => \Str::title(str_replace("-", " ", $inx)))->values()) !!},
+            {!! json_encode($providersPopular->values()) !!},
             'Likes',
             'providers posts Likes',
         );
         createChart(
             'PopularPosts',
-            {!! json_encode(($postsLikes->take(15))->map(fn ($x) => \Str::limit($x->title, 11))) !!},
-            {{ ($postsLikes->take(15))->map(fn ($x) => $x->liked) }},
+            {!! json_encode($popularPosts->map(fn ($x) => \Str::limit($x->title, 11))) !!},
+            {{ $popularPosts->map(fn ($x) => $x->likes_count) }},
             'likes',
             'Popular Posts'
         );
