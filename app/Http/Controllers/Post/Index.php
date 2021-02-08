@@ -24,7 +24,7 @@ class Index extends Controller
     {
         if (request('q')) {
             return $this->search(
-                $this->getPostBuilder('liked')->orderByDesc('created_at'),
+                $this->getPostBuilder('likes_count')->orderByDesc('created_at'),
             );
         }
 
