@@ -2,11 +2,11 @@
 
 namespace App\Providers;
 
-use App\Actions\ApproveProvider;
-use App\Actions\RejectProvider;
-use App\FormFields\StateFormField;
-use Enlightn\Enlightn\EnlightnServiceProvider;
+use Goutte\Client as GoutteClient;
 use Illuminate\Support\ServiceProvider;
+use Symfony\Component\BrowserKit\History;
+use Symfony\Component\BrowserKit\CookieJar;
+use Symfony\Component\HttpClient\HttpClient;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -17,9 +17,21 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        if ($this->app->runningInConsole()) {
-            $this->app->register(EnlightnServiceProvider::class);
-        }
+        $this->app->bind(History::class);
+        $this->app->bind(CookieJar::class);
+
+        $this->app->singleton('goutte', function ($app) {
+            $config = $app->make('config');
+
+            $goutte = new GoutteClient(
+                HttpClient::create($config->get('goutte.client', [])),
+                $app->make(History::class),
+                $app->make(CookieJar::class)
+            );
+
+            return $goutte;
+        });
+        $this->app->alias('goutte', GoutteClient::class);
     }
 
     /**
