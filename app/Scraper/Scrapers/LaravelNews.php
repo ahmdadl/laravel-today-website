@@ -13,33 +13,25 @@ final class LaravelNews extends AbstractScraper
     protected function extract(): array
     {
         return $this->crawler
-            ->filter("div.w-full.px-5.mb-6 > div.card.w-full.mx-0")
+            ->filter("section.col-span-10.pb-24 > .grid > li.group.max-w-sm.col-span-12.group-link-underline a.flex")
             ->each(function (Crawler $node) {
-                $link = $this->findEl($node, "h2 .text-red")?->first();
+                $uri = $this->resolveUri($node?->attr('href'));
+                $title = $this->findEl($node, "p > span.link")?->first()?->text();
                 $img = $this
-                    ->findEl($node, ".post__image img")
+                    ->findEl($node, "img.object-cover")
                     ?->first()
                     ?->attr('src');
 
                 $created_at = $this
-                    ->findEl($node, ".prose > span > span")
-                    ?->last()
+                    ->findEl($node, "p.text-gray-400")
+                    ?->first()
                     ?->text();
-                $author = $this->findEl($node, '.post__author')?->first();
-                $authorLink = $this->findEl($author, ".author__content > h4 > a")?->first();
 
                 return $this->item(
-                    $link?->text(),
-                    $this->resolveUri($link?->attr("href")),
+                    $title,
+                    $uri,
                     $created_at,
-                    Str::substr($img ?? "", 0, strpos($img ?? "", "?")),
-                    !is_null($author)
-                        ? (object) [
-                            "name" => $authorLink->text("null"),
-                            "uri" => $this->resolveUri($authorLink->attr("href")),
-                            'img' => $this->findEl($author, "img")?->first()?->attr('src'),
-                        ]
-                        : null
+                    Str::substr($img ?? "", 0, strpos($img ?? "", "?"))
                 );
             });
     }

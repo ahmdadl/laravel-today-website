@@ -50,7 +50,7 @@ class Post extends Model
     public function getImageUrlAttribute(): string
     {
         return is_null($this->image) || empty($this->image)
-            ? 'https://images.test/posts/5.jpg'
+            ? '/default_post.jpg'
             : $this->image;
     }
 
