@@ -71,9 +71,9 @@ class UserSeeder extends Seeder
         //     'email' => 'admin@site.test',
         // ]);
 
-        User::factory()
-            ->count(9)
-            ->create();
+        // User::factory()
+        //     ->count(9)
+        //     ->create();
     }
 
     private function provUser(
