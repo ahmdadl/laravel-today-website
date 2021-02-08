@@ -20,7 +20,7 @@ class PostSeeder extends Seeder
     {
         DB::beginTransaction();
 
-        $categories = Category::all();
+        // $categories = Category::all();
 
         // Provider::all()->each(function (Provider $provider) use ($categories) {
         //     if ($provider->id !== 1) {

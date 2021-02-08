@@ -19,7 +19,7 @@ class ProviderSeeder extends Seeder
     {
         DB::beginTransaction();
 
-        $users = User::all();
+        // $users = User::all();
 
         $this->prov(
             'Laravel News',

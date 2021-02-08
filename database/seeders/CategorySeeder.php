@@ -14,12 +14,13 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        Category::factory()
-            ->count(2)
-            ->sequence(
-                ['title' => 'News'],
-                ['title' => 'Tutorial']
-            )
-            ->create();
+        Category::insert([
+            'title' => 'News',
+            'slug' => 'news',
+        ]);
+        Category::insert([
+            'title' => 'Tutorial',
+            'slug' => 'tutorial',
+        ]);
     }
 }
