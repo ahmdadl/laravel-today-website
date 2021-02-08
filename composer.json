@@ -1,14 +1,16 @@
 {
-    "name": "laravel/laravel",
+    "name": "abo3adel/laravel-today",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "list of latest laravel news and tutorials scraped from multible websites",
     "keywords": [
-        "framework",
-        "laravel"
+        "laravel",
+        "laravel web scraper",
+        "php goutte",
+        "laravel news",
+        "laravel tutorial"
     ],
     "license": "MIT",
     "require": {
-        "php": "^8.0",
         "artesaos/seotools": "^0.20.0",
         "brianium/paratest": "^6.2",
         "cviebrock/eloquent-sluggable": "^8.0",
@@ -89,11 +91,5 @@
             "@php artisan ide-helper:meta",
             "@php artisan ide-helper:models --nowrite"
         ]
-    },
-    "repositories": {
-        "hooks": {
-            "type": "composer",
-            "url": "https://larapack.io"
-        }
     }
 }
