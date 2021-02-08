@@ -18,12 +18,12 @@ class LaravelNewsTutorialsTest extends Scraper
         $this->crawler->run();
 
         $this->assertTrue(
-            Post::whereTitle('Laravel Collections “when” Method')->exists(),
+            Post::whereTitle('New Laravel Route “Missing” Method')->exists(),
         );
 
         $this->assertTrue(
-            Post::whereTitle('Laravel Blade @prepend Directive')
-                ->whereUrl('https://laravel-news.com/blade-prepend')
+            Post::whereTitle('Building REST APIs with Laravel Orion')
+                ->whereImage('https://laravelnews.imgix.net/images/orion.png')
                 ->exists(),
         );
     }
