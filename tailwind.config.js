@@ -36,18 +36,9 @@ module.exports = {
     },
 
     theme: {
-        themeVariants: ['dark'],
+        themeVariants: ['dark', 'rtl'],
+        fontFamily: false,
         extend: {
-            fontFamily: {
-                sans: [
-                    'Roboto',
-                    'Cairo',
-                    '-apple-system',
-                    'BlinkMacSystemFont',
-                    'Segoe UI',
-                    ...defaultTheme.fontFamily.sans,
-                ],
-            },
             colors: {
                 teal: colors.teal,
                 green: colors.emerald,
