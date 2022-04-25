@@ -26,6 +26,6 @@
         built with <span class='text-xl text-red-500'>&hearts;</span> by
         <a href="https://abo3adel.github.io/" target='_blank'
             class="text-xl font-semibold text-orange-400 whitespace-pre hover:underline"
-            style="font-variant: small-caps">NinjaCoder</a>
+            style="font-variant: small-caps">Ahmed Adel</a>
     </div>
 </div>
