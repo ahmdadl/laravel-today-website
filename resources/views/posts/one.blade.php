@@ -42,7 +42,7 @@
                     <hr class='my-2 border border-gray-400 dark:border-gray-700' />
                     <div class='flex flex-wrap text-center'>
                         <div class="w-1/2 text-xl text-left md:w-3/4">
-                            <x-button bg='green' icon='fas fa-thumbs-up' clear='1' id='like'
+                            <x-button bg='green' icon='fas fa-thumbs-up' clear='1' id='like{{$post->slug}}'
                                 x-bind:class="{'bg-green-500 liked': isLiked}" loader-id='{{ $post->slug }}'
                                 x-on:mouseenter="addDislike()" x-on:mouseleave='removeDisLike()' x-on:click="$store.post.like(slug, 'fa-thumbs-up', 'like', !isLiked).then(r => {
                                     if (r) {

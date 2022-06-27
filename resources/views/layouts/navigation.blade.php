@@ -57,7 +57,7 @@
                     class="inline-flex items-center justify-center text-gray-300 transition duration-500 ease-in-out border-4 border-transparent rounded-full w-13 h-13 hover:border-gray-200 focus:outline-none"
                     :class='{"border-gray-200": open}'>
                     <img class='inline-block object-cover w-full h-full mx-1 rounded-full lazyload'
-                        data-src='https://abo3adel.github.io/myImg.jpeg' alt='Ahmed Adel Profile Image' />
+                        data-src='https://abo3adel.github.io/icon.png' alt='Ahmed Adel Profile Image' />
                 </button>
             </div>
         </div>
