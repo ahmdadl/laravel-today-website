@@ -11,6 +11,7 @@
     ],
     "license": "MIT",
     "require": {
+        "php": "8.0.0",
         "artesaos/seotools": "^0.20.0",
         "cviebrock/eloquent-sluggable": "^8.0",
         "encore/laravel-admin": "^1.8",
