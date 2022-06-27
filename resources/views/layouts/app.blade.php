@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" x-data
     :class="{'theme-dark': $store.common.dark}">
+
 <head>
     @include('layouts.head')
 </head>
@@ -17,6 +18,10 @@
         @include('footer')
     </div>
     <x-toast></x-toast>
+
+    <a target="_blank" class="fixed github-fork-ribbon right-top" href="https://github.com/abo3adel/project-todos"
+        data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+    <script src="{{ mix('js/app.js') }}" defer></script>
 </body>
 
 </html>
