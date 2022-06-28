@@ -9,6 +9,7 @@
     <button {{ $attributes->merge([
     'type' => 'button', 
     'class' => 'inline-flex items-center hover:bg-'.$bg.'-700 active:bg-'.$bg.'-800' .$bgClasses. $border.' border '.$rounded.' font-semibold text-xs uppercase tracking-widest focus:outline-none focus:border-'.$bg.'-800 focus:shadow-outline-'.$bg.' disabled:opacity-25 transition ease-in-out duration-500 disabled:cursor-not-allowed',
+    'id' => $loaderId,
     ]) }} aria-label="{{$loaderId}}">
         <span @if($spin) x-data x-on:click="$refs['{{$loaderId}}'].classList.remove('hidden');$refs['{{$loaderId}}'].classList.add('fas', 'fa-spin')" @endif>
             @isset($icon)

@@ -10,7 +10,7 @@ Axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 Axios.interceptors.response.use(
     function (response) {
         // TODO show loader
-        console.log(response.data);
+        // console.log(response.data);
         return response;
     },
     function (error) {
@@ -19,7 +19,7 @@ Axios.interceptors.response.use(
             return error.response;
         }
         // console.log(error.response);
-        console.log(error);
+        // console.log(error);
         $notify.error('an error was occured, please');
         return Promise.reject(error);
     }
@@ -74,7 +74,7 @@ window.Spruce.store('post', {
 
         let data = isLike ? { like: true } : {};
 
-        console.log(isLike);
+        // console.log(isLike);
 
         const res = await Axios.post(`/${slug}/like`, data).catch(err => null);
 
